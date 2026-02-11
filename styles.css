@@ -12,7 +12,6 @@ body {
 }
 
 .page {
-    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -22,11 +21,14 @@ body {
     gap: 0;
     align-items: flex-start;
     position: relative;
+    justify-content: center;
     /* Context for sticky sidebar limit */
 }
 
 .container_main_page {
     flex-grow: 1;
+    width: 1440px;
+    max-width: 1440px;
     min-width: 0;
     /* Prevents flex item from overflowing */
     background: #1E1E1E;
@@ -39,6 +41,9 @@ body {
 
 .container {
     flex-grow: 1;
+    min-width: 0;
+    width: 1440px;
+    max-width: 1440px;
     min-width: 0;
     /* Prevents flex item from overflowing */
     background: #f9f9f9;
@@ -652,63 +657,48 @@ a {
 
 /* Hero Section */
 .hero-section {
-    display: flex;
-    gap: 60px;
-    margin-bottom: 80px;
     position: relative;
-    background: #353535;
-    border-radius: 0;
-    padding: 40px 80px;
+    width: calc(100% + 160px);
+    /* Full width including negative margins to ignore container padding */
+    min-height: 489px;
+    background: rgb(53, 53, 53);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 80px;
     margin-left: -80px;
     margin-right: -80px;
 }
 
-.hero-left {
-    flex: 1;
-    position: relative;
-}
-
-.hero-title {
-    font-size: 160px;
-    font-weight: 900;
-    color: #6BA4D8;
-    line-height: 0.85;
-    margin-bottom: 30px;
-    letter-spacing: -4px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-phones {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-phones img {
-    margin-top: -100px;
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-}
-
-.hero-right {
-    flex: 0 0 350px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-/* Hero Background Clouds */
-.hero-background-clouds {
+/* Background Layers */
+.hero-text-bg {
     position: absolute;
     top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    right: 40px;
+    /* Adjust positioning */
+    transform: translateY(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 174px;
+    font-weight: 600;
+    color: rgb(167, 209, 243);
+    text-align: right;
+    line-height: 1;
     z-index: 1;
+    white-space: nowrap;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    /* Opacity or blend mode if needed, but JSON uses solid color */
+}
+
+.hero-bg-cloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
     pointer-events: none;
     width: 100%;
     height: 100%;
@@ -717,59 +707,146 @@ a {
     align-items: center;
 }
 
-.hero-background-clouds .cloud {
-    width: 600px;
+.hero-bg-cloud img {
+    width: 80%;
+    /* Adjust size */
+    max-width: 800px;
     height: auto;
-    opacity: 0.15;
-    filter: brightness(0.7);
+    opacity: 0.3;
+    /* Adjust based on visuals */
+    filter: brightness(0.8);
 }
 
-.hero-cloud {
-    display: none;
-}
-
-/* Atlas Info */
-.atlas-info {
-    text-align: center;
+/* Content Layer */
+.hero-content {
     position: relative;
     z-index: 2;
-    padding-right: 40px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    /* Internal content width */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 40px;
 }
 
-.atlas-header {
-    margin-bottom: 24px;
+/* Left Column: Atlas Info */
+.hero-info-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* JSON says cross: center */
+    gap: 40px;
+    width: 290px;
+    flex-shrink: 0;
+}
+
+.atlas-logo-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .atlas-logo {
-    width: 200px;
+    width: 100%;
+    max-width: 282px;
     height: auto;
+    /* If the logo is black in the file, invert it to white/light as per design */
     filter: brightness(0) invert(1);
+    /* Or specifically rgb(247, 247, 247) */
+    filter: brightness(0) saturate(100%) invert(95%) sepia(2%) saturate(99%) hue-rotate(184deg) brightness(105%) contrast(96%);
+}
+
+.atlas-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 
 .atlas-description {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    line-height: 1.4;
-    color: #E0E0E0;
-    margin-bottom: 32px;
+    font-family: "Adobe Jenson Pro", serif;
+    /* Fallback to serif */
+    font-size: 24px;
     font-weight: 400;
+    color: rgb(247, 247, 247);
+    text-align: center;
+    line-height: 1.2;
 }
 
-.atlas-link {
-    display: inline-block;
-    background: #9FC9EB;
-    color: #2A2A2A;
+.atlas-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 224px;
+    height: 57px;
+    background: rgb(166, 211, 255);
+    border: 1px solid rgb(140, 237, 159);
+    border-radius: 5px;
     text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 700;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
 }
 
-.atlas-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(159, 201, 235, 0.4);
+.atlas-btn:hover {
+    transform: scale(1.02);
+}
+
+.atlas-btn span {
+    font-family: "Adobe Jenson Pro", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(73, 69, 79);
+    text-align: left;
+}
+
+/* Right Column: Visuals */
+.hero-visual-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-phones-img {
+    width: 100%;
+    max-width: 600px;
+    /* Adjust as needed */
+    height: auto;
+    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-text-bg {
+        font-size: 120px;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text-bg {
+        top: 20%;
+        right: 50%;
+        transform: translateX(50%);
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text-bg {
+        font-size: 80px;
+        top: 15%;
+    }
+
+    .hero-section {
+        margin-left: -24px;
+        /* Adjust for smaller padding */
+        margin-right: -24px;
+        border-radius: 0;
+    }
 }
 
 /* Cases Divider */

@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "exportedAt": "2026-02-11T12:21:24.842Z",
+    "componentName": "HeroScreen",
+    "totalElements": 14,
+    "nestingDepth": 7,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(53, 53, 53)": "rgb(53, 53, 53)",
+      "color-rgb(247, 247, 247)": "rgb(247, 247, 247)",
+      "color-rgb(166, 211, 255)": "rgb(166, 211, 255)",
+      "color-rgb(73, 69, 79)": "rgb(73, 69, 79)",
+      "color-rgb(167, 209, 243)": "rgb(167, 209, 243)"
+    },
+    "fonts": {
+      "adobe-jenson-pro": {
+        "family": "Adobe Jenson Pro",
+        "sizes": {
+          "size-24": "24px",
+          "size-20": "20px"
+        },
+        "weights": {
+          "weight-400": "400",
+          "weight-700": "700"
+        }
+      },
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-174": "174px"
+        },
+        "weights": {
+          "weight-600": "600"
+        }
+      }
+    },
+    "spacing": {
+      "gap-40": "40px",
+      "gap-16": "16px",
+      "gap-32": "32px",
+      "padding-top-14": "14px",
+      "padding-right-23": "23px",
+      "padding-bottom-14": "14px",
+      "padding-left-23": "23px",
+      "gap-12": "12px"
+    },
+    "effects": {
+      "shadow-4-4": {
+        "x": 0,
+        "y": 4,
+        "blur": 4,
+        "color": "rgba(0, 0, 0, 0.25)"
+      }
+    }
+  },
+  "structure": {
+    "name": "heroscreen",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 489
+    },
+    "styles": {
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "rectangle-600",
+        "type": "RECTANGLE",
+        "size": {
+          "w": 1440,
+          "h": 489
+        },
+        "styles": {
+          "bg": "rgb(53, 53, 53)",
+          "radius": 12
+        }
+      },
+      {
+        "name": "frame-1321314419",
+        "type": "FRAME",
+        "size": {
+          "w": 290,
+          "h": 278
+        },
+        "styles": {
+          "layout": {
+            "direction": "column",
+            "gap": 40,
+            "align": {
+              "main": "start",
+              "cross": "center"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1321314419",
+            "type": "FRAME",
+            "size": {
+              "w": 290,
+              "h": 62
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 16,
+                "align": {
+                  "main": "start",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "atlas",
+                "type": "VECTOR",
+                "size": {
+                  "w": 282,
+                  "h": 62
+                },
+                "styles": {
+                  "bg": "rgb(247, 247, 247)"
+                }
+              }
+            ]
+          },
+          {
+            "name": "frame-1321314420",
+            "type": "FRAME",
+            "size": {
+              "w": 290,
+              "h": 176
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 32,
+                "align": {
+                  "main": "start",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "a-library-of-metaphorical--decks-for-practice--and-therapy-",
+                "type": "TEXT",
+                "size": {
+                  "w": 290,
+                  "h": 87
+                },
+                "content": "A library of metaphorical  decks for practice  and therapy.",
+                "styles": {
+                  "bg": "rgb(247, 247, 247)",
+                  "text": {
+                    "family": "Adobe Jenson Pro",
+                    "size": 24,
+                    "weight": "400",
+                    "align": "center"
+                  }
+                }
+              },
+              {
+                "name": "button---outline",
+                "type": "FRAME",
+                "size": {
+                  "w": 224,
+                  "h": 57
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "align": {
+                      "main": "center",
+                      "cross": "center"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "content",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 224,
+                      "h": 57
+                    },
+                    "styles": {
+                      "bg": "rgb(166, 211, 255)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(140, 237, 159)"
+                      },
+                      "radius": 5,
+                      "layout": {
+                        "direction": "column",
+                        "gap": 0,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "state-layer",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 224,
+                          "h": 57
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 12,
+                            "align": {
+                              "main": "center",
+                              "cross": "center"
+                            },
+                            "padding": [
+                              14,
+                              23,
+                              14,
+                              23
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "label",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 178,
+                              "h": 28
+                            },
+                            "content": "Exlore our new case >",
+                            "styles": {
+                              "bg": "rgb(73, 69, 79)",
+                              "text": {
+                                "family": "Adobe Jenson Pro",
+                                "size": 20,
+                                "weight": "700",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "image-352",
+        "type": "RECTANGLE",
+        "size": {
+          "w": 693,
+          "h": 350
+        }
+      },
+      {
+        "name": "last-case",
+        "type": "TEXT",
+        "size": {
+          "w": 966,
+          "h": 269
+        },
+        "content": "last case",
+        "styles": {
+          "bg": "rgb(167, 209, 243)",
+          "text": {
+            "family": "Inter",
+            "size": 174,
+            "weight": "600",
+            "align": "right"
+          },
+          "shadow": {
+            "x": 0,
+            "y": 4,
+            "blur": 4,
+            "color": "rgba(0, 0, 0, 0.25)"
+          }
+        }
+      },
+      {
+        "name": "iphone-16-pro",
+        "type": "RECTANGLE",
+        "size": {
+          "w": 821,
+          "h": 616
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 7,
+    "texts": 3,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}
