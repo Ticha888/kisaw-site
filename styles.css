@@ -668,7 +668,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
     margin-left: -80px;
     margin-right: -80px;
 }
@@ -865,21 +865,35 @@ a {
     margin-bottom: 40px;
 }
 
-.cases-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+.cases-rows-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+}
+
+.cases-row {
+    display: flex;
+    gap: 48px;
+    width: 100%;
+    justify-content: center;
 }
 
 /* Case Cards */
 .case-card {
-    background: #fff;
-    border-radius: 12px;
+    background: #fbfbfb;
+    border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
-    display: block;
-    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    width: 616px;
+    height: 424px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 24px;
+    /* Content alignment: Push content to bottom */
+    justify-content: flex-start;
 }
 
 .case-card:hover {
@@ -893,12 +907,15 @@ a {
 
 .case-card-image {
     width: 100%;
-    height: 260px;
+    height: 288px;
+    /* Fixed height for image area */
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 24px;
+    border-radius: 16px 16px 0 0;
 }
 
 .case-card-image img {
@@ -925,45 +942,91 @@ a {
 }
 
 .case-card-content {
-    padding: 20px 24px;
-    background: #fff;
+    /* Padding matches JSON padding: 0 24px */
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    /* Fill remaining height */
+    width: 100%;
+    align-items: flex-start;
+    /* Left align content */
+    box-sizing: border-box;
+    /* Ensure bottom spacing */
+}
+
+/* Specific Content Widths can be removed or set to 100% since we align left */
+.content-abilka,
+.content-frozen,
+.content-boiling,
+.content-wdy {
+    width: 100%;
 }
 
 .case-card-header {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    /* Text align left */
+    text-align: left;
+    width: 100%;
+    margin-bottom: 34px;
 }
 
 .case-card-title {
-    font-size: 18px;
-    font-weight: 900;
-    color: #2A2A2A;
+    font-size: 24px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Specific Title Colors */
+.content-abilka .case-card-title {
+    color: #f15a24;
+}
+
+.content-frozen .case-card-title {
+    color: #ad60db;
+}
+
+.content-boiling .case-card-title,
+.content-wdy .case-card-title {
+    color: #3a442c;
 }
 
 .case-card-location {
-    font-size: 10px;
-    color: #888;
+    font-size: 14px;
+    color: #898989;
+    /* Grey per screenshot */
     font-weight: 600;
     text-transform: uppercase;
+    /* Uppercase per screenshot */
     letter-spacing: 0.3px;
+}
+
+/* Exception for USA - screenshot shows uppercase for Frozen Bro, keep uppercase */
+.content-frozen .case-card-location,
+.content-wdy .case-card-location {
+    text-transform: uppercase;
 }
 
 .case-card-tags {
     display: flex;
-    gap: 10px;
+    gap: 16px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    /* Ensure left alignment */
 }
 
 .case-card-tags span {
-    font-size: 10px;
-    color: #666;
+    font-size: 18px;
+    color: #595959;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
 }
 
 /* Responsive */
@@ -1074,13 +1137,36 @@ a {
         max-width: 100%;
     }
 
-    .cases-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .cases-rows-container {
+        gap: 32px;
+    }
+
+    .cases-row {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .case-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .case-card-image {
-        height: 180px;
+        height: 220px;
+    }
+
+    .case-card-content {
+        width: 100%;
+        align-self: center;
+    }
+
+    .content-abilka,
+    .content-frozen,
+    .content-boiling,
+    .content-wdy {
+        width: 100%;
     }
 
     .send-signal-btn {
@@ -1152,4 +1238,13 @@ a {
 /* When dragging, remove transition to make it responsive */
 #lightbox-img:active {
     transition: none;
+}
+
+
+.cases-header-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
