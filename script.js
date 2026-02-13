@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Select all zoomable elements
     const zoomableElements = document.querySelectorAll(
-        '.graphic-logo-card, .graphic-color-palette, .graphic-labels, .graphic-graphics, .graphic-social-media, .strategy-img'
+        '.graphic-logo-card, .graphic-color-palette, .graphic-labels, .graphic-graphics, .graphic-social-media, .strategy-img, .zoomable-media'
     );
 
     zoomableElements.forEach(element => {
