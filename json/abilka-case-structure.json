@@ -1,0 +1,3159 @@
+{
+  "metadata": {
+    "exportedAt": "2026-02-13T21:19:12.238Z",
+    "componentName": "ABILKA CASE",
+    "totalElements": 192,
+    "nestingDepth": 11,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(184, 184, 184)": "rgb(184, 184, 184)",
+      "color-rgb(0, 126, 250)": "rgb(0, 126, 250)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(217, 217, 217)": "rgb(217, 217, 217)",
+      "color-rgb(189, 204, 229)": "rgb(189, 204, 229)",
+      "color-rgb(249, 249, 249)": "rgb(249, 249, 249)",
+      "color-rgb(251, 131, 63)": "rgb(251, 131, 63)",
+      "color-rgb(56, 54, 54)": "rgb(56, 54, 54)",
+      "color-rgb(166, 211, 255)": "rgb(166, 211, 255)",
+      "color-rgb(238, 238, 238)": "rgb(238, 238, 238)",
+      "color-rgb(243, 243, 243)": "rgb(243, 243, 243)",
+      "color-rgb(44, 44, 44)": "rgb(44, 44, 44)",
+      "color-rgb(80, 80, 80)": "rgb(80, 80, 80)",
+      "color-rgb(0, 44, 218)": "rgb(0, 44, 218)"
+    },
+    "fonts": {
+      "reenie-beanie": {
+        "family": "Reenie Beanie",
+        "sizes": {
+          "size-104": "104px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      },
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-16": "16px",
+          "size-20": "20px",
+          "size-39": "39px",
+          "size-18": "18px",
+          "size-45": "45px",
+          "size-13": "13px"
+        },
+        "weights": {
+          "weight-600": "600",
+          "weight-900": "900",
+          "weight-700": "700",
+          "weight-400": "400"
+        }
+      },
+      "oxygen-mono": {
+        "family": "Oxygen Mono",
+        "sizes": {
+          "size-16": "16px",
+          "size-12": "12px",
+          "size-10": "10px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {
+      "padding-top-64": "64px",
+      "padding-right-210": "210px",
+      "padding-bottom-64": "64px",
+      "padding-left-210": "210px",
+      "padding-top-161": "161px",
+      "padding-right-41": "41px",
+      "padding-bottom-41": "41px",
+      "padding-left-41": "41px",
+      "gap-153": "153px",
+      "gap-20": "20px",
+      "gap-64": "64px",
+      "gap-40": "40px",
+      "padding-top-24": "24px",
+      "padding-right-24": "24px",
+      "padding-bottom-24": "24px",
+      "padding-left-24": "24px",
+      "gap-24": "24px",
+      "gap-13": "13px",
+      "gap-84": "84px",
+      "gap-197": "197px",
+      "gap-48": "48px",
+      "gap-18": "18px",
+      "gap-31": "31px"
+    },
+    "effects": {
+      "shadow-4-4": {
+        "x": 0,
+        "y": 4,
+        "blur": 4,
+        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+      },
+      "shadow-16-16": {
+        "x": 0,
+        "y": 16,
+        "blur": 16,
+        "color": "rgba(12, 12, 13, 0.10000000149011612)"
+      },
+      "shadow-3-1": {
+        "x": 0,
+        "y": 1,
+        "blur": 3,
+        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+      },
+      "shadow-2-1": {
+        "x": 0,
+        "y": 1,
+        "blur": 2,
+        "color": "rgba(0, 0, 0, 0.30000001192092896)"
+      },
+      "shadow-4-1": {
+        "x": 0,
+        "y": 1,
+        "blur": 4,
+        "color": "rgba(12, 12, 13, 0.10000000149011612)"
+      },
+      "shadow-3-3": {
+        "x": 0,
+        "y": 3,
+        "blur": 3,
+        "color": "rgba(0, 0, 0, 0.25)"
+      }
+    }
+  },
+  "structure": {
+    "name": "abilka-case",
+    "type": "FRAME",
+    "size": {
+      "w": 1919,
+      "h": 3940
+    },
+    "styles": {
+      "bg": "rgb(184, 184, 184)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "center",
+          "cross": "center"
+        },
+        "padding": [
+          64,
+          210,
+          64,
+          210
+        ]
+      }
+    },
+    "children": [
+      {
+        "name": "group-1321314473",
+        "type": "GROUP",
+        "size": {
+          "w": 1499,
+          "h": 3812
+        },
+        "children": [
+          {
+            "name": "frame-9157",
+            "type": "FRAME",
+            "size": {
+              "w": 654,
+              "h": 118
+            },
+            "styles": {
+              "bg": "rgb(0, 126, 250)",
+              "radius": 12,
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "rectangle-596",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 654,
+                  "h": 118
+                },
+                "styles": {
+                  "bg": "rgb(30, 30, 30)"
+                }
+              },
+              {
+                "name": "image-181",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 1063,
+                  "h": 1103
+                }
+              },
+              {
+                "name": "abilka",
+                "type": "TEXT",
+                "size": {
+                  "w": 285,
+                  "h": 90
+                },
+                "content": "ABILKA",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Reenie Beanie",
+                    "size": 104,
+                    "weight": "400",
+                    "align": "center"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "group-1321314472",
+            "type": "GROUP",
+            "size": {
+              "w": 1440,
+              "h": 3812
+            },
+            "children": [
+              {
+                "name": "auto-layout-horizontal",
+                "type": "FRAME",
+                "size": {
+                  "w": 702,
+                  "h": 262
+                },
+                "styles": {
+                  "bg": "rgb(255, 255, 255)",
+                  "radius": 15,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 153,
+                    "align": {
+                      "main": "start",
+                      "cross": "center"
+                    },
+                    "padding": [
+                      161,
+                      41,
+                      41,
+                      41
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "auto-layout-horizontal",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 413,
+                      "h": 60
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "row",
+                        "gap": 20,
+                        "align": {
+                          "main": "start",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "mask-group",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 60,
+                          "h": 60
+                        },
+                        "children": [
+                          {
+                            "name": "ellipse",
+                            "type": "ELLIPSE",
+                            "size": {
+                              "w": 60,
+                              "h": 60
+                            },
+                            "styles": {
+                              "bg": "rgb(217, 217, 217)"
+                            }
+                          },
+                          {
+                            "name": "frame-36",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 65,
+                              "h": 65
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "rectangle",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 55,
+                                  "h": 55
+                                },
+                                "styles": {
+                                  "bg": "rgb(189, 204, 229)"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "image",
+                            "type": "RECTANGLE",
+                            "size": {
+                              "w": 147,
+                              "h": 108
+                            }
+                          },
+                          {
+                            "name": "image-190",
+                            "type": "RECTANGLE",
+                            "size": {
+                              "w": 64,
+                              "h": 77
+                            },
+                            "styles": {
+                              "radius": 4
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "brand-designer-nika-pizhma",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 334,
+                          "h": 51
+                        },
+                        "content": "brand designer nika pizhma",
+                        "styles": {
+                          "text": {
+                            "family": "Inter",
+                            "size": 16,
+                            "weight": "600",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "2024",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 55,
+                      "h": 27
+                    },
+                    "content": "2024",
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 20,
+                        "weight": "600",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "framer-tutorial",
+                "type": "FRAME",
+                "size": {
+                  "w": 1440,
+                  "h": 3681
+                },
+                "styles": {
+                  "bg": "rgb(249, 249, 249)",
+                  "radius": 12,
+                  "shadow": {
+                    "x": 0,
+                    "y": 4,
+                    "blur": 4,
+                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                  },
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "group-9099",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 136,
+                      "h": 34
+                    },
+                    "children": [
+                      {
+                        "name": "kisaw",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 136,
+                          "h": 34
+                        },
+                        "content": "KisaW",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 39,
+                            "weight": "900",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-2",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 475,
+                      "h": 17
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "row",
+                        "gap": 64,
+                        "align": {
+                          "main": "start",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "design",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 68,
+                          "h": 17
+                        },
+                        "content": "design",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 18,
+                            "weight": "700",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "music",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 60,
+                          "h": 17
+                        },
+                        "content": "music",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 18,
+                            "weight": "700",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "about",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 65,
+                          "h": 17
+                        },
+                        "content": "About",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 18,
+                            "weight": "700",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "contact",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 90,
+                          "h": 17
+                        },
+                        "content": "contact",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 18,
+                            "weight": "700",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "design-studio-by-visual-enthusiasts",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 328,
+                      "h": 18
+                    },
+                    "content": "Design studio by visual enthusiasts",
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 16,
+                        "weight": "400",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "frame-8575",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1040,
+                      "h": 3493
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 40,
+                        "align": {
+                          "main": "start",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "---bento",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1040,
+                          "h": 403
+                        },
+                        "styles": {
+                          "bg": "rgb(249, 249, 249)",
+                          "layout": {
+                            "direction": "column",
+                            "gap": 24,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            },
+                            "padding": [
+                              24,
+                              24,
+                              24,
+                              24
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 992,
+                              "h": 355
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 24,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 992,
+                                  "h": 355
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "image-16",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 4,
+                                      "h": 27
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(251, 131, 63)",
+                                      "radius": 50,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-14",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 4,
+                                      "h": 27
+                                    },
+                                    "styles": {
+                                      "radius": 50,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-15",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 4,
+                                      "h": 27
+                                    },
+                                    "styles": {
+                                      "radius": 50,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-17",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 4,
+                                      "h": 27
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(251, 131, 63)",
+                                      "radius": 50,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-18",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 29,
+                                      "h": 60
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-21",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 431,
+                                      "h": 560
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(56, 54, 54)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-35",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 186,
+                                      "h": 242
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(56, 54, 54)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-121",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 68,
+                                      "h": 82
+                                    },
+                                    "styles": {
+                                      "radius": 50,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-157",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 102,
+                                      "h": 102
+                                    }
+                                  },
+                                  {
+                                    "name": "image",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 102,
+                                      "h": 107
+                                    },
+                                    "styles": {
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 1,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.15000000596046448)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "424-2",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 57,
+                                      "h": 57
+                                    }
+                                  },
+                                  {
+                                    "name": "frame-53",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 559,
+                                      "h": 141
+                                    },
+                                    "styles": {
+                                      "layout": {
+                                        "direction": "column",
+                                        "gap": 24,
+                                        "align": {
+                                          "main": "center",
+                                          "cross": "center"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group-9102",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 516,
+                                          "h": 107
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group-9100",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 516,
+                                              "h": 107
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "group-8580",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 494,
+                                          "h": 10
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "group-8578",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 73,
+                                              "h": 10
+                                            }
+                                          },
+                                          {
+                                            "name": "group-8579",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 60,
+                                              "h": 10
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "we-created-the-visual-identity-for-abilka-school---an-educational-space-that-inspires-adults-to-explore-design--illustration--and-creativity-through-intensive-programs-and-hands-on-projects-",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 535,
+                                      "h": 84
+                                    },
+                                    "content": "We created the visual identity for Abilka School,  an educational space that inspires adults to explore design, illustration, and creativity through intensive programs and hands-on projects.",
+                                    "styles": {
+                                      "bg": "rgb(30, 30, 30)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 16,
+                                        "weight": "400",
+                                        "align": "center"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "tabspanel",
+                        "type": "INSTANCE",
+                        "size": {
+                          "w": 0,
+                          "h": 0
+                        }
+                      },
+                      {
+                        "name": "---bento",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1040,
+                          "h": 600
+                        },
+                        "styles": {
+                          "bg": "rgb(249, 249, 249)",
+                          "layout": {
+                            "direction": "column",
+                            "gap": 24,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            },
+                            "padding": [
+                              24,
+                              24,
+                              24,
+                              24
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 992,
+                              "h": 264
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 24,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 597,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(251, 131, 63)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "manifesto",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 147,
+                                      "h": 20
+                                    },
+                                    "content": "Manifesto",
+                                    "styles": {
+                                      "bg": "rgb(255, 255, 255)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 12,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "2023",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 147,
+                                      "h": 20
+                                    },
+                                    "content": "2023",
+                                    "styles": {
+                                      "bg": "rgb(255, 255, 255)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 12,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-9",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 85,
+                                      "h": 177
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)"
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-10",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 85,
+                                      "h": 177
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(255, 255, 255)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 371,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "frame-8570",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 275,
+                                      "h": 150
+                                    },
+                                    "styles": {
+                                      "layout": {
+                                        "direction": "column",
+                                        "gap": 13,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "start"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "abilka-space-is-a-community--space--prostor---------------",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 173,
+                                          "h": 72
+                                        },
+                                        "content": "Abilka Space is a community. \nSpace. Prostor. Пространство.",
+                                        "styles": {
+                                          "text": {
+                                            "family": "Oxygen Mono",
+                                            "size": 10,
+                                            "weight": "400",
+                                            "align": "left"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "name": "we-wish-to-bring-more-opportunities-to-people-to-create--to-learn--to-work-and-to-be-happy-",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 275,
+                                          "h": 65
+                                        },
+                                        "content": "We wish to bring more opportunities to people to create, to learn, to work and to be happy.",
+                                        "styles": {
+                                          "bg": "rgb(56, 54, 54)",
+                                          "text": {
+                                            "family": "Oxygen Mono",
+                                            "size": 10,
+                                            "weight": "400",
+                                            "align": "left"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "vector-15",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 197,
+                                      "h": 177
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(56, 54, 54)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "vector-22",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 25,
+                                      "h": 22
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 992,
+                              "h": 264
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 24,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 397,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "abilka-space-is-educational-programs--intensive-lessons-and-practical-exercises-for-adults-in-the-field-of-design--illustration-and-creativity--the-programs-are-practical-and-theoretical-classes--as-well-as-joint-projects--lectures--events-etc",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 307,
+                                      "h": 130
+                                    },
+                                    "content": "Abilka Space is educational programs, \nintensive lessons\r\nand practical exercises for\r\nadults in the field of design,\r\nillustration and creativity.\n\nThe programs are practical and theoretical\r\nclasses, as well as joint\r\nprojects, lectures, events\r\netc",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 334,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "we-offer-a-variety-of-classes-which-include--drawings-and-sketches-short-courses-lecture-hall-meetings-with-joint-projects-kids-school-our-guest-masters-with-their-own-programs-events-with-our-friends",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 266,
+                                      "h": 117
+                                    },
+                                    "content": "We offer a variety of classes which include:\n\ndrawings and sketches\nshort courses\nlecture hall\nmeetings with joint projects\nkids school \nour guest masters with their own programs\nevents with our friends",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 213,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "image-105",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 270,
+                                      "h": 205
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "frame",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1040,
+                          "h": 60
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 24,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 1040,
+                              "h": 60
+                            },
+                            "styles": {
+                              "bg": "rgb(249, 249, 249)",
+                              "radius": 12,
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "rectangle-582",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 60,
+                                  "h": 194
+                                },
+                                "styles": {
+                                  "bg": "rgb(56, 54, 54)",
+                                  "radius": 7
+                                }
+                              },
+                              {
+                                "name": "rectangle-586",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 60,
+                                  "h": 194
+                                },
+                                "styles": {
+                                  "bg": "rgb(251, 131, 63)",
+                                  "radius": 7
+                                }
+                              },
+                              {
+                                "name": "rectangle-583",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 60,
+                                  "h": 191
+                                },
+                                "styles": {
+                                  "bg": "rgb(0, 126, 250)",
+                                  "radius": 7
+                                }
+                              },
+                              {
+                                "name": "rectangle-584",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 60,
+                                  "h": 194
+                                },
+                                "styles": {
+                                  "bg": "rgb(166, 211, 255)",
+                                  "radius": 7
+                                }
+                              },
+                              {
+                                "name": "rectangle-585",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 60,
+                                  "h": 194
+                                },
+                                "styles": {
+                                  "bg": "rgb(238, 238, 238)",
+                                  "radius": 7
+                                }
+                              },
+                              {
+                                "name": "-827873-ashes-of-the-forgotten-forge",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 169,
+                                  "h": 26
+                                },
+                                "content": "#827873 Ashes of the Forgotten Forge",
+                                "styles": {
+                                  "bg": "rgb(166, 211, 255)",
+                                  "text": {
+                                    "family": "Oxygen Mono",
+                                    "size": 10,
+                                    "weight": "400",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "-e18d5a--dragon-s-ember-glow",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 115,
+                                  "h": 26
+                                },
+                                "content": "#e18d5a  Dragon’s Ember Glow",
+                                "styles": {
+                                  "bg": "rgb(56, 54, 54)",
+                                  "text": {
+                                    "family": "Oxygen Mono",
+                                    "size": 10,
+                                    "weight": "400",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "65a0ee--wings-of-the-sapphire-sprite",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 169,
+                                  "h": 26
+                                },
+                                "content": "65a0ee  Wings of the Sapphire Sprite",
+                                "styles": {
+                                  "bg": "rgb(56, 54, 54)",
+                                  "text": {
+                                    "family": "Oxygen Mono",
+                                    "size": 10,
+                                    "weight": "400",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "-b6dbfd--frostmoss-veil",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 85,
+                                  "h": 26
+                                },
+                                "content": "#b6dbfd  Frostmoss Veil",
+                                "styles": {
+                                  "bg": "rgb(56, 54, 54)",
+                                  "text": {
+                                    "family": "Oxygen Mono",
+                                    "size": 10,
+                                    "weight": "400",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "-f0f1f2--moonlit-whisper",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 91,
+                                  "h": 26
+                                },
+                                "content": "#f0f1f2  Moonlit Whisper",
+                                "styles": {
+                                  "bg": "rgb(56, 54, 54)",
+                                  "text": {
+                                    "family": "Oxygen Mono",
+                                    "size": 10,
+                                    "weight": "400",
+                                    "align": "left"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "---bento",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1040,
+                          "h": 600
+                        },
+                        "styles": {
+                          "bg": "rgb(249, 249, 249)",
+                          "layout": {
+                            "direction": "column",
+                            "gap": 24,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            },
+                            "padding": [
+                              24,
+                              24,
+                              24,
+                              24
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 992,
+                              "h": 264
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 24,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 426,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "the-logo-is-inspired-by-children-s-paper-cutting-activities--the-elements-of-the-logo-are-various-familiar-shapes-that-resemble-the-letters-of-abilka-space--emphasizing-the-natural-charm-and-creativity-of-cultural-and-artistic-endeavors-",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 307,
+                                      "h": 65
+                                    },
+                                    "content": "The logo is inspired by children's paper-cutting activities. The elements of the logo are various familiar shapes that resemble the letters of Abilka Space, emphasizing the natural charm and creativity of cultural and artistic endeavors.",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "group-9104",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 401,
+                                      "h": 296
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group-9100",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 401,
+                                          "h": 296
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 95,
+                                              "h": 83
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 51,
+                                              "h": 84
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 58,
+                                              "h": 93
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "image",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 64,
+                                              "h": 76
+                                            },
+                                            "styles": {
+                                              "shadow": {
+                                                "x": 0,
+                                                "y": 1,
+                                                "blur": 4,
+                                                "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 75,
+                                              "h": 74
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "image",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 70,
+                                              "h": 81
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 542,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "bg": "rgb(255, 255, 255)",
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "group-9103",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 447,
+                                      "h": 93
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group-9100",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 447,
+                                          "h": 93
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 95,
+                                              "h": 83
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 51,
+                                              "h": 84
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 58,
+                                              "h": 93
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "vector-5",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 64,
+                                              "h": 76
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(238, 238, 238)",
+                                              "border": {
+                                                "width": 1,
+                                                "color": "rgb(56, 54, 54)"
+                                              },
+                                              "shadow": {
+                                                "x": 0,
+                                                "y": 1,
+                                                "blur": 4,
+                                                "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "frame",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 75,
+                                              "h": 74
+                                            },
+                                            "styles": {
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "vector-37",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 70,
+                                              "h": 81
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(238, 238, 238)",
+                                              "border": {
+                                                "width": 1,
+                                                "color": "rgb(56, 54, 54)"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "stars",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 31,
+                                      "h": 13
+                                    },
+                                    "content": "stars",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "mask",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 25,
+                                      "h": 13
+                                    },
+                                    "content": "mask",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "key",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 19,
+                                      "h": 13
+                                    },
+                                    "content": "key",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "moon",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 25,
+                                      "h": 13
+                                    },
+                                    "content": "moon",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "snowflake",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 55,
+                                      "h": 13
+                                    },
+                                    "content": "snowflake",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-3",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 168,
+                                      "h": 30
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-5",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 42,
+                                      "h": 31
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-6",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 45,
+                                      "h": 13
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-7",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 45,
+                                      "h": 13
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-8",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 48,
+                                      "h": 34
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-4",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 168,
+                                      "h": 30
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(45, 42, 41)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "frame",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 992,
+                              "h": 264
+                            },
+                            "styles": {
+                              "bg": "rgb(255, 255, 255)",
+                              "radius": 12,
+                              "layout": {
+                                "direction": "row",
+                                "gap": 24,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 992,
+                                  "h": 264
+                                },
+                                "styles": {
+                                  "radius": 12,
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "image-158",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 992,
+                                      "h": 264
+                                    },
+                                    "styles": {
+                                      "radius": 38
+                                    }
+                                  },
+                                  {
+                                    "name": "group-9108",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 861,
+                                      "h": 232
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "image-159",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 164,
+                                          "h": 164
+                                        }
+                                      },
+                                      {
+                                        "name": "image-160",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 53,
+                                          "h": 164
+                                        }
+                                      },
+                                      {
+                                        "name": "image-161",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 53,
+                                          "h": 164
+                                        }
+                                      },
+                                      {
+                                        "name": "image-163",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 53,
+                                          "h": 164
+                                        }
+                                      },
+                                      {
+                                        "name": "image-164",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 53,
+                                          "h": 164
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "group-9107",
+                                    "type": "GROUP",
+                                    "size": {
+                                      "w": 888,
+                                      "h": 274
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "image-151",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 112,
+                                          "h": 112
+                                        }
+                                      },
+                                      {
+                                        "name": "image-152",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 115,
+                                          "h": 115
+                                        }
+                                      },
+                                      {
+                                        "name": "image-155",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 66,
+                                          "h": 104
+                                        },
+                                        "styles": {
+                                          "radius": 5
+                                        }
+                                      },
+                                      {
+                                        "name": "image-156",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 117,
+                                          "h": 117
+                                        }
+                                      },
+                                      {
+                                        "name": "group-9150",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 172,
+                                          "h": 274
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "image-162",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 53,
+                                              "h": 164
+                                            }
+                                          },
+                                          {
+                                            "name": "image-157",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 123,
+                                              "h": 123
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "424-1",
+                                        "type": "RECTANGLE",
+                                        "size": {
+                                          "w": 110,
+                                          "h": 110
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "thanks-to-the-different-elements-of-the-logo---you-can-create-various-objects-for-the-brand--such-as-icons-or-merch",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 413,
+                                      "h": 26
+                                    },
+                                    "content": "thanks to the different elements of the logo,  you can create various objects for the brand, such as icons or merch",
+                                    "styles": {
+                                      "bg": "rgb(56, 54, 54)",
+                                      "text": {
+                                        "family": "Oxygen Mono",
+                                        "size": 10,
+                                        "weight": "400",
+                                        "align": "left"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "frame-8577",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 992,
+                          "h": 678
+                        },
+                        "styles": {
+                          "bg": "rgb(243, 243, 243)",
+                          "radius": 12,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "full-social-media-support",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 104,
+                              "h": 26
+                            },
+                            "content": "full social media support",
+                            "styles": {
+                              "bg": "rgb(56, 54, 54)",
+                              "text": {
+                                "family": "Oxygen Mono",
+                                "size": 10,
+                                "weight": "400",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "group-9111",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 733,
+                              "h": 566
+                            },
+                            "children": [
+                              {
+                                "name": "image-110",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 183,
+                                  "h": 327
+                                },
+                                "styles": {
+                                  "radius": 11,
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 4,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "group-9110",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 733,
+                                  "h": 138
+                                },
+                                "children": [
+                                  {
+                                    "name": "image-130",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 138,
+                                      "h": 138
+                                    },
+                                    "styles": {
+                                      "radius": 12,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-131",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 138,
+                                      "h": 138
+                                    },
+                                    "styles": {
+                                      "radius": 12,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-144",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 138,
+                                      "h": 138
+                                    },
+                                    "styles": {
+                                      "radius": 12,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-145",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 138,
+                                      "h": 138
+                                    },
+                                    "styles": {
+                                      "radius": 12,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-109",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 138,
+                                      "h": 138
+                                    },
+                                    "styles": {
+                                      "radius": 10,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "group-9109",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 491,
+                                  "h": 390
+                                },
+                                "children": [
+                                  {
+                                    "name": "vector",
+                                    "type": "VECTOR",
+                                    "size": {
+                                      "w": 155,
+                                      "h": 88
+                                    },
+                                    "styles": {
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 3,
+                                        "blur": 3,
+                                        "color": "rgba(0, 0, 0, 0.25)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "image-111",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 184,
+                                      "h": 327
+                                    },
+                                    "styles": {
+                                      "radius": 11,
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "iphone-14-pro",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 193,
+                                      "h": 390
+                                    },
+                                    "styles": {
+                                      "shadow": {
+                                        "x": 0,
+                                        "y": 4,
+                                        "blur": 4,
+                                        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                      },
+                                      "layout": {
+                                        "direction": "row",
+                                        "gap": 0,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "start"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "body",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 189,
+                                          "h": 390
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "screen-background",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 189,
+                                              "h": 390
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)",
+                                              "radius": 30
+                                            }
+                                          },
+                                          {
+                                            "name": "screen",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 171,
+                                              "h": 373
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "buttons",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 192,
+                                          "h": 86
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "--button",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 2,
+                                              "h": 26
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)"
+                                            }
+                                          },
+                                          {
+                                            "name": "--button",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 1,
+                                              "h": 26
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)"
+                                            }
+                                          },
+                                          {
+                                            "name": "silence-button",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 1,
+                                              "h": 14
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)"
+                                            }
+                                          },
+                                          {
+                                            "name": "power-button",
+                                            "type": "VECTOR",
+                                            "size": {
+                                              "w": 1,
+                                              "h": 41
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "front-camera",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 49,
+                                          "h": 13
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "rectangle",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 49,
+                                              "h": 13
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(44, 44, 44)",
+                                              "radius": 6
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "frame-8578",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 992,
+                          "h": 590
+                        },
+                        "styles": {
+                          "bg": "rgb(243, 243, 243)",
+                          "radius": 12,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "merch-print",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 104,
+                              "h": 13
+                            },
+                            "content": "merch&print",
+                            "styles": {
+                              "bg": "rgb(56, 54, 54)",
+                              "text": {
+                                "family": "Oxygen Mono",
+                                "size": 10,
+                                "weight": "400",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "frame-9180",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 397,
+                              "h": 545
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "group-1321314410",
+                                "type": "GROUP",
+                                "size": {
+                                  "w": 397,
+                                  "h": 545
+                                },
+                                "children": [
+                                  {
+                                    "name": "frame-9178",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 397,
+                                      "h": 272
+                                    },
+                                    "styles": {
+                                      "radius": 6,
+                                      "layout": {
+                                        "direction": "row",
+                                        "gap": 0,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "start"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group-1321314409",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 397,
+                                          "h": 272
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "image-196",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 199,
+                                              "h": 272
+                                            }
+                                          },
+                                          {
+                                            "name": "frame-9176",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 199,
+                                              "h": 272
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(251, 131, 63)",
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "frame-9179",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 397,
+                                      "h": 272
+                                    },
+                                    "styles": {
+                                      "radius": 6,
+                                      "layout": {
+                                        "direction": "row",
+                                        "gap": 0,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "start"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "group-1321314409",
+                                        "type": "GROUP",
+                                        "size": {
+                                          "w": 489,
+                                          "h": 286
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "image-196",
+                                            "type": "RECTANGLE",
+                                            "size": {
+                                              "w": 199,
+                                              "h": 272
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(166, 211, 255)"
+                                            }
+                                          },
+                                          {
+                                            "name": "group-8581",
+                                            "type": "GROUP",
+                                            "size": {
+                                              "w": 429,
+                                              "h": 286
+                                            }
+                                          },
+                                          {
+                                            "name": "frame-9176",
+                                            "type": "FRAME",
+                                            "size": {
+                                              "w": 199,
+                                              "h": 272
+                                            },
+                                            "styles": {
+                                              "bg": "rgb(0, 126, 250)",
+                                              "layout": {
+                                                "direction": "row",
+                                                "gap": 0,
+                                                "align": {
+                                                  "main": "start",
+                                                  "cross": "start"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 72,
+                                  "h": 330
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 131, 63)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 66,
+                                  "h": 88
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 131, 63)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 375,
+                                  "h": 341
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 131, 63)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "frame-9183",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 354,
+                              "h": 432
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "image-198",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 294,
+                                  "h": 432
+                                },
+                                "styles": {
+                                  "radius": 9
+                                }
+                              },
+                              {
+                                "name": "vector-5",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 90,
+                                  "h": 122
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector-5",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 62,
+                                  "h": 47
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector-5",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 16,
+                                  "h": 2
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector-5",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 122,
+                                  "h": 107
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector-6",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 54,
+                                  "h": 176
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "vector-6",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 68,
+                                  "h": 53
+                                },
+                                "styles": {
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(251, 251, 251)"
+                                  },
+                                  "shadow": {
+                                    "x": 0,
+                                    "y": 1,
+                                    "blur": 4,
+                                    "color": "rgba(12, 12, 13, 0.05000000074505806)"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-51",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 975,
+                      "h": 183
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 84,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-47",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 975,
+                          "h": 183
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 197,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame-44",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 975,
+                              "h": 183
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "column",
+                                "gap": 48,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "montenegro-abilka-space--mini-brand-identity",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 861,
+                                  "h": 87
+                                },
+                                "content": "montenegro\\abilka space  mini-brand identity",
+                                "styles": {
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 45,
+                                    "weight": "900",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "frame-27",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 975,
+                                  "h": 48
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": 18,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "-",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 975,
+                                      "h": 13
+                                    },
+                                    "content": "#",
+                                    "styles": {
+                                      "bg": "rgb(80, 80, 80)",
+                                      "text": {
+                                        "family": "Inter",
+                                        "size": 13,
+                                        "weight": "600",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "frame-11",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 975,
+                                      "h": 17
+                                    },
+                                    "styles": {
+                                      "layout": {
+                                        "direction": "row",
+                                        "gap": 31,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "center"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "education",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 78,
+                                          "h": 13
+                                        },
+                                        "content": "education",
+                                        "styles": {
+                                          "bg": "rgb(30, 30, 30)",
+                                          "text": {
+                                            "family": "Inter",
+                                            "size": 13,
+                                            "weight": "600",
+                                            "align": "left"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "name": "brand-identity",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 111,
+                                          "h": 13
+                                        },
+                                        "content": "brand identity",
+                                        "styles": {
+                                          "bg": "rgb(30, 30, 30)",
+                                          "text": {
+                                            "family": "Inter",
+                                            "size": 13,
+                                            "weight": "600",
+                                            "align": "left"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "name": "social-media",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 95,
+                                          "h": 13
+                                        },
+                                        "content": "social media",
+                                        "styles": {
+                                          "bg": "rgb(30, 30, 30)",
+                                          "text": {
+                                            "family": "Inter",
+                                            "size": 13,
+                                            "weight": "600",
+                                            "align": "left"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "name": "concept",
+                                        "type": "TEXT",
+                                        "size": {
+                                          "w": 65,
+                                          "h": 13
+                                        },
+                                        "content": "concept",
+                                        "styles": {
+                                          "bg": "rgb(30, 30, 30)",
+                                          "text": {
+                                            "family": "Inter",
+                                            "size": 13,
+                                            "weight": "600",
+                                            "align": "left"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "vector",
+        "type": "VECTOR",
+        "size": {
+          "w": 24,
+          "h": 16
+        },
+        "styles": {
+          "bg": "rgb(0, 44, 218)",
+          "shadow": {
+            "x": 0,
+            "y": 1,
+            "blur": 4,
+            "color": "rgba(12, 12, 13, 0.05000000074505806)"
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 1,
+    "frames": 51,
+    "texts": 36,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}
