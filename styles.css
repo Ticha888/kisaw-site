@@ -162,6 +162,10 @@ a {
     padding-left: 244px;
 }
 
+.frozenbro-page .main-left {
+    padding-top: 88px;
+}
+
 .main-title {
     font-size: 45px;
     font-weight: 900;
@@ -1258,6 +1262,7 @@ a {
 
 .abilka-main-left {
     padding-left: 244px;
+    padding-top: 88px;
 }
 
 .abilka-tags {
@@ -1267,7 +1272,7 @@ a {
 .abilka-section {
     width: 952px;
     max-width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 64px;
 }
 
 .abilka-section-first {
@@ -1333,57 +1338,61 @@ a {
 }
 
 .abilka-palette {
-    border: 1px solid #dddddd;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+}
+
+.abilka-palette-item {
+    height: 60px;
+    min-height: 60px;
+    padding: 10px 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: 'Oxygen Mono', monospace;
     border-radius: 8px;
-    padding: 20px 24px;
-    background: #ffffff;
 }
 
-.abilka-palette-bars {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    overflow: hidden;
-    border-radius: 6px;
-    margin-bottom: 16px;
+.abilka-palette-hex {
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.abilka-palette-bars span {
-    display: block;
-    height: 42px;
+.abilka-palette-label {
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.abilka-palette-meta {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 12px;
+.abilka-palette-item-1 {
+    background: #383636;
+    color: #a6d3ff;
 }
 
-.abilka-palette-meta p {
-    font-size: 12px;
-    line-height: 1.35;
+.abilka-palette-item-2 {
+    background: #fb833f;
     color: #383636;
 }
 
-.designer-card-abilka {
-    width: 402px;
-    padding: 14px 18px;
-    margin-top: -8px;
+.abilka-palette-item-3 {
+    background: #007efa;
+    color: #2c2c2c;
 }
 
-.designer-card-abilka .role {
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    margin-bottom: 1px;
+.abilka-palette-item-4 {
+    background: #a6d3ff;
+    color: #383636;
 }
 
-.designer-card-abilka .name {
-    font-size: 16px;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
+.abilka-palette-item-5 {
+    background: #eeeeee;
+    color: #383636;
 }
 
-.designer-card-abilka .years {
-    font-size: 16px;
+.abilka-after-pair {
+    margin-top: 24px;
 }
 
 @media (max-width: 1100px) {
@@ -1407,19 +1416,23 @@ a {
         flex: 0 0 auto;
         width: 100%;
     }
+
+    .abilka-after-pair {
+        margin-top: 24px;
+    }
 }
 
 @media (max-width: 800px) {
-    .abilka-palette-bars {
+    .abilka-palette {
         grid-template-columns: 1fr;
     }
 
-    .abilka-palette-meta {
-        grid-template-columns: 1fr;
-        gap: 10px;
+    .abilka-palette-item {
+        min-height: auto;
     }
 
-    .designer-card-abilka {
-        width: 100%;
+    .abilka-palette-label {
+        white-space: normal;
     }
+
 }
