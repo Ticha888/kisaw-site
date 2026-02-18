@@ -73,6 +73,20 @@ body {
     z-index: 1;
 }
 
+.sticky-sidebar-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    --sticky-overlap: clamp(25px, calc(1488px - 100vw), 72px);
+}
+
+.sticky-sidebar-layer .sticky-sidebar {
+    margin-right: 0;
+    left: max(0px, calc((100vw - 1488px) / 2));
+    transform: translateX(calc(-100% + var(--sticky-overlap))) rotate(180deg);
+}
+
 .sticky-sidebar span {
     text-transform: uppercase;
 }
@@ -1113,6 +1127,10 @@ a {
     }
 
     .sticky-sidebar {
+        display: none;
+    }
+
+    .sticky-sidebar-layer {
         display: none;
     }
 
