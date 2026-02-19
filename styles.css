@@ -1279,7 +1279,7 @@ a {
 }
 
 .sticky-sidebar-drweedy {
-    background: #ce91e1;
+    background: #EE716C;
 }
 
 .abilka-main-left {
@@ -1445,13 +1445,81 @@ a {
 }
 
 .drweedy-buttons {
-    background: #ce91e1;
+    background: rgb(228, 236, 243);
+    border-radius: 40px;
+    padding: 8px;
+    gap: 8px;
+}
+
+.drweedy-buttons .btn {
+    height: 48px;
+    border-radius: 40px;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: rgb(56, 96, 136);
+    background: transparent;
+}
+
+.drweedy-buttons .btn.black {
+    min-width: 110px;
+}
+
+.drweedy-buttons .btn.purple {
+    min-width: 112px;
+}
+
+.drweedy-buttons .btn.black.active,
+.drweedy-buttons .btn.black:hover {
+    background: rgb(238, 113, 108);
+    color: rgb(255, 255, 255);
+}
+
+.drweedy-buttons .btn.purple.active,
+.drweedy-buttons .btn.purple:hover {
+    background: rgb(56, 96, 136);
+    color: rgb(255, 255, 255);
+}
+
+.drweedy-buttons .btn:focus-visible {
+    outline: 2px solid rgba(56, 96, 136, 0.45);
+    outline-offset: 2px;
 }
 
 .drweedy-grid-three {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+}
+
+.drweedy-brandbook-section {
+    width: 1040px;
+    max-width: 100%;
+}
+
+.drweedy-brandbook-section .drweedy-grid-three {
+    grid-template-columns: repeat(3, 330px);
+    justify-content: center;
+}
+
+.drweedy-brandbook-title {
+    margin-bottom: 8px;
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.55;
+    text-transform: none;
+}
+
+.drweedy-brandbook-section .drweedy-grid-image {
+    width: 330px;
+    height: 324px;
+    border-radius: 12px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
+    object-fit: fill;
 }
 
 .drweedy-grid-image {
@@ -1528,6 +1596,10 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .drweedy-brandbook-section .drweedy-grid-three {
+        grid-template-columns: repeat(2, 330px);
+    }
+
     .drweedy-history-figure {
         max-width: 100%;
     }
@@ -1548,6 +1620,20 @@ a {
 
     .drweedy-copy {
         font-size: 16px;
+    }
+
+    .drweedy-buttons {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .drweedy-buttons .btn {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .drweedy-brandbook-section .drweedy-grid-three {
+        grid-template-columns: 330px;
     }
 
 }
