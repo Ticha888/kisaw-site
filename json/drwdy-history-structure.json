@@ -1,7 +1,7 @@
 {
   "metadata": {
     "exportedAt": "2026-02-18T19:23:13.832Z",
-    "componentName": "WEEDY_HISTORY",
+    "componentName": "WDY_HISTORY",
     "totalElements": 552,
     "nestingDepth": 11,
     "plugin": "Figma to JSON Exporter"
@@ -190,7 +190,7 @@
     }
   },
   "structure": {
-    "name": "weedy_history",
+    "name": "drwdy_history",
     "type": "FRAME",
     "size": {
       "w": 1920,
@@ -638,13 +638,13 @@
                 }
               },
               {
-                "name": "dr-weedy",
+                "name": "dr-wdy",
                 "type": "TEXT",
                 "size": {
                   "w": 327,
                   "h": 90
                 },
-                "content": "dr.weedy",
+                "content": "dr.wdy",
                 "styles": {
                   "bg": "rgb(30, 30, 30)",
                   "text": {
@@ -938,13 +938,13 @@
                                     }
                                   },
                                   {
-                                    "name": "dr-weedy-com",
+                                    "name": "dr-wdy-com",
                                     "type": "TEXT",
                                     "size": {
                                       "w": 51,
                                       "h": 8
                                     },
-                                    "content": "dr-weedy.com",
+                                    "content": "dr-wdy.com",
                                     "styles": {
                                       "bg": "rgb(238, 113, 108)",
                                       "text": {
@@ -3656,13 +3656,13 @@
                                     }
                                   },
                                   {
-                                    "name": "dr-weedy",
+                                    "name": "dr-wdy",
                                     "type": "TEXT",
                                     "size": {
                                       "w": 70,
                                       "h": 31
                                     },
-                                    "content": "Dr.Weedy",
+                                    "content": "Dr.WDY",
                                     "styles": {
                                       "text": {
                                         "family": "Oswald",
@@ -6170,13 +6170,13 @@
                                     ]
                                   },
                                   {
-                                    "name": "from-dr-weedy-",
+                                    "name": "from-dr-wdy-",
                                     "type": "TEXT",
                                     "size": {
                                       "w": 49,
                                       "h": 5
                                     },
-                                    "content": "from Dr.Weedy!",
+                                    "content": "from Dr.WDY!",
                                     "styles": {
                                       "bg": "rgb(255, 255, 255)",
                                       "text": {

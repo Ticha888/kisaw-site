@@ -1,7 +1,7 @@
 {
   "metadata": {
     "exportedAt": "2026-02-18T19:08:43.954Z",
-    "componentName": "WEEDY_VISUALS",
+    "componentName": "WDY_VISUALS",
     "totalElements": 992,
     "nestingDepth": 11,
     "plugin": "Figma to JSON Exporter"
@@ -195,7 +195,7 @@
     }
   },
   "structure": {
-    "name": "weedy_visuals",
+    "name": "drwdy_visuals",
     "type": "FRAME",
     "size": {
       "w": 1920,
@@ -643,13 +643,13 @@
                 }
               },
               {
-                "name": "dr-weedy",
+                "name": "dr-wdy",
                 "type": "TEXT",
                 "size": {
                   "w": 327,
                   "h": 90
                 },
-                "content": "dr.weedy",
+                "content": "dr.wdy",
                 "styles": {
                   "bg": "rgb(255, 255, 255)",
                   "text": {
@@ -1371,13 +1371,13 @@
                                     }
                                   },
                                   {
-                                    "name": "dr-weedy-is-not-just-one-doctor---we-are-a-healthcare-digital-company-uniting-dozens-of-top-qualified-state-licensed-doctors--large-trusted-dispensaries-and-client-oriented-managers--yea--all-this-crowd-of-people-is-here-and-ready-to-offer-you-a-fast-and-convenient-service--being-true-mmj-ambassadors--we-strive-to-educate-people-about-the-healing-power-of-cannabis--our-mission-in-dr-weedy-is-to-popularize-medical-marijuana-as-a-highly-effective-organic-cure-for-a-wide-range-of-diseases--setting-it-apart-from-the-plants-acceptable-for-recreational-use--and-we-try-to-do-it-in-an-amusing-and-light-manner--are-you-with-us--then-let-s-start-our-path-to-recovery-and-enlightenment-together-",
+                                    "name": "dr-wdy-is-not-just-one-doctor---we-are-a-healthcare-digital-company-uniting-dozens-of-top-qualified-state-licensed-doctors--large-trusted-dispensaries-and-client-oriented-managers--yea--all-this-crowd-of-people-is-here-and-ready-to-offer-you-a-fast-and-convenient-service--being-true-mmj-ambassadors--we-strive-to-educate-people-about-the-healing-power-of-cannabis--our-mission-in-dr-wdy-is-to-popularize-medical-marijuana-as-a-highly-effective-organic-cure-for-a-wide-range-of-diseases--setting-it-apart-from-the-plants-acceptable-for-recreational-use--and-we-try-to-do-it-in-an-amusing-and-light-manner--are-you-with-us--then-let-s-start-our-path-to-recovery-and-enlightenment-together-",
                                     "type": "TEXT",
                                     "size": {
                                       "w": 293,
                                       "h": 126
                                     },
-                                    "content": "Dr.Weedy is not just one doctor – we are a healthcare digital company uniting dozens of top qualified state-licensed doctors, large trusted dispensaries and client-oriented managers. Yea, all this crowd of people is here and ready to offer you a fast and convenient service. \n\r\nBeing true MMJ ambassadors, we strive to educate people about the healing power of cannabis. \nOur mission in Dr.Weedy is to popularize medical marijuana as a highly effective organic cure for a wide range of diseases, setting it apart from the plants acceptable for recreational use. \nAnd we try to do it in an amusing and light manner.\r\n\r\nAre you with us? Then let’s start our path to recovery and enlightenment together!",
+                                    "content": "Dr.WDY is not just one doctor – we are a healthcare digital company uniting dozens of top qualified state-licensed doctors, large trusted dispensaries and client-oriented managers. Yea, all this crowd of people is here and ready to offer you a fast and convenient service. \n\r\nBeing true MMJ ambassadors, we strive to educate people about the healing power of cannabis. \nOur mission in Dr.WDY is to popularize medical marijuana as a highly effective organic cure for a wide range of diseases, setting it apart from the plants acceptable for recreational use. \nAnd we try to do it in an amusing and light manner.\r\n\r\nAre you with us? Then let’s start our path to recovery and enlightenment together!",
                                     "styles": {
                                       "text": {
                                         "family": "Montserrat",
@@ -2358,13 +2358,13 @@
                                     }
                                   },
                                   {
-                                    "name": "the-path-of-our-logo-comes-from-the-name-of-the-company-doctor-weedy--which-in-turn-has-an-abbreviated-version-of-dr-wdy-the---dot-and-double-e-s-are-converted-to-a-square-shape-that-can-enclose-graphic-elements-",
+                                    "name": "the-path-of-our-logo-comes-from-the-name-of-the-company-doctor-wdy--which-in-turn-has-an-abbreviated-version-of-dr-wdy-the---dot-and-double-e-s-are-converted-to-a-square-shape-that-can-enclose-graphic-elements-",
                                     "type": "TEXT",
                                     "size": {
                                       "w": 147,
                                       "h": 78
                                     },
-                                    "content": "The path of our logo comes from the name of the company Doctor Weedy, which in turn has an abbreviated version of Dr.Wdy\n\nThe . dot and double E's are converted to a square shape that can enclose graphic elements.",
+                                    "content": "The path of our logo comes from the name of the company Dr WDY, which in turn has an abbreviated version of Dr.Wdy\n\nThe . dot and double E's are converted to a square shape that can enclose graphic elements.",
                                     "styles": {
                                       "text": {
                                         "family": "Montserrat",
@@ -10951,13 +10951,13 @@
                                 ]
                               },
                               {
-                                "name": "from-dr-weedy-",
+                                "name": "from-dr-wdy-",
                                 "type": "TEXT",
                                 "size": {
                                   "w": 71,
                                   "h": 8
                                 },
-                                "content": "from Dr.Weedy!",
+                                "content": "from Dr.WDY!",
                                 "styles": {
                                   "bg": "rgb(255, 255, 255)",
                                   "text": {
