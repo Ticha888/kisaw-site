@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "exportedAt": "2026-02-27T19:21:27.516Z",
+    "componentName": "Form",
+    "totalElements": 20,
+    "nestingDepth": 7,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(53, 53, 53)": "rgb(53, 53, 53)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)",
+      "color-rgb(249, 249, 249)": "rgb(249, 249, 249)",
+      "color-rgb(0, 0, 0)": "rgb(0, 0, 0)",
+      "color-rgb(217, 217, 217)": "rgb(217, 217, 217)",
+      "color-rgb(71, 225, 148)": "rgb(71, 225, 148)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)"
+    },
+    "fonts": {
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-75": "75px",
+          "size-22": "22px"
+        },
+        "weights": {
+          "weight-900": "900",
+          "weight-600": "600",
+          "weight-700": "700"
+        }
+      }
+    },
+    "spacing": {
+      "padding-top-72": "72px",
+      "padding-right-80": "80px",
+      "padding-bottom-72": "72px",
+      "padding-left-80": "80px",
+      "gap-15": "15px",
+      "gap-60": "60px",
+      "gap-50": "50px",
+      "gap-65": "65px",
+      "gap-42": "42px",
+      "gap-9": "9px",
+      "padding-top-7": "7px",
+      "padding-right-4": "4px",
+      "padding-bottom-7": "7px",
+      "padding-left-4": "4px",
+      "gap-12": "12px"
+    },
+    "effects": {}
+  },
+  "structure": {
+    "name": "form",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 725
+    },
+    "styles": {
+      "bg": "rgb(53, 53, 53)",
+      "radius": 15,
+      "layout": {
+        "direction": "column",
+        "gap": 15,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        },
+        "padding": [
+          72,
+          80,
+          72,
+          80
+        ]
+      }
+    },
+    "children": [
+      {
+        "name": "frame-1321314490",
+        "type": "FRAME",
+        "size": {
+          "w": 1280,
+          "h": 580
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1321314489",
+            "type": "FRAME",
+            "size": {
+              "w": 609,
+              "h": 380
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 60,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "drop-your-quest-here",
+                "type": "TEXT",
+                "size": {
+                  "w": 609,
+                  "h": 145
+                },
+                "content": "Drop Your Quest Here",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 75,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "tell-us-about-your-project--we-ll-review-what-you-have--listen-to-your-ideas--and-propose-a-clear-direction-for-how-the-project-should-look--sound--and-communicate-",
+                "type": "TEXT",
+                "size": {
+                  "w": 508,
+                  "h": 175
+                },
+                "content": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                "styles": {
+                  "text": {
+                    "family": "Inter",
+                    "size": 22,
+                    "weight": "600",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "frame-1321314488",
+            "type": "FRAME",
+            "size": {
+              "w": 671,
+              "h": 580
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 50,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "frame-1321314485",
+                "type": "FRAME",
+                "size": {
+                  "w": 671,
+                  "h": 476
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 65,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "frame-1321314484",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 671,
+                      "h": 130
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 42,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-1321314482",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 671,
+                          "h": 44
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 9,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "name",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 671,
+                              "h": 35
+                            },
+                            "content": "Name",
+                            "styles": {
+                              "bg": "rgb(249, 249, 249)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 22,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "line-40",
+                            "type": "LINE",
+                            "size": {
+                              "w": 671,
+                              "h": 0
+                            },
+                            "styles": {
+                              "border": {
+                                "width": 1,
+                                "color": "rgb(249, 249, 249)"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "frame-1321314483",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 671,
+                          "h": 44
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 9,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "email",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 671,
+                              "h": 35
+                            },
+                            "content": "Email",
+                            "styles": {
+                              "bg": "rgb(249, 249, 249)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 22,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "line-40",
+                            "type": "LINE",
+                            "size": {
+                              "w": 671,
+                              "h": 0
+                            },
+                            "styles": {
+                              "border": {
+                                "width": 1,
+                                "color": "rgb(249, 249, 249)"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-1321314487",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 671,
+                      "h": 281
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "rectangle-42121481",
+                        "type": "RECTANGLE",
+                        "size": {
+                          "w": 671,
+                          "h": 281
+                        },
+                        "styles": {
+                          "bg": "rgb(0, 0, 0)",
+                          "border": {
+                            "width": 1,
+                            "color": "rgb(249, 249, 249)"
+                          },
+                          "radius": 15
+                        }
+                      },
+                      {
+                        "name": "rectangle-42121482",
+                        "type": "RECTANGLE",
+                        "size": {
+                          "w": 12,
+                          "h": 49
+                        },
+                        "styles": {
+                          "bg": "rgb(217, 217, 217)",
+                          "radius": 15
+                        }
+                      },
+                      {
+                        "name": "tell-us-about-your-project-and-task",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 374,
+                          "h": 35
+                        },
+                        "content": "Tell us about your project and task",
+                        "styles": {
+                          "bg": "rgb(249, 249, 249)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 22,
+                            "weight": "600",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "frame-1321314448",
+                "type": "FRAME",
+                "size": {
+                  "w": 287,
+                  "h": 55
+                },
+                "styles": {
+                  "bg": "rgb(71, 225, 148)",
+                  "border": {
+                    "width": 4,
+                    "color": "rgb(71, 225, 148)"
+                  },
+                  "radius": 11,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 12,
+                    "align": {
+                      "main": "center",
+                      "cross": "center"
+                    },
+                    "padding": [
+                      7,
+                      4,
+                      7,
+                      4
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "here-s-my-project",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 232,
+                      "h": 22
+                    },
+                    "content": "Here’s my project",
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 22,
+                        "weight": "700",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 10,
+    "texts": 6,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}

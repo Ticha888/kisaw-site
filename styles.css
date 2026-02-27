@@ -59,7 +59,7 @@ body {
     top: 64px;
     height: fit-content;
     background: #E4C1F5;
-    border-radius: 12px;
+    border-radius: 0 12px 12px 0;
     padding: 40px 16px;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -584,12 +584,14 @@ a {
     width: 40vw;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
 }
 
 .main-row+.designer-card {
-    z-index: 2;
+    margin-top: -12px;
     margin-bottom: -8px;
-    box-shadow: #DDDDDD 0px 4px 8px 0px
+    z-index: 1;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .designer-img {
@@ -658,6 +660,10 @@ a {
     background: #4CAF50;
     color: #fff;
     border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     padding: 10px 24px;
     border-radius: 24px;
     font-size: 14px;
@@ -671,6 +677,163 @@ a {
 .send-signal-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    color: #fff;
+}
+
+.send-signal-btn:focus-visible {
+    color: #fff;
+}
+
+/* Request Form (Main Page) */
+.request-form-section {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    margin-right: -80px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: rgb(53, 53, 53);
+    padding: 72px 80px;
+    overflow: hidden;
+}
+
+.request-form-layout {
+    display: grid;
+    grid-template-columns: 609px 671px;
+    gap: 0;
+    align-items: start;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.request-form-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    color: rgb(251, 251, 251);
+    padding-right: 40px;
+}
+
+.request-form-title {
+    font-size: clamp(42px, 4.2vw, 75px);
+    line-height: 0.97;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgb(251, 251, 251);
+}
+
+.request-form-description {
+    width: min(508px, 100%);
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(249, 249, 249);
+    text-transform: uppercase;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.request-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+.request-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.request-input-group label {
+    color: rgba(249, 249, 249, 0.58);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.request-input-group input[type="text"],
+.request-input-group input[type="email"] {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
+    font-size: 22px;
+    line-height: 1.4;
+    padding: 2px 0 4px;
+    caret-color: rgb(249, 249, 249);
+}
+
+.request-input-group input::placeholder,
+.request-input-group textarea::placeholder {
+    color: rgba(249, 249, 249, 0.45);
+}
+
+.request-textarea-group textarea {
+    width: 100%;
+    height: 281px;
+    min-height: 281px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgb(249, 249, 249);
+    border-radius: 15px;
+    color: rgb(249, 249, 249);
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 18px 20px 16px;
+    resize: vertical;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(249, 249, 249, 0.95) transparent;
+}
+
+.request-textarea-group textarea::-webkit-scrollbar {
+    width: 14px;
+}
+
+.request-textarea-group textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.request-textarea-group textarea::-webkit-scrollbar-thumb {
+    background: rgba(249, 249, 249, 0.95);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.request-submit-btn {
+    width: 287px;
+    height: 55px;
+    border: 4px solid rgb(71, 225, 148);
+    background: rgb(71, 225, 148);
+    border-radius: 11px;
+    color: rgb(30, 30, 30);
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.request-submit-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+}
+
+.request-input-group input:focus,
+.request-input-group textarea:focus,
+.request-submit-btn:focus-visible {
+    outline: 2px solid rgba(71, 225, 148, 0.85);
+    outline-offset: 2px;
 }
 
 /* Hero Section */
@@ -1195,6 +1358,51 @@ a {
         width: 100%;
         padding: 12px 20px;
     }
+
+    .request-form-section {
+        width: calc(100% + 44px);
+        margin-left: -22px;
+        margin-right: -22px;
+        padding: 40px 22px;
+    }
+
+    .request-form-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .request-form-copy {
+        gap: 24px;
+        padding-right: 0;
+    }
+
+    .request-form-title {
+        font-size: 42px;
+    }
+
+    .request-form-description {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .request-input-group label {
+        font-size: 18px;
+    }
+
+    .request-input-group input[type="text"],
+    .request-input-group input[type="email"] {
+        font-size: 18px;
+    }
+
+    .request-textarea-group textarea {
+        height: 170px;
+        min-height: 170px;
+        font-size: 16px;
+    }
+
+    .request-submit-btn {
+        width: 100%;
+    }
 }
 
 /* Lightbox & Hover Effects */
@@ -1280,6 +1488,11 @@ a {
 
 .sticky-sidebar-drwdy {
     background: #EE716C;
+}
+
+.sticky-sidebar-bb {
+    background: #CEE3EF;
+    color: #434343;
 }
 
 .abilka-main-left {
@@ -1485,6 +1698,38 @@ a {
 
 .drwdy-buttons .btn:focus-visible {
     outline: 2px solid rgba(56, 96, 136, 0.45);
+    outline-offset: 2px;
+}
+
+/* Boiling Brains tabs (from tabspanel-structure-bb.json) */
+.bb-buttons {
+    background: rgb(206, 227, 239);
+    border-radius: 40px;
+    padding: 4px;
+    gap: 8px;
+}
+
+.bb-buttons .btn {
+    height: 48px;
+    border-radius: 40px;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: rgb(67, 67, 67);
+    background: transparent;
+}
+
+.bb-buttons .btn.black.active,
+.bb-buttons .btn.black:hover,
+.bb-buttons .btn.purple.active,
+.bb-buttons .btn.purple:hover {
+    background: rgb(238, 239, 205);
+    color: rgb(67, 67, 67);
+}
+
+.bb-buttons .btn:focus-visible {
+    outline: 2px solid rgba(67, 67, 67, 0.3);
     outline-offset: 2px;
 }
 

@@ -36,7 +36,7 @@
                         <a href="#cases">CASES</a>
                         <a href="#about">ABOUT</a>
                         <a href="#services">SERVICES</a>
-                        <button class="send-signal-btn">SEND THE SIGNAL</button>
+                        <a href="#request-form" class="send-signal-btn">SEND THE SIGNAL</a>
                     </nav>
                 </header>
                 <!-- Hero Section -->
@@ -123,7 +123,7 @@
                             <!-- Row 2 -->
                             <div class="cases-row">
                                 <!-- Boiling Brains Card -->
-                                <div class="case-card">
+                                <a href="boilingbrains.html" class="case-card case-card-link">
                                     <div class="case-card-image boiling-bg">
                                         <img src="img/imgs_for_main/BB_cover.png" alt="Boiling Brains">
                                     </div>
@@ -138,7 +138,7 @@
                                             <span>personal branding</span>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
                                 <!-- Dr.WDY Card -->
                                 <a href="drwdy.html" class="case-card case-card-link">
@@ -158,6 +158,40 @@
                                     </div>
                                 </a>
                             </div>
+                        </div>
+                    </section>
+
+                    <section id="request-form" class="request-form-section">
+                        <div class="request-form-layout">
+                            <div id="about" class="request-form-copy">
+                                <h2 class="request-form-title">Drop Your Quest Here</h2>
+                                <p class="request-form-description">
+                                    Tell us about your project. We’ll review what you have, listen to your ideas, and
+                                    propose a clear direction for how the project should look, sound, and communicate.
+                                </p>
+                            </div>
+
+                            <form id="services" class="request-form" action="#" method="post" enctype="multipart/form-data">
+                                <div class="request-form-fields">
+                                    <div class="request-input-group">
+                                        <label for="request-name">Name</label>
+                                        <input id="request-name" name="name" type="text" autocomplete="name">
+                                    </div>
+
+                                    <div class="request-input-group">
+                                        <label for="request-email">Email</label>
+                                        <input id="request-email" name="email" type="email" autocomplete="email">
+                                    </div>
+
+                                    <div class="request-input-group request-textarea-group">
+                                        <label for="request-message">Tell us about your project and task</label>
+                                        <textarea id="request-message" name="message"
+                                            placeholder="Tell us about your project and task" rows="6"></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="request-submit-btn">HERE’S MY PROJECT</button>
+                            </form>
                         </div>
                     </section>
                 </main>
