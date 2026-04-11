@@ -874,15 +874,18 @@ a {
 /* HELPER ROW */
 .request-helper-row {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 8px;
 }
 
 .helper-text {
+    text-transform: uppercase;
     font-size: 14px;
-    font-weight: 500;
-    color: rgba(251, 251, 251, 0.8);
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #9E9E9E;
 }
 
 .state-voice .helper-text {

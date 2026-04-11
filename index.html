@@ -267,10 +267,14 @@
 
                                         <!-- Helper text and Media Controls Container -->
                                         <div class="request-helper-row">
-                                            <div class="helper-text" id="helper-status"></div>
+                                            <div class="helper-text" id="helper-status">If you can’t be bothered to type, just say what’s on your mind.</div>
                                             <div class="helper-icons">
-                                                <button type="button" class="icon-btn btn-mic-toggle">🎙</button>
-                                                <button type="button" class="icon-btn btn-clip-toggle">📎</button>
+                                                <button type="button" class="icon-btn btn-mic-toggle">
+                                                    <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                                </button>
+                                                <button type="button" class="icon-btn btn-clip-toggle">
+                                                    <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -278,17 +282,7 @@
 
                                 <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY
                                     PROJECT</button>
-
-                                <!-- State Toggle Demo Buttons (Temporary for testing) -->
-                                <div class="form-demo-toggles">
-                                    <button type="button" onclick="setFormState('default')">Default</button>
-                                    <button type="button" onclick="setFormState('error')">Error</button>
-                                    <button type="button" onclick="setFormState('voice')">Voice Rec</button>
-                                    <button type="button" onclick="setFormState('files')">Files</button>
-                                    <button type="button"
-                                        onclick="document.getElementById('success-modal').style.display='flex'">Success</button>
-                                </div>
-                            </form>
+                                </form>
                         </div>
                     </section>
                 </main>
@@ -388,7 +382,7 @@
             } else {
                 form.classList.add('state-default');
                 submitBtn.textContent = "HERE'S MY PROJECT";
-                helperStatus.textContent = '';
+                helperStatus.textContent = 'If you can’t be bothered to type, just say what’s on your mind.';
             }
         }
     </script>
