@@ -200,26 +200,6 @@
                                         <div class="request-files-section">
                                             <div class="files-label">ATTACHED FILES</div>
                                             <div class="files-list">
-                                                <div class="file-item">
-                                                    <div class="file-info-left">
-                                                        <span class="file-icon">📄</span>
-                                                        <div class="file-details">
-                                                            <span class="file-name">brand_brief.pdf</span>
-                                                            <span class="file-size">2.4 MB</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="file-remove">✕</span>
-                                                </div>
-                                                <div class="file-item">
-                                                    <div class="file-info-left">
-                                                        <span class="file-icon">🖼️</span>
-                                                        <div class="file-details">
-                                                            <span class="file-name">reference_mockup.png</span>
-                                                            <span class="file-size">5.1 MB</span>
-                                                        </div>
-                                                    </div>
-                                                    <span class="file-remove">✕</span>
-                                                </div>
                                             </div>
                                         </div>
 
@@ -261,7 +241,7 @@
                                             <div class="voice-controls">
                                                 <button type="button" class="btn-stop-record"><span
                                                         class="stop-icon"></span></button>
-                                                <div class="btn-mic-active">🎙</div>
+                                                <!-- <div class="btn-mic-active">🎙</div> -->
                                             </div>
                                         </div>
 
@@ -272,6 +252,7 @@
                                                 <button type="button" class="icon-btn btn-mic-toggle">
                                                     <img src="img/Mic.svg" alt="Mic" width="28" height="28">
                                                 </button>
+                                                <input type="file" id="request-file-upload" accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
                                                 <button type="button" class="icon-btn btn-clip-toggle">
                                                     <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
                                                 </button>
@@ -355,36 +336,256 @@
 
     <!-- JS script for form states -->
     <script>
-        function setFormState(state) {
+        document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('services');
-            const submitBtn = document.getElementById('btn-submit');
+            if (!form) return;
+
+            const fileInput = document.getElementById('request-file-upload');
+            const clipBtn = form.querySelector('.btn-clip-toggle');
+            const micBtn = form.querySelector('.btn-mic-toggle');
+            const filesListContainer = form.querySelector('.files-list');
             const helperStatus = document.getElementById('helper-status');
+            const submitBtn = document.getElementById('btn-submit');
+            
+            const stopRecordBtn = form.querySelector('.btn-stop-record');
+            const voiceTimer = form.querySelector('.recording-timer');
+            
+            let selectedFiles = [];
+            const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20 MB
 
-            // Remove all specific states
-            form.classList.remove('state-default', 'state-error', 'state-voice', 'state-files');
-            // Remove error class from groups
-            document.querySelectorAll('.request-input-group').forEach(el => el.classList.remove('has-error'));
+            let mediaRecorder;
+            let audioChunks = [];
+            let recordInterval;
+            let recordStartTime;
 
-            if (state === 'error') {
-                form.classList.add('state-default');
-                document.getElementById('group-name').classList.add('has-error');
-                document.getElementById('group-email').classList.add('has-error');
-                submitBtn.textContent = "HERE'S MY PROJECT";
-                helperStatus.textContent = '';
-            } else if (state === 'voice') {
-                form.classList.add('state-voice');
-                submitBtn.textContent = 'SEND VOICE MESSAGE';
-                helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
-            } else if (state === 'files') {
-                form.classList.add('state-files');
-                submitBtn.textContent = "HERE'S MY PROJECT";
-                helperStatus.textContent = '2 FILES ATTACHED (7.5 MB TOTAL)';
-            } else {
-                form.classList.add('state-default');
-                submitBtn.textContent = "HERE'S MY PROJECT";
-                helperStatus.textContent = 'If you can’t be bothered to type, just say what’s on your mind.';
+            let audioContext;
+            let analyser;
+            let dataArray;
+            let animationId;
+
+            // --- FILE UPLOAD LOGIC ---
+            if (clipBtn && fileInput) {
+                clipBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if(form.classList.contains('state-voice')) return; // Disabled while recording
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener('change', (e) => {
+                    const newFiles = Array.from(e.target.files);
+                    addFiles(newFiles);
+                    fileInput.value = ''; 
+                });
             }
-        }
+
+            function addFiles(newFiles) {
+                const validFiles = [];
+                newFiles.forEach(f => {
+                    if (f.size > MAX_FILE_SIZE) {
+                        alert(`File ${f.name} is too large. Max size is 20MB.`);
+                    } else {
+                        if (!selectedFiles.find(extF => extF.name === f.name && extF.size === f.size)) {
+                            validFiles.push(f);
+                        }
+                    }
+                });
+                
+                selectedFiles = [...selectedFiles, ...validFiles];
+                updateFilesUI();
+            }
+
+            // Delegation for remove buttons
+            if (filesListContainer) {
+                filesListContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('file-remove')) {
+                        const idx = parseInt(e.target.getAttribute('data-index'));
+                        selectedFiles.splice(idx, 1);
+                        updateFilesUI();
+                    }
+                });
+            }
+
+            function updateFilesUI() {
+                if (!filesListContainer) return;
+                filesListContainer.innerHTML = '';
+                
+                let totalBytes = 0;
+                selectedFiles.forEach((file, index) => {
+                    totalBytes += file.size;
+                    
+                    const item = document.createElement('div');
+                    item.className = 'file-item';
+                    
+                    const isImage = file.type.startsWith('image/');
+                    const icon = isImage ? '🖼️' : '📄';
+                    const sizeStr = formatBytes(file.size);
+                    
+                    item.innerHTML = `
+                        <div class="file-info-left">
+                            <span class="file-icon">${icon}</span>
+                            <div class="file-details">
+                                <span class="file-name">${file.name}</span>
+                                <span class="file-size">${sizeStr}</span>
+                            </div>
+                        </div>
+                        <span class="file-remove" data-index="${index}">✕</span>
+                    `;
+                    
+                    filesListContainer.appendChild(item);
+                });
+                
+                if (selectedFiles.length > 0) {
+                    form.classList.remove('state-default', 'state-error', 'state-voice');
+                    form.classList.add('state-files');
+                    
+                    const totalSizeStr = formatBytes(totalBytes);
+                    const fileCountStr = selectedFiles.length === 1 ? '1 FILE' : `${selectedFiles.length} FILES`;
+                    if (helperStatus) {
+                        helperStatus.textContent = `${fileCountStr} ATTACHED (${totalSizeStr} TOTAL)`;
+                    }
+                    submitBtn.textContent = "HERE'S MY PROJECT";
+                } else {
+                    form.classList.remove('state-files', 'state-voice');
+                    form.classList.add('state-default');
+                    if (helperStatus) {
+                        helperStatus.textContent = 'If you can’t be bothered to type, just say what’s on your mind.';
+                    }
+                    submitBtn.textContent = "HERE'S MY PROJECT";
+                }
+            }
+            
+            function formatBytes(bytes, decimals = 1) {
+                if (!+bytes) return '0 Bytes';
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+            }
+
+            // --- VOICE RECORDING LOGIC ---
+            if (micBtn && stopRecordBtn && voiceTimer) {
+                micBtn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    if(form.classList.contains('state-voice')) return; // Already recording
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        startRecording(stream);
+                    } catch (err) {
+                        console.error("Error accessing microphone:", err);
+                        alert("Microphone access is required to record a voice message.");
+                    }
+                });
+
+                stopRecordBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    stopRecording();
+                });
+            }
+
+            // Also stop recording if main submit button is clicked during recording
+            submitBtn.addEventListener('click', (e) => {
+                if(form.classList.contains('state-voice')) {
+                    e.preventDefault();
+                    stopRecording();
+                } else {
+                    // Normal form submission
+                    e.preventDefault();
+                    const sModal = document.getElementById('success-modal');
+                    if(sModal) sModal.style.display = 'flex';
+                }
+            });
+
+            function startRecording(stream) {
+                form.classList.remove('state-default', 'state-error', 'state-files');
+                form.classList.add('state-voice');
+                
+                if (helperStatus) helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
+                if (submitBtn) submitBtn.textContent = 'STOP & SAVE RECORDING';
+
+                audioChunks = [];
+                mediaRecorder = new MediaRecorder(stream);
+                
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+                
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    const fileName = `voice_message_${new Date().toISOString().replace(/[:.]/g, '-')}.webm`;
+                    const audioFile = new File([audioBlob], fileName, { type: 'audio/webm', lastModified: Date.now() });
+                    
+                    addFiles([audioFile]);
+                    
+                    stream.getTracks().forEach(track => track.stop());
+                };
+                
+                mediaRecorder.start();
+                
+                recordStartTime = Date.now();
+                voiceTimer.textContent = '00:00';
+                clearInterval(recordInterval);
+                recordInterval = setInterval(updateTimer, 1000);
+
+                // Setup AudioContext for visualization
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                const source = audioContext.createMediaStreamSource(stream);
+                source.connect(analyser);
+                analyser.fftSize = 64; // Small size for performance and general volume
+                const bufferLength = analyser.frequencyBinCount;
+                dataArray = new Uint8Array(bufferLength);
+                
+                drawWaveform();
+            }
+
+            function drawWaveform() {
+                if (!form.classList.contains('state-voice')) return;
+                
+                animationId = requestAnimationFrame(drawWaveform);
+                analyser.getByteFrequencyData(dataArray);
+                
+                const waveBars = form.querySelectorAll('.wave-bar');
+                // We have ~22 bars, map values from frequency data
+                for (let i = 0; i < waveBars.length; i++) {
+                    // Use a slightly shifted index to pick up varied frequencies
+                    const dataIndex = Math.floor(i * (dataArray.length / waveBars.length));
+                    const val = dataArray[dataIndex] / 255;
+                    // Scale from 0.1 to 1.8 depending on volume
+                    const scale = 0.1 + (val * 1.7);
+                    waveBars[i].style.transform = `scaleY(${scale})`;
+                }
+            }
+
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                    mediaRecorder.stop();
+                }
+                clearInterval(recordInterval);
+                
+                // Cleanup AudioContext
+                cancelAnimationFrame(animationId);
+                if (audioContext && audioContext.state !== 'closed') {
+                    audioContext.close();
+                }
+                // Reset bars transform
+                form.querySelectorAll('.wave-bar').forEach(b => b.style.transform = '');
+            }
+
+            function updateTimer() {
+                const diff = Math.floor((Date.now() - recordStartTime) / 1000);
+                
+                // 2-minute constraint (120 seconds)
+                if (diff >= 120) {
+                    stopRecording();
+                    return;
+                }
+                
+                const mins = String(Math.floor(diff / 60)).padStart(2, '0');
+                const secs = String(diff % 60).padStart(2, '0');
+                if (voiceTimer) voiceTimer.textContent = `${mins}:${secs}`;
+            }
+        });
     </script>
 </body>
 

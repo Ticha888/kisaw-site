@@ -1071,6 +1071,11 @@ a {
     opacity: 0.4;
 }
 
+@keyframes wave-pulse {
+    0%, 100% { transform: scaleY(0.7); }
+    50% { transform: scaleY(1.3); }
+}
+
 .voice-controls {
     display: flex;
     align-items: center;
