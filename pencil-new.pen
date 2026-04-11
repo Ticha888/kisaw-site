@@ -1,0 +1,2475 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "mKskf",
+      "x": 920,
+      "y": 58,
+      "name": "Form",
+      "reusable": true,
+      "clip": true,
+      "width": 1440,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "vertical",
+      "padding": [
+        72,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "QsF3z",
+          "name": "Frame 1321314490",
+          "width": "fill_container",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.2478337287902832
+          },
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "k5BCi",
+              "name": "Frame 1321314489",
+              "width": 569,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tKGNn",
+                  "name": "Drop Your Quest Here",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DROP YOUR \nQUEST HERE",
+                  "fontFamily": "Inter",
+                  "fontSize": 60,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "ZEmvt",
+                  "name": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TELL US ABOUT YOUR PROJECT. WE'LL REVIEW WHAT YOU HAVE, LISTEN TO YOUR IDEAS, AND PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qGgdG",
+              "name": "Frame 1321314488",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NBor2",
+                  "name": "Frame 1321314485",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1.2478337287902832
+                  },
+                  "layout": "vertical",
+                  "gap": 48,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uOBNM",
+                      "name": "Frame 1321314484",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1.2478337287902832
+                      },
+                      "layout": "vertical",
+                      "gap": 42.42634582519531,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lX7oR",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aaBfH",
+                              "name": "Name",
+                              "opacity": 0.5,
+                              "fill": "#fbfbfbff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "NAME",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "VxuZs",
+                              "name": "Line 40",
+                              "fill": "#fbfbfbff",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 1.2478337287902832,
+                                "fill": "#fbfbfbff"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gmsNn",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0ge4i",
+                              "name": "email",
+                              "opacity": 0.5,
+                              "fill": "#f9f9f9ff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "EMAIL",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "DvzDN",
+                              "name": "Line 40",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 1.2478337287902832,
+                                "fill": "#f9f9f9ff"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zp8Qf",
+                      "name": "Frame 2131327961",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "bNyzs",
+                          "name": "TextArea",
+                          "width": 671,
+                          "height": 260,
+                          "fill": {
+                            "type": "color",
+                            "color": "#f9f9f9ff",
+                            "enabled": false
+                          },
+                          "cornerRadius": 12,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832,
+                            "fill": "#fbfbfbff"
+                          },
+                          "gap": 272,
+                          "padding": [
+                            14,
+                            4,
+                            218,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KNuCY",
+                              "name": "Tell us about your project and task",
+                              "fill": "#9e9e9eff",
+                              "content": "Tell us about your project and task",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 12,
+                              "id": "qeugg",
+                              "name": "Rectangle 42121482",
+                              "enabled": false,
+                              "fill": "#d9d9d9ff",
+                              "width": 12,
+                              "height": 48,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1.2478337287902832
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TjlzZ",
+                          "name": "Frame 2131327960",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          },
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2AU7o",
+                              "name": "If you can’t be bothered to type, just say what’s on your mind.",
+                              "opacity": 0.5,
+                              "fill": "#f9f9f9ff",
+                              "textGrowth": "fixed-width",
+                              "width": 538,
+                              "content": "IF YOU CAN'T BE BOTHERED TO TYPE, JUST SAY WHAT'S ON YOUR MIND.",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "8WTTe",
+                              "name": "Frame 1321314493",
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 0.6216216087341309
+                              },
+                              "gap": 9.324323654174805,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Zz8ko",
+                                  "name": "Mic.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "wxtJL",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "kCNxC",
+                                          "x": 5.834000110626221,
+                                          "y": 1.1670000553131104,
+                                          "geometry": "M16.333 10.5l0 2.333c-0.00055 4.50973-3.65627 8.16545-8.166 8.166m0 0c-2.16593 0.00026-4.24324-0.85996-5.77488-2.39141-1.53164-1.53145-2.39212-3.60866-2.39212-5.77459l0-2.334m8.167 10.5l0 4.667m-4.667 0l9.333 0m-4.666-25.666c-1.933 0-3.5 1.567-3.5 3.5l0 9.333c0 1.25043 0.6671 2.40587 1.75 3.03109 1.0829 0.62521 2.4171 0.62521 3.5 0 1.08291-0.62522 1.75-1.78066 1.75-3.03109l0-9.333c0-1.933-1.567-3.5-3.5-3.5",
+                                          "width": 16.33299970626831,
+                                          "height": 25.66600012779236,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "sBUwx",
+                                  "name": "Paperclip.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "KfajK",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "A499O",
+                                          "x": 2.307917833328247,
+                                          "y": 1.6859354972839355,
+                                          "geometry": "M22.70608 11.20606l-10.722 10.721c-1.76606 1.78572-4.35306 2.48915-6.7802 1.8436-2.42714-0.64555-4.32284-2.54125-4.96839-4.9684-0.64555-2.42714 0.05787-5.01414 1.84359-6.7802l10.723-10.721c1.8338-1.76038 4.73878-1.73072 6.53625 0.06675 1.79747 1.79747 1.82713 4.70245 0.06675 6.53625l-10.733 10.722c-0.91182 0.91182-2.39018 0.91182-3.302 0-0.91182-0.91182-0.91182-2.39018 0-3.302l9.905-9.89299",
+                                          "width": 22.706082105636597,
+                                          "height": 24.00614595413208,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "s53e7",
+                  "name": "Button",
+                  "width": "fit_content(254)",
+                  "fill": {
+                    "type": "color",
+                    "color": "#ffffffff",
+                    "enabled": false
+                  },
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HovdE",
+                      "name": "Button size=big",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "#47e194ff",
+                      "cornerRadius": 12,
+                      "padding": [
+                        8,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZozJI",
+                          "name": "here's my project",
+                          "fill": "#1e1e1eff",
+                          "content": "HERE'S MY PROJECT",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "4GXBM",
+      "x": 2455,
+      "y": 58,
+      "name": "Form - Filled",
+      "clip": true,
+      "width": 1440,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "vertical",
+      "padding": [
+        72,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "OxjvY",
+          "name": "Frame 1321314490",
+          "width": "fill_container",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.2478337287902832
+          },
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "FsRhf",
+              "name": "Frame 1321314489",
+              "width": 569,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 59.896018981933594,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "whggE",
+                  "name": "Drop Your Quest Here",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DROP YOUR \nQUEST HERE",
+                  "fontFamily": "Inter",
+                  "fontSize": 60,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "RhReR",
+                  "name": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TELL US ABOUT YOUR PROJECT. WE'LL REVIEW WHAT YOU HAVE, LISTEN TO YOUR IDEAS, AND PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VkiKq",
+              "name": "Frame 1321314488",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ftPUL",
+                  "name": "Frame 1321314485",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1.2478337287902832
+                  },
+                  "layout": "vertical",
+                  "gap": 48,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7E65C",
+                      "name": "Frame 1321314484",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1.2478337287902832
+                      },
+                      "layout": "vertical",
+                      "gap": 42.42634582519531,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gORJa",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "3sO6R",
+                              "name": "Name",
+                              "fill": "#fbfbfbff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "John Doe",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "pg4Fe",
+                              "name": "Line 40",
+                              "fill": "#fbfbfbff",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 1.2478337287902832,
+                                "fill": "#fbfbfbff"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cjVPj",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "UGrZX",
+                              "name": "email",
+                              "fill": "#f9f9f9ff",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "john.doe@example.com",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "Om6fb",
+                              "name": "Line 40",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 1.2478337287902832,
+                                "fill": "#f9f9f9ff"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xayhU",
+                      "name": "Frame 2131327961",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DGumH",
+                          "name": "TextArea",
+                          "width": 671,
+                          "height": 260,
+                          "fill": {
+                            "type": "color",
+                            "color": "#f9f9f9ff",
+                            "enabled": false
+                          },
+                          "cornerRadius": 12,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832,
+                            "fill": "#fbfbfbff"
+                          },
+                          "gap": 272,
+                          "padding": [
+                            14,
+                            4,
+                            218,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "peBwl",
+                              "name": "Tell us about your project and task",
+                              "fill": "#fbfbfb",
+                              "content": "We need a web application to be built next month.",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 12,
+                              "id": "CZZL4",
+                              "name": "Rectangle 42121482",
+                              "enabled": false,
+                              "fill": "#d9d9d9ff",
+                              "width": 12,
+                              "height": 48,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1.2478337287902832
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "3qC1B",
+                          "name": "Frame 2131327960",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          },
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2OonS",
+                              "name": "If you can’t be bothered to type, just say what’s on your mind.",
+                              "opacity": 0.5,
+                              "fill": "#f9f9f9ff",
+                              "textGrowth": "fixed-width",
+                              "width": 538,
+                              "content": "IF YOU CAN'T BE BOTHERED TO TYPE, JUST SAY WHAT'S ON YOUR MIND.",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "gYCbC",
+                              "name": "Frame 1321314493",
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 0.6216216087341309
+                              },
+                              "gap": 9.324323654174805,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Ue4U4",
+                                  "name": "Mic.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "e7MRk",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "qvmII",
+                                          "x": 5.834000110626221,
+                                          "y": 1.1670000553131104,
+                                          "geometry": "M16.333 10.5l0 2.333c-0.00055 4.50973-3.65627 8.16545-8.166 8.166m0 0c-2.16593 0.00026-4.24324-0.85996-5.77488-2.39141-1.53164-1.53145-2.39212-3.60866-2.39212-5.77459l0-2.334m8.167 10.5l0 4.667m-4.667 0l9.333 0m-4.666-25.666c-1.933 0-3.5 1.567-3.5 3.5l0 9.333c0 1.25043 0.6671 2.40587 1.75 3.03109 1.0829 0.62521 2.4171 0.62521 3.5 0 1.08291-0.62522 1.75-1.78066 1.75-3.03109l0-9.333c0-1.933-1.567-3.5-3.5-3.5",
+                                          "width": 16.33299970626831,
+                                          "height": 25.66600012779236,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "S53Ff",
+                                  "name": "Paperclip.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "mkkcc",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "e8g1m",
+                                          "x": 2.307917833328247,
+                                          "y": 1.6859354972839355,
+                                          "geometry": "M22.70608 11.20606l-10.722 10.721c-1.76606 1.78572-4.35306 2.48915-6.7802 1.8436-2.42714-0.64555-4.32284-2.54125-4.96839-4.9684-0.64555-2.42714 0.05787-5.01414 1.84359-6.7802l10.723-10.721c1.8338-1.76038 4.73878-1.73072 6.53625 0.06675 1.79747 1.79747 1.82713 4.70245 0.06675 6.53625l-10.733 10.722c-0.91182 0.91182-2.39018 0.91182-3.302 0-0.91182-0.91182-0.91182-2.39018 0-3.302l9.905-9.89299",
+                                          "width": 22.706082105636597,
+                                          "height": 24.00614595413208,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YAUvK",
+                  "name": "Button",
+                  "width": "fit_content(254)",
+                  "fill": {
+                    "type": "color",
+                    "color": "#ffffffff",
+                    "enabled": false
+                  },
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SeU6Q",
+                      "name": "Button size=big",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "#47e194ff",
+                      "cornerRadius": 12,
+                      "padding": [
+                        8,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "khyNQ",
+                          "name": "here's my project",
+                          "fill": "#1e1e1eff",
+                          "content": "HERE'S MY PROJECT",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "onRS3",
+      "x": 920.3498991775868,
+      "y": 926.5182121690054,
+      "name": "Form - Error",
+      "clip": true,
+      "width": 1440,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "vertical",
+      "padding": [
+        72,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "B8M3e",
+          "name": "Frame 1321314490",
+          "width": "fill_container",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.2478337287902832
+          },
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Mjpov",
+              "name": "Frame 1321314489",
+              "width": 569,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gTPFr",
+                  "name": "Drop Your Quest Here",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DROP YOUR \nQUEST HERE",
+                  "fontFamily": "Inter",
+                  "fontSize": 60,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "frame",
+                  "id": "iD8D5",
+                  "name": "Frame 2131327962",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sj9Kj",
+                      "name": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                      "fill": "#46e195ff",
+                      "textGrowth": "fixed-width",
+                      "width": 390,
+                      "content": "TELL US ABOUT YOUR PROJECT. ",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w3rn0",
+                      "name": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                      "fill": "#fbfbfbff",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "WE'LL REVIEW WHAT YOU HAVE, LISTEN TO YOUR IDEAS, AND PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mVVct",
+              "name": "Frame 1321314488",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.2478337287902832
+              },
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Dx5IK",
+                  "name": "Frame 1321314485",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1.2478337287902832
+                  },
+                  "layout": "vertical",
+                  "gap": 48,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wxjmD",
+                      "name": "Frame 1321314484",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1.2478337287902832
+                      },
+                      "layout": "vertical",
+                      "gap": 42.42634582519531,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KiCrb",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "3FBxd",
+                              "name": "Name",
+                              "fill": "#ff4444",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "NAME",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "9EBSE",
+                              "name": "Line 40",
+                              "fill": "#fbfbfbff",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 2,
+                                "fill": "#ff4444"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TWFVd",
+                          "name": "Input",
+                          "width": 673.33447265625,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NRhqK",
+                              "name": "email",
+                              "fill": "#ff4444",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "EMAIL IS REQUIRED",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "line",
+                              "id": "Ynrep",
+                              "name": "Line 40",
+                              "width": "fill_container",
+                              "height": 0,
+                              "stroke": {
+                                "align": "center",
+                                "thickness": 2,
+                                "fill": "#ff4444"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NkQPJ",
+                      "name": "Frame 2131327961",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XTBNc",
+                          "name": "TextArea",
+                          "width": 671,
+                          "height": 260,
+                          "fill": {
+                            "type": "color",
+                            "color": "#f9f9f9ff",
+                            "enabled": false
+                          },
+                          "cornerRadius": 12,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1.2478337287902832,
+                            "fill": "#fbfbfbff"
+                          },
+                          "gap": 272,
+                          "padding": [
+                            14,
+                            4,
+                            218,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YQemY",
+                              "name": "Tell us about your project and task",
+                              "fill": "#9e9e9eff",
+                              "content": "Tell us about your project and task",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 12,
+                              "id": "PmLbT",
+                              "name": "Rectangle 42121482",
+                              "enabled": false,
+                              "fill": "#d9d9d9ff",
+                              "width": 12,
+                              "height": 48,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1.2478337287902832
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hUZtP",
+                          "name": "Frame 2131327960",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          },
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "j0A5C",
+                              "name": "If you can’t be bothered to type, just say what’s on your mind.",
+                              "opacity": 0.5,
+                              "fill": "#f9f9f9ff",
+                              "textGrowth": "fixed-width",
+                              "width": 538,
+                              "content": "IF YOU CAN'T BE BOTHERED TO TYPE, JUST SAY WHAT'S ON YOUR MIND.",
+                              "lineHeight": 1.5399999618530273,
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "7J3Gs",
+                              "name": "Frame 1321314493",
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 0.6216216087341309
+                              },
+                              "gap": 9.324323654174805,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "q7hIs",
+                                  "name": "Mic.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "3d1ES",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "1ggil",
+                                          "x": 5.834000110626221,
+                                          "y": 1.1670000553131104,
+                                          "geometry": "M16.333 10.5l0 2.333c-0.00055 4.50973-3.65627 8.16545-8.166 8.166m0 0c-2.16593 0.00026-4.24324-0.85996-5.77488-2.39141-1.53164-1.53145-2.39212-3.60866-2.39212-5.77459l0-2.334m8.167 10.5l0 4.667m-4.667 0l9.333 0m-4.666-25.666c-1.933 0-3.5 1.567-3.5 3.5l0 9.333c0 1.25043 0.6671 2.40587 1.75 3.03109 1.0829 0.62521 2.4171 0.62521 3.5 0 1.08291-0.62522 1.75-1.78066 1.75-3.03109l0-9.333c0-1.933-1.567-3.5-3.5-3.5",
+                                          "width": 16.33299970626831,
+                                          "height": 25.66600012779236,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "gdgC4",
+                                  "name": "Paperclip.svg",
+                                  "width": 28,
+                                  "height": 28,
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "group",
+                                      "id": "rhoxz",
+                                      "x": 0,
+                                      "y": 0,
+                                      "children": [
+                                        {
+                                          "type": "path",
+                                          "id": "CYLRP",
+                                          "x": 2.307917833328247,
+                                          "y": 1.6859354972839355,
+                                          "geometry": "M22.70608 11.20606l-10.722 10.721c-1.76606 1.78572-4.35306 2.48915-6.7802 1.8436-2.42714-0.64555-4.32284-2.54125-4.96839-4.9684-0.64555-2.42714 0.05787-5.01414 1.84359-6.7802l10.723-10.721c1.8338-1.76038 4.73878-1.73072 6.53625 0.06675 1.79747 1.79747 1.82713 4.70245 0.06675 6.53625l-10.733 10.722c-0.91182 0.91182-2.39018 0.91182-3.302 0-0.91182-0.91182-0.91182-2.39018 0-3.302l9.905-9.89299",
+                                          "width": 22.706082105636597,
+                                          "height": 24.00614595413208,
+                                          "stroke": {
+                                            "align": "center",
+                                            "thickness": 2.486,
+                                            "join": "round",
+                                            "cap": "round",
+                                            "fill": "#9E9E9E"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lscUP",
+                  "name": "Button",
+                  "width": "fit_content(254)",
+                  "fill": {
+                    "type": "color",
+                    "color": "#ffffffff",
+                    "enabled": false
+                  },
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RijXE",
+                      "name": "Button size=big",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "#47e194ff",
+                      "cornerRadius": 12,
+                      "padding": [
+                        8,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PblTB",
+                          "name": "here's my project",
+                          "fill": "#1e1e1eff",
+                          "content": "HERE'S MY PROJECT",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BJOGB",
+      "x": 920,
+      "y": 1781,
+      "name": "Form - Success Modal",
+      "clip": true,
+      "width": 1440,
+      "height": 680,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "2HwBB",
+          "x": 0,
+          "y": 0,
+          "name": "Overlay",
+          "fill": "#000000aa",
+          "width": 1440,
+          "height": 680
+        },
+        {
+          "type": "frame",
+          "id": "Rgmak",
+          "x": 480,
+          "y": 140,
+          "name": "Success Modal",
+          "width": 480,
+          "fill": "#2a2a2aff",
+          "cornerRadius": 16,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.5,
+            "fill": "#47e19440"
+          },
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            48,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bb1y0",
+              "name": "Success Icon Circle",
+              "width": 72,
+              "height": 72,
+              "fill": "#47e19420",
+              "cornerRadius": 36,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YECDk",
+                  "x": 20,
+                  "y": 14,
+                  "name": "Checkmark",
+                  "fill": "#47e194ff",
+                  "content": "✓",
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "CrvBX",
+              "name": "Success Title",
+              "fill": "#47e194ff",
+              "content": "QUEST SECURED",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 36,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "1TgI8",
+              "name": "Success Description",
+              "fill": "#fbfbfbcc",
+              "textGrowth": "fixed-width",
+              "width": 360,
+              "content": "Thanks for reaching out!\nWe will review your project and get back to you shortly.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "90W7Q",
+              "name": "Close Button",
+              "width": 200,
+              "height": 52,
+              "fill": "#47e194",
+              "cornerRadius": 12,
+              "padding": [
+                8,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X6Nwu",
+                  "name": "Button Text",
+                  "fill": "#1e1e1eff",
+                  "content": "GOT IT",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700",
+                  "fontStyle": "italic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XoO4z",
+      "x": 920,
+      "y": 2575,
+      "name": "Form - Voice Recording",
+      "clip": true,
+      "width": 1440,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "vertical",
+      "padding": [
+        72,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "qk3uS",
+          "name": "Content",
+          "width": "fill_container",
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "aWgUZ",
+              "name": "Left Column",
+              "width": 569,
+              "layout": "vertical",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ph3BL",
+                  "name": "Title",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DROP YOUR \nQUEST HERE",
+                  "fontFamily": "Inter",
+                  "fontSize": 60,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "4SEPH",
+                  "name": "Description",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TELL US ABOUT YOUR PROJECT. WE'LL REVIEW WHAT YOU HAVE, LISTEN TO YOUR IDEAS, AND PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OXpz9",
+              "name": "Right Column",
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mdnDH",
+                  "name": "Inputs",
+                  "width": 673,
+                  "layout": "vertical",
+                  "gap": 42,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qikU1",
+                      "name": "Input Name",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1KOOs",
+                          "name": "Name",
+                          "fill": "#fbfbfbff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "John Doe",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "line",
+                          "id": "9Zwar",
+                          "name": "Line",
+                          "width": "fill_container",
+                          "height": 0,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.25,
+                            "fill": "#fbfbfbff"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Cwt2w",
+                      "name": "Input Email",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tVFFd",
+                          "name": "Email",
+                          "fill": "#fbfbfbff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "john@example.com",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "line",
+                          "id": "IOw3m",
+                          "name": "Line",
+                          "width": "fill_container",
+                          "height": 0,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.25,
+                            "fill": "#fbfbfbff"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sS3gd",
+                  "name": "Recording Area",
+                  "width": 671,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FpwCC",
+                      "name": "Recording Panel",
+                      "width": "fill_container",
+                      "height": 260,
+                      "fill": "#2a2a2aff",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1.5,
+                        "fill": "#47e19460"
+                      },
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xIqi8",
+                          "name": "Recording Header",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "wrmG7",
+                              "name": "Recording Indicator",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "kjrKl",
+                                  "name": "Red Dot",
+                                  "fill": "#ff4444ff",
+                                  "width": 10,
+                                  "height": 10
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "wnkCI",
+                                  "name": "Recording Label",
+                                  "fill": "#ff4444ff",
+                                  "content": "RECORDING",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 14,
+                                  "fontWeight": "700",
+                                  "letterSpacing": 2
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "DYBeo",
+                              "name": "Timer",
+                              "fill": "#fbfbfbcc",
+                              "content": "01:24",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hkD3m",
+                          "name": "Waveform",
+                          "width": "fill_container",
+                          "height": 80,
+                          "gap": 3,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "9huAP",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 20
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "8nr9z",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 45
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "5lARi",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 30
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "dZ44Z",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 60
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "RJDZ8",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 35
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "IF7f3",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 55
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "eoUKU",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 25
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "hBr9k",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 50
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "seqGk",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 40
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "3o7kV",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 65
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "Q4xJW",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 30
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "xpjga",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 55
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "PzPqd",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 20
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "cA7zm",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 45
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "iNOX4",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 70
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "ga6FF",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 35
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "kVAOs",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 50
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "AfFqW",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 25
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "iExvu",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 60
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "goW5I",
+                              "name": "bar",
+                              "fill": "#47e194ff",
+                              "width": 4,
+                              "height": 40
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "Z5YmB",
+                              "name": "bar",
+                              "fill": "#47e19460",
+                              "width": 4,
+                              "height": 15
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "ynkT2",
+                              "name": "bar",
+                              "fill": "#47e19460",
+                              "width": 4,
+                              "height": 25
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "BpYyG",
+                              "name": "bar",
+                              "fill": "#47e19460",
+                              "width": 4,
+                              "height": 10
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "2tMsJ",
+                              "name": "bar",
+                              "fill": "#47e19460",
+                              "width": 4,
+                              "height": 20
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "53WvI",
+                          "name": "Controls",
+                          "width": "fill_container",
+                          "gap": 24,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "A2MDO",
+                              "name": "Stop Button",
+                              "width": 44,
+                              "height": 44,
+                              "fill": "#ff4444ff",
+                              "cornerRadius": 22,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 3,
+                                  "id": "OeAUq",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Stop Icon",
+                                  "fill": "#ffffffff",
+                                  "width": 16,
+                                  "height": 16
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "yIrpr",
+                              "name": "Mic Active",
+                              "width": 56,
+                              "height": 56,
+                              "fill": "#47e194ff",
+                              "cornerRadius": 28,
+                              "layout": "vertical",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DGEmd",
+                                  "name": "Mic Icon",
+                                  "content": "🎙",
+                                  "textAlign": "center",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 24,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ds9Mv",
+                      "name": "Helper Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kiCIo",
+                          "name": "Helper",
+                          "opacity": 0.8,
+                          "fill": "#47e194ff",
+                          "content": "RECORDING YOUR VOICE MESSAGE...",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tqb0f",
+                          "name": "Icons",
+                          "gap": 9,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2vK7u",
+                              "name": "Mic Icon",
+                              "fill": "#47e194ff",
+                              "content": "🎙",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nv8bg",
+                              "name": "Clip Icon",
+                              "fill": "#9E9E9Eff",
+                              "content": "📎",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CVbyf",
+                  "name": "Button",
+                  "width": "fit_content(254)",
+                  "fill": {
+                    "type": "color",
+                    "color": "#ffffffff",
+                    "enabled": false
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Qljvl",
+                      "name": "Button size=big",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "#47e194ff",
+                      "cornerRadius": 12,
+                      "padding": [
+                        8,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H3UMJ",
+                          "name": "Send Label",
+                          "fill": "#1e1e1eff",
+                          "content": "SEND VOICE MESSAGE",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "4FdSh",
+      "x": 904,
+      "y": 3515,
+      "name": "Form - File Attached",
+      "clip": true,
+      "width": 1440,
+      "height": 731,
+      "fill": "#353535ff",
+      "cornerRadius": 12,
+      "stroke": {
+        "align": "inside",
+        "thickness": 1.2478337287902832
+      },
+      "layout": "vertical",
+      "padding": [
+        72,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "y3CFv",
+          "name": "Content",
+          "width": "fill_container",
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "V7M6J",
+              "name": "Left Column",
+              "width": 569,
+              "layout": "vertical",
+              "gap": 60,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AE26W",
+                  "name": "Title",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DROP YOUR \nQUEST HERE",
+                  "fontFamily": "Inter",
+                  "fontSize": 60,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "ihaQH",
+                  "name": "Description",
+                  "fill": "#fbfbfbff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TELL US ABOUT YOUR PROJECT. WE'LL REVIEW WHAT YOU HAVE, LISTEN TO YOUR IDEAS, AND PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE",
+                  "fontFamily": "Inter",
+                  "fontSize": 24,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TiB6d",
+              "name": "Right Column",
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zmuAx",
+                  "name": "Inputs",
+                  "width": 673,
+                  "layout": "vertical",
+                  "gap": 42,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dXWyV",
+                      "name": "Input Name",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Hex0i",
+                          "name": "Name",
+                          "fill": "#fbfbfbff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "John Doe",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "line",
+                          "id": "6ISt0",
+                          "name": "Line",
+                          "width": "fill_container",
+                          "height": 0,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.25,
+                            "fill": "#fbfbfbff"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hcHQU",
+                      "name": "Input Email",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PUQJ3",
+                          "name": "Email",
+                          "fill": "#fbfbfbff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "john@example.com",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "line",
+                          "id": "KlARd",
+                          "name": "Line",
+                          "width": "fill_container",
+                          "height": 0,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.25,
+                            "fill": "#fbfbfbff"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NuqGP",
+                  "name": "TextArea and Files",
+                  "width": 671,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hwtwk",
+                      "name": "TextArea",
+                      "width": "fill_container",
+                      "height": 120,
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1.25,
+                        "fill": "#fbfbfbff"
+                      },
+                      "layout": "vertical",
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6rUIc",
+                          "name": "Message Text",
+                          "fill": "#fbfbfbff",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "We need a complete brand identity package including logo design, brand guidelines, and a website redesign.",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TQivH",
+                      "name": "Attached Files",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "qQrzS",
+                          "name": "Files Label",
+                          "fill": "#fbfbfb80",
+                          "content": "ATTACHED FILES",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IxO9i",
+                          "name": "File Item 1",
+                          "width": "fill_container",
+                          "fill": "#2a2a2aff",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#fbfbfb20"
+                          },
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "ds0qx",
+                              "name": "File Info",
+                              "gap": 10,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "z7EFw",
+                                  "name": "Icon",
+                                  "content": "📄",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 18,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "uPlL5",
+                                  "name": "Details",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "FQcIT",
+                                      "name": "Filename",
+                                      "fill": "#fbfbfbff",
+                                      "content": "brand_brief.pdf",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "38ajS",
+                                      "name": "Size",
+                                      "fill": "#fbfbfb60",
+                                      "content": "2.4 MB",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "EGRGH",
+                              "name": "Remove",
+                              "fill": "#fbfbfb60",
+                              "content": "✕",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mjtWr",
+                          "name": "File Item 2",
+                          "width": "fill_container",
+                          "fill": "#2a2a2aff",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#fbfbfb20"
+                          },
+                          "padding": [
+                            10,
+                            14
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "MMpUW",
+                              "name": "File Info",
+                              "gap": 10,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "n6U8p",
+                                  "name": "Icon",
+                                  "content": "🖼️",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 18,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "GKguI",
+                                  "name": "Details",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "OTfXK",
+                                      "name": "Filename",
+                                      "fill": "#fbfbfbff",
+                                      "content": "reference_mockup.png",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 14,
+                                      "fontWeight": "500"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "MUBE5",
+                                      "name": "Size",
+                                      "fill": "#fbfbfb60",
+                                      "content": "5.1 MB",
+                                      "fontFamily": "Inter",
+                                      "fontSize": 12,
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "oCfHV",
+                              "name": "Remove",
+                              "fill": "#fbfbfb60",
+                              "content": "✕",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CVFtD",
+                      "name": "Helper Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZY6Vp",
+                          "name": "Helper",
+                          "fill": "#fbfbfb80",
+                          "content": "2 FILES ATTACHED (7.5 MB TOTAL)",
+                          "lineHeight": 1.54,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RNSJk",
+                          "name": "Icons",
+                          "gap": 9,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Zr51K",
+                              "name": "Mic",
+                              "fill": "#9E9E9Eff",
+                              "content": "🎙",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "YrGqb",
+                              "name": "Clip",
+                              "fill": "#47e194ff",
+                              "content": "📎",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Qrktv",
+                  "name": "Button",
+                  "width": "fit_content(254)",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "YpkIw",
+                      "name": "Button size=big",
+                      "width": "fill_container",
+                      "height": 56,
+                      "fill": "#47e194ff",
+                      "cornerRadius": 12,
+                      "padding": [
+                        8,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mreCa",
+                          "name": "Send Label",
+                          "fill": "#1e1e1eff",
+                          "content": "HERE'S MY PROJECT",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700",
+                          "fontStyle": "italic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Theme": [
+      "Default"
+    ]
+  }
+}

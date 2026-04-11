@@ -1,0 +1,1416 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-07T19:33:59.033Z",
+    "componentName": "New Brand Package",
+    "totalElements": 73,
+    "nestingDepth": 9,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(184, 184, 184)": "rgb(184, 184, 184)",
+      "color-rgb(68, 131, 255)": "rgb(68, 131, 255)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(166, 211, 255)": "rgb(166, 211, 255)",
+      "color-rgb(53, 53, 53)": "rgb(53, 53, 53)",
+      "color-rgb(249, 249, 249)": "rgb(249, 249, 249)",
+      "color-rgb(217, 217, 217)": "rgb(217, 217, 217)",
+      "color-rgb(71, 225, 148)": "rgb(71, 225, 148)"
+    },
+    "fonts": {
+      "reenie-beanie": {
+        "family": "Reenie Beanie",
+        "sizes": {
+          "size-107": "107px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      },
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-18": "18px",
+          "size-16": "16px",
+          "size-26": "26px",
+          "size-60": "60px",
+          "size-24": "24px",
+          "size-38": "38px",
+          "size-75": "75px",
+          "size-22": "22px",
+          "size-14": "14px"
+        },
+        "weights": {
+          "weight-600": "600",
+          "weight-700": "700",
+          "weight-400": "400",
+          "weight-900": "900",
+          "weight-500": "500"
+        }
+      },
+      "arial": {
+        "family": "Arial",
+        "sizes": {
+          "size-24": "24px"
+        },
+        "weights": {
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {
+      "padding-top-21": "21px",
+      "padding-right-27": "27px",
+      "padding-bottom-21": "21px",
+      "padding-left-27": "27px",
+      "gap-10": "10px",
+      "gap-132": "132px",
+      "gap-80": "80px",
+      "gap-40": "40px",
+      "gap-72": "72px",
+      "gap-48": "48px",
+      "gap-32": "32px",
+      "gap-8": "8px",
+      "gap-83": "83px",
+      "padding-top-80": "80px",
+      "padding-bottom-80": "80px",
+      "gap-12": "12px",
+      "gap-212": "212px",
+      "gap-43": "43px",
+      "gap-52": "52px",
+      "gap-34": "34px",
+      "gap-7": "7px",
+      "gap-15": "15px",
+      "gap-9": "9px",
+      "padding-top-16": "16px",
+      "padding-right-21": "21px",
+      "padding-bottom-16": "16px",
+      "padding-left-21": "21px"
+    },
+    "effects": {
+      "shadow-4-4": {
+        "x": 0,
+        "y": 4,
+        "blur": 4,
+        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+      },
+      "shadow-16-16": {
+        "x": 0,
+        "y": 16,
+        "blur": 16,
+        "color": "rgba(12, 12, 13, 0.10000000149011612)"
+      }
+    }
+  },
+  "structure": {
+    "name": "new-brand-package",
+    "type": "FRAME",
+    "size": {
+      "w": 1671,
+      "h": 3660
+    },
+    "styles": {
+      "bg": "rgb(184, 184, 184)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-9158",
+        "type": "FRAME",
+        "size": {
+          "w": 654,
+          "h": 118
+        },
+        "styles": {
+          "bg": "rgb(68, 131, 255)",
+          "radius": 12,
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-596",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 654,
+              "h": 118
+            },
+            "styles": {
+              "bg": "rgb(30, 30, 30)"
+            }
+          },
+          {
+            "name": "image-181",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1063,
+              "h": 1103
+            }
+          },
+          {
+            "name": "new-brand-package",
+            "type": "TEXT",
+            "size": {
+              "w": 819,
+              "h": 93
+            },
+            "content": "New Brand Package",
+            "styles": {
+              "bg": "rgb(251, 251, 251)",
+              "text": {
+                "family": "Reenie Beanie",
+                "size": 107,
+                "weight": "400",
+                "align": "center"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "framer-tutorial",
+        "type": "FRAME",
+        "size": {
+          "w": 1440,
+          "h": 3494
+        },
+        "styles": {
+          "bg": "rgb(255, 255, 255)",
+          "radius": 12,
+          "shadow": {
+            "x": 0,
+            "y": 4,
+            "blur": 4,
+            "color": "rgba(12, 12, 13, 0.05000000074505806)"
+          },
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-30",
+            "type": "FRAME",
+            "size": {
+              "w": 203,
+              "h": 60
+            },
+            "styles": {
+              "bg": "rgb(30, 30, 30)",
+              "border": {
+                "width": 2,
+                "color": "rgb(233, 227, 220)"
+              },
+              "layout": {
+                "direction": "row",
+                "gap": 10,
+                "align": {
+                  "main": "center",
+                  "cross": "center"
+                },
+                "padding": [
+                  21,
+                  27,
+                  21,
+                  27
+                ]
+              }
+            },
+            "children": [
+              {
+                "name": "order-online",
+                "type": "TEXT",
+                "size": {
+                  "w": 133,
+                  "h": 17
+                },
+                "content": "Order Online",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "600",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "group-9169",
+            "type": "GROUP",
+            "size": {
+              "w": 1284,
+              "h": 33
+            },
+            "children": [
+              {
+                "name": "design",
+                "type": "TEXT",
+                "size": {
+                  "w": 68,
+                  "h": 17
+                },
+                "content": "design",
+                "styles": {
+                  "bg": "rgb(30, 30, 30)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "kisaw-print",
+                "type": "TEXT",
+                "size": {
+                  "w": 118,
+                  "h": 17
+                },
+                "content": "kisaw print",
+                "styles": {
+                  "bg": "rgb(166, 211, 255)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "about",
+                "type": "TEXT",
+                "size": {
+                  "w": 65,
+                  "h": 17
+                },
+                "content": "About",
+                "styles": {
+                  "bg": "rgb(30, 30, 30)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "faq",
+                "type": "TEXT",
+                "size": {
+                  "w": 36,
+                  "h": 17
+                },
+                "content": "FAQ",
+                "styles": {
+                  "bg": "rgb(30, 30, 30)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "contact",
+                "type": "TEXT",
+                "size": {
+                  "w": 90,
+                  "h": 17
+                },
+                "content": "contact",
+                "styles": {
+                  "bg": "rgb(30, 30, 30)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "design-studio-by-visual-enthusiasts",
+                "type": "TEXT",
+                "size": {
+                  "w": 328,
+                  "h": 18
+                },
+                "content": "Design studio by visual enthusiasts",
+                "styles": {
+                  "bg": "rgb(30, 30, 30)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 16,
+                    "weight": "400",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "group-9100",
+                "type": "GROUP",
+                "size": {
+                  "w": 131,
+                  "h": 33
+                },
+                "children": [
+                  {
+                    "name": "group-9100",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 131,
+                      "h": 33
+                    },
+                    "children": [
+                      {
+                        "name": "group-9099",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 131,
+                          "h": 33
+                        },
+                        "children": [
+                          {
+                            "name": "group-19",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 31,
+                              "h": 33
+                            },
+                            "children": [
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 32,
+                                  "h": 13
+                                },
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "border": {
+                                    "width": 0,
+                                    "color": "rgb(30, 30, 30)"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "kisaw",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 91,
+                              "h": 23
+                            },
+                            "content": "KisaW",
+                            "styles": {
+                              "bg": "rgb(30, 30, 30)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 26,
+                                "weight": "900",
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "frame-1321314511",
+            "type": "FRAME",
+            "size": {
+              "w": 1156,
+              "h": 2400
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 132,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "frame-1321314509",
+                "type": "FRAME",
+                "size": {
+                  "w": 1156,
+                  "h": 444
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 80,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "new-brand-package",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 684,
+                      "h": 44
+                    },
+                    "content": "New Brand Package",
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 60,
+                        "weight": "900",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "frame-1321314526",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1156,
+                      "h": 320
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 40,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "a-brand-package-is-a-complete-foundation-for-a-new-brand---built-from-scratch--with-a-clear-strategy-and-a-visual-language-that-works-from-day-one-",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 80
+                        },
+                        "content": "A BRAND PACKAGE IS A COMPLETE FOUNDATION FOR A NEW BRAND — BUILT FROM SCRATCH, WITH A CLEAR STRATEGY AND A VISUAL LANGUAGE THAT WORKS FROM DAY ONE.",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 24,
+                            "weight": "500",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "it-gives-your-business-a-name--a-voice--and-a-look-that-fits-together--no-patchwork--no-guessing--just-a-system-that-s-ready-to-launch-",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 80
+                        },
+                        "content": "IT GIVES YOUR BUSINESS A NAME, A VOICE, AND A LOOK THAT FITS TOGETHER. NO PATCHWORK. NO GUESSING. JUST A SYSTEM THAT'S READY TO LAUNCH.",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 24,
+                            "weight": "500",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "the-outcome-is-a-full-brand-identity---positioning--visuals--and-guidelines-your-team-can-use-immediately-",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 80
+                        },
+                        "content": "THE OUTCOME IS A FULL BRAND IDENTITY — POSITIONING, VISUALS, AND GUIDELINES YOUR TEAM CAN USE IMMEDIATELY.",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 24,
+                            "weight": "500",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "frame-1321314531",
+                "type": "FRAME",
+                "size": {
+                  "w": 1156,
+                  "h": 1824
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 72,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "frame-1321314510",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1156,
+                      "h": 986
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 48,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "process",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 44
+                        },
+                        "content": "Process",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 38,
+                            "weight": "900",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "frame-1321314531",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1156,
+                          "h": 268
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 32,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "01-project-introduction",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 1016,
+                              "h": 34
+                            },
+                            "content": "01 Project introduction",
+                            "styles": {
+                              "bg": "rgb(30, 30, 30)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 24,
+                                "weight": "700",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "frame-1321314528",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 1016,
+                              "h": 202
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "column",
+                                "gap": 8,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "end"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "brief-creation",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 1016,
+                                  "h": 34
+                                },
+                                "content": "Brief creation",
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 24,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "free-consultation",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 1016,
+                                  "h": 34
+                                },
+                                "content": "Free consultation",
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 24,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "clarifying-the-task--workflow-format--and-q-a",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 1016,
+                                  "h": 34
+                                },
+                                "content": "Clarifying the task, workflow format, and Q&A",
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 24,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "defining-the-goals-and-objectives-the-brand-must-solve",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 1016,
+                                  "h": 34
+                                },
+                                "content": "Defining the goals and objectives the brand must solve",
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 24,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "agreement-and-kick-off-after-100--prepayment-for-the-stage",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 1016,
+                                  "h": 34
+                                },
+                                "content": "Agreement and kick-off after 100% prepayment for the stage",
+                                "styles": {
+                                  "bg": "rgb(30, 30, 30)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 24,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "02-research--strategy-session--positioning--values--brand-direction-desk-research--market--competitors--category-language-customer-development--interviews-with-the-target-audience-to-test-hypotheses--and-uncover-insights-03-visual-direction-concept--building-a-visual-idea-based-on-the-brand-s-meaning-and-business-goals-developing-the-elements-and-their-logic--color--typography--graphics--form-fixing-the-system-as-a-cohesive-style-where-all-elements-work-together-04-design---presentation--packaging-the-result-into-a-guideline-with-identity-rules-and-usage-recommendations-delivering-the-guideline-in-a-practical-format-ready-for-implementation",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 578
+                        },
+                        "content": "02 Research\nStrategy session: positioning, values, brand direction\nDesk research: market, competitors, category language\nCustomer development: interviews with the target audience to test hypotheses and uncover insights\n\n03 Visual direction concept\nBuilding a visual idea based on the brand’s meaning and business goals\nDeveloping the elements and their logic: color, typography, graphics, form\nFixing the system as a cohesive style where all elements work together\n\n04 Design & presentation\nPackaging the result into a guideline with identity rules and usage recommendations\nDelivering the guideline in a practical format ready for implementation",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Arial",
+                            "size": 24,
+                            "weight": "400",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-1321314511",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1156,
+                      "h": 228
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 48,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "what-you-get",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 44
+                        },
+                        "content": "What you get",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 38,
+                            "weight": "900",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "a-brand-book-with-positioning-and-brand-values-verbal-and-non-verbal-identity-system-a-guidebook-for-using-the-visual-identity-recommendations-for-scaling-and-long-term-development",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 136
+                        },
+                        "content": "A brand book with positioning and brand valuesVerbal and non-verbal identity systemA guidebook for using the visual identityRecommendations for scaling and long-term development",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 24,
+                            "weight": "500",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-1321314513",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1156,
+                      "h": 466
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 48,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "how-we-work",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 1156,
+                          "h": 44
+                        },
+                        "content": "how we work",
+                        "styles": {
+                          "bg": "rgb(30, 30, 30)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 38,
+                            "weight": "900",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "frame-1321314512",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 549,
+                          "h": 374
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 83,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "timeline--from-7-weeks-pricing--from--4-500-the-final-price-is-determined-after-a-consultation--and-review-of-the-client-s-brief--100--prepayment-per-stage",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 549,
+                              "h": 374
+                            },
+                            "content": "Timeline\nFrom 7 weeks\n\nPricingFrom €4,500The final price is determined after a consultation and review of the client’s brief\n100% prepayment per stage",
+                            "styles": {
+                              "bg": "rgb(30, 30, 30)",
+                              "text": {
+                                "family": "Arial",
+                                "size": 24,
+                                "weight": "400",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "frame-1321314490",
+            "type": "FRAME",
+            "size": {
+              "w": 1440,
+              "h": 721
+            },
+            "styles": {
+              "bg": "rgb(53, 53, 53)",
+              "radius": 12,
+              "layout": {
+                "direction": "row",
+                "gap": 12,
+                "align": {
+                  "main": "center",
+                  "cross": "center"
+                },
+                "padding": [
+                  80,
+                  0,
+                  80,
+                  0
+                ]
+              }
+            },
+            "children": [
+              {
+                "name": "frame-1321314490",
+                "type": "FRAME",
+                "size": {
+                  "w": 1238,
+                  "h": 574
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 212,
+                    "align": {
+                      "main": "center",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "frame-1321314489",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 488,
+                      "h": 403
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 48,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "drop-your-quest-here",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 488,
+                          "h": 145
+                        },
+                        "content": "Drop Your Quest Here",
+                        "styles": {
+                          "bg": "rgb(251, 251, 251)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 75,
+                            "weight": "900",
+                            "align": "left"
+                          }
+                        }
+                      },
+                      {
+                        "name": "tell-us-about-your-project--we-ll-review-what-you-have--listen-to-your-ideas--and-propose-a-clear-direction-for-how-the-project-should-look--sound--and-communicate-",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 407,
+                          "h": 210
+                        },
+                        "content": "Tell us about your project. We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.",
+                        "styles": {
+                          "text": {
+                            "family": "Inter",
+                            "size": 22,
+                            "weight": "600",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "frame-1321314488",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 538,
+                      "h": 574
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 43,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-1321314485",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 538,
+                          "h": 477
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 52,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame-1321314484",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 538,
+                              "h": 118
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "column",
+                                "gap": 34,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame-1321314482",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 538,
+                                  "h": 42
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": 7,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "name",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 538,
+                                      "h": 35
+                                    },
+                                    "content": "Name",
+                                    "styles": {
+                                      "bg": "rgb(249, 249, 249)",
+                                      "text": {
+                                        "family": "Inter",
+                                        "size": 22,
+                                        "weight": "600",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-40",
+                                    "type": "LINE",
+                                    "size": {
+                                      "w": 538,
+                                      "h": 0
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(249, 249, 249)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "frame-1321314483",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 538,
+                                  "h": 42
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "column",
+                                    "gap": 7,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "email",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 538,
+                                      "h": 35
+                                    },
+                                    "content": "Email",
+                                    "styles": {
+                                      "bg": "rgb(249, 249, 249)",
+                                      "text": {
+                                        "family": "Inter",
+                                        "size": 22,
+                                        "weight": "600",
+                                        "align": "left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "line-40",
+                                    "type": "LINE",
+                                    "size": {
+                                      "w": 538,
+                                      "h": 0
+                                    },
+                                    "styles": {
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(249, 249, 249)"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "frame-1321314492",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 538,
+                              "h": 307
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "column",
+                                "gap": 15,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "frame-1321314487",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 538,
+                                  "h": 225
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "rectangle-42121481",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 538,
+                                      "h": 225
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(249, 249, 249)",
+                                      "border": {
+                                        "width": 1,
+                                        "color": "rgb(249, 249, 249)"
+                                      },
+                                      "radius": 12
+                                    }
+                                  },
+                                  {
+                                    "name": "rectangle-42121482",
+                                    "type": "RECTANGLE",
+                                    "size": {
+                                      "w": 10,
+                                      "h": 39
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(217, 217, 217)",
+                                      "radius": 12
+                                    }
+                                  },
+                                  {
+                                    "name": "tell-us-about-your-project-and-task",
+                                    "type": "TEXT",
+                                    "size": {
+                                      "w": 374,
+                                      "h": 35
+                                    },
+                                    "content": "Tell us about your project and task",
+                                    "styles": {
+                                      "bg": "rgb(30, 30, 30)",
+                                      "text": {
+                                        "family": "Inter",
+                                        "size": 22,
+                                        "weight": "600",
+                                        "align": "left"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "if-you-can-t-be-bothered-to-type--just-say-what-s-on-your-mind-",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 538,
+                                  "h": 22
+                                },
+                                "content": "If you can’t be bothered to type, just say what’s on your mind.",
+                                "styles": {
+                                  "bg": "rgb(249, 249, 249)",
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 14,
+                                    "weight": "500",
+                                    "align": "left"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "frame-1321314493",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 69,
+                                  "h": 30
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 9,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "mic",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  },
+                                  {
+                                    "name": "paperclip",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "frame-1321314448",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 274,
+                          "h": 54
+                        },
+                        "styles": {
+                          "bg": "rgb(71, 225, 148)",
+                          "border": {
+                            "width": 3,
+                            "color": "rgb(71, 225, 148)"
+                          },
+                          "radius": 9,
+                          "layout": {
+                            "direction": "row",
+                            "gap": 34,
+                            "align": {
+                              "main": "center",
+                              "cross": "center"
+                            },
+                            "padding": [
+                              16,
+                              21,
+                              16,
+                              21
+                            ]
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "here-s-my-project",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 232,
+                              "h": 22
+                            },
+                            "content": "Here’s my project",
+                            "styles": {
+                              "bg": "rgb(30, 30, 30)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 22,
+                                "weight": "700",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "header",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 3,
+    "frames": 26,
+    "texts": 32,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}

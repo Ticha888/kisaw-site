@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-07T19:54:41.396Z",
+    "componentName": "Footer",
+    "totalElements": 28,
+    "nestingDepth": 7,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)"
+    },
+    "fonts": {
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-17": "17px",
+          "size-16": "16px"
+        },
+        "weights": {
+          "weight-900": "900",
+          "weight-300": "300",
+          "weight-400": "400"
+        }
+      }
+    },
+    "spacing": {
+      "gap-16": "16px",
+      "gap-3": "3px",
+      "gap-24": "24px"
+    },
+    "effects": {}
+  },
+  "structure": {
+    "name": "footer",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 387
+    },
+    "styles": {
+      "bg": "rgb(30, 30, 30)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "group-1321314563",
+        "type": "GROUP",
+        "size": {
+          "w": 1309,
+          "h": 288
+        },
+        "children": [
+          {
+            "name": "slot",
+            "type": "FRAME",
+            "size": {
+              "w": 194,
+              "h": 22
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 16,
+                "align": {
+                  "main": "start",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "slot",
+                "type": "FRAME",
+                "size": {
+                  "w": 194,
+                  "h": 22
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 3,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "text-link-list-item",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  },
+                  {
+                    "name": "group-9099",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 82,
+                      "h": 22
+                    },
+                    "children": [
+                      {
+                        "name": "group-19",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 21,
+                          "h": 22
+                        },
+                        "children": [
+                          {
+                            "name": "vector",
+                            "type": "VECTOR",
+                            "size": {
+                              "w": 21,
+                              "h": 9
+                            },
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)",
+                              "border": {
+                                "width": 0,
+                                "color": "rgb(251, 251, 251)"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "kisaw",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 61,
+                          "h": 16
+                        },
+                        "content": "KisaW",
+                        "styles": {
+                          "bg": "rgb(251, 251, 251)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 17,
+                            "weight": "900",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "2026",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 40,
+                      "h": 22
+                    },
+                    "content": "2026",
+                    "styles": {
+                      "bg": "rgb(251, 251, 251)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 16,
+                        "weight": "300",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "group-1321314562",
+            "type": "GROUP",
+            "size": {
+              "w": 1309,
+              "h": 174
+            },
+            "children": [
+              {
+                "name": "slot",
+                "type": "FRAME",
+                "size": {
+                  "w": 101,
+                  "h": 174
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 16,
+                    "align": {
+                      "main": "center",
+                      "cross": "center"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "text-link-list",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "title",
+                "type": "FRAME",
+                "size": {
+                  "w": 262,
+                  "h": 136
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 24,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "figma",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 40,
+                      "h": 42
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "row",
+                        "gap": 0,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 41,
+                          "h": 17
+                        },
+                        "styles": {
+                          "bg": "rgb(251, 251, 251)",
+                          "border": {
+                            "width": 1,
+                            "color": "rgb(251, 251, 251)"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "button-list",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 144,
+                      "h": 24
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "row",
+                        "gap": 16,
+                        "align": {
+                          "main": "start",
+                          "cross": "center"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "x-logo",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 24,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "icon",
+                            "type": "VECTOR",
+                            "size": {
+                              "w": 24,
+                              "h": 24
+                            },
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "logo-instagram",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 24,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "icon",
+                            "type": "VECTOR",
+                            "size": {
+                              "w": 24,
+                              "h": 24
+                            },
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "logo-youtube",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 24,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "icon",
+                            "type": "VECTOR",
+                            "size": {
+                              "w": 24,
+                              "h": 18
+                            },
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "linkedin",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 24,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 0,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "icon",
+                            "type": "VECTOR",
+                            "size": {
+                              "w": 24,
+                              "h": 24
+                            },
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "list-item",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 144,
+                      "h": 22
+                    },
+                    "content": "hello@kisaw.studio",
+                    "styles": {
+                      "bg": "rgb(251, 251, 251)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 16,
+                        "weight": "400",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "slot",
+        "type": "FRAME",
+        "size": {
+          "w": 818,
+          "h": 276
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 16,
+            "align": {
+              "main": "center",
+              "cross": "center"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "text-link-list",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 3,
+    "frames": 12,
+    "texts": 3,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}

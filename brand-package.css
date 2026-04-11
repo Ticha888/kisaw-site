@@ -1,0 +1,188 @@
+/* Brand Package Page Specific Styles */
+
+:root {
+    --brand-blue: rgb(68, 131, 255); /* #4483FF */
+    --text-dark: rgb(30, 30, 30);
+    --bg-light: rgb(251, 251, 251);
+    --bg-dark-section: rgb(53, 53, 53);
+    --brand-green: rgb(71, 225, 148);
+}
+
+.brand-package-page {
+    background-color: #f9f9f9;
+}
+
+/* Sticky Blue Sidebar Badge */
+.sticky-sidebar-blue-layer {
+    grid-area: sidebar;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    pointer-events: none;
+    z-index: 10;
+    min-width: 60px;
+    position: relative;
+    right: -8px;
+}
+
+.sticky-sidebar-blue {
+    position: sticky;
+    top: 64px;
+    margin-right: 0;
+    pointer-events: auto;
+    height: fit-content;
+    background: var(--brand-blue);
+    border-radius: 12px 0 0 12px; /* Matches the mockup tab look */
+    padding: 24px 12px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Reenie Beanie', cursive;
+    color: #fff;
+    font-size: 72px; /* Large handwritten style */
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: uppercase;
+    box-shadow: -4px 0 12px rgba(68, 131, 255, 0.2);
+}
+
+/* Content Container Overrides */
+.brand-package-page .container {
+    background: #fff;
+    padding-bottom: 0; /* Let footer section handle padding */
+}
+
+/* Hero Section / Intro */
+.brand-intro {
+    padding-bottom: 80px;
+}
+
+.brand-intro h1 {
+    font-size: 75px;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+}
+
+.brand-intro p {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    max-width: 1156px;
+    line-height: 1.4;
+}
+
+/* Section Headings */
+.section-title-large {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-top: 72px;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+}
+
+/* Process Section */
+.process-section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.process-step {
+    margin-bottom: 48px;
+}
+
+.process-step h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.process-step ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.process-step li {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.process-text-block {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--text-dark);
+    white-space: pre-line;
+}
+
+/* What You Get & How We Work */
+.content-section {
+    margin-bottom: 80px;
+}
+
+.deliverables-list {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.work-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.work-item h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.work-item p {
+    font-size: 24px;
+    color: var(--text-dark);
+}
+
+.pricing-note {
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+    margin-top: 12px;
+}
+
+/* Dark Request Form Section */
+.brand-package-page .request-form-section {
+    background: var(--bg-dark-section);
+}
+
+.brand-package-page .request-form-title {
+    font-size: 75px;
+    color: var(--bg-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+    .brand-intro h1 { font-size: 64px; }
+    .sticky-sidebar-blue { font-size: 60px; }
+}
+
+@media (max-width: 1024px) {
+    .brand-intro h1 { font-size: 48px; }
+    .request-form-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
