@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-13T13:11:59.775Z",
+    "componentName": "Header",
+    "totalElements": 17,
+    "nestingDepth": 6,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)",
+      "color-rgb(221, 221, 221)": "rgb(221, 221, 221)",
+      "color-rgb(71, 225, 148)": "rgb(71, 225, 148)"
+    },
+    "fonts": {
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-32": "32px",
+          "size-16": "16px",
+          "size-18": "18px"
+        },
+        "weights": {
+          "weight-900": "900",
+          "weight-400": "400",
+          "weight-700": "700"
+        }
+      }
+    },
+    "spacing": {
+      "padding-top-64": "64px",
+      "padding-right-80": "80px",
+      "padding-bottom-64": "64px",
+      "padding-left-80": "80px",
+      "gap-112": "112px",
+      "gap-17": "17px",
+      "gap-10": "10px",
+      "gap-64": "64px",
+      "gap-48": "48px",
+      "padding-top-8": "8px",
+      "padding-right-24": "24px",
+      "padding-bottom-8": "8px",
+      "padding-left-24": "24px"
+    },
+    "effects": {}
+  },
+  "structure": {
+    "name": "header",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 170
+    },
+    "styles": {
+      "bg": "rgb(30, 30, 30)",
+      "layout": {
+        "direction": "row",
+        "gap": 112,
+        "align": {
+          "main": "space-between",
+          "cross": "center"
+        },
+        "padding": [
+          64,
+          80,
+          64,
+          80
+        ]
+      }
+    },
+    "children": [
+      {
+        "name": "logo---subtitle",
+        "type": "FRAME",
+        "size": {
+          "w": 560,
+          "h": 42
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 17,
+            "align": {
+              "main": "start",
+              "cross": "center"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-9099",
+            "type": "FRAME",
+            "size": {
+              "w": 200,
+              "h": 42
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 10,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "image-11848",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 66,
+                  "h": 64
+                }
+              },
+              {
+                "name": "group-9099",
+                "type": "GROUP",
+                "size": {
+                  "w": 168,
+                  "h": 42
+                },
+                "children": [
+                  {
+                    "name": "group-19",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 40,
+                      "h": 42
+                    },
+                    "children": [
+                      {
+                        "name": "vector",
+                        "type": "VECTOR",
+                        "size": {
+                          "w": 41,
+                          "h": 17
+                        },
+                        "styles": {
+                          "bg": "rgb(251, 251, 251)",
+                          "border": {
+                            "width": 1,
+                            "color": "rgb(30, 30, 30)"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "kisaw",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 116,
+                      "h": 30
+                    },
+                    "content": "KisaW",
+                    "styles": {
+                      "bg": "rgb(251, 251, 251)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 32,
+                        "weight": "900",
+                        "align": "center"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "a-design-studio-by-visual-enthusiasts",
+            "type": "TEXT",
+            "size": {
+              "w": 343,
+              "h": 18
+            },
+            "content": "a Design studio by visual enthusiasts",
+            "styles": {
+              "bg": "rgb(221, 221, 221)",
+              "text": {
+                "family": "Inter",
+                "size": 16,
+                "weight": "400",
+                "align": "left"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "navigation",
+        "type": "FRAME",
+        "size": {
+          "w": 587,
+          "h": 42
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 64,
+            "align": {
+              "main": "start",
+              "cross": "center"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "frame-1321314478",
+            "type": "FRAME",
+            "size": {
+              "w": 313,
+              "h": 17
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 48,
+                "align": {
+                  "main": "start",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "cases",
+                "type": "TEXT",
+                "size": {
+                  "w": 62,
+                  "h": 17
+                },
+                "content": "cases",
+                "styles": {
+                  "bg": "rgb(221, 221, 221)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "services",
+                "type": "TEXT",
+                "size": {
+                  "w": 90,
+                  "h": 17
+                },
+                "content": "Services",
+                "styles": {
+                  "bg": "rgb(221, 221, 221)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "about",
+                "type": "TEXT",
+                "size": {
+                  "w": 65,
+                  "h": 17
+                },
+                "content": "About",
+                "styles": {
+                  "bg": "rgb(221, 221, 221)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 18,
+                    "weight": "700",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "button",
+            "type": "FRAME",
+            "size": {
+              "w": 210,
+              "h": 40
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "button-size-small",
+                "type": "FRAME",
+                "size": {
+                  "w": 210,
+                  "h": 40
+                },
+                "styles": {
+                  "bg": "rgb(71, 225, 148)",
+                  "border": {
+                    "width": 0,
+                    "color": "rgb(71, 225, 148)"
+                  },
+                  "radius": 12,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 0,
+                    "align": {
+                      "main": "center",
+                      "cross": "center"
+                    },
+                    "padding": [
+                      8,
+                      24,
+                      8,
+                      24
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "text",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 162,
+                      "h": 17
+                    },
+                    "content": "Send the Signal",
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "700",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 0,
+    "frames": 7,
+    "texts": 6,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}
