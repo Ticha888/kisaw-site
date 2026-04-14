@@ -1,0 +1,1399 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-14T16:35:02.112Z",
+    "componentName": "ABOUT",
+    "totalElements": 84,
+    "nestingDepth": 10,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(184, 184, 184)": "rgb(184, 184, 184)",
+      "color-rgb(30, 30, 30)": "rgb(30, 30, 30)",
+      "color-rgb(71, 225, 148)": "rgb(71, 225, 148)",
+      "color-rgb(39, 39, 42)": "rgb(39, 39, 42)",
+      "color-rgb(217, 217, 217)": "rgb(217, 217, 217)",
+      "color-rgb(242, 28, 28)": "rgb(242, 28, 28)",
+      "color-rgb(243, 244, 245)": "rgb(243, 244, 245)",
+      "color-rgb(239, 49, 36)": "rgb(239, 49, 36)",
+      "color-rgb(241, 241, 241)": "rgb(241, 241, 241)",
+      "color-rgb(255, 255, 255)": "rgb(255, 255, 255)",
+      "color-rgb(222, 222, 222)": "rgb(222, 222, 222)",
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)"
+    },
+    "fonts": {
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-18": "18px",
+          "size-60": "60px",
+          "size-28": "28px"
+        },
+        "weights": {
+          "weight-600": "600",
+          "weight-900": "900",
+          "weight-500": "500"
+        }
+      }
+    },
+    "spacing": {
+      "padding-right-70": "70px",
+      "padding-bottom-128": "128px",
+      "padding-left-70": "70px",
+      "gap-76": "76px",
+      "padding-top-4": "4px",
+      "padding-right-4": "4px",
+      "padding-bottom-4": "4px",
+      "padding-left-4": "4px",
+      "gap-8": "8px",
+      "padding-top-12": "12px",
+      "padding-right-16": "16px",
+      "padding-bottom-12": "12px",
+      "padding-left-16": "16px",
+      "gap-4": "4px",
+      "gap-10": "10px",
+      "gap-38": "38px",
+      "gap-64": "64px",
+      "gap-24": "24px",
+      "gap-42": "42px",
+      "padding-top-47": "47px",
+      "padding-right-34": "34px",
+      "padding-bottom-47": "47px",
+      "padding-left-34": "34px",
+      "gap-35": "35px",
+      "gap-28": "28px"
+    },
+    "effects": {
+      "shadow-4-4": {
+        "x": 0,
+        "y": 4,
+        "blur": 4,
+        "color": "rgba(12, 12, 13, 0.05000000074505806)"
+      },
+      "shadow-16-16": {
+        "x": 0,
+        "y": 16,
+        "blur": 16,
+        "color": "rgba(12, 12, 13, 0.10000000149011612)"
+      }
+    }
+  },
+  "structure": {
+    "name": "about",
+    "type": "FRAME",
+    "size": {
+      "w": 1920,
+      "h": 3172
+    },
+    "styles": {
+      "bg": "rgb(184, 184, 184)",
+      "layout": {
+        "direction": "row",
+        "gap": 0,
+        "align": {
+          "main": "start",
+          "cross": "start"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "sidebar",
+        "type": "INSTANCE",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      {
+        "name": "framer-tutorial",
+        "type": "FRAME",
+        "size": {
+          "w": 1440,
+          "h": 2084
+        },
+        "styles": {
+          "bg": "rgb(30, 30, 30)",
+          "shadow": {
+            "x": 0,
+            "y": 4,
+            "blur": 4,
+            "color": "rgba(12, 12, 13, 0.05000000074505806)"
+          },
+          "layout": {
+            "direction": "column",
+            "gap": 76,
+            "align": {
+              "main": "start",
+              "cross": "center"
+            },
+            "padding": [
+              0,
+              70,
+              128,
+              70
+            ]
+          }
+        },
+        "children": [
+          {
+            "name": "header",
+            "type": "INSTANCE",
+            "size": {
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "name": "group-1321314517",
+            "type": "GROUP",
+            "size": {
+              "w": 335,
+              "h": 56
+            },
+            "children": [
+              {
+                "name": "tabspanel",
+                "type": "FRAME",
+                "size": {
+                  "w": 335,
+                  "h": 56
+                },
+                "styles": {
+                  "bg": "rgb(71, 225, 148)",
+                  "radius": 40,
+                  "layout": {
+                    "direction": "row",
+                    "gap": 8,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    },
+                    "padding": [
+                      4,
+                      4,
+                      4,
+                      4
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "tab-btn",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 170,
+                      "h": 48
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "radius": 40,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 4,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        },
+                        "padding": [
+                          12,
+                          16,
+                          12,
+                          16
+                        ]
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "text",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 138,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 8,
+                            "align": {
+                              "main": "start",
+                              "cross": "center"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "iconveiw",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 40,
+                              "h": 40
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "row",
+                                "gap": 0,
+                                "align": {
+                                  "main": "start",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "shape",
+                                "type": "BOOLEAN_OPERATION",
+                                "size": {
+                                  "w": 40,
+                                  "h": 40
+                                },
+                                "styles": {
+                                  "bg": "rgb(39, 39, 42)",
+                                  "radius": 2
+                                },
+                                "children": [
+                                  {
+                                    "name": "shape",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  },
+                                  {
+                                    "name": "addon_bottom",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 24,
+                                      "h": 24
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(217, 217, 217)"
+                                    }
+                                  },
+                                  {
+                                    "name": "addon_top",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 24,
+                                      "h": 24
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(217, 217, 217)"
+                                    }
+                                  },
+                                  {
+                                    "name": "indicator",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 12,
+                                      "h": 12
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(242, 28, 28)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "border",
+                                "type": "BOOLEAN_OPERATION",
+                                "size": {
+                                  "w": 0,
+                                  "h": 0
+                                },
+                                "styles": {
+                                  "bg": "rgb(243, 244, 245)",
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(220, 220, 221)"
+                                  },
+                                  "radius": 2
+                                },
+                                "children": [
+                                  {
+                                    "name": "border",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  },
+                                  {
+                                    "name": "addon_bottom",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 24,
+                                      "h": 24
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(217, 217, 217)"
+                                    }
+                                  },
+                                  {
+                                    "name": "addon_top",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 24,
+                                      "h": 24
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(217, 217, 217)"
+                                    }
+                                  },
+                                  {
+                                    "name": "indicator",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 12,
+                                      "h": 12
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(242, 28, 28)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "addon_bottom",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 20,
+                                  "h": 20
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "addons",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "addon_top",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 20,
+                                  "h": 20
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "addons",
+                                    "type": "INSTANCE",
+                                    "size": {
+                                      "w": 0,
+                                      "h": 0
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "indicator",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 8,
+                                  "h": 8
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 0,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "indicator",
+                                    "type": "ELLIPSE",
+                                    "size": {
+                                      "w": 8,
+                                      "h": 8
+                                    },
+                                    "styles": {
+                                      "bg": "rgb(239, 49, 36)"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "maincontent",
+                                "type": "FRAME",
+                                "size": {
+                                  "w": 24,
+                                  "h": 24
+                                },
+                                "styles": {
+                                  "layout": {
+                                    "direction": "row",
+                                    "gap": 10,
+                                    "align": {
+                                      "main": "start",
+                                      "cross": "start"
+                                    }
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "airplane",
+                                    "type": "FRAME",
+                                    "size": {
+                                      "w": 24,
+                                      "h": 24
+                                    },
+                                    "styles": {
+                                      "layout": {
+                                        "direction": "row",
+                                        "gap": 0,
+                                        "align": {
+                                          "main": "start",
+                                          "cross": "start"
+                                        }
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "icon",
+                                        "type": "VECTOR",
+                                        "size": {
+                                          "w": 18,
+                                          "h": 18
+                                        },
+                                        "styles": {
+                                          "bg": "rgb(241, 241, 241)"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "label",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 138,
+                              "h": 24
+                            },
+                            "content": "ABOUT STUDIO",
+                            "styles": {
+                              "bg": "rgb(255, 255, 255)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 149,
+                      "h": 48
+                    },
+                    "styles": {
+                      "radius": 40,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 4,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        },
+                        "padding": [
+                          12,
+                          16,
+                          12,
+                          16
+                        ]
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "text",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 117,
+                          "h": 24
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 8,
+                            "align": {
+                              "main": "start",
+                              "cross": "center"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "iconveiw",
+                            "type": "INSTANCE",
+                            "size": {
+                              "w": 0,
+                              "h": 0
+                            }
+                          },
+                          {
+                            "name": "label",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 117,
+                              "h": 24
+                            },
+                            "content": "PHILOSOPHY",
+                            "styles": {
+                              "bg": "rgb(30, 30, 30)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  },
+                  {
+                    "name": "tab-btn",
+                    "type": "INSTANCE",
+                    "size": {
+                      "w": 0,
+                      "h": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "frame-1321314525",
+            "type": "FRAME",
+            "size": {
+              "w": 1280,
+              "h": 357
+            },
+            "styles": {
+              "layout": {
+                "direction": "column",
+                "gap": 38,
+                "align": {
+                  "main": "center",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "frame-44",
+                "type": "FRAME",
+                "size": {
+                  "w": 1280,
+                  "h": 131
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 64,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "branding-communication-design",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 1152,
+                      "h": 44
+                    },
+                    "content": "branding&communication design",
+                    "styles": {
+                      "text": {
+                        "family": "Inter",
+                        "size": 60,
+                        "weight": "900",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "frame-27",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 1280,
+                      "h": 23
+                    },
+                    "styles": {
+                      "layout": {
+                        "direction": "column",
+                        "gap": 24,
+                        "align": {
+                          "main": "start",
+                          "cross": "start"
+                        }
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-11",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 1280,
+                          "h": 23
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 42,
+                            "align": {
+                              "main": "start",
+                              "cross": "center"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "company-brand",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 161,
+                              "h": 17
+                            },
+                            "content": "company brand",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "personal-brand",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 164,
+                              "h": 17
+                            },
+                            "content": "personal brand",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "graphic-web-design",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 202,
+                              "h": 17
+                            },
+                            "content": "graphic/web design",
+                            "styles": {
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "concept",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 89,
+                              "h": 17
+                            },
+                            "content": "concept",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "universes",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 102,
+                              "h": 17
+                            },
+                            "content": "universes",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "ai",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 18,
+                              "h": 17
+                            },
+                            "content": "AI",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "frame-1321314524",
+                "type": "FRAME",
+                "size": {
+                  "w": 1280,
+                  "h": 188
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "column",
+                    "gap": 38,
+                    "align": {
+                      "main": "start",
+                      "cross": "start"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "kisaw-is-a-branding-and-digital-design-studio--we-work-with-brands-as-systems--from-meaning-and-structure-to-visual-identity-and-digital-products--projects-are-handled-by-a-small-team-directly-involved-in-the-process-",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 1073,
+                      "h": 66
+                    },
+                    "content": "KISAW is a branding and digital design studio.\r\nWe work with brands as systems, from meaning and structure to visual identity and digital products.\r\nProjects are handled by a small team directly involved in the process.",
+                    "styles": {
+                      "bg": "rgb(251, 251, 251)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "600",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "founded--2025--podgorica--montenegro--number-of-employees--4-products--art-direction--conception--digital-design--graphic-design--visual-identity",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 858,
+                      "h": 84
+                    },
+                    "content": "Founded: 2025 (podgorica, montenegro)\nNumber of employees: 4\nProducts: Art Direction, Conception, Digital Design, Graphic Design, Visual Identity",
+                    "styles": {
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "600",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "personalcards",
+            "type": "GROUP",
+            "size": {
+              "w": 1280,
+              "h": 1145
+            },
+            "children": [
+              {
+                "name": "group-1321314526",
+                "type": "GROUP",
+                "size": {
+                  "w": 317,
+                  "h": 616
+                },
+                "children": [
+                  {
+                    "name": "rectangle-42121479",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 41,
+                      "h": 199
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(166, 211, 255)"
+                      },
+                      "radius": 10
+                    }
+                  },
+                  {
+                    "name": "frame-1321314481",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 317,
+                      "h": 594
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(255, 255, 255)"
+                      },
+                      "radius": 35,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 10,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        },
+                        "padding": [
+                          47,
+                          34,
+                          47,
+                          34
+                        ]
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-1321314475",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 206,
+                          "h": 356
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "row",
+                            "gap": 35,
+                            "align": {
+                              "main": "start",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "frame-1321314472",
+                            "type": "FRAME",
+                            "size": {
+                              "w": 206,
+                              "h": 356
+                            },
+                            "styles": {
+                              "layout": {
+                                "direction": "column",
+                                "gap": 28,
+                                "align": {
+                                  "main": "center",
+                                  "cross": "start"
+                                }
+                              }
+                            },
+                            "children": [
+                              {
+                                "name": "image-192",
+                                "type": "RECTANGLE",
+                                "size": {
+                                  "w": 206,
+                                  "h": 244
+                                },
+                                "styles": {
+                                  "radius": 12
+                                }
+                              },
+                              {
+                                "name": "tasya-zhdan-graphic-design--brand-design",
+                                "type": "TEXT",
+                                "size": {
+                                  "w": 205,
+                                  "h": 84
+                                },
+                                "content": "tasya zhdangraphic design, brand design",
+                                "styles": {
+                                  "text": {
+                                    "family": "Inter",
+                                    "size": 18,
+                                    "weight": "600",
+                                    "align": "left"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "group-1321314525",
+                "type": "GROUP",
+                "size": {
+                  "w": 354,
+                  "h": 634
+                },
+                "children": [
+                  {
+                    "name": "rectangle-42121480",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 43,
+                      "h": 179
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(166, 211, 255)"
+                      },
+                      "radius": 10
+                    }
+                  },
+                  {
+                    "name": "frame-1321314480",
+                    "type": "FRAME",
+                    "size": {
+                      "w": 331,
+                      "h": 634
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(255, 255, 255)"
+                      },
+                      "radius": 35,
+                      "layout": {
+                        "direction": "row",
+                        "gap": 10,
+                        "align": {
+                          "main": "center",
+                          "cross": "center"
+                        },
+                        "padding": [
+                          47,
+                          34,
+                          47,
+                          34
+                        ]
+                      }
+                    },
+                    "children": [
+                      {
+                        "name": "frame-1321314471",
+                        "type": "FRAME",
+                        "size": {
+                          "w": 206,
+                          "h": 356
+                        },
+                        "styles": {
+                          "layout": {
+                            "direction": "column",
+                            "gap": 28,
+                            "align": {
+                              "main": "center",
+                              "cross": "start"
+                            }
+                          }
+                        },
+                        "children": [
+                          {
+                            "name": "image-192",
+                            "type": "RECTANGLE",
+                            "size": {
+                              "w": 206,
+                              "h": 244
+                            },
+                            "styles": {
+                              "radius": 12
+                            }
+                          },
+                          {
+                            "name": "pavel-marchenko-graphic-design--ui-ux-design",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 205,
+                              "h": 84
+                            },
+                            "content": "pavel marchenkographic design, UI\\UX design",
+                            "styles": {
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "600",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "group-1321314523",
+                "type": "GROUP",
+                "size": {
+                  "w": 817,
+                  "h": 531
+                },
+                "children": [
+                  {
+                    "name": "rectangle-42121479",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 307,
+                      "h": 49
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(166, 211, 255)"
+                      },
+                      "radius": 10
+                    }
+                  },
+                  {
+                    "name": "rectangle-42121478",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 789,
+                      "h": 531
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(255, 255, 255)"
+                      },
+                      "radius": 35
+                    }
+                  },
+                  {
+                    "name": "group-9167",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 189,
+                      "h": 77
+                    },
+                    "children": [
+                      {
+                        "name": "group-9158",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 189,
+                          "h": 77
+                        },
+                        "children": [
+                          {
+                            "name": "-ticcha",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 158,
+                              "h": 16
+                            },
+                            "content": "@Ticcha",
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 28,
+                                "weight": "900",
+                                "align": "left"
+                              }
+                            }
+                          },
+                          {
+                            "name": "drop-a-personal--message--tg-",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 189,
+                              "h": 44
+                            },
+                            "content": "drop a personal message (Tg)",
+                            "styles": {
+                              "bg": "rgb(222, 222, 222)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 18,
+                                "weight": "500",
+                                "align": "left"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "image-190",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 215,
+                      "h": 255
+                    },
+                    "styles": {
+                      "radius": 12
+                    }
+                  },
+                  {
+                    "name": "ivan-diachkov-co-founder---product-designer--i-design-end-to-end-product-experiences--application-flows--core-product-pages--and-promotional-landing-pages--i-work-with-customer-journeys--cjm---user-research--and-iteration-to-improve-conversion--clarity--and-brand-perception---i-also-build-new-products-from-zero-to-production-ready-releases--supporting-teams-from-early-concept-through-launch-and-continuous-improvement-",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 411,
+                      "h": 448
+                    },
+                    "content": "Ivan diachkovCo-founder & Product Designer\ni DESIGN END-TO-END PRODUCT EXPERIENCES: APPLICATION FLOWS, CORE PRODUCT PAGES, AND PROMOTIONAL LANDING PAGES. I WORK WITH CUSTOMER JOURNEYS (CJM), USER RESEARCH, AND ITERATION TO IMPROVE CONVERSION, CLARITY, AND BRAND PERCEPTION.\nI ALSO BUILD NEW PRODUCTS FROM ZERO TO PRODUCTION-READY RELEASES, SUPPORTING TEAMS FROM EARLY CONCEPT THROUGH LAUNCH AND CONTINUOUS IMPROVEMENT.",
+                    "styles": {
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "600",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "group-1321314524",
+                "type": "GROUP",
+                "size": {
+                  "w": 755,
+                  "h": 585
+                },
+                "children": [
+                  {
+                    "name": "rectangle-42121479",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 321,
+                      "h": 47
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(166, 211, 255)"
+                      },
+                      "radius": 10
+                    }
+                  },
+                  {
+                    "name": "rectangle-42121478",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 755,
+                      "h": 555
+                    },
+                    "styles": {
+                      "bg": "rgb(30, 30, 30)",
+                      "border": {
+                        "width": 1,
+                        "color": "rgb(255, 255, 255)"
+                      },
+                      "radius": 35
+                    }
+                  },
+                  {
+                    "name": "group-9167",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 247,
+                      "h": 80
+                    },
+                    "children": [
+                      {
+                        "name": "-pizhmaishere",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 247,
+                          "h": 16
+                        },
+                        "content": "@pizhmaishere",
+                        "styles": {
+                          "bg": "rgb(251, 251, 251)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 28,
+                            "weight": "900",
+                            "align": "right"
+                          }
+                        }
+                      },
+                      {
+                        "name": "drop-a-personal--message--tg-",
+                        "type": "TEXT",
+                        "size": {
+                          "w": 181,
+                          "h": 46
+                        },
+                        "content": "drop a personal message (Tg)",
+                        "styles": {
+                          "bg": "rgb(222, 222, 222)",
+                          "text": {
+                            "family": "Inter",
+                            "size": 18,
+                            "weight": "500",
+                            "align": "left"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "image-190",
+                    "type": "RECTANGLE",
+                    "size": {
+                      "w": 215,
+                      "h": 255
+                    },
+                    "styles": {
+                      "radius": 12
+                    }
+                  },
+                  {
+                    "name": "nika-pizhma-co-founder---brand-designer-we-work-with-small-and-medium-businesses--experts-and-cultural-projects--creating-visual-identities--communication-systems--brand-led-websites--printed-matter-and-merch--we-treat-design-as-both-partnership-and-analysis--through-strategy--narrative-and-clear-visual-language--kisaw-helps-brands-define-who-they-are--how-they-sound-and-how-they-appear-across-digital-and-physical-spaces-",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 393,
+                      "h": 498
+                    },
+                    "content": "Nika PizhmaCo-founder & Brand Designer\n\nWe work with small and medium businesses, experts and cultural projects, creating visual identities, communication systems, brand-led websites, printed matter and merch.\n\nwe treat design as both partnership and analysis. Through strategy, narrative and clear visual language, KISAW helps brands define who they are, how they sound and how they appear across digital and physical spaces.",
+                    "styles": {
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "600",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "footer",
+        "type": "INSTANCE",
+        "size": {
+          "w": 0,
+          "h": 0
+        }
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 13,
+    "frames": 23,
+    "texts": 19,
+    "hasAutoLayout": true,
+    "hasEffects": true
+  }
+}

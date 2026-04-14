@@ -37,7 +37,7 @@
                         <div class="nav-links">
                             <a href="#cases">cases</a>
                             <a href="#services">Services</a>
-                            <a href="#about">About</a>
+                            <a href="about.html">About</a>
                         </div>
                         <a href="#request-form" class="send-signal-btn">Send the Signal</a>
                     </nav>
@@ -339,7 +339,7 @@
                             <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
                         </div>
                         <div class="footer-nav-col">
-                            <a href="#about" class="footer-nav-link">About</a>
+                            <a href="about.html" class="footer-nav-link">About</a>
                             <a href="#services" class="footer-nav-link">Services</a>
                             <a href="#cases" class="footer-nav-link">Cases</a>
                         </div>
@@ -707,33 +707,62 @@
                     startX = Math.max(safeWidth / 2 + 10, Math.min(w - safeWidth / 2 - 10, startX));
                     startY = Math.max(safeHeight / 2 + 10, Math.min(h - safeHeight / 2 - 10, startY));
 
-                    el.style.transform = `translate(${startX - elWidth / 2}px, ${startY - elHeight / 2}px)`;
-
                     let body = bodiesMap.get(el);
                     if (!body) {
                         body = Bodies.rectangle(startX, startY, safeWidth, safeHeight, {
-                            isStatic: true,
-                            restitution: 0.6,
+                            isStatic: false, // make dynamic initially for repulsion
+                            restitution: 0.1,
                             friction: 0.1,
-                            frictionAir: 0.05
+                            frictionAir: 0.5 // High drag prevents flying away
                         });
                         Composite.add(engine.world, body);
                         bodiesMap.set(el, body);
 
-                        el.addEventListener('mouseenter', () => {
+                        const wakeUp = () => {
                             if (body.isStatic) {
                                 Matter.Body.setStatic(body, false);
                                 Matter.Sleeping.set(body, false);
                             }
-                        });
+                        };
+                        el.addEventListener('mouseenter', wakeUp);
+                        el.addEventListener('touchstart', wakeUp, {passive: true});
                     } else {
                         // Reset existing body
-                        Matter.Body.setStatic(body, true);
+                        Matter.Body.setStatic(body, false);
                         Matter.Sleeping.set(body, false);
                         Matter.Body.setPosition(body, { x: startX, y: startY });
                         Matter.Body.setAngle(body, 0);
                         Matter.Body.setVelocity(body, { x: 0, y: 0 });
                         Matter.Body.setAngularVelocity(body, 0);
+                        body.restitution = 0.1;
+                        body.frictionAir = 0.5;
+                    }
+                });
+
+                // --- ZERO GRAVITY REPULSION TRICK ---
+                let originalGravity = engine.gravity.y;
+                engine.gravity.y = 0; // Turn off gravity
+                
+                // Fast-forward physics engine to let bounding boxes push each other apart naturally
+                for(let i = 0; i < 60; i++) {
+                    Matter.Engine.update(engine, 16.666);
+                }
+                
+                engine.gravity.y = originalGravity; // Restore
+
+                // Freeze them in their newly corrected, non-overlapping positions
+                phElements.forEach((el) => {
+                    let body = bodiesMap.get(el);
+                    if(body) {
+                        Matter.Body.setStatic(body, true);
+                        Matter.Body.setVelocity(body, { x: 0, y: 0 });
+                        Matter.Body.setAngularVelocity(body, 0);
+                        
+                        body.restitution = 0.6; // restore normal bounce
+                        body.frictionAir = 0.05; // restore normal air friction
+                        
+                        // Force DOM sync immediately
+                        el.style.transform = `translate(${body.position.x - el.offsetWidth / 2}px, ${body.position.y - el.offsetHeight / 2}px) rotate(${body.angle}rad)`;
                     }
                 });
             }

@@ -2660,3 +2660,238 @@ a {
         margin-right: -22px;
     }
 }
+
+/* ABOUT PAGE STYLES */
+.about-page {
+    background: rgb(30, 30, 30);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-page .container_main_page {
+    background: transparent;
+}
+
+.badge-about {
+    background: rgb(71, 225, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.badge-about span {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 60px;
+    color: #121212;
+    transform: rotate(270deg);
+    white-space: nowrap;
+}
+
+.about-main {
+    padding: 40px 70px 128px 70px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Header Adjustments */
+.about-header .logo-white { color: #fff; }
+.about-header .tagline-white { color: rgb(184, 184, 184); }
+
+/* Tabs */
+.about-tabs {
+    display: inline-flex;
+    background: rgb(71, 225, 148);
+    padding: 4px;
+    border-radius: 40px;
+    margin-bottom: 76px;
+    gap: 8px;
+}
+.about-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #121212;
+    cursor: pointer;
+}
+.about-tab.active {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Headline */
+.about-headline {
+    font-size: 60px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+    line-height: 1.1;
+}
+
+/* Tags */
+.about-tags {
+    display: flex;
+    gap: 42px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+.about-tags .tag {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.about-tags .tag.gray { color: rgb(184, 184, 184); }
+.about-tags .tag.transparent { color: #fff; }
+
+/* Description */
+.about-description {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(241, 241, 241);
+    line-height: 1.5;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Stats */
+.about-stats p {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(217, 217, 217);
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 100px;
+    align-items: start;
+}
+.team-card {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.role-green {
+    color: rgb(71, 225, 148);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+.team-info h3 {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.btn-personal-message {
+    display: inline-block;
+    background: rgb(222, 222, 222);
+    color: #121212;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.handle { 
+    font-size: 18px; 
+    font-weight: 900; 
+    color: #fff; 
+    display: block;
+    margin-top: 10px; 
+}
+
+/* Specific Cards */
+.nika-card {
+    border-radius: 16px;
+    grid-column: 1 / 2;
+}
+.photo-nika { width: 147px; height: 167px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+.nika-card .team-bio { font-size: 10px; color: #fff; margin: 20px 0; text-transform: uppercase; }
+
+.tasya-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px 100px 20px 20px;
+    padding-top: 60px;
+    text-align: center;
+    grid-column: 2 / 3;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.photo-tasya { 
+    width: 147px; height: 139px; object-fit: cover; 
+    border-radius: 20px; margin-bottom: 20px;
+    margin-top: -120px; /* Extends past top edge */
+}
+
+.pavel-card { 
+    grid-column: 1 / 2; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    max-width: 300px;
+    margin-left: 20px;
+    border-right-width: 3px; /* Asymmetric styling */
+    border-bottom-width: 3px;
+}
+.photo-pavel { width: 147px; height: 167px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+
+.ivan-card {
+    grid-column: 2 / 3; 
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 30px;
+    margin-top: -30px;
+}
+.photo-wrapper-ivan {
+    display: flex;
+    flex-direction: column;
+}
+.photo-ivan { width: 153px; height: 167px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+.ivan-card .team-bio { font-size: 10px; color: #fff; text-transform: uppercase; margin-top: 10px; line-height: 1.5; }
+
+@media (max-width: 1000px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+    }
+    .ivan-card {
+        grid-column: 1 / -1;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .pavel-card {
+        grid-column: 1 / -1;
+        margin-left: 0;
+    }
+    .tasya-card {
+        grid-column: 1 / -1;
+        margin-top: 80px;
+    }
+    .about-main {
+        padding: 40px 20px;
+    }
+    .about-headline { font-size: 40px; }
+}
