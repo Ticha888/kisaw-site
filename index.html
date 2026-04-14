@@ -42,37 +42,64 @@
                         <a href="#request-form" class="send-signal-btn">Send the Signal</a>
                     </nav>
                 </header>
-                <!-- Hero Section -->
-                <section class="hero-section">
-                    <!-- Background Layers -->
-                    <div class="hero-text-bg">last case</div>
-                    <div class="hero-bg-cloud">
-                        <img src="img/imgs_for_main/cloud.png" alt="" role="presentation">
+                <!-- Hero Section (Physics Based) -->
+                <section id="physics-hero" class="hero-section new-hero-physics">
+                    <!-- <div class="ph-el ph-vector ph-outline-bone" style="width:95px; height:41px;"></div> -->
+                    <!-- <div class="ph-el ph-vector ph-blue"></div>
+                    <div class="ph-el ph-vector ph-pink"></div>
+                    <div class="ph-el ph-vector ph-green"></div> -->
+
+                    <!-- Images -->
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_kisaw.png"
+                            alt="" style="height:120px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_dino.png"
+                            alt="" style="height:140px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_cat.png"
+                            alt="" style="height:170px;"></div>
+                    <div class="ph-el ph-img"><img
+                            src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_matches.png" alt=""
+                            style="height:166px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_bone.png"
+                            alt="" style="height:41px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_02.png"
+                            alt="" style="height:140px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_03.png"
+                            alt="" style="height:158px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_05.png"
+                            alt="" style="height:130px;"></div>
+
+
+
+                    <!-- Texts -->
+                    <div class="ph-el ph-text">Brand</div>
+                    <div class="ph-el ph-text">Context</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">pirate</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">ads</div>
+                    <div class="ph-el ph-text">Strategy</div>
+                    <div class="ph-el ph-text">Communication</div>
+                    <div class="ph-el ph-text">Unfiltered</div>
+                    <div class="ph-el ph-text">Visual language</div>
+                    <div class="ph-el ph-text">Narrative</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">site</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">smm</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">web</div>
+                    <div class="ph-el ph-text">Artful</div>
+                    <div class="ph-el ph-text" style="text-transform:none;">illustrations</div>
+
+                    <div class="ph-el ph-color-bars" style="width:161px; height:32px;">
+                        <div style="background:#47E194;"></div>
+                        <div style="background:#A6D3FF;"></div>
+                        <div style="background:#DD3737;"></div>
+                        <div style="background:#FFDAEF;"></div>
+                        <div style="background:#007EFA;"></div>
                     </div>
 
-                    <!-- Content Layer -->
-                    <div class="hero-content">
-                        <!-- Right Column: Visuals -->
-                        <div class="hero-visual-col">
-                            <img src="img/imgs_for_main/Iphones.png" alt="Atlas App Interface" class="hero-phones-img">
-                        </div>
-
-                        <!-- Left Column: Atlas Info -->
-                        <div class="hero-info-col">
-                            <div class="atlas-logo-wrapper">
-                                <img src="img/imgs_for_main/Atlas_Head.png" alt="Atlas" class="atlas-logo">
-                            </div>
-                            <div class="atlas-text-content">
-                                <p class="atlas-description">
-                                    A library of metaphorical<br>
-                                    decks for practice<br>
-                                    and therapy.
-                                </p>
-                                <a href="#" class="atlas-btn">
-                                    <span>Exlore our new case ></span>
-                                </a>
-                            </div>
-                        </div>
+                    <!-- Reset Broom -->
+                    <div id="reset-broom"
+                        style="position: absolute; bottom: 20px; right: 20px; z-index: 100; cursor: pointer; text-align: center; line-height: 1;">
+                        <!-- Иконка из assets, можете заменить файл если это не 10.png -->
+                        <img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_broom.png" alt="Reset"
+                            style="height: 60px;" onerror="this.outerHTML='<span style=\'font-size: 50px;\'>🧹</span>'">
                     </div>
                 </section>
                 <div class="cases-header-icon">
@@ -595,6 +622,166 @@
                 const secs = String(diff % 60).padStart(2, '0');
                 if (voiceTimer) voiceTimer.textContent = `${mins}:${secs}`;
             }
+        });
+    </script>
+    <!-- Matter.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const heroEl = document.getElementById('physics-hero');
+            if (!heroEl) return;
+
+            const Engine = Matter.Engine,
+                Runner = Matter.Runner,
+                Bodies = Matter.Bodies,
+                Composite = Matter.Composite,
+                Events = Matter.Events;
+
+            const engine = Engine.create();
+            let w = heroEl.clientWidth;
+            let h = heroEl.clientHeight;
+
+            let ground = Bodies.rectangle(w / 2, h + 25, w, 50, { isStatic: true });
+            let leftWall = Bodies.rectangle(-25, h / 2, 50, h * 2, { isStatic: true });
+            let rightWall = Bodies.rectangle(w + 25, h / 2, 50, h * 2, { isStatic: true });
+            
+            // Broom physical barrier (w: 60px, h: 60px, right/bottom: 20px)
+            let broomWidth = 60;
+            let broomHeight = 60;
+            let broomBody = Bodies.rectangle(
+                w - 20 - broomWidth / 2, 
+                h - 20 - broomHeight / 2, 
+                broomWidth + 40, 
+                broomHeight + 40, // extra padding so items bounce off nicely
+                { isStatic: true }
+            );
+
+            Composite.add(engine.world, [ground, leftWall, rightWall, broomBody]);
+
+            const phElements = heroEl.querySelectorAll('.ph-el');
+            const bodiesMap = new Map();
+
+            // Generate grid cells to prevent initial overlap
+            function generateCells(width, height, numElements) {
+                let cols = Math.ceil(Math.sqrt(numElements * (width / height)));
+                let rows = Math.ceil(numElements / cols);
+                let cells = [];
+                let cellW = width / cols;
+                let cellH = height / rows;
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        let cx = c * cellW + cellW / 2;
+                        let cy = r * cellH + cellH / 2;
+                        
+                        // Push cell away from broom area if it's too close
+                        if (cx > width - 150 && cy > height - 150) {
+                            cx -= 40;
+                            cy -= 40;
+                        }
+                        
+                        cells.push({ x: cx, y: cy });
+                    }
+                }
+                return cells;
+            }
+
+            let baseCells = generateCells(w, h, phElements.length);
+
+            function initialLayout() {
+                // Shuffle cells
+                let cells = [...baseCells].sort(() => Math.random() - 0.5);
+
+                phElements.forEach((el, index) => {
+                    let cell = cells[index % cells.length];
+                    const elWidth = el.offsetWidth || 100;
+                    const elHeight = el.offsetHeight || 40;
+                    // Prevent zero dimension issues
+                    const safeWidth = Math.max(elWidth, 40);
+                    const safeHeight = Math.max(elHeight, 40);
+
+                    // Add slight random offset to make it look scattered but roughly aligned
+                    let startX = cell.x + (Math.random() * 30 - 15);
+                    let startY = cell.y + (Math.random() * 30 - 15);
+
+                    // Clamp to container
+                    startX = Math.max(safeWidth / 2 + 10, Math.min(w - safeWidth / 2 - 10, startX));
+                    startY = Math.max(safeHeight / 2 + 10, Math.min(h - safeHeight / 2 - 10, startY));
+
+                    el.style.transform = `translate(${startX - elWidth / 2}px, ${startY - elHeight / 2}px)`;
+
+                    let body = bodiesMap.get(el);
+                    if (!body) {
+                        body = Bodies.rectangle(startX, startY, safeWidth, safeHeight, {
+                            isStatic: true,
+                            restitution: 0.6,
+                            friction: 0.1,
+                            frictionAir: 0.05
+                        });
+                        Composite.add(engine.world, body);
+                        bodiesMap.set(el, body);
+
+                        el.addEventListener('mouseenter', () => {
+                            if (body.isStatic) {
+                                Matter.Body.setStatic(body, false);
+                                Matter.Sleeping.set(body, false);
+                            }
+                        });
+                    } else {
+                        // Reset existing body
+                        Matter.Body.setStatic(body, true);
+                        Matter.Sleeping.set(body, false);
+                        Matter.Body.setPosition(body, { x: startX, y: startY });
+                        Matter.Body.setAngle(body, 0);
+                        Matter.Body.setVelocity(body, { x: 0, y: 0 });
+                        Matter.Body.setAngularVelocity(body, 0);
+                    }
+                });
+            }
+
+            // Execute once all images and resources have loaded strictly
+            initialLayout();
+
+            Events.on(engine, 'afterUpdate', function () {
+                phElements.forEach((el) => {
+                    const body = bodiesMap.get(el);
+                    if (body && !body.isStatic) {
+                        el.style.transform = `translate(${body.position.x - el.offsetWidth / 2}px, ${body.position.y - el.offsetHeight / 2}px) rotate(${body.angle}rad)`;
+                    }
+                });
+            });
+
+            const runner = Runner.create();
+            Runner.run(runner, engine);
+
+            // Handle Reset Broom Click
+            const broom = document.getElementById('reset-broom');
+            if (broom) {
+                broom.addEventListener('click', () => {
+                    initialLayout();
+                });
+            }
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                const newW = heroEl.clientWidth;
+                const newH = heroEl.clientHeight;
+                if (newW !== w || newH !== h) {
+                    Matter.Body.setPosition(ground, { x: newW / 2, y: newH + 25 });
+                    Matter.Body.setVertices(ground, Matter.Bodies.rectangle(newW / 2, newH + 25, newW, 50).vertices);
+                    Matter.Body.setPosition(rightWall, { x: newW + 25, y: newH / 2 });
+                    
+                    // Reposition broom barrier
+                    Matter.Body.setPosition(broomBody, { 
+                        x: newW - 20 - broomWidth / 2, 
+                        y: newH - 20 - broomHeight / 2 
+                    });
+                    
+                    // Recompute base cells for new dimensions
+                    baseCells = generateCells(newW, newH, phElements.length);
+                    w = newW;
+                    h = newH;
+                }
+            });
         });
     </script>
 </body>

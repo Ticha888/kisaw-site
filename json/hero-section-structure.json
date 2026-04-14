@@ -1,0 +1,903 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-14T12:37:29.520Z",
+    "componentName": "Frame 1321314544",
+    "totalElements": 59,
+    "nestingDepth": 8,
+    "plugin": "Figma to JSON Exporter"
+  },
+  "designTokens": {
+    "colors": {
+      "color-rgb(251, 251, 251)": "rgb(251, 251, 251)",
+      "color-rgb(222, 222, 222)": "rgb(222, 222, 222)",
+      "color-rgb(53, 53, 53)": "rgb(53, 53, 53)",
+      "color-rgb(180, 222, 246)": "rgb(180, 222, 246)",
+      "color-rgb(255, 218, 239)": "rgb(255, 218, 239)",
+      "color-rgb(221, 140, 172)": "rgb(221, 140, 172)",
+      "color-rgb(208, 236, 241)": "rgb(208, 236, 241)",
+      "color-rgb(71, 225, 148)": "rgb(71, 225, 148)",
+      "color-rgb(166, 211, 255)": "rgb(166, 211, 255)",
+      "color-rgb(221, 55, 55)": "rgb(221, 55, 55)",
+      "color-rgb(0, 126, 250)": "rgb(0, 126, 250)"
+    },
+    "fonts": {
+      "inter": {
+        "family": "Inter",
+        "sizes": {
+          "size-34": "34px",
+          "size-16": "16px",
+          "size-18": "18px",
+          "size-38": "38px",
+          "size-23": "23px",
+          "size-14": "14px"
+        },
+        "weights": {
+          "weight-900": "900",
+          "weight-400": "400",
+          "weight-700": "700"
+        }
+      }
+    },
+    "spacing": {
+      "gap-96": "96px",
+      "gap-112": "112px",
+      "gap-64": "64px",
+      "gap-94": "94px"
+    },
+    "effects": {}
+  },
+  "structure": {
+    "name": "frame-1321314544",
+    "type": "FRAME",
+    "size": {
+      "w": 1440,
+      "h": 489
+    },
+    "styles": {
+      "layout": {
+        "direction": "column",
+        "gap": 96,
+        "align": {
+          "main": "start",
+          "cross": "center"
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "frame-1321314523",
+        "type": "FRAME",
+        "size": {
+          "w": 1280,
+          "h": 42
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 112,
+            "align": {
+              "main": "start",
+              "cross": "center"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "group-9169",
+            "type": "GROUP",
+            "size": {
+              "w": 528,
+              "h": 42
+            },
+            "children": [
+              {
+                "name": "group-1321314465",
+                "type": "GROUP",
+                "size": {
+                  "w": 528,
+                  "h": 42
+                },
+                "children": [
+                  {
+                    "name": "group-9099",
+                    "type": "GROUP",
+                    "size": {
+                      "w": 168,
+                      "h": 42
+                    },
+                    "children": [
+                      {
+                        "name": "group-9099",
+                        "type": "GROUP",
+                        "size": {
+                          "w": 168,
+                          "h": 42
+                        },
+                        "children": [
+                          {
+                            "name": "group-19",
+                            "type": "GROUP",
+                            "size": {
+                              "w": 40,
+                              "h": 42
+                            },
+                            "children": [
+                              {
+                                "name": "vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "w": 40,
+                                  "h": 17
+                                },
+                                "styles": {
+                                  "bg": "rgb(251, 251, 251)",
+                                  "border": {
+                                    "width": 1,
+                                    "color": "rgb(30, 30, 30)"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "name": "kisaw",
+                            "type": "TEXT",
+                            "size": {
+                              "w": 116,
+                              "h": 30
+                            },
+                            "content": "KisaW",
+                            "styles": {
+                              "bg": "rgb(251, 251, 251)",
+                              "text": {
+                                "family": "Inter",
+                                "size": 34,
+                                "weight": "900",
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "a-design-studio-by-visual-enthusiasts",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 343,
+                      "h": 18
+                    },
+                    "content": "a Design studio by visual enthusiasts",
+                    "styles": {
+                      "bg": "rgb(222, 222, 222)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 16,
+                        "weight": "400",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "frame-2",
+            "type": "FRAME",
+            "size": {
+              "w": 679,
+              "h": 40
+            },
+            "styles": {
+              "layout": {
+                "direction": "row",
+                "gap": 64,
+                "align": {
+                  "main": "start",
+                  "cross": "center"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "frame-1321314478",
+                "type": "FRAME",
+                "size": {
+                  "w": 405,
+                  "h": 17
+                },
+                "styles": {
+                  "layout": {
+                    "direction": "row",
+                    "gap": 94,
+                    "align": {
+                      "main": "start",
+                      "cross": "center"
+                    }
+                  }
+                },
+                "children": [
+                  {
+                    "name": "cases",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 62,
+                      "h": 17
+                    },
+                    "content": "cases",
+                    "styles": {
+                      "bg": "rgb(222, 222, 222)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "700",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "about",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 65,
+                      "h": 17
+                    },
+                    "content": "About",
+                    "styles": {
+                      "bg": "rgb(222, 222, 222)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "700",
+                        "align": "left"
+                      }
+                    }
+                  },
+                  {
+                    "name": "services",
+                    "type": "TEXT",
+                    "size": {
+                      "w": 90,
+                      "h": 17
+                    },
+                    "content": "Services",
+                    "styles": {
+                      "bg": "rgb(222, 222, 222)",
+                      "text": {
+                        "family": "Inter",
+                        "size": 18,
+                        "weight": "700",
+                        "align": "left"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "button",
+                "type": "INSTANCE",
+                "size": {
+                  "w": 0,
+                  "h": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "heroscreen",
+        "type": "FRAME",
+        "size": {
+          "w": 1440,
+          "h": 489
+        },
+        "styles": {
+          "layout": {
+            "direction": "row",
+            "gap": 0,
+            "align": {
+              "main": "start",
+              "cross": "start"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "rectangle-600",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 1440,
+              "h": 489
+            },
+            "styles": {
+              "bg": "rgb(53, 53, 53)",
+              "radius": 12
+            }
+          },
+          {
+            "name": "vector",
+            "type": "VECTOR",
+            "size": {
+              "w": 95,
+              "h": 41
+            },
+            "styles": {
+              "bg": "rgb(53, 53, 53)",
+              "border": {
+                "width": 2,
+                "color": "rgb(251, 251, 251)"
+              }
+            }
+          },
+          {
+            "name": "vector",
+            "type": "VECTOR",
+            "size": {
+              "w": 134,
+              "h": 41
+            },
+            "styles": {
+              "bg": "rgb(180, 222, 246)"
+            }
+          },
+          {
+            "name": "image-11842",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 96,
+              "h": 166
+            },
+            "styles": {
+              "radius": 10
+            }
+          },
+          {
+            "name": "vector",
+            "type": "VECTOR",
+            "size": {
+              "w": 134,
+              "h": 41
+            },
+            "styles": {
+              "bg": "rgb(255, 218, 239)"
+            }
+          },
+          {
+            "name": "image",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 173,
+              "h": 120
+            },
+            "styles": {
+              "radius": 10
+            }
+          },
+          {
+            "name": "petar-petar-vujacic-1",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 85,
+              "h": 84
+            },
+            "styles": {
+              "radius": 7
+            }
+          },
+          {
+            "name": "group-1321314553",
+            "type": "GROUP",
+            "size": {
+              "w": 1070,
+              "h": 380
+            },
+            "children": [
+              {
+                "name": "brand",
+                "type": "TEXT",
+                "size": {
+                  "w": 137,
+                  "h": 28
+                },
+                "content": "Brand",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "context",
+                "type": "TEXT",
+                "size": {
+                  "w": 192,
+                  "h": 28
+                },
+                "content": "Context",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "pirate",
+                "type": "TEXT",
+                "size": {
+                  "w": 138,
+                  "h": 28
+                },
+                "content": "pirate",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "ads",
+                "type": "TEXT",
+                "size": {
+                  "w": 84,
+                  "h": 28
+                },
+                "content": "ads",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "frame-9161",
+            "type": "FRAME",
+            "size": {
+              "w": 167,
+              "h": 158
+            },
+            "styles": {
+              "bg": "rgb(221, 140, 172)",
+              "radius": 4,
+              "layout": {
+                "direction": "row",
+                "gap": 0,
+                "align": {
+                  "main": "start",
+                  "cross": "start"
+                }
+              }
+            },
+            "children": [
+              {
+                "name": "image-189",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 158,
+                  "h": 158
+                },
+                "styles": {
+                  "radius": 12
+                }
+              },
+              {
+                "name": "me",
+                "type": "TEXT",
+                "size": {
+                  "w": 36,
+                  "h": 20
+                },
+                "content": "me",
+                "styles": {
+                  "bg": "rgb(208, 236, 241)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 23,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "your-brand",
+                "type": "TEXT",
+                "size": {
+                  "w": 52,
+                  "h": 26
+                },
+                "content": "yourbrand",
+                "styles": {
+                  "bg": "rgb(208, 236, 241)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 14,
+                    "weight": "900",
+                    "align": "right"
+                  }
+                }
+              },
+              {
+                "name": "line-19",
+                "type": "LINE",
+                "size": {
+                  "w": 52,
+                  "h": 0
+                },
+                "styles": {
+                  "border": {
+                    "width": 1,
+                    "color": "rgb(208, 236, 241)"
+                  }
+                }
+              },
+              {
+                "name": "line-18",
+                "type": "LINE",
+                "size": {
+                  "w": 62,
+                  "h": 0
+                },
+                "styles": {
+                  "border": {
+                    "width": 1,
+                    "color": "rgb(208, 236, 241)"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "group-1321314551",
+            "type": "GROUP",
+            "size": {
+              "w": 630,
+              "h": 90
+            },
+            "children": [
+              {
+                "name": "strategy",
+                "type": "TEXT",
+                "size": {
+                  "w": 211,
+                  "h": 28
+                },
+                "content": "Strategy",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "communication",
+                "type": "TEXT",
+                "size": {
+                  "w": 347,
+                  "h": 28
+                },
+                "content": "Communication",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "unfiltered",
+                "type": "TEXT",
+                "size": {
+                  "w": 234,
+                  "h": 28
+                },
+                "content": "Unfiltered",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "image-11811",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 119,
+              "h": 270
+            }
+          },
+          {
+            "name": "image-11853",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 112,
+              "h": 176
+            },
+            "styles": {
+              "radius": 3
+            }
+          },
+          {
+            "name": "image-187",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 131,
+              "h": 170
+            },
+            "styles": {
+              "radius": 5
+            }
+          },
+          {
+            "name": "group-1321314552",
+            "type": "GROUP",
+            "size": {
+              "w": 1267,
+              "h": 388
+            },
+            "children": [
+              {
+                "name": "visual-language",
+                "type": "TEXT",
+                "size": {
+                  "w": 372,
+                  "h": 28
+                },
+                "content": "Visual language",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "narrative",
+                "type": "TEXT",
+                "size": {
+                  "w": 227,
+                  "h": 28
+                },
+                "content": "Narrative",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "site",
+                "type": "TEXT",
+                "size": {
+                  "w": 87,
+                  "h": 28
+                },
+                "content": "site",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "smm",
+                "type": "TEXT",
+                "size": {
+                  "w": 97,
+                  "h": 28
+                },
+                "content": "smm",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "web",
+                "type": "TEXT",
+                "size": {
+                  "w": 91,
+                  "h": 28
+                },
+                "content": "web",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "artful",
+                "type": "TEXT",
+                "size": {
+                  "w": 154,
+                  "h": 28
+                },
+                "content": "Artful",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              },
+              {
+                "name": "illustrations",
+                "type": "TEXT",
+                "size": {
+                  "w": 306,
+                  "h": 28
+                },
+                "content": "illustrations",
+                "styles": {
+                  "bg": "rgb(251, 251, 251)",
+                  "text": {
+                    "family": "Inter",
+                    "size": 38,
+                    "weight": "900",
+                    "align": "left"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "vector",
+            "type": "VECTOR",
+            "size": {
+              "w": 95,
+              "h": 41
+            },
+            "styles": {
+              "bg": "rgb(71, 225, 148)"
+            }
+          },
+          {
+            "name": "image-11846",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 225,
+              "h": 219
+            }
+          },
+          {
+            "name": "image-11854",
+            "type": "RECTANGLE",
+            "size": {
+              "w": 130,
+              "h": 130
+            }
+          },
+          {
+            "name": "group-1321314561",
+            "type": "GROUP",
+            "size": {
+              "w": 161,
+              "h": 32
+            },
+            "children": [
+              {
+                "name": "rectangle-618",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 32,
+                  "h": 32
+                },
+                "styles": {
+                  "bg": "rgb(71, 225, 148)"
+                }
+              },
+              {
+                "name": "rectangle-619",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 32,
+                  "h": 32
+                },
+                "styles": {
+                  "bg": "rgb(166, 211, 255)"
+                }
+              },
+              {
+                "name": "rectangle-620",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 32,
+                  "h": 32
+                },
+                "styles": {
+                  "bg": "rgb(221, 55, 55)"
+                }
+              },
+              {
+                "name": "rectangle-621",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 32,
+                  "h": 32
+                },
+                "styles": {
+                  "bg": "rgb(255, 218, 239)"
+                }
+              },
+              {
+                "name": "rectangle-628",
+                "type": "RECTANGLE",
+                "size": {
+                  "w": 32,
+                  "h": 32
+                },
+                "styles": {
+                  "bg": "rgb(0, 126, 250)"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "components": 0,
+    "instances": 1,
+    "frames": 6,
+    "texts": 21,
+    "hasAutoLayout": true,
+    "hasEffects": false
+  }
+}
