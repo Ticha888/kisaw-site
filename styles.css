@@ -688,10 +688,13 @@ a {
     justify-content: center;
     text-decoration: none;
     padding: 8px 24px;
+    height: 40px;
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
     font-style: italic;
+    line-height: 0.969;
+    white-space: nowrap;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     text-transform: uppercase;

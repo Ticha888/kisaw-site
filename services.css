@@ -1,7 +1,43 @@
 /* Services page specific styles */
+.services-page .page {
+    zoom: 0.8;
+}
+
+/* Fix: sidebar behind the white container */
+.sticky-sidebar-blue-layer {
+    z-index: 1;
+    right: -40px !important; /* Tuck slightly less under the white block */
+}
+
+/* Image badge styles */
+.sticky-sidebar-blue-img {
+    position: sticky;
+    top: 64px; /* Align perfectly to the top (safe because the corner is tucked 80px deep!) */
+    margin-top: 0;
+    height: auto;
+    width: auto;
+    max-width: 150px;
+    display: block;
+}
+
+/* Page Background */
+body.services-page {
+    background: #b8b8b8;
+}
+
+.services-page .request-form-section {
+    background: rgb(53, 53, 53);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.services-page .request-form-title {
+    font-size: 75px;
+    color: rgb(251, 251, 251);
+}
 
 .services-page-container {
-    background: #fff;
+    background: #FBFBFB;
     padding-bottom: 0;
 }
 
@@ -22,9 +58,10 @@
     color: #007efa;
 }
 
+
 /* Main section */
 .services-main {
-    padding-bottom: 103px;
+    padding-bottom: 64px;
 }
 
 .services-headline {
@@ -33,7 +70,8 @@
     color: #1e1e1e;
     text-transform: uppercase;
     line-height: 1;
-    margin-bottom: 48px;
+    margin-top: 60px;
+    margin-bottom: 100px;
 }
 
 /* Services Grid */
@@ -41,34 +79,46 @@
     display: flex;
     flex-direction: column;
     gap: 103px;
+    max-width: 1152px;
 }
 
+/* Each section */
+.services-section {
+    display: flex;
+    flex-direction: column;
+    gap: 103px;
+}
+
+/* Default row: 2 equal columns, 154px column gap */
 .services-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 154px;
+    column-gap: 154px;
     align-items: start;
 }
 
-.services-row-single {
-    grid-template-columns: 1fr 1fr;
+/* Section 2 row: wider column gap (196px per Figma) */
+.services-row--wide {
+    column-gap: 196px;
 }
 
-.services-row-single .service-card {
-    /* Only the first card appears, the second column stays empty */
+/* Single-card row: only first column used */
+.services-row-single {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 154px;
 }
 
 /* Service Card */
 .service-card {
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 20px;
 }
 
 .service-card-body {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
 }
 
 .service-name {
@@ -82,13 +132,13 @@
 .service-steps {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
 }
 
 .service-step {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 4px;
 }
 
 .step-title {
@@ -112,6 +162,8 @@
     color: #9e9e9e;
     line-height: 1.54;
     margin: 0;
+    max-width: 380px;
+    /* Forces wrapping similar to Figma */
 }
 
 /* Learn more link */
@@ -138,7 +190,17 @@
 }
 
 /* Responsive */
+@media (max-width: 1440px) {
+    .sticky-sidebar-blue {
+        font-size: 88px;
+    }
+}
+
 @media (max-width: 1100px) {
+    .sticky-sidebar-blue {
+        font-size: 72px;
+    }
+
     .services-row {
         gap: 80px;
     }
@@ -153,6 +215,7 @@
 }
 
 @media (max-width: 800px) {
+
     .services-row,
     .services-row-single {
         grid-template-columns: 1fr;
