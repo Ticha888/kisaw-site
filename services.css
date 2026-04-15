@@ -170,12 +170,13 @@ body.services-page {
 .service-learn-more {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-size: 18px;
     font-weight: 600;
     color: #007efa;
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
     text-transform: uppercase;
     transition: color 0.2s;
     width: fit-content;
