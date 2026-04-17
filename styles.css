@@ -720,18 +720,17 @@ a {
     margin-left: -80px;
     margin-right: -80px;
     margin-top: 15px;
-    border-radius: 15px;
-    background: rgb(53, 53, 53);
+    border-radius: 12px;
+    background: #353535;
     padding: 72px 80px;
     overflow: hidden;
 }
 
 .request-form-layout {
-    display: grid;
-    grid-template-columns: 609px 671px;
-    gap: 0;
+    display: flex;
+    gap: 40px;
     align-items: start;
-    max-width: 1280px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -739,40 +738,48 @@ a {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    color: rgb(251, 251, 251);
-    padding-right: 40px;
+    color: #fbfbfb;
+    flex: 1;
 }
 
 .request-form-title {
-    font-size: clamp(42px, 4.2vw, 75px);
-    line-height: 0.97;
+    font-size: 60px;
+    line-height: 1;
     font-weight: 900;
     margin: 0;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     text-transform: uppercase;
-    color: rgb(251, 251, 251);
+    color: #fbfbfb;
+    font-family: 'Inter', sans-serif;
 }
 
 .request-form-description {
     width: min(508px, 100%);
-    font-size: 22px;
-    line-height: 1.55;
-    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
     margin: 0;
-    color: rgb(249, 249, 249);
-    text-transform: uppercase;
+    color: #fbfbfb;
+    text-transform: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.request-form-description .text-accent-green {
+    color: #47e194;
 }
 
 .request-form {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 48px;
+    width: 671px;
+    flex-shrink: 0;
 }
 
 .request-form-fields {
     display: flex;
     flex-direction: column;
-    gap: 65px;
+    gap: 48px;
 }
 
 .request-input-group {
@@ -780,10 +787,15 @@ a {
     flex-direction: column;
     gap: 12px;
     position: relative;
+    width: 100%;
 }
 
-.request-input-group label {
-    display: none;
+.request-input-group .input-label {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fbfbfb;
+    opacity: 0.5;
+    text-transform: uppercase;
 }
 
 .request-input-group input[type="text"],
@@ -795,7 +807,7 @@ a {
     color: #fbfbfb;
     font-size: 18px;
     line-height: 1.54;
-    padding: 2px 0 10px;
+    padding: 0 0 0px;
     caret-color: #fbfbfb;
     font-family: 'Inter', sans-serif;
 }
@@ -832,14 +844,14 @@ a {
 
 .request-textarea-wrapper textarea {
     width: 100%;
-    height: 120px;
+    height: 260px;
     background: transparent;
     border: 1.25px solid #fbfbfb;
     border-radius: 12px;
     color: #fbfbfb;
     font-size: 18px;
     line-height: 1.54;
-    padding: 14px 16px;
+    padding: 16px 11px;
     resize: none;
     font-family: 'Inter', sans-serif;
     scrollbar-width: thin;
