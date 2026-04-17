@@ -757,14 +757,14 @@ a {
 .request-form-copy {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
     color: #fbfbfb;
     flex: 1;
 }
 
 .request-form-title {
     font-size: 60px;
-    line-height: 1;
+    line-height: 1.1;
     font-weight: 900;
     margin: 0;
     letter-spacing: 0;
@@ -776,11 +776,11 @@ a {
 .request-form-description {
     width: min(508px, 100%);
     font-size: 24px;
-    line-height: 1;
+    line-height: 1.25;
     font-weight: 500;
     margin: 0;
     color: #fbfbfb;
-    text-transform: none;
+    text-transform: uppercase;
     font-family: 'Inter', sans-serif;
 }
 
@@ -1303,7 +1303,7 @@ a {
 /* PIXEL-PERFECT REFINEMENTS FOR SERVICES.HTML */
 .variant-refined .request-form-copy {
     text-transform: uppercase;
-    gap: 60px;
+    gap: 40px;
 }
 
 .variant-refined .request-form-title {
@@ -1336,6 +1336,12 @@ a {
     outline: none;
     font-size: 18px;
     padding: 15px 0 2px 0; /* Minimized bottom padding to press text to line */
+}
+
+/* Remove the line below icons specifically for the media group */
+.request-form .request-media-group {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .variant-refined .request-input-group input::placeholder {
