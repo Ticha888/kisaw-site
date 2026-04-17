@@ -486,12 +486,10 @@
                             enctype="multipart/form-data">
                                 <div class="request-form-fields">
                                     <div class="request-input-group">
-                                        <span class="input-label">NAME</span>
-                                        <input id="request-name" name="name" type="text" placeholder="">
+                                        <input id="request-name" name="name" type="text" placeholder="NAME">
                                     </div>
                                     <div class="request-input-group">
-                                        <span class="input-label">EMAIL</span>
-                                        <input id="request-email" name="email" type="email" placeholder="">
+                                        <input id="request-email" name="email" type="email" placeholder="EMAIL">
                                     </div>
                                 <div class="request-media-group">
                                     <div class="request-textarea-wrapper">
@@ -623,19 +621,16 @@
     <!-- Success Modal -->
     <div class="success-modal-overlay" id="success-modal" style="display:none;">
         <div class="success-modal-card">
-            <div class="success-icon-wrap">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M5 13l4 4L19 7" stroke="#47e194" stroke-width="2.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+            <div class="success-image-wrap">
+                <img src="img/alien_cat_thumbs_up.png" alt="Signal Sent" class="success-mascot">
             </div>
-            <p class="success-title">Signal Sent!</p>
-            <p class="success-desc">We've received your message and will get back to you shortly.</p>
-            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">Got
-                it</button>
+            <h3 class="success-title">SIGNAL SENT!</h3>
+            <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('services-form');
@@ -647,6 +642,24 @@
             const filesListContainer = form.querySelector('.files-list');
             const helperStatus = document.getElementById('helper-status');
             const submitBtn = document.getElementById('btn-submit');
+
+            // --- Confetti Effect ---
+            if (submitBtn) {
+                submitBtn.addEventListener('click', () => {
+                    const rect = submitBtn.getBoundingClientRect();
+                    const x = (rect.left + rect.width / 2) / window.innerWidth;
+                    const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                    confetti({
+                        particleCount: 150,
+                        spread: 70,
+                        origin: { x, y },
+                        colors: ['#47e194', '#fbfbfb', '#1e1e1e'],
+                        zIndex: 9999
+                    });
+                });
+            }
+            // ------------------------
             const stopRecordBtn = form.querySelector('.btn-stop-record');
             const voiceTimer = form.querySelector('.recording-timer');
 
