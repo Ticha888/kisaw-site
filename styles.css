@@ -2750,8 +2750,8 @@ a {
     z-index: 10;
 }
 .ph-text {
-    background: rgb(251, 251, 251);
-    color: #121212;
+    background: transparent;
+    color: rgb(251, 251, 251);
     padding: 2px 14px;
     border-radius: 4px;
     font-size: 38px;
