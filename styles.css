@@ -728,10 +728,26 @@ a {
 
 .request-form-layout {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     align-items: start;
     max-width: 1320px;
     margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .request-form-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .request-form {
+        width: 100%;
+    }
+    
+    .request-form-copy {
+        padding-right: 0;
+    }
 }
 
 .request-form-copy {
@@ -839,7 +855,10 @@ a {
 
 /* MEDIA GROUP (Textarea + Files + Voice) */
 .request-media-group {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .request-textarea-wrapper textarea {
@@ -908,17 +927,18 @@ a {
 .request-helper-row {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 19px;
     align-items: flex-start;
-    margin-top: 8px;
+    margin-top: 15px;
 }
 
 .helper-text {
-    text-transform: uppercase;
     font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 16px;
-    color: #9E9E9E;
+    font-weight: 500;
+    color: #fbfbfb;
+    opacity: 0.5;
+    text-transform: uppercase;
+    max-width: 538px;
 }
 
 .state-voice .helper-text {
@@ -1230,7 +1250,7 @@ a {
 }
 
 .request-submit-btn {
-    width: fit-content;
+    width: 254px;
     height: 56px;
     padding: 8px 24px;
     border: none;
@@ -1242,6 +1262,7 @@ a {
     font-style: italic;
     cursor: pointer;
     transition: transform 0.2s, filter 0.2s;
+    font-family: 'Inter', sans-serif;
 }
 
 .request-submit-btn:hover {
@@ -1254,6 +1275,101 @@ a {
 .request-submit-btn:focus-visible {
     outline: 2px solid rgba(71, 225, 148, 0.85);
     outline-offset: 2px;
+}
+
+/* PIXEL-PERFECT REFINEMENTS FOR SERVICES.HTML */
+.variant-refined .request-form-copy {
+    text-transform: uppercase;
+    gap: 60px;
+}
+
+.variant-refined .request-form-title {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.variant-refined .request-form-description {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.variant-refined .request-form-fields {
+    gap: 42.5px; /* Precision gap from design context */
+}
+
+.variant-refined .request-input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    border-bottom: 1.25px solid #fbfbfb;
+    padding-bottom: 5px;
+}
+
+.variant-refined .request-input-group .input-label {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.variant-refined .request-input-group input {
+    border-bottom: none !important;
+    padding: 0;
+    height: auto;
+    flex: 1;
+    background: transparent;
+    color: #fbfbfb;
+    border: none;
+    outline: none;
+}
+
+.variant-refined .request-textarea-wrapper textarea {
+    border: 1.25px solid #fbfbfb;
+    padding: 16px 11px;
+    font-size: 18px;
+}
+
+.variant-refined .request-textarea-wrapper textarea::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.variant-refined .helper-text {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.5;
+    text-transform: uppercase;
+    line-height: 1.54;
+}
+
+.variant-refined .icon-btn img {
+    filter: brightness(0) saturate(100%) invert(74%) sepia(58%) saturate(518%) hue-rotate(95deg) brightness(96%) contrast(91%);
+}
+
+.variant-refined .request-helper-row {
+    margin-top: 5px;
+    gap: 12px;
+}
+
+.variant-refined .request-submit-btn {
+    width: fit-content;
+    min-width: 254px;
+    height: 56px;
+    border-radius: 12px;
+    background: #47e194;
+    color: #1e1e1e;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 8px 32px;
 }
 
 /* Hero Section */

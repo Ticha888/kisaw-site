@@ -157,7 +157,7 @@
                         <div class="request-form-copy">
                             <h2 class="request-form-title">Drop Your Quest Here</h2>
                             <p class="request-form-description">
-                                <span style="color:#47e194;">Tell us about your project.</span> We'll review what you
+                                <span class="text-accent-green">Tell us about your project.</span> We'll review what you
                                 have, listen to your ideas, and
                                 propose a clear direction for how the project should look, sound, and communicate.
                             </p>
@@ -165,13 +165,15 @@
 
                         <form id="services-form" class="request-form state-default" action="#" method="post"
                             enctype="multipart/form-data">
-                            <div class="request-form-fields">
-                                <div class="request-input-group">
-                                    <input id="request-name" name="name" type="text" placeholder="Name">
-                                </div>
-                                <div class="request-input-group">
-                                    <input id="request-email" name="email" type="email" placeholder="Email">
-                                </div>
+                                <div class="request-form-fields">
+                                    <div class="request-input-group">
+                                        <span class="input-label">Name</span>
+                                        <input id="request-name" name="name" type="text" placeholder="">
+                                    </div>
+                                    <div class="request-input-group">
+                                        <span class="input-label">Email</span>
+                                        <input id="request-email" name="email" type="email" placeholder="">
+                                    </div>
                                 <div class="request-input-group request-media-group">
                                     <div class="request-textarea-wrapper">
                                         <textarea id="request-message" name="message"
