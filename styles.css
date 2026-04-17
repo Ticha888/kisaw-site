@@ -2728,15 +2728,7 @@ a {
     }
 }
 
-/* Broom Reset Styling */
-#reset-broom {
-    filter: drop-shadow(0 0 10px rgba(71, 225, 148, 0.8));
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-#reset-broom:hover {
-    transform: scale(1.15) rotate(-8deg);
-    filter: drop-shadow(0 0 20px rgba(71, 225, 148, 1));
-}
+
 
 /* New Hero Physics */
 .new-hero-physics {
@@ -2759,13 +2751,27 @@ a {
     -webkit-user-select: none;
     z-index: 10;
 }
+/* Increase hover area for better reactivity */
+.ph-el::after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    pointer-events: auto;
+    z-index: -1;
+}
+.ph-grenade {
+    cursor: url('img/imgs_for_main/icons_hero_screen/boommouse.png') 16 16, pointer;
+}
 .ph-text {
     background: transparent;
     color: rgb(251, 251, 251);
     padding: 2px 14px;
     border-radius: 4px;
-    font-size: 38px;
-    line-height: 1.2;
+    font-size: 64px;
+    line-height: 1.1;
     font-weight: 900;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
@@ -2773,11 +2779,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.4s ease, background 0.4s ease, -webkit-background-clip 0.4s ease;
+    background-clip: padding-box; /* Default */
 }
 .ph-img img {
     display: block;
     max-width: 100%;
     pointer-events: none;
+}
+.ph-piano img {
+    height: 500px !important;
+    width: auto;
 }
 .avatar-circle img {
     border-radius: 50%;
@@ -2786,6 +2798,9 @@ a {
 .ph-vector {
     border: 2px solid rgb(251, 251, 251);
     border-radius: 20px;
+}
+.ph-grenade:hover {
+    cursor: url('img/imgs_for_main/icons_hero_screen/boommouse.png'), auto !important;
 }
 .ph-blue { background: rgb(180, 222, 246); width: 134px; height: 41px; }
 .ph-pink { background: rgb(255, 218, 239); width: 134px; height: 41px; }
@@ -3251,4 +3266,40 @@ a {
     }
 
     .bp-outline { display: none; }
+}
+
+/* --- Reset Broom Styles --- */
+#reset-broom img {
+    transition: transform 0.3s ease;
+    filter: none !important;
+    box-shadow: none !important;
+    transform-origin: 80% 10%; /* Pivots from the handle tip */
+}
+
+#reset-broom:hover img {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+#reset-broom.sweeping img {
+    animation: sweep-pendulum 0.8s ease-in-out;
+}
+
+@keyframes sweep-pendulum {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-35deg); }
+    40% { transform: rotate(30deg); }
+    60% { transform: rotate(-25deg); }
+    80% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.explosion-shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
 }

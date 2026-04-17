@@ -43,7 +43,7 @@
                     </nav>
                 </header>
                 <!-- Hero Section (Physics Based) -->
-                <section id="physics-hero" class="hero-section new-hero-physics">
+                <section id="physics-hero" class="hero-section new-hero-physics" style="overflow:hidden;">
                     <!-- <div class="ph-el ph-vector ph-outline-bone" style="width:95px; height:41px;"></div> -->
                     <!-- <div class="ph-el ph-vector ph-blue"></div>
                     <div class="ph-el ph-vector ph-pink"></div>
@@ -51,30 +51,27 @@
 
                 <!-- Images -->
                     <!-- Large statement objects -->
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_kisaw.png" alt="" style="height:160px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_kisaw.png" alt="" style="height:240px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/kisaw ill.png" alt="" style="height:240px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/nodog.png" alt="" style="height:200px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/me your brand.png" alt="" style="height:160px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/megustaIcon_main_screen_07.png" alt="" style="height:180px;"></div>
 
                     <!-- Medium objects -->
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_dino.png" alt="" style="height:120px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_matches.png" alt="" style="height:155px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/dino.png" alt="" style="height:120px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/matchbox.png" alt="" style="height:145px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/lazyguy.png" alt="" style="height:130px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/moucemat.png" alt="" style="height:110px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/wellplayed.png" alt="" style="height:170px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/grenade.png" alt="" style="height:90px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/grenade frame.png" alt="" style="height:90px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/tamagochi animation.gif" alt="" style="height:120px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/moucemat.png" alt="" style="height:160px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/wellplayed.png" alt="" style="height:100px;"></div>
+                    <div class="ph-el ph-img ph-grenade"><img src="img/imgs_for_main/icons_hero_screen/grenade.png" alt="" style="height:60px;"></div>
+                    <div class="ph-el ph-img ph-grenade"><img src="img/imgs_for_main/icons_hero_screen/grenade.png" alt="" style="height:60px;"></div>
+                    <div class="ph-el ph-img ph-grenade"><img src="img/imgs_for_main/icons_hero_screen/grenade.png" alt="" style="height:60px;"></div>
 
                     <!-- Small objects -->
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_08.png" alt="" style="height:80px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_10.png" alt="" style="height:80px;"></div>
+                    <div class="ph-el ph-img ph-piano" style="z-index: 20;"><img src="img/imgs_for_main/icons_hero_screen/piano.png" alt="" style="height:500px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/pink bone.png" alt="" style="height:40px;"></div>
+                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/blue bone.png" alt="" style="height:40px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/Icon_main_screen_bone.png" alt="" style="height:40px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/bone blue.png" alt="" style="height:40px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/bone pink.png" alt="" style="height:40px;"></div>
-                    <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/bone green.png" alt="" style="height:40px;"></div>
                     <div class="ph-el ph-img"><img src="img/imgs_for_main/icons_hero_screen/bine white stroke.png" alt="" style="height:40px;"></div>
 
                     <!-- Reset Broom -->
@@ -647,179 +644,258 @@
                 Events = Matter.Events;
 
             const engine = Engine.create();
-            let w = heroEl.clientWidth;
-            let h = heroEl.clientHeight;
-
-            let ground = Bodies.rectangle(w / 2, h + 25, w, 50, { isStatic: true });
-            let leftWall = Bodies.rectangle(-25, h / 2, 50, h * 2, { isStatic: true });
-            let rightWall = Bodies.rectangle(w + 25, h / 2, 50, h * 2, { isStatic: true });
+            engine.gravity.y = 1.5; 
             
-            // Broom physical barrier (w: 60px, h: 60px, right/bottom: 20px)
-            let broomWidth = 60;
-            let broomHeight = 60;
-            let broomBody = Bodies.rectangle(
+            let w = Math.max(heroEl.clientWidth, 800);
+            let h = Math.max(heroEl.clientHeight, 600);
+
+            const wallThickness = 100;
+            const ground = Bodies.rectangle(w / 2, h + wallThickness / 2, w + wallThickness * 2, wallThickness, { isStatic: true });
+            const ceiling = Bodies.rectangle(w / 2, -wallThickness / 2, w + wallThickness * 2, wallThickness, { isStatic: true });
+            const leftWall = Bodies.rectangle(-wallThickness / 2, h / 2, wallThickness, h * 2, { isStatic: true });
+            const rightWall = Bodies.rectangle(w + wallThickness / 2, h / 2, wallThickness, h * 2, { isStatic: true });
+            
+            const broomWidth = 100;
+            const broomHeight = 100;
+            const broomBody = Bodies.rectangle(
                 w - 20 - broomWidth / 2, 
                 h - 20 - broomHeight / 2, 
-                broomWidth + 40, 
-                broomHeight + 40, // extra padding so items bounce off nicely
-                { isStatic: true }
+                broomWidth, 
+                broomHeight,
+                { isStatic: true, restitution: 0.8, friction: 0.1 }
             );
 
-            Composite.add(engine.world, [ground, leftWall, rightWall, broomBody]);
+            let wallsEnabled = true;
+            let isExploded = false;
+            let walls = [ground, ceiling, leftWall, rightWall];
+            Composite.add(engine.world, [...walls, broomBody]);
 
-            const phElements = heroEl.querySelectorAll('.ph-el');
+            const phElements = Array.from(heroEl.querySelectorAll('.ph-el'));
             const bodiesMap = new Map();
 
-            // Generate grid cells to prevent initial overlap
-            function generateCells(width, height, numElements) {
-                let cols = Math.ceil(Math.sqrt(numElements * (width / height)));
-                let rows = Math.ceil(numElements / cols);
+            function generateLayout(width, height, elements) {
+                const count = elements.length;
+                // Wider grid to fill the screen better
+                const paddingW = width * 0.1; 
+                const paddingH = height * 0.12;
+                const innerW = width - paddingW * 2;
+                const innerH = height - paddingH * 2;
+                
                 let cells = [];
-                let cellW = width / cols;
-                let cellH = height / rows;
+                const cols = 6;
+                const rows = Math.ceil(count / cols);
+                
+                // Use more of the screen width for the strictly clean grid
+                const netW = width - 100;
+                const netH = height - 100;
+                const cellW = netW / cols;
+                const cellH = netH / rows;
+
                 for (let r = 0; r < rows; r++) {
                     for (let c = 0; c < cols; c++) {
-                        let cx = c * cellW + cellW / 2;
-                        let cy = r * cellH + cellH / 2;
-                        
-                        // Push cell away from broom area if it's too close
-                        if (cx > width - 150 && cy > height - 150) {
-                            cx -= 40;
-                            cy -= 40;
-                        }
-                        
-                        cells.push({ x: cx, y: cy });
+                        cells.push({
+                            x: 50 + (c + 0.5) * cellW,
+                            y: 50 + (r + 0.5) * cellH
+                        });
                     }
                 }
-                return cells;
+                
+                // Shuffle cells only once to distribute assets randomly but strictly in grid slots
+                return cells.sort(() => Math.random() - 0.5);
             }
 
-            let baseCells = generateCells(w, h, phElements.length);
-
             function initialLayout() {
-                // Shuffle cells
-                let cells = [...baseCells].sort(() => Math.random() - 0.5);
+                const cells = generateLayout(w, h, phElements);
+                
+                // Smart sorting: prioritize placing images first (they take more space)
+                const sortedEls = [...phElements].sort((a, b) => {
+                    const isImgA = a.classList.contains('ph-img') ? 1 : 0;
+                    const isImgB = b.classList.contains('ph-img') ? 1 : 0;
+                    return isImgB - isImgA;
+                });
 
-                phElements.forEach((el, index) => {
-                    let cell = cells[index % cells.length];
-                    const elWidth = el.offsetWidth || 100;
-                    const elHeight = el.offsetHeight || 40;
-                    // Prevent zero dimension issues
-                    const safeWidth = Math.max(elWidth, 40);
-                    const safeHeight = Math.max(elHeight, 40);
+                sortedEls.forEach((el, index) => {
+                    const isText = el.classList.contains('ph-text');
+                    const isPiano = el.classList.contains('ph-piano');
+                    let cell = cells[index] || { x: w/2, y: h/2 };
 
-                    // Add slight random offset to make it look scattered but roughly aligned
-                    let startX = cell.x + (Math.random() * 30 - 15);
-                    let startY = cell.y + (Math.random() * 30 - 15);
-
-                    // Clamp to container
-                    startX = Math.max(safeWidth / 2 + 10, Math.min(w - safeWidth / 2 - 10, startX));
-                    startY = Math.max(safeHeight / 2 + 10, Math.min(h - safeHeight / 2 - 10, startY));
+                    const elW = el.offsetWidth || (isText ? 180 : 100);
+                    const elH = el.offsetHeight || 60;
+                    
+                    // Placement is now STICKTLY on the grid center point
+                    let startX = cell.x;
+                    let startY = cell.y;
+                    
+                    // Final safety clamping
+                    startX = Math.max(elW/2 + 10, Math.min(w - elW/2 - 10, startX));
+                    startY = Math.max(elH/2 + 10, Math.min(h - elH/2 - 10, startY));
 
                     let body = bodiesMap.get(el);
                     if (!body) {
-                        body = Bodies.rectangle(startX, startY, safeWidth, safeHeight, {
-                            isStatic: false, // make dynamic initially for repulsion
-                            restitution: 0.1,
-                            friction: 0.1,
-                            frictionAir: 0.5 // High drag prevents flying away
+                        body = Bodies.rectangle(startX, startY, elW + 10, elH + 10, {
+                            isStatic: isPiano,
+                            frictionAir: isPiano ? 0.08 : (isText ? 0.05 : 0.02),
+                            restitution: isText ? 0.05 : 0.4,
+                            mass: isPiano ? 500 : (isText ? 20 : 1),
+                            density: isPiano ? 1 : 0.001,
+                            label: isPiano ? 'piano' : 'object'
                         });
                         Composite.add(engine.world, body);
                         bodiesMap.set(el, body);
 
+                        const applyRandomTextStyle = (targetEl) => {
+                            const palette = ['#47E194', '#A6D3FF', '#FFDAEF', '#DD3737', '#FF6B35', '#D4A5D4', '#F7931E'];
+                            const c1 = palette[Math.floor(Math.random() * palette.length)];
+                            const c2 = palette[Math.floor(Math.random() * palette.length)];
+                            if (Math.random() > 0.4) {
+                                targetEl.style.backgroundImage = `linear-gradient(135deg, ${c1}, ${c2})`;
+                                targetEl.style.webkitBackgroundClip = 'text';
+                                targetEl.style.backgroundClip = 'text';
+                                targetEl.style.webkitTextFillColor = 'transparent';
+                            } else {
+                                targetEl.style.backgroundImage = 'none';
+                                targetEl.style.webkitBackgroundClip = 'padding-box';
+                                targetEl.style.backgroundClip = 'padding-box';
+                                targetEl.style.webkitTextFillColor = 'initial';
+                                targetEl.style.color = c1;
+                            }
+                        };
+
                         const wakeUp = () => {
+                            if (isExploded) return;
                             if (body.isStatic) {
                                 Matter.Body.setStatic(body, false);
                                 Matter.Sleeping.set(body, false);
                             }
+                            if (isText) {
+                                // Words: Heavy, short jump
+                                Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 5, y: -4 });
+                                applyRandomTextStyle(el);
+                            } else if (isPiano) {
+                                // Piano: Heavyweight reaction
+                                // It should feel massive but responsive
+                                Matter.Body.setVelocity(body, { 
+                                    x: (Math.random() - 0.5) * 8, 
+                                    y: -4 
+                                });
+                                Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
+                            } else {
+                                // Objects: Agile, high jump + spin
+                                Matter.Body.setVelocity(body, { 
+                                    x: (Math.random() - 0.5) * 15, 
+                                    y: -Math.random() * 15 - 5 
+                                });
+                                Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.4);
+                            }
                         };
                         el.addEventListener('mouseenter', wakeUp);
                         el.addEventListener('touchstart', wakeUp, {passive: true});
+                        if (el.classList.contains('ph-grenade')) {
+                            el.addEventListener('click', () => triggerExplosion(body.position));
+                        }
                     } else {
-                        // Reset existing body
                         Matter.Body.setStatic(body, false);
-                        Matter.Sleeping.set(body, false);
                         Matter.Body.setPosition(body, { x: startX, y: startY });
                         Matter.Body.setAngle(body, 0);
                         Matter.Body.setVelocity(body, { x: 0, y: 0 });
-                        Matter.Body.setAngularVelocity(body, 0);
-                        body.restitution = 0.1;
-                        body.frictionAir = 0.5;
                     }
                 });
 
-                // --- ZERO GRAVITY REPULSION TRICK ---
-                let originalGravity = engine.gravity.y;
-                engine.gravity.y = 0; // Turn off gravity
-                
-                // Fast-forward physics engine to let bounding boxes push each other apart naturally
-                for(let i = 0; i < 60; i++) {
-                    Matter.Engine.update(engine, 16.666);
-                }
-                
-                engine.gravity.y = originalGravity; // Restore
+                // NO physical resolution loop here to keep grid STRICT
+                engine.gravity.y = 1.5;
+                isExploded = false;
 
-                // Freeze them in their newly corrected, non-overlapping positions
-                phElements.forEach((el) => {
-                    let body = bodiesMap.get(el);
+                // Elements are now DYNAMIC from the start (except piano)
+                phElements.forEach(el => {
+                    const body = bodiesMap.get(el);
                     if(body) {
-                        Matter.Body.setStatic(body, true);
-                        Matter.Body.setVelocity(body, { x: 0, y: 0 });
-                        Matter.Body.setAngularVelocity(body, 0);
+                        const isText = el.classList.contains('ph-text');
+                        const isPiano = el.classList.contains('ph-piano');
                         
-                        body.restitution = 0.6; // restore normal bounce
-                        body.frictionAir = 0.05; // restore normal air friction
+                        if (isPiano) {
+                            Matter.Body.setStatic(body, true);
+                            Matter.Body.setPosition(body, { x: w/2, y: -1000 });
+                        } else {
+                            // Elements find their own place by falling!
+                            Matter.Body.setStatic(body, false);
+                            Matter.Sleeping.set(body, false);
+                        }
                         
-                        // Force DOM sync immediately
-                        el.style.transform = `translate(${body.position.x - el.offsetWidth / 2}px, ${body.position.y - el.offsetHeight / 2}px) rotate(${body.angle}rad)`;
+                        if (isText) {
+                            el.style.backgroundImage = 'none';
+                            el.style.webkitBackgroundClip = 'padding-box';
+                            el.style.backgroundClip = 'padding-box';
+                            el.style.webkitTextFillColor = 'initial';
+                            el.style.color = 'rgb(251, 251, 251)';
+                        }
+                        syncEl(el, body);
                     }
                 });
             }
 
-            // Execute once all images and resources have loaded strictly
-            initialLayout();
+            function syncEl(el, body) {
+                const elW = el.offsetWidth || 100;
+                const elH = el.offsetHeight || 60;
+                el.style.transform = `translate(${body.position.x - elW/2}px, ${body.position.y - elH/2}px) rotate(${body.angle}rad)`;
+            }
 
-            Events.on(engine, 'afterUpdate', function () {
-                phElements.forEach((el) => {
+            function triggerExplosion(center) {
+                if (isExploded) return;
+                isExploded = true;
+                heroEl.classList.add('explosion-shake');
+                setTimeout(() => heroEl.classList.remove('explosion-shake'), 500);
+                if (wallsEnabled) { Composite.remove(engine.world, walls); wallsEnabled = false; }
+                
+                phElements.forEach(el => {
                     const body = bodiesMap.get(el);
-                    if (body && !body.isStatic) {
-                        el.style.transform = `translate(${body.position.x - el.offsetWidth / 2}px, ${body.position.y - el.offsetHeight / 2}px) rotate(${body.angle}rad)`;
+                    if (body) {
+                        Matter.Body.setStatic(body, false);
+                        const dx = body.position.x - center.x;
+                        const dy = body.position.y - center.y;
+                        const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+                        const force = 80 / (dist / 100 + 1);
+                        Matter.Body.setVelocity(body, { x: (dx/dist)*force, y: (dy/dist)*force });
                     }
+                });
+
+                // Drop Piano immediately and centered
+                const pianoEl = phElements.find(el => el.classList.contains('ph-piano'));
+                if (pianoEl) {
+                    const pianoBody = bodiesMap.get(pianoEl);
+                    if (pianoBody) {
+                        Matter.Body.setStatic(pianoBody, false);
+                        Matter.Body.setPosition(pianoBody, { 
+                            x: w / 2, 
+                            y: -600 
+                        });
+                        Matter.Body.setVelocity(pianoBody, { x: 0, y: 15 }); 
+                        // Just a tiny bit of rotation for realism
+                        Matter.Body.setAngularVelocity(pianoBody, (Math.random() - 0.5) * 0.15);
+                    }
+                }
+            }
+
+            Events.on(engine, 'afterUpdate', () => {
+                phElements.forEach(el => {
+                    const body = bodiesMap.get(el);
+                    if (body && !body.isStatic) syncEl(el, body);
                 });
             });
 
             const runner = Runner.create();
             Runner.run(runner, engine);
-
-            // Handle Reset Broom Click
             const broom = document.getElementById('reset-broom');
-            if (broom) {
-                broom.addEventListener('click', () => {
-                    initialLayout();
-                });
-            }
-
-            // Handle resize
-            window.addEventListener('resize', () => {
-                const newW = heroEl.clientWidth;
-                const newH = heroEl.clientHeight;
-                if (newW !== w || newH !== h) {
-                    Matter.Body.setPosition(ground, { x: newW / 2, y: newH + 25 });
-                    Matter.Body.setVertices(ground, Matter.Bodies.rectangle(newW / 2, newH + 25, newW, 50).vertices);
-                    Matter.Body.setPosition(rightWall, { x: newW + 25, y: newH / 2 });
-                    
-                    // Reposition broom barrier
-                    Matter.Body.setPosition(broomBody, { 
-                        x: newW - 20 - broomWidth / 2, 
-                        y: newH - 20 - broomHeight / 2 
-                    });
-                    
-                    // Recompute base cells for new dimensions
-                    baseCells = generateCells(newW, newH, phElements.length);
-                    w = newW;
-                    h = newH;
-                }
+            if (broom) broom.addEventListener('click', () => {
+                if (!wallsEnabled) { Composite.add(engine.world, walls); wallsEnabled = true; }
+                initialLayout();
             });
+
+            window.addEventListener('resize', () => {
+                w = heroEl.clientWidth; h = heroEl.clientHeight;
+                Matter.Body.setPosition(ground, { x: w / 2, y: h + 100 });
+            });
+
+            initialLayout();
         });
     </script>
 </body>
