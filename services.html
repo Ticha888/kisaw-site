@@ -27,22 +27,53 @@
 
                 <!-- Header -->
                 <header class="header services-header">
-                    <div class="header-left">
-                        <a href="/" class="logo-link">
-                            <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="KISAW Logo" class="logo-img"
-                                style="filter: invert(1);">
-                            <span class="logo">KISAW</span>
-                        </a>
-                        <span class="tagline">a Design studio by visual enthusiasts</span>
-                    </div>
-                    <nav class="nav">
-                        <div class="nav-links">
-                            <a href="/">cases</a>
-                            <a href="/services.html">Services</a>
-                            <a href="about.html">About</a>
+                    <!-- Desktop Layout -->
+                    <div class="header-desktop-layout">
+                        <div class="header-left">
+                            <a href="/" class="logo-link">
+                                <img src="img/bone black.svg" alt="logo" class="logo-img">
+                                <span class="logo">KISAW</span>
+                            </a>
+                            <p class="tagline">a Design studio<br>by visual enthusiasts</p>
                         </div>
-                        <a href="#request-form" class="send-signal-btn">Send the Signal</a>
-                    </nav>
+                        <nav class="nav">
+                            <div class="nav-links">
+                                <a href="/">cases</a>
+                                <a href="services.html">Services</a>
+                                <a href="about.html">About</a>
+                            </div>
+                            <a href="#request-form" class="send-signal-btn">Send the Signal</a>
+                        </nav>
+                        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hero Layout -->
+                    <div class="header-mobile-hero">
+                        <div class="logo-stack">
+                            <img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main">
+                        </div>
+                        <p class="tagline">a Design studio<br>by visual enthusiasts</p>
+                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Popup Menu -->
+                    <div class="nav-overlay">
+                        <nav class="nav-popup">
+                            <button class="menu-close-btn" aria-label="Close Menu">
+                                <img src="img/closewindow.svg" alt="Close">
+                            </button>
+                            <div class="nav-links">
+                                <a href="/">cases</a>
+                                <a href="services.html">Services</a>
+                                <a href="about.html">About</a>
+                            </div>
+                            <a href="#request-form" class="send-signal-btn-mobile">Send the Signal</a>
+                        </nav>
+                    </div>
                 </header>
 
                 <!-- Services Content -->
@@ -529,13 +560,19 @@
 
                 <!-- Request Form Section -->
                 <section id="request-form" class="request-form-section variant-refined">
+                    <!-- Close button for mobile design -->
+                    <button class="form-close-btn" aria-label="Close form">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7L7 21M7 7L21 21" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
                     <div class="request-form-layout">
                         <div class="request-form-copy">
-                            <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                            <h2 class="request-form-title">Let’s work<br>together</h2>
                             <p class="request-form-description">
-                                <span class="text-accent-green">TELL US ABOUT YOUR PROJECT.</span><br>WE'LL REVIEW WHAT YOU
-                                HAVE, LISTEN TO YOUR IDEAS, AND
-                                PROPOSE A CLEAR DIRECTION FOR HOW THE PROJECT SHOULD LOOK, SOUND, AND COMMUNICATE.
+                                <span class="text-accent-green">Tell us about your project.</span><br>
+                                We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.
                             </p>
                         </div>
 
@@ -894,6 +931,32 @@
                 const diff = Math.floor((Date.now() - recordStartTime) / 1000);
                 if (diff >= 120) { stopRecording(); return; }
                 voiceTimer.textContent = `${String(Math.floor(diff / 60)).padStart(2, '0')}:${String(diff % 60).padStart(2, '0')}`;
+            }
+
+            // Mobile Nav Toggle
+            const toggles = document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero');
+            const closeBtn = document.querySelector('.menu-close-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+            
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    navOverlay.classList.add('active');
+                });
+            });
+            
+            if (closeBtn && navOverlay) {
+                closeBtn.addEventListener('click', () => {
+                    navOverlay.classList.remove('active');
+                });
+            }
+
+            // Close on backdrop click
+            if (navOverlay) {
+                navOverlay.addEventListener('click', (e) => {
+                    if (e.target === navOverlay) {
+                        navOverlay.classList.remove('active');
+                    }
+                });
             }
         });
     </script>
