@@ -1850,11 +1850,12 @@ a {
     .request-form-section {
         width: 100%;
         margin: 0;
-        padding: 56px 0;
+        padding: 32px 0;
         position: relative;
     }
 
     .form-close-btn {
+        display: none !important;
         position: absolute;
         top: 24px;
         right: 24px;
@@ -2042,8 +2043,8 @@ a {
     .request-form-layout {
         display: flex !important;
         flex-direction: column !important;
-        gap: 40px !important;
-        padding: 35px 31px 38px !important;
+        gap: 24px !important;
+        padding: 24px 20px 48px !important; /* Increased bottom padding for more "air" */
         background: #353535 !important;
         border-radius: 12px !important;
     }
@@ -2066,7 +2067,7 @@ a {
     }
 
     .request-form-description {
-        font-size: 12.6px !important;
+        font-size: 15px !important;
         line-height: 1.54 !important;
         width: 100% !important;
         color: #FBFBFB !important;
@@ -2089,12 +2090,13 @@ a {
         display: flex !important;
         flex-direction: column !important;
         gap: 24px !important;
+        margin-bottom: 0 !important; /* Force no space at the bottom */
     }
 
     .request-input-group {
         width: 100% !important;
         border-bottom: 0.88px solid #FBFBFB !important;
-        padding-bottom: 8px !important;
+        padding-bottom: 0px !important; /* Zero spacing reached */
     }
 
     .request-input-group input[type="text"],
@@ -2103,11 +2105,17 @@ a {
         background: transparent !important;
         border: none !important;
         border-radius: 0 !important;
-        padding: 4px 0 !important;
-        font-size: 12.6px !important;
+        padding: 0px 0 !important;
+        margin-bottom: -6px !important; /* Forces text to sit ON the line */
+        font-size: 11px !important;
         color: #FBFBFB !important;
         font-family: 'Inter', sans-serif !important;
         text-transform: uppercase !important;
+        line-height: 1 !important;
+    }
+
+    .request-media-group {
+        border-bottom: none !important;
     }
 
     .request-textarea-wrapper textarea {
@@ -2116,7 +2124,7 @@ a {
         border: 0.88px solid #FBFBFB !important;
         border-radius: 8.4px !important;
         padding: 12px !important;
-        font-size: 12.6px !important;
+        font-size: 11px !important;
         color: #FBFBFB !important;
         font-family: 'Inter', sans-serif !important;
         min-height: 180px !important;
@@ -2128,49 +2136,52 @@ a {
         outline: none !important;
     }
 
-    .request-input-group input::placeholder {
+    .request-input-group input::placeholder,
+    .request-textarea-wrapper textarea::placeholder {
         color: rgba(251, 251, 251, 0.5) !important;
+        font-size: 11px !important;
     }
 
     .request-helper-row {
         flex-direction: column !important;
         align-items: flex-start !important;
-        gap: 12px !important;
-        margin-top: 16px !important;
+        gap: 8px !important; /* Added a bit of space for the larger icons */
+        margin-top: 0px !important; /* No gap with the message window */
     }
 
     .helper-text {
         text-align: left !important;
-        font-size: 10px !important;
+        font-size: 13px !important;
         color: rgba(251, 251, 251, 0.5) !important;
         line-height: 1.5 !important;
     }
 
     .helper-icons {
         display: flex !important;
-        gap: 12px !important;
+        gap: -8px !important; /* Adjusted negative gap for larger icons */
     }
 
     .helper-icons .icon-btn img {
         filter: invert(72%) sepia(87%) saturate(357%) hue-rotate(101deg) brightness(97%) contrast(87%); /* #47E194 approx */
-        width: 20px !important;
-        height: 20px !important;
+        width: 28px !important; /* Made icons larger */
+        height: 28px !important;
     }
 
     .request-submit-btn {
-        width: 178px !important;
-        align-self: center !important;
+        width: 200px !important; /* Slightly smaller width */
+        margin: -16px auto 0 !important; /* Negative margin to stay close to icons */
+        height: 48px !important; /* Slightly smaller height */
         background: #47E194 !important;
         color: #1E1E1E !important;
-        font-size: 14px !important;
+        font-size: 15px !important; /* Balanced font size */
         font-weight: 700 !important;
         font-style: italic !important;
         text-transform: uppercase !important;
-        padding: 12px !important;
-        border-radius: 12px !important;
+        padding: 4px 16px !important;
+        border-radius: 12px !important; /* Proportional rounding */
         border: none !important;
-        margin-top: 32px !important;
         cursor: pointer !important;
+        align-self: center;
     }
 
     .request-submit-btn:active {
@@ -2208,12 +2219,12 @@ a {
     }
 
     .helper-icons .icon-btn {
-        padding: 10px !important; /* Larger hit area */
+        padding: 10px 2px !important; /* Removed large horizontal padding to allow icons to sit closer */
     }
 
     .helper-icons img {
-        width: 24px !important;
-        height: 24px !important;
+        width: 28px !important; /* Consistency for all images in helper icons */
+        height: 28px !important;
     }
 
     /* Footer Responsive */
@@ -2930,21 +2941,23 @@ a {
 /* New Dark Footer Responsive */
 @media (max-width: 1100px) {
     .new-site-footer {
-        width: calc(100% + 80px);
-        margin-left: -40px;
-        margin-right: -40px;
-        padding-left: 40px;
-        padding-right: 40px;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        border-radius: 12px !important;
     }
 }
 
 @media (max-width: 800px) {
     .new-site-footer {
-        width: calc(100% + 44px);
-        margin-left: -22px;
-        margin-right: -22px;
-        padding-left: 22px;
-        padding-right: 22px;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        border-radius: 12px !important;
     }
 }
 
@@ -3719,7 +3732,7 @@ a {
 }
 
 /* MOBILE OVERRIDES */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     body { padding: 20px 0 !important; }
 
     .main-row { 
@@ -3883,13 +3896,23 @@ a {
         white-space: nowrap !important;
     }
 
+    /* FINAL PIXEL-PERFECT MOBILE REFINEMENTS */
+    .container_main_page, .container { margin-bottom: 0 !important; padding-bottom: 0 !important; }
     .sticky-sidebar-layer, .sticky-sidebar-blue-layer, .sticky-sidebar-blue-img, .sticky-sidebar-img { display: none !important; }
+    .cases-section { margin-bottom: 0 !important; }
     .cases-row { flex-direction: column !important; gap: 32px !important; padding: 0 20px !important; }
     .case-card { width: 100% !important; }
     .services-grid { display: flex !important; flex-direction: column !important; gap: 40px !important; padding: 0 20px !important; }
     .services-row { flex-direction: column !important; gap: 24px !important; }
     .service-card { width: 100% !important; }
-    .request-form-section { padding: 40px 20px !important; border-radius: 8px !important; width: 100% !important; }
+    #request-form { 
+        padding-top: 0 !important;
+        margin-top: -60px !important; /* Extremely aggressive pull-up */
+    }
+    .request-form-section { 
+        padding: 0 20px 40px !important; 
+        width: 100% !important; 
+    }
     .footer-main-row { flex-direction: column !important; gap: 40px !important; align-items: center !important; text-align: center !important; padding: 0 20px !important; }
 }
 
