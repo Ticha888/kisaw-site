@@ -113,7 +113,7 @@ body {
     pointer-events: auto;
     height: auto;
     width: auto;
-    max-width: 150px;
+    max-width: 90px;
     display: block;
     transition: all 0.3s ease;
 }
@@ -890,7 +890,7 @@ a {
     width: 100%;
     background: transparent;
     border: 0;
-    border-bottom: 1.25px solid #fbfbfb;
+    border-bottom: 1.25px solid rgba(255, 255, 255, 0.3);
     color: #fbfbfb;
     font-size: 18px;
     line-height: 1.54;
@@ -936,7 +936,7 @@ a {
     width: 100%;
     height: 260px;
     background: transparent;
-    border: 1.25px solid #fbfbfb;
+    border: 1.25px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     color: #fbfbfb;
     font-size: 18px;
@@ -1390,7 +1390,7 @@ a {
 }
 
 .variant-refined .request-input-group {
-    border-bottom: 1.25px solid #fbfbfb;
+    border-bottom: 1.25px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
 }
 
@@ -1419,7 +1419,7 @@ a {
 }
 
 .variant-refined .request-textarea-wrapper textarea {
-    border: 1.25px solid #fbfbfb;
+    border: 1.25px solid rgba(255, 255, 255, 0.3);
     padding: 16px 11px;
     font-size: 18px;
 }
@@ -1854,20 +1854,7 @@ a {
         position: relative;
     }
 
-    .form-close-btn {
-        display: none !important;
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 10;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
 }
 
 /* Small screens ≤ 800px */
@@ -3914,5 +3901,22 @@ a {
         width: 100% !important; 
     }
     .footer-main-row { flex-direction: column !important; gap: 40px !important; align-items: center !important; text-align: center !important; padding: 0 20px !important; }
+}
+
+/* Standardizing all badges to the new smaller size */
+.sticky-sidebar-img, 
+.sticky-sidebar-blue-img {
+    max-width: 90px !important;
+}
+
+.sticky-sidebar, 
+.sticky-sidebar-blue {
+    font-size: 44px !important;
+    padding: 16px 8px !important;
+}
+
+.badge-about {
+    font-size: 65px !important;
+    padding: 20px 10px 5px !important;
 }
 

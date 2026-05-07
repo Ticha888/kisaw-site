@@ -33,12 +33,12 @@
     height: fit-content;
     background: var(--brand-blue);
     border-radius: 12px 0 0 12px; /* Matches the mockup tab look */
-    padding: 24px 12px;
+    padding: 16px 8px;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-family: 'Reenie Beanie', cursive;
     color: #fff;
-    font-size: 72px; /* Large handwritten style */
+    font-size: 44px; /* Reduced from 72px */
     line-height: 1;
     white-space: nowrap;
     text-transform: uppercase;
