@@ -5,203 +5,409 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About KISAW</title>
+    <title>About - KISAW</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css?v=1.3">
+    <style>
+        /* Base typography enforcement */
+        .about-content-inner, 
+        .about-content-inner h1, 
+        .about-content-inner p, 
+        .about-content-inner span,
+        .about-content-inner div {
+            color: #fbfbfb !important;
+            text-transform: uppercase !important;
+        }
 
-<body>
-    <div class="page about-page">
+        #about-tab-content {
+            width: 100%;
+            max-width: 1280px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .about-h1 {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 60px !important;
+            font-weight: 900 !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            letter-spacing: -0.02em !important;
+            text-align: left !important;
+            width: 100%;
+        }
+
+        .about-h1 .gray { color: #a3a3a3 !important; font-size: 0.9em !important; margin: 0 4px !important; }
+        
+        .about-tags-list {
+            display: flex;
+            gap: 42px !important;
+            flex-wrap: wrap;
+            justify-content: flex-start !important;
+            margin-bottom: 64px !important;
+            width: 100%;
+        }
+
+        .about-tag-item {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            opacity: 0.69 !important;
+        }
+
+        .about-intro-section {
+            width: 100%;
+            margin-bottom: 96px !important;
+            text-align: left !important;
+        }
+
+        .about-intro-text p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            line-height: 1.55 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .about-info-stats {
+            margin-top: 38px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0 !important;
+        }
+
+        .about-stat-line {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            line-height: 1.55 !important;
+        }
+        
+        .about-stat-line .value { color: #b3b3b3 !important; }
+
+        .about-team-grid {
+            width: 100%;
+            max-width: 974px !important;
+            gap: 98px !important;
+        }
+
+        .about-member-card {
+            gap: 57px !important;
+            align-items: flex-start !important;
+        }
+
+        .about-member-left {
+            width: 219px !important;
+        }
+
+        .about-member-photo {
+            width: 219px !important;
+            height: 260px !important;
+            margin-bottom: 60px !important;
+        }
+
+        .about-tg-msg { 
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 500 !important;
+            font-style: italic !important;
+            color: #dedede !important; 
+            line-height: 1.2 !important;
+            margin-bottom: 12px !important;
+            text-align: left !important;
+            display: block !important;
+        }
+
+        .about-handle { 
+            font-family: 'Inter', sans-serif !important;
+            font-size: 28px !important;
+            font-weight: 900 !important;
+            letter-spacing: -0.02em !important;
+            text-align: left !important;
+            display: block !important;
+        }
+
+        .about-member-right {
+            padding-top: 0 !important;
+            text-align: left !important;
+        }
+
+        .about-member-name {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            margin-bottom: 0 !important;
+            display: block !important;
+        }
+
+        .about-member-role { 
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: #47e194 !important; 
+            margin-bottom: 38px !important;
+            display: block !important;
+        }
+
+        .about-member-bio { 
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: #dedede !important; 
+            line-height: 1.55 !important;
+        }
+
+        .about-tabs {
+            display: inline-flex !important;
+            background: #47e194 !important;
+            padding: 4px !important;
+            border-radius: 40px !important;
+            gap: 8px !important;
+            margin: 0 auto 96px auto !important;
+        }
+
+        .about-tab-btn { 
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 180px !important; /* Force equal width for perfect symmetry */
+            font-family: 'Inter', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: #1e1e1e !important; 
+            padding: 12px 16px !important;
+            border-radius: 40px !important;
+            cursor: pointer !important;
+            line-height: 24px !important;
+            text-transform: uppercase !important;
+            text-align: center !important;
+        }
+        
+        .about-tab-btn.active { 
+            background: #1e1e1e !important;
+            color: #fbfbfb !important; 
+        }
+    </style></head>
+
+<body class="main-page about-page-body">
+    <div class="page">
         <div class="main-row">
-            <!-- Sticky Sidebar -->
+            <!-- Sidebar Badge (EXACT same layer as Main) -->
             <div class="sticky-sidebar-layer">
-                <div class="sticky-sidebar badge-about">
-                    <span>ABOUT</span>
-                </div>
+                <img src="img/badge about.png" alt="About" class="sticky-sidebar-img">
             </div>
 
             <div class="container_main_page">
-                <!-- Header -->
-                <header class="header about-header">
-                    <div class="header-left">
-                        <a href="/" class="logo-link">
-                            <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="KISAW Logo" class="logo-img">
-                            <span class="logo logo-white">KISAW</span>
-                        </a>
-                        <span class="tagline tagline-white">a Design studio by visual enthusiasts</span>
-                    </div>
-                    <nav class="nav nav-dark-mode">
-                        <div class="nav-links">
-                            <a href="/" style="color:#FFF;">cases</a>
-                            <a href="#services" style="color:#FFF;">Services</a>
-                            <a href="about.html" style="color:#FFF; opacity: 1;">About</a>
+                <!-- Header (EXACT copy from Main) -->
+                <header class="header header--dark">
+                    <!-- Desktop Layout -->
+                    <div class="header-desktop-layout">
+                        <div class="header-left">
+                            <a href="/" class="logo-link">
+                                <img src="img/bone white.svg" alt="logo" class="logo-img">
+                                <span class="logo">KISAW</span>
+                            </a>
+                            <p class="tagline">a Design studio by visual enthusiasts</p>
                         </div>
-                        <a href="#request-form" class="send-signal-btn btn-green">Send the Signal</a>
-                    </nav>
+                        <nav class="nav">
+                            <div class="nav-links">
+                                <a href="#cases">cases</a>
+                                <a href="services.html">Services</a>
+                                <a href="about.html">About</a>
+                            </div>
+                            <a href="#request-form" class="send-signal-btn">Send the Signal</a>
+                        </nav>
+                        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hero Layout -->
+                    <div class="header-mobile-hero">
+                        <div class="logo-stack">
+                            <img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main">
+                        </div>
+                        <p class="tagline">a Design studio by visual enthusiasts</p>
+                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Popup Menu -->
+                    <div class="nav-overlay">
+                        <nav class="nav-popup">
+                            <button class="menu-close-btn" aria-label="Close Menu">
+                                <img src="img/closewindow.svg" alt="Close">
+                            </button>
+                            <div class="nav-links">
+                                <a href="#cases">cases</a>
+                                <a href="services.html">Services</a>
+                                <a href="about.html">About</a>
+                            </div>
+                            <a href="#request-form" class="send-signal-btn-mobile">Send the Signal</a>
+                        </nav>
+                    </div>
                 </header>
 
-                <!-- Main Content -->
-                <main class="main about-main">
-                    <div class="about-hero">
-                        <div class="about-tabs-panel">
-                            <div class="about-tab-btn active">
-                                <span>ABOUT STUDIO</span>
-                            </div>
-                            <div class="about-tab-btn">
-                                <span>PHILOSOPHY</span>
-                            </div>
+                <!-- About Content -->
+                <main class="about-content-inner">
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <div class="about-tabs">
+                            <div class="about-tab-btn active" data-tab="about">ABOUT STUDIO</div>
+                            <div class="about-tab-btn" data-tab="philosophy">PHILOSOPHY</div>
                         </div>
+                    </div>
 
-                        <h1 class="about-headline">BRANDING<span class="text-gray">&amp;</span>COMMUNICATION DESIGN</h1>
+                    <div id="about-tab-content">
+                        <h1 class="about-h1">BRANDING<span class="gray">&</span>CREATIVE<span class="gray">&</span>COMMUNICATION</h1>
                         
-                        <div class="about-tags">
-                            <span class="tag">company brand</span>
-                            <span class="tag">personal brand</span>
-                            <span class="tag">graphic<span class="text-gray">/web</span> design</span>
-                            <span class="tag">concept</span>
-                            <span class="tag">universes</span>
-                            <span class="tag">ai</span>
+                        <div class="about-tags-list">
+                            <span class="about-tag-item">COMPANY BRAND</span>
+                            <span class="about-tag-item">PERSONAL BRAND</span>
+                            <span class="about-tag-item">GRAPHIC<span class="gray">/WEB</span> DESIGN</span>
+                            <span class="about-tag-item">CONCEPT</span>
+                            <span class="about-tag-item">UNIVERSES</span>
+                            <span class="about-tag-item">AI</span>
                         </div>
 
-                        <div class="about-intro">
-                            <div class="about-description">
-                                <p>KISAW IS A BRANDING AND DIGITAL DESIGN STUDIO.<br>
-                                WE WORK WITH BRANDS AS SYSTEMS, FROM MEANING AND STRUCTURE TO VISUAL IDENTITY AND DIGITAL PRODUCTS.<br>
-                                PROJECTS ARE HANDLED BY A SMALL TEAM DIRECTLY INVOLVED IN THE PROCESS.</p>
+                        <div class="about-intro-section">
+                            <div class="about-intro-text">
+                                <p>KISAW IS A BRANDING AND DIGITAL DESIGN STUDIO.</p>
+                                <p>WE WORK WITH BRANDS AS SYSTEMS, FROM MEANING AND STRUCTURE TO VISUAL IDENTITY AND DIGITAL PRODUCTS.</p>
+                                <p>PROJECTS ARE HANDLED BY A SMALL TEAM DIRECTLY INVOLVED IN THE PROCESS.</p>
+                            </div>
+                            <div class="about-info-stats">
+                                <div class="about-stat-line">
+                                    <span class="label">FOUNDED:</span>
+                                    <span class="value">2025 (PODGORICA, MONTENEGRO)</span>
+                                </div>
+                                <div class="about-stat-line">
+                                    <span class="label">PRODUCTS:</span>
+                                    <span class="value">ART DIRECTION, MANAGEMENT, CONCEPTION, DIGITAL DESIGN, GRAPHIC DESIGN, VISUAL IDENTITY</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-team-grid">
+                            <!-- Nika -->
+                            <div class="about-member-card">
+                                <div class="about-member-left">
+                                    <img src="img/Anika avatar.png" alt="Nika Pizhma" class="about-member-photo">
+                                    <div class="about-member-social">
+                                        <a href="https://t.me/pizhmaishere" target="_blank" class="about-tg-msg">DROP A PERSONAL<br>MESSAGE (TG)</a>
+                                        <span class="about-handle">@PIZHMAISHERE</span>
+                                    </div>
+                                </div>
+                                <div class="about-member-right">
+                                    <span class="about-member-name">Nika Pizhma</span>
+                                    <span class="about-member-role">Brand\creative Designer</span>
+                                    <p class="about-member-bio">
+                                        BRAND DESIGNER AND ART DIRECTOR WITH 5+ YEARS ACROSS INTERNATIONAL TEAMS — ISRAEL, USA, ESTONIA.<br><br>
+                                        I BUILD EVERYTHING AS SYSTEMS: FROM STRATEGY AND DNA TO VISUAL LANGUAGE AND DIGITAL PRODUCTS. I'VE LED TEAMS OF UP TO 6 DESIGNERS AND WORKED WITH BOTH B2C AND B2B CLIENTS. I BALANCE BUSINESS GOALS AND AESTHETICS — AND I TAKE PROJECTS FROM BRIEF TO FINAL RESULT. FOUNDER OF KISAW.
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="about-stats">
-                                <p><span class="label-white">FOUNDED:</span> <span class="value-gray">2025 (PODGORICA, MONTENEGRO)</span></p>
-                                <p><span class="label-white">NUMBER OF EMPLOYEES:</span> <span class="value-white">4</span></p>
-                                <p><span class="label-white">PRODUCTS:</span> <span class="value-gray">ART DIRECTION, CONCEPTION, DIGITAL DESIGN, GRAPHIC DESIGN, VISUAL IDENTITY</span></p>
+                            <!-- Ivan -->
+                            <div class="about-member-card">
+                                <div class="about-member-left">
+                                    <img src="img/Ivan avatar.png" alt="Ivan Diachkov" class="about-member-photo">
+                                    <div class="about-member-social">
+                                        <a href="https://t.me/Ticcha" target="_blank" class="about-tg-msg">DROP A PERSONAL<br>MESSAGE (TG)</a>
+                                        <span class="about-handle">@TICCHA</span>
+                                    </div>
+                                </div>
+                                <div class="about-member-right">
+                                    <span class="about-member-name">Ivan diachkov</span>
+                                    <span class="about-member-role">Product\web Designer</span>
+                                    <p class="about-member-bio">
+                                        PRODUCT DESIGNER WITH 6 YEARS OF EXPERIENCE. WORKED ON HIGH-TRAFFIC FINTECH PRODUCTS — REDESIGNED PAGES THAT WENT TO 33% CONVERSION. DESIGNS AND DELIVERS WEB AND MOBILE PRODUCTS FROM CONCEPT TO PRODUCTION. UNDERSTANDS FRONTEND CONSTRAINTS, DESIGN SYSTEMS, AND HOW TO WORK IN A REAL PRODUCT TEAM. CO-FOUNDER OF KISAW.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Team Grid Blueprint -->
-                    <div class="team-blueprint-grid">
-                        
-                        <!-- Nika (Top Left) -->
-                        <div class="blueprint-card nika-bp-card">
-                            <div class="bp-outline bp-outline-left"></div>
-                            
-                            <div class="bp-content-flex">
-                                <div class="bp-left-col">
-                                    <img src="img/Anika_avatar.png" alt="Nika Pizhma" class="bp-photo bp-photo-nika">
-                                    <div class="bp-contact bp-contact-nika">
-                                        <a href="#" class="bp-msg-link">DROP A PERSONAL<br>MESSAGE (TG)</a>
-                                        <span class="bp-handle">@PIZHMAISHERE</span>
-                                    </div>
-                                </div>
-                                <div class="bp-right-col bp-text-content">
-                                    <div class="bp-info">
-                                        <h3>Nika Pizhma</h3>
-                                        <p class="role-green">Co-founder & Brand Designer</p>
-                                    </div>
-                                    <div class="bp-bio">
-                                        <p>We work with small and medium businesses, experts and cultural projects, creating visual identities, communication systems, brand-led websites, printed matter and merch.</p>
-                                        <br>
-                                        <p>we treat design as both partnership and analysis. Through strategy, narrative and clear visual language, <span class="text-green">KISAW</span> helps brands define who they are, how they sound and how they appear across digital and physical spaces.</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="philosophy-tab-content" style="display: none;">
+                        <h1 class="about-h1">Philosophy</h1>
+                        <div class="about-intro-text">
+                            <p>CONTENT COMING SOON...</p>
                         </div>
-
-                        <!-- Tasya (Top Right) -->
-                        <div class="blueprint-card tasya-bp-card">
-                            <div class="bp-outline bp-outline-top"></div>
-                            <div class="bp-content-vert">
-                                <div class="bp-photo-wrapper">
-                                    <img src="img/tasya_avatar.png" alt="Tasya Zhdan" class="bp-photo">
-                                </div>
-                                <div class="bp-info bp-info-center">
-                                    <h3>TASYA ZHDAN</h3>
-                                    <p class="role-green">GRAPHIC DESIGN, BRAND DESIGN</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pavel (Bottom Left) -->
-                        <div class="blueprint-card pavel-bp-card">
-                            <div class="bp-outline bp-outline-lower-left"></div>
-                            <div class="bp-content-vert">
-                                <div class="bp-photo-wrapper">
-                                    <img src="images/image-import-16.png" alt="Pavel Marchenko" class="bp-photo">
-                                </div>
-                                <div class="bp-info bp-info-center">
-                                    <h3>PAVEL MARCHENKO</h3>
-                                    <p class="role-green">GRAPHIC DESIGN, UI/UX DESIGN</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Ivan (Bottom Right) -->
-                        <div class="blueprint-card ivan-bp-card">
-                            <div class="bp-outline bp-outline-right"></div>
-                            
-                            <div class="bp-content-flex bp-ivan-flex">
-                                <div class="bp-left-col bp-ivan-left">
-                                    <img src="img/ivan_avatar.png" alt="Ivan Diachkov" class="bp-photo bp-photo-ivan">
-                                    <div class="bp-contact bp-contact-ivan">
-                                        <span class="bp-handle">@TICCHA</span>
-                                        <a href="#" class="bp-msg-link">DROP A PERSONAL<br>MESSAGE (TG)</a>
-                                    </div>
-                                </div>
-                                <div class="bp-right-col bp-text-content">
-                                    <div class="bp-info">
-                                        <h3>IVAN DIACHKOV</h3>
-                                        <p class="role-green">CO-FOUNDER & PRODUCT DESIGNER</p>
-                                    </div>
-                                    <div class="bp-bio">
-                                        <p>I DESIGN END-TO-END PRODUCT EXPERIENCES: APPLICATION FLOWS, CORE PRODUCT PAGES, AND PROMOTIONAL LANDING PAGES. I WORK WITH CUSTOMER JOURNEYS (CJM), USER RESEARCH, AND ITERATION TO IMPROVE CONVERSION, CLARITY, AND BRAND PERCEPTION.</p>
-                                        <br>
-                                        <p>I ALSO BUILD NEW PRODUCTS FROM ZERO TO PRODUCTION-READY RELEASES, SUPPORTING TEAMS FROM EARLY CONCEPT THROUGH LAUNCH AND CONTINUOUS IMPROVEMENT.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </main>
 
-                <!-- Footer -->
+                <!-- Footer (EXACT copy from Main) -->
                 <footer class="new-site-footer">
-                    <div class="footer-left">
-                        <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="Kisaw Logo" class="footer-logo">
-                        <div class="social-icons">
-                            <a href="#"><img src="img/social_x.svg" alt="X"></a>
-                            <a href="#"><img src="img/social_inst.svg" alt="Instagram"></a>
-                            <a href="#"><img src="img/social_youtube.svg" alt="YouTube"></a>
-                            <a href="#"><img src="img/social_linkedin.svg" alt="LinkedIn"></a>
+                    <div class="footer-main-row">
+                        <div class="footer-brand-col">
+                            <div class="footer-brand-logo">
+                                <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="KISAW Logo" class="logo-img">
+                            </div>
+                            <div class="footer-socials">
+                                <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="Instagram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="YouTube">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
                         </div>
-                        <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
-                        <div class="footer-credits">
-                            Made by <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="K" style="height: 10px; margin:0 4px;"> 2026
+                        <div class="footer-nav-col">
+                            <a href="about.html" class="footer-nav-link">About</a>
+                            <a href="services.html" class="footer-nav-link">Services</a>
+                            <a href="/" class="footer-nav-link">Cases</a>
+                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
                         </div>
                     </div>
-                    <div class="footer-right">
-                        <nav class="footer-nav">
-                            <a href="about.html">About</a>
-                            <a href="#services">Services</a>
-                            <a href="#cases">Cases</a>
-                            <a href="#privacy">Privacy policy</a>
-                        </nav>
+                    <div class="footer-copyright-row">
+                        <span>Made by</span>
+                        <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="" class="footer-bone-icon">
+                        <span>KISAW 2026</span>
                     </div>
                 </footer>
             </div>
         </div>
     </div>
+
     <script>
-        // About page tab switching
-        document.querySelectorAll('.about-tab-btn').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.about-tab-btn').forEach(function(b) {
-                    b.classList.remove('active');
-                });
+        document.querySelectorAll('.about-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.about-tab-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
+                
+                const target = btn.getAttribute('data-tab');
+                if (target === 'about') {
+                    document.getElementById('about-tab-content').style.display = 'block';
+                    document.getElementById('philosophy-tab-content').style.display = 'none';
+                } else {
+                    document.getElementById('about-tab-content').style.display = 'none';
+                    document.getElementById('philosophy-tab-content').style.display = 'block';
+                }
             });
         });
     </script>

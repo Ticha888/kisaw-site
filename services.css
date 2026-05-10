@@ -41,27 +41,9 @@ body.services-page {
     padding-bottom: 0;
 }
 
-/* Header override for light background */
-.services-header .logo {
-    color: #1e1e1e;
-}
-
-.services-header .tagline {
-    color: #9e9e9e;
-}
-
-.services-header .nav-links a {
-    color: #1e1e1e;
-}
-
-.services-header .nav-links a:hover {
-    color: #007efa;
-}
-
-
-/* Main section */
-.services-main {
-    padding-bottom: 64px;
+/* Page Background */
+body.services-page {
+    background: #b8b8b8;
 }
 
 .services-headline {
