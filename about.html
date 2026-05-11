@@ -92,22 +92,30 @@
         .about-team-grid {
             width: 100%;
             max-width: 974px !important;
-            gap: 98px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 96px !important;
+            margin: 0 auto !important; /* Center the grid itself */
+            align-items: center !important; /* Center the cards inside */
         }
 
         .about-member-card {
-            gap: 57px !important;
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 60px !important;
             align-items: flex-start !important;
         }
 
         .about-member-left {
-            width: 219px !important;
+            width: 220px !important;
         }
 
         .about-member-photo {
-            width: 219px !important;
+            width: 220px !important;
             height: 260px !important;
-            margin-bottom: 60px !important;
+            border-radius: 12px !important;
+            object-fit: cover !important;
+            margin-bottom: 0 !important;
         }
 
         .about-tg-msg { 
@@ -134,17 +142,18 @@
         .about-member-right {
             padding-top: 0 !important;
             text-align: left !important;
+            flex: 1 !important; /* Allow it to take remaining space */
         }
 
         .about-member-name {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 600 !important;
-            margin-bottom: 0 !important;
+            margin-bottom: 12px !important; /* Increased gap to role */
             display: block !important;
         }
 
-        .about-member-role { 
+        .about-content-inner .about-member-role { 
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 600 !important;
@@ -161,13 +170,21 @@
             line-height: 1.55 !important;
         }
 
+        .about-member-bio p {
+            margin-bottom: 1.55em !important;
+        }
+        
+        .about-member-bio p:last-child {
+            margin-bottom: 0 !important;
+        }
+
         .about-tabs {
             display: inline-flex !important;
             background: #47e194 !important;
             padding: 4px !important;
             border-radius: 40px !important;
             gap: 8px !important;
-            margin: 0 auto 96px auto !important;
+            margin: 0 auto 48px auto !important;
         }
 
         .about-tab-btn { 
@@ -194,14 +211,47 @@
 
         /* Philosophy Styles (Forced) */
         .philosophy-content {
-            width: 100% !important;
-            max-width: 1280px !important;
-            display: flex !important;
+            width: calc(100% + 160px) !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            display: flex;
             flex-direction: column !important;
             align-items: center !important;
-            gap: 120px !important;
+            gap: 40px !important;
             padding-bottom: 120px !important;
-            margin: 0 auto !important;
+        }
+
+        .philosophy-intro-text {
+            width: 100% !important;
+            max-width: 1008px !important;
+            text-align: left !important;
+            padding: 0 20px !important; /* Safety for very narrow screens */
+        }
+
+        .philosophy-intro-text p {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 21px !important;
+            font-weight: 600 !important;
+            line-height: 1.55 !important;
+            color: #fbfbfb !important;
+            text-transform: uppercase !important;
+            margin-bottom: 28px !important;
+        }
+
+        .philosophy-intro-text p:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .philosophy-content {
+                width: calc(100% + 40px) !important;
+                margin-left: -20px !important;
+                margin-right: -20px !important;
+                gap: 64px !important;
+            }
+            .philosophy-intro-text {
+                padding: 0 40px !important;
+            }
         }
 
         .philosophy-section {
@@ -263,9 +313,66 @@
 
         .inline-bone {
             display: inline-block !important;
-            height: 1em !important;
-            margin: 0 4px !important;
+            height: 0.7em !important;
+            margin: 0 6px !important;
             vertical-align: middle !important;
+            position: relative !important;
+            top: -0.15em !important;
+            transition: transform 0.5s ease !important;
+        }
+
+        .inline-bone:hover {
+            transform: rotate(360deg) !important;
+        }
+
+        .philosophy-palette-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .palette-overlay {
+            position: absolute !important;
+            top: 60px !important;
+            left: 0 !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            z-index: 5 !important;
+            pointer-events: none !important;
+        }
+
+        .palette-squares {
+            width: 100% !important;
+            max-width: 1008px !important;
+            display: flex !important;
+            gap: 0 !important;
+            margin-bottom: 40px !important;
+            padding: 0 20px !important;
+        }
+
+        .palette-square {
+            width: 33px !important;
+            height: 33px !important;
+        }
+
+        .palette-text {
+            width: 100% !important;
+            max-width: 1008px !important;
+            padding: 0 20px !important;
+        }
+
+        @media (max-width: 768px) {
+            .palette-overlay {
+                top: 30px !important;
+            }
+            .palette-squares {
+                margin-bottom: 24px !important;
+            }
+            .palette-square {
+                width: 30px !important;
+                height: 22px !important;
+            }
         }
 
         .logotype-graphic-wrapper {
@@ -383,7 +490,7 @@
 
                         <div class="about-intro-section">
                             <div class="about-intro-text">
-                                <p>KISAW IS A BRANDING AND DIGITAL DESIGN STUDIO.</p>
+                                <p><span style="color: #47e194 !important;">KISAW</span> IS A BRANDING AND DIGITAL DESIGN STUDIO.</p>
                                 <p>WE WORK WITH BRANDS AS SYSTEMS, FROM MEANING AND STRUCTURE TO VISUAL IDENTITY AND DIGITAL PRODUCTS.</p>
                                 <p>PROJECTS ARE HANDLED BY A SMALL TEAM DIRECTLY INVOLVED IN THE PROCESS.</p>
                             </div>
@@ -404,18 +511,14 @@
                             <div class="about-member-card">
                                 <div class="about-member-left">
                                     <img src="img/Anika avatar.png" alt="Nika Pizhma" class="about-member-photo">
-                                    <div class="about-member-social">
-                                        <a href="https://t.me/pizhmaishere" target="_blank" class="about-tg-msg">DROP A PERSONAL<br>MESSAGE (TG)</a>
-                                        <span class="about-handle">@PIZHMAISHERE</span>
-                                    </div>
                                 </div>
                                 <div class="about-member-right">
                                     <span class="about-member-name">Nika Pizhma</span>
-                                    <span class="about-member-role">Brand\creative Designer</span>
-                                    <p class="about-member-bio">
-                                        BRAND DESIGNER AND ART DIRECTOR WITH 5+ YEARS ACROSS INTERNATIONAL TEAMS — ISRAEL, USA, ESTONIA.<br><br>
-                                        I BUILD EVERYTHING AS SYSTEMS: FROM STRATEGY AND DNA TO VISUAL LANGUAGE AND DIGITAL PRODUCTS. I'VE LED TEAMS OF UP TO 6 DESIGNERS AND WORKED WITH BOTH B2C AND B2B CLIENTS. I BALANCE BUSINESS GOALS AND AESTHETICS — AND I TAKE PROJECTS FROM BRIEF TO FINAL RESULT. FOUNDER OF KISAW.
-                                    </p>
+                                    <span class="about-member-role">art director</span>
+                                    <div class="about-member-bio">
+                                        <p>At Kisaw, I am responsible for strategy, visual foundations, and meaning. My background includes leading design teams and developing systems for diverse markets ranging from branding to complex digital products.</p>
+                                        <p>I don’t limit myself to identity alone; I’m driven to work on any project that requires creativity, narrative, and structure. My approach is about building an architecture where every element, from an illustration to an interface, is logically grounded and communicates the project's core values.</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -423,58 +526,47 @@
                             <div class="about-member-card">
                                 <div class="about-member-left">
                                     <img src="img/Ivan avatar.png" alt="Ivan Diachkov" class="about-member-photo">
-                                    <div class="about-member-social">
-                                        <a href="https://t.me/Ticcha" target="_blank" class="about-tg-msg">DROP A PERSONAL<br>MESSAGE (TG)</a>
-                                        <span class="about-handle">@TICCHA</span>
-                                    </div>
                                 </div>
                                 <div class="about-member-right">
                                     <span class="about-member-name">Ivan diachkov</span>
-                                    <span class="about-member-role">Product\web Designer</span>
-                                    <p class="about-member-bio">
-                                        PRODUCT DESIGNER WITH 6 YEARS OF EXPERIENCE. WORKED ON HIGH-TRAFFIC FINTECH PRODUCTS — REDESIGNED PAGES THAT WENT TO 33% CONVERSION. DESIGNS AND DELIVERS WEB AND MOBILE PRODUCTS FROM CONCEPT TO PRODUCTION. UNDERSTANDS FRONTEND CONSTRAINTS, DESIGN SYSTEMS, AND HOW TO WORK IN A REAL PRODUCT TEAM. CO-FOUNDER OF KISAW.
-                                    </p>
+                                    <span class="about-member-role">Product Designer</span>
+                                    <div class="about-member-bio">
+                                        <p>At Kisaw I am responsible for product design and technical implementation. My background includes 6 years of experience working on major digital platforms, including fintech and international projects. I design interfaces and landing pages based on data and analytics; in my recent cases, page redesigns led to conversion growth from 28% to 33%.</p>
+                                        <p>My profile sits at the intersection of design and frontend development. I understand how design translates into code, I am familiar with CMS limitations, and I know how to build systems that are technically sustainable. I integrate AI into Kisaw processes as a tool for prototyping, copywriting, and requirement analysis. This allows us to accelerate production while keeping the results manageable and consistent with the design system.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div id="philosophy-tab-content" style="display: none;" class="philosophy-content">
-                        <!-- WHY BONE Section -->
-                        <section class="philosophy-section why-bone-section">
-                            <div class="why-bone-graphic">
-                                <img src="img/Bone Pattern.svg" alt="Bone Pattern Background" class="bone-pattern-bg">
-                                <h2 class="why-bone-title">WHY BONE?</h2>
+                        <div class="philosophy-intro-text">
+                            <p>We believe in systems that make you feel something. Design isn't just about making things look good — it's about creating a structure that holds emotion, logic, and intent. We strip away the unnecessary until what's left is undeniable.</p>
+                            <p>Our approach is rooted in clarity and impact. Whether it's a brand identity, a digital product, or an entire ecosystem, we build it to be resilient, scalable, and impossible to ignore. We don't do "okay". We do exceptional.</p>
+                            <p>We are a compact, highly specialized team. We don't have account managers or bureaucracy. You work directly with the creators. This means faster iterations, deeper understanding, and a final product</p>
+                        </div>
+                        <img src="img/whybone.svg?v=5" alt="Why Bone?" style="width: 70%; height: auto; display: block; margin: 0 auto;">
+                        <div class="philosophy-intro-text">
+                            <p>THE <img src="img/bone white.svg" alt="" class="inline-bone"> IN OUR MARK STANDS FOR STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF, BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT’S A REMINDER THAT THE RESULT IS BUILT ON A SYSTEM, NOT DECORATION.</p>
+                        </div>
+                        <img src="img/Kiss%20%2B%20Saw.svg?v=2" alt="Kiss + Saw" style="width: 80%; height: auto; display: block; margin: -120px auto 0 !important; transform: translateX(100px) !important;">
+                        <div class="philosophy-palette-container">
+                            <div class="palette-overlay">
+                                <div class="palette-squares">
+                                    <div class="palette-square" style="background: #47E194;"></div>
+                                    <div class="palette-square" style="background: #A6D3FF;"></div>
+                                    <div class="palette-square" style="background: #DD3737;"></div>
+                                    <div class="palette-square" style="background: #FFBEE1;"></div>
+                                    <div class="palette-square" style="background: #007BFF;"></div>
+                                </div>
+                                <div class="palette-text philosophy-intro-text" style="padding: 0 20px !important;">
+                                    <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
+                                    <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW. THE ACCENT IS NOT DECORATION, IT’S NAVIGATION, PRIORITIZATION, AND PROCESS CONTROL.</p>
+                                </div>
                             </div>
-                            <div class="philosophy-text-block">
-                                <p>THE <img src="img/bone white.svg" alt="bone icon" class="inline-bone"> IN OUR MARK STANDS FOR STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF, BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT'S A REMINDER THAT THE RESULT IS BUILT ON A SYSTEM, NOT DECORATION.</p>
-                            </div>
-                        </section>
-
-                        <!-- LOGOTYPE Section -->
-                        <section class="philosophy-section logotype-section">
-                            <div class="logotype-graphic-wrapper">
-                                <img src="img/Kiss + Saw.svg" alt="Kiss + Saw Logotype Structure" class="philosophy-graphic logotype-graphic">
-                            </div>
-                            <div class="philosophy-text-block">
-                                <p>THE NAME <b>KISAW</b> COMES FROM THE ASSOCIATION OF "KISS" AND "SAW". FOR US, IT DESCRIBES TWO MODES OF WORK: KEEPING THE MEANING INTACT WHILE PRECISELY BREAKING A PROJECT DOWN AND REBUILDING IT. WE TAKE THE RAW INPUT, CUT WHAT'S UNNECESSARY, KEEP WHAT MATTERS, AND TURN IT INTO A CLEAR SYSTEM THE BRAND CAN USE IN REAL LIFE.</p>
-                            </div>
-                        </section>
-
-                        <!-- PALETTE Section -->
-                        <section class="philosophy-section palette-section">
-                            <div class="palette-title-container">
-                                <h2 class="palette-title">PALETTE</h2>
-                            </div>
-                            <div class="philosophy-text-block">
-                                <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
-                                <br>
-                                <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW. THE ACCENT IS NOT DECORATION, IT'S NAVIGATION, PRIORITIZATION, AND PROCESS CONTROL.</p>
-                            </div>
-                            <div class="palette-graphic-wrapper">
-                                <img src="img/Palette.svg" alt="Kisaw Color Palette" class="philosophy-graphic palette-graphic">
-                            </div>
-                        </section>
+                            <img src="img/Palette.svg?v=2" alt="Palette" style="width: 100%; height: auto; display: block;">
+                        </div>
                     </div>
                 </main>
 

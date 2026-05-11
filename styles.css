@@ -132,6 +132,11 @@ a {
     height: 42px;
     object-fit: contain;
     transform: rotate(-45deg);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-link:hover .logo-img {
+    transform: rotate(315deg); /* -45 + 360 */
 }
 
 
@@ -197,6 +202,17 @@ a {
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    animation: logoFloat 2s infinite ease-in-out;
+}
+
+@keyframes logoFloat {
+    0% { transform: translateY(0) scale(1.05); }
+    50% { transform: translateY(-3px) scale(1.05); }
+    100% { transform: translateY(0) scale(1.05); }
 }
 
 /* logo-img is defined above */
@@ -206,6 +222,11 @@ a {
     font-weight: 900;
     letter-spacing: 0;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover .logo {
+    letter-spacing: 0.1em;
 }
 
 .header--dark .logo {
