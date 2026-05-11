@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1.3">
+    <link rel="stylesheet" href="styles.css?v=1.4">
     <style>
         /* Base typography enforcement */
         .about-content-inner, 
@@ -191,6 +191,113 @@
             background: #1e1e1e !important;
             color: #fbfbfb !important; 
         }
+
+        /* Philosophy Styles (Forced) */
+        .philosophy-content {
+            width: 100% !important;
+            max-width: 1280px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 120px !important;
+            padding-bottom: 120px !important;
+            margin: 0 auto !important;
+        }
+
+        .philosophy-section {
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .why-bone-graphic {
+            position: relative !important;
+            width: 100% !important;
+            max-width: 1008px !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin: 0 auto !important;
+            overflow: hidden !important;
+        }
+
+        .bone-pattern-bg {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .why-bone-title {
+            position: absolute !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 162px !important;
+            font-weight: 900 !important;
+            color: #fbfbfb !important;
+            text-transform: uppercase !important;
+            line-height: 1 !important;
+            letter-spacing: -0.02em !important;
+            text-align: center !important;
+            margin: 0 !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            white-space: nowrap !important;
+            z-index: 2 !important;
+        }
+
+        .philosophy-text-block {
+            width: 100% !important;
+            max-width: 815px !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+        }
+
+        .philosophy-text-block p {
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: #fbfbfb !important;
+            line-height: 1.55 !important;
+            text-align: center !important;
+            text-transform: uppercase !important;
+        }
+
+        .inline-bone {
+            display: inline-block !important;
+            height: 1em !important;
+            margin: 0 4px !important;
+            vertical-align: middle !important;
+        }
+
+        .logotype-graphic-wrapper {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: flex-end !important;
+        }
+
+        .logotype-graphic {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .palette-section {
+            gap: 40px !important;
+            align-items: center !important;
+        }
+
+        .palette-title {
+            font-size: 80px !important;
+            font-weight: 900 !important;
+            color: #1e1e1e !important;
+        }
+
+        /* Responsive overrides */
+        @media (max-width: 1024px) {
+            .why-bone-title { font-size: 100px !important; }
+        }
+        @media (max-width: 768px) {
+            .why-bone-title { font-size: 60px !important; }
+            .palette-title { font-size: 48px !important; }
+        }
     </style></head>
 
 <body class="main-page about-page-body">
@@ -198,7 +305,7 @@
         <div class="main-row">
             <!-- Sidebar Badge (EXACT same layer as Main) -->
             <div class="sticky-sidebar-layer">
-                <img src="img/badge about.png" alt="About" class="sticky-sidebar-img">
+                <img src="img/badge about.png" alt="About" class="sticky-sidebar-img" id="sticky-badge">
             </div>
 
             <div class="container_main_page">
@@ -332,11 +439,42 @@
                         </div>
                     </div>
 
-                    <div id="philosophy-tab-content" style="display: none;">
-                        <h1 class="about-h1">Philosophy</h1>
-                        <div class="about-intro-text">
-                            <p>CONTENT COMING SOON...</p>
-                        </div>
+                    <div id="philosophy-tab-content" style="display: none;" class="philosophy-content">
+                        <!-- WHY BONE Section -->
+                        <section class="philosophy-section why-bone-section">
+                            <div class="why-bone-graphic">
+                                <img src="img/Bone Pattern.svg" alt="Bone Pattern Background" class="bone-pattern-bg">
+                                <h2 class="why-bone-title">WHY BONE?</h2>
+                            </div>
+                            <div class="philosophy-text-block">
+                                <p>THE <img src="img/bone white.svg" alt="bone icon" class="inline-bone"> IN OUR MARK STANDS FOR STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF, BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT'S A REMINDER THAT THE RESULT IS BUILT ON A SYSTEM, NOT DECORATION.</p>
+                            </div>
+                        </section>
+
+                        <!-- LOGOTYPE Section -->
+                        <section class="philosophy-section logotype-section">
+                            <div class="logotype-graphic-wrapper">
+                                <img src="img/Kiss + Saw.svg" alt="Kiss + Saw Logotype Structure" class="philosophy-graphic logotype-graphic">
+                            </div>
+                            <div class="philosophy-text-block">
+                                <p>THE NAME <b>KISAW</b> COMES FROM THE ASSOCIATION OF "KISS" AND "SAW". FOR US, IT DESCRIBES TWO MODES OF WORK: KEEPING THE MEANING INTACT WHILE PRECISELY BREAKING A PROJECT DOWN AND REBUILDING IT. WE TAKE THE RAW INPUT, CUT WHAT'S UNNECESSARY, KEEP WHAT MATTERS, AND TURN IT INTO A CLEAR SYSTEM THE BRAND CAN USE IN REAL LIFE.</p>
+                            </div>
+                        </section>
+
+                        <!-- PALETTE Section -->
+                        <section class="philosophy-section palette-section">
+                            <div class="palette-title-container">
+                                <h2 class="palette-title">PALETTE</h2>
+                            </div>
+                            <div class="philosophy-text-block">
+                                <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
+                                <br>
+                                <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW. THE ACCENT IS NOT DECORATION, IT'S NAVIGATION, PRIORITIZATION, AND PROCESS CONTROL.</p>
+                            </div>
+                            <div class="palette-graphic-wrapper">
+                                <img src="img/Palette.svg" alt="Kisaw Color Palette" class="philosophy-graphic palette-graphic">
+                            </div>
+                        </section>
                     </div>
                 </main>
 
@@ -401,12 +539,22 @@
                 btn.classList.add('active');
                 
                 const target = btn.getAttribute('data-tab');
+                const aboutTab = document.getElementById('about-tab-content');
+                const philoTab = document.getElementById('philosophy-tab-content');
+                const badgeImg = document.getElementById('sticky-badge');
+
                 if (target === 'about') {
-                    document.getElementById('about-tab-content').style.display = 'block';
-                    document.getElementById('philosophy-tab-content').style.display = 'none';
+                    aboutTab.style.display = 'block';
+                    philoTab.style.display = 'none';
+                    if (badgeImg) badgeImg.src = 'img/badge about.png';
                 } else {
-                    document.getElementById('about-tab-content').style.display = 'none';
-                    document.getElementById('philosophy-tab-content').style.display = 'block';
+                    aboutTab.style.display = 'none';
+                    
+                    philoTab.style.display = 'flex';
+                    philoTab.style.flexDirection = 'column';
+                    philoTab.style.alignItems = 'center';
+                    
+                    if (badgeImg) badgeImg.src = 'img/brandbook badge.png';
                 }
             });
         });

@@ -4117,4 +4117,157 @@ a {
     .about-h1 { font-size: 40px !important; }
     .about-member-left { width: 100%; }
 }
+
+/* ==========================================================================
+   ABOUT PAGE - PHILOSOPHY TAB
+   ========================================================================== */
+
+.philosophy-content {
+    width: 100%;
+    max-width: 1280px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 120px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
+
+.philosophy-section {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Most sections are centered */
+}
+
+.why-bone-section {
+    gap: 48px;
+    align-items: center !important;
+}
+
+.why-bone-graphic {
+    position: relative;
+    width: 100%;
+    max-width: 1008px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bone-pattern-bg {
+    width: 100%;
+    height: auto;
+}
+
+.why-bone-title {
+    position: absolute;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 162px !important;
+    font-weight: 900 !important;
+    color: #fbfbfb !important;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.philosophy-text-block {
+    width: 100%;
+    max-width: 815px; /* Narrow width as requested */
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.philosophy-text-block p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fbfbfb !important;
+    line-height: 1.55;
+    text-align: center !important;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.inline-bone {
+    display: inline-block;
+    height: 1em;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
+.logotype-section {
+    gap: 64px;
+    width: 100%;
+    align-items: center !important;
+}
+
+.logotype-graphic-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Move to the right edge as requested */
+}
+
+.logotype-graphic {
+    width: 100%;
+    height: auto;
+}
+
+.palette-section {
+    gap: 40px;
+    align-items: center !important;
+    width: 100%;
+}
+
+.palette-title {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 80px !important;
+    font-weight: 900 !important;
+    color: #1e1e1e !important;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.palette-graphic-wrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.palette-graphic {
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+/* Philosophy Responsive */
+@media (max-width: 1024px) {
+    .why-bone-title {
+        font-size: 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .philosophy-content {
+        gap: 80px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .why-bone-title {
+        font-size: 60px !important;
+    }
+    .palette-title {
+        font-size: 48px !important;
+    }
+    .philosophy-text-block p {
+        font-size: 16px;
+    }
+}
 
