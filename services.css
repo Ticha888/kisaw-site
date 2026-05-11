@@ -1,12 +1,13 @@
 /* Services page specific styles */
-.services-page .page {
-    zoom: 0.8;
-}
 
 /* Fix: sidebar behind the white container */
 .sticky-sidebar-blue-layer {
     z-index: 1;
     right: -40px !important; /* Tuck slightly less under the white block */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 /* Image badge styles */

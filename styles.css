@@ -15,12 +15,26 @@ body {
     margin: 0 auto;
 }
 
-.main-page .page {
+.main-page .page,
+.about-page-body .page,
+.services-page .page,
+.abilka-case-page .page,
+.frozenbro-page .page,
+.drwdy-page .page,
+.brand-package-page .page,
+.privacy-page .page {
     zoom: 0.8;
 }
 
 @media (max-width: 1024px) {
-    .main-page .page {
+    .main-page .page,
+    .about-page-body .page,
+    .services-page .page,
+    .abilka-case-page .page,
+    .frozenbro-page .page,
+    .drwdy-page .page,
+    .brand-package-page .page,
+    .privacy-page .page {
         zoom: 1;
     }
 }
@@ -29,7 +43,7 @@ body {
 .main-row {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
     position: relative;
     padding: 0 24px;
@@ -3913,15 +3927,7 @@ a {
     background: #b8b8b8 !important;
 }
 
-.about-page-body .page {
-    zoom: 0.8;
-}
-
-@media (max-width: 1024px) {
-    .about-page-body .page {
-        zoom: 1;
-    }
-}
+/* About Content Components */
 
 
 /* About Content Components */

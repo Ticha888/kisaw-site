@@ -12,19 +12,24 @@
 
 /* Sticky Sidebar Badge */
 .badge-privacy {
+    position: sticky;
+    top: 64px;
     background: #47e194;
     border-radius: 12px;
-    padding: 32px 16px;
-    height: 654px;
+    padding: 24px 0;
+    width: 90px;
+    height: auto;
+    min-height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0.78;
+    box-sizing: border-box;
 }
 
 .badge-privacy span {
     font-family: 'Reenie Beanie', cursive;
-    font-size: 107px;
+    font-size: 64px;
     color: #fbfbfb;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
