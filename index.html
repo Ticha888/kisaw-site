@@ -217,6 +217,53 @@
                         </div>
                     </section>
 
+                    <!-- Why Us Section -->
+                    <section id="why-us" class="why-us-section">
+                        <!-- <h2 class="why-us-heading">why us?</h2> -->
+                        <div class="why-us-deck-wrapper">
+                            <!-- Card-1: Back (dark) -->
+                            <div class="why-us-card why-us-card--1">
+                                <span class="why-us-card-label">WHY US?</span>
+                            </div>
+                            <!-- Card-2: We ask first -->
+                            <div class="why-us-card why-us-card--2">
+                                <span class="why-us-counter">1/6</span>
+                                <h3 class="why-us-card-title">We ask first.</h3>
+                                <p class="why-us-card-desc">We ask the right questions ourselves to clearly understand the task, set priorities and not waste resources.</p>
+                            </div>
+                            <!-- Card-3: You always know -->
+                            <div class="why-us-card why-us-card--3">
+                                <span class="why-us-counter">2/6</span>
+                                <h3 class="why-us-card-title">You always know.</h3>
+                                <p class="why-us-card-desc">You always know where the project stands. Every stage is broken into tasks and subtasks, progress is easy to track.</p>
+                            </div>
+                            <!-- Card-4: sorted -->
+                            <div class="why-us-card why-us-card--4">
+                                <span class="why-us-counter">3/6</span>
+                                <h3 class="why-us-card-title">sorted.</h3>
+                                <p class="why-us-card-desc">Documentation and files are structured and ready to use straight away. We work to minimise FUCKUPS and maximise results.</p>
+                            </div>
+                            <!-- Card-5: For real -->
+                            <div class="why-us-card why-us-card--5">
+                                <span class="why-us-counter">4/6</span>
+                                <h3 class="why-us-card-title">For real.</h3>
+                                <p class="why-us-card-desc">We commit to dates and keep them.</p>
+                            </div>
+                            <!-- Card-6: Autonomy -->
+                            <div class="why-us-card why-us-card--6">
+                                <span class="why-us-counter">5/6</span>
+                                <h3 class="why-us-card-title">Autonomy.</h3>
+                                <p class="why-us-card-desc">We work directly with your marketers, project managers, developers and copywriters.</p>
+                            </div>
+                            <!-- Card-7: Just me -->
+                            <div class="why-us-card why-us-card--7">
+                                <span class="why-us-counter">6/6</span>
+                                <h3 class="why-us-card-title">Just me.</h3>
+                                <p class="why-us-card-desc">All communication goes through one person who is deep in the project from start to finish.</p>
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="request-form" class="request-form-section">
 
 
@@ -389,6 +436,89 @@
             <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
         </div>
     </div>
+
+    <!-- GSAP + Flip plugin for card stack -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap === 'undefined' || typeof Flip === 'undefined') return;
+            gsap.registerPlugin(Flip);
+
+            const wrapper = document.querySelector('.why-us-deck-wrapper');
+            if (!wrapper) return;
+
+            // 7 slots — all cards always visible (last 3 peek out faintly)
+            const SLOTS = [
+                { left: '50%', xPercent: -50, top: 0,   rotation: 0,      zIndex: 7, opacity: 1,    scale: 1,    boxShadow: '0 20px 56px rgba(0,0,0,0.30)' },
+                { left: '28%', xPercent: 0,   top: -20,  rotation: -4.646, zIndex: 6, opacity: 1,    scale: 1,    boxShadow: '0 8px 32px rgba(0,0,0,0.18)'  },
+                { left: '26%', xPercent: 0,   top: -30,  rotation:  6.863, zIndex: 5, opacity: 1,    scale: 1,    boxShadow: '0 12px 40px rgba(0,0,0,0.22)' },
+                { left: '31%', xPercent: 0,   top: -10,  rotation:  4.149, zIndex: 4, opacity: 1,    scale: 1,    boxShadow: '0 6px 24px rgba(0,0,0,0.14)'  },
+                { left: '32%', xPercent: 0,   top: 2,    rotation:  3.0,   zIndex: 3, opacity: 0.55, scale: 0.97, boxShadow: '0 4px 12px rgba(0,0,0,0.08)'  },
+                { left: '33%', xPercent: 0,   top: 10,   rotation:  2.0,   zIndex: 2, opacity: 0.3,  scale: 0.95, boxShadow: 'none' },
+                { left: '33%', xPercent: 0,   top: 16,   rotation:  1.5,   zIndex: 1, opacity: 0.15, scale: 0.93, boxShadow: 'none' },
+            ];
+
+            const allCards = gsap.utils.toArray('.why-us-card', wrapper);
+
+            // Set initial positions (always reset x/y to avoid drift)
+            allCards.forEach((card, i) => gsap.set(card, { ...SLOTS[i], x: 0, y: 0 }));
+
+            // Hover — lift front card
+            wrapper.addEventListener('mouseenter', (e) => {
+                const front = wrapper.firstElementChild;
+                if (front && front.contains(e.target))
+                    gsap.to(front, { y: -8, boxShadow: '0 28px 64px rgba(0,0,0,0.34)', duration: 0.25, ease: 'power2.out', overwrite: 'auto' });
+            }, true);
+            wrapper.addEventListener('mouseleave', () => {
+                const front = wrapper.firstElementChild;
+                if (front) gsap.to(front, { y: 0, boxShadow: SLOTS[0].boxShadow, duration: 0.2, ease: 'power2.in', overwrite: 'auto' });
+            }, true);
+
+            // Click to cycle
+            let busy = false;
+            wrapper.addEventListener('click', (e) => {
+                if (busy) return;
+                const front = wrapper.firstElementChild;
+                if (!front || !front.contains(e.target)) return;
+                busy = true;
+
+                // Record state of the OTHER 6 cards (Flip handles their movement)
+                const others = allCards.filter(c => c !== front);
+                const state = Flip.getState(others);
+
+                // Move front to end of DOM
+                wrapper.appendChild(front);
+
+                // Assign new slot positions to all non-front cards (reset x/y!)
+                [...wrapper.children].forEach((card, i) => {
+                    if (card !== front) gsap.set(card, { ...SLOTS[i], x: 0, y: 0 });
+                });
+
+                // 1. Front card exits to the right (separate from Flip)
+                gsap.fromTo(front,
+                    { x: 0, y: 0, opacity: 1, scale: 1 },
+                    {
+                        x: '+=130%', rotation: '+=16', opacity: 0, scale: 0.85,
+                        duration: 0.38, ease: 'power2.in',
+                        onComplete: () => {
+                            // Reset to last slot (faded, no x offset)
+                            gsap.set(front, { ...SLOTS[6], x: 0, y: 0, opacity: 0 });
+                            gsap.to(front, { opacity: SLOTS[6].opacity, duration: 0.3, ease: 'power2.out' });
+                        }
+                    }
+                );
+
+                // 2. Other 6 cards animate forward via Flip
+                Flip.from(state, {
+                    duration: 0.52,
+                    ease: 'power3.inOut',
+                    absolute: true,
+                    onComplete: () => { busy = false; },
+                });
+            });
+        });
+    </script>
 
     <!-- JS script for form states -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
