@@ -1,0 +1,14 @@
+﻿.other-projects-section {
+    padding: 120px 0;
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.other-projects-title {
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: #1E1E1E;
+}

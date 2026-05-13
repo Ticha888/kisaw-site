@@ -8,14 +8,159 @@
     <title>KISAW - Design Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oxygen+Mono&family=Reenie+Beanie&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=38.0">
+    <style>
+        /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
+        .abilka-centered-group {
+            margin: 0 auto !important;
+            width: 1000px !important;
+            max-width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .abilka-case-images {
+            margin-top: 40px !important;
+            margin-bottom: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-intro-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-img-wrapper {
+            width: 1000px !important;
+            max-width: 100% !important;
+            border-radius: 12px !important;
+            margin-bottom: 40px !important;
+            overflow: hidden !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            cursor: pointer !important;
+        }
+
+        .abilka-img-small {
+            width: 500px !important;
+            align-self: center !important;
+        }
+
+        .abilka-img-wrapper:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+        }
+        
+        .abilka-image {
+            width: 100% !important;
+            display: block !important;
+            height: auto !important;
+            object-fit: cover !important;
+        }
+
+        .other-projects-section {
+            padding: 100px 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .other-projects-title {
+            width: 1000px !important;
+            max-width: calc(100% - 80px) !important;
+            margin: 0 auto 40px auto !important;
+            padding: 0 !important;
+            text-align: left !important;
+        }
+
+        .projects-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            padding: 40px 0 !important;
+        }
+
+        .carousel-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .carousel-track {
+            display: flex !important;
+            gap: 24px !important;
+            padding-left: calc((100% - 1000px) / 2) !important;
+            padding-right: 40px !important;
+            width: max-content !important;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+
+        @media (max-width: 1100px) {
+            .carousel-track {
+                padding-left: 40px !important;
+            }
+        }
+
+        .carousel-item {
+            flex: 0 0 380px !important;
+        }
+
+        .carousel-full-card {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 12px !important;
+        }
+
+        .request-form-section {
+            margin-top: 0 !important;
+            padding-top: 180px !important;
+            padding-bottom: 120px !important;
+            background-color: #353535 !important;
+        }
+
+        .request-form-layout {
+            width: 1230px !important;
+            max-width: calc(100% - 40px) !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 80px !important;
+        }
+
+        .request-form-copy {
+            flex: 1 !important;
+            max-width: 550px !important;
+        }
+
+        .request-form {
+            flex: 0 0 600px !important;
+            width: 600px !important;
+        }
+
+        .request-form-title {
+            font-size: 60px !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+        }
+
+        .request-form-description {
+            font-size: 24px !important;
+            line-height: 1.4 !important;
+        }
+    </style>
 </head>
 
 <body class="abilka-case-page">
     <div class="page">
         <div class="main-row">
+            <!-- Sticky Sidebar -->
             <div class="sticky-sidebar-layer">
                 <img src="img/Abilka Badge.png" alt="Abilka" class="sticky-sidebar-img">
             </div>
@@ -72,128 +217,447 @@
                 </header>
 
                 <main class="main">
-                    <div class="main-left abilka-main-left">
-                        <section class="title-section">
+                    <div class="abilka-centered-group">
+                        <div class="main-left">
+                            <section class="title-section">
                             <h1 class="main-title"><span class="light">MONTENEGRO\</span>ABILKA SPACE</h1>
-                            <h2 class="sub-title">MINI-BRAND IDENTITY</h2>
+                            <h2 class="sub-title">BRAND IDENTITY</h2>
                         </section>
 
                         <span class="tag-hash">#</span>
-                        <div class="tags abilka-tags">
+                        <div class="tags">
                             <span>EDUCATION</span>
                             <span>BRAND IDENTITY</span>
                             <span>SOCIAL MEDIA</span>
                             <span>CONCEPT</span>
                         </div>
                     </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section abilka-section-first">
-                            <img src="img/abilka_case/abilka_01.png" alt="Abilka visual identity hero"
-                                class="abilka-image abilka-image-first">
-                        </section>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section">
-                            <div class="abilka-combo-grid">
-                                <div class="abilka-row">
-                                    <img src="img/abilka_case/abilka_05.png" alt="Abilka manifesto"
-                                        class="abilka-combo-image zoomable-media abilka-grow-2388">
-                                    <img src="img/abilka_case/abilka_06.png" alt="Abilka space statement"
-                                        class="abilka-combo-image zoomable-media abilka-grow-1484">
-                                </div>
-                                <div class="abilka-row">
-                                    <img src="img/abilka_case/abilka_02.png" alt="Abilka educational programs"
-                                        class="abilka-combo-image zoomable-media abilka-grow-1588">
-                                    <img src="img/abilka_case/abilka_03.png" alt="Abilka class list"
-                                        class="abilka-combo-image zoomable-media abilka-grow-1336">
-                                    <img src="img/abilka_case/abilka_04.png" alt="Abilka cards design"
-                                        class="abilka-combo-image zoomable-media abilka-grow-852">
-                                </div>
+                    <div class="abilka-case-images">
+                        <section class="abilka-intro-section">
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 1.svg" alt="Abilka visual identity 1" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 2.svg" alt="Abilka visual identity 2" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 4.svg" alt="Abilka visual identity 3" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 7.svg" alt="Abilka visual identity 4" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 8.png" alt="Abilka visual identity 5" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper abilka-img-small">
+                                <img src="img/abilka_case/Abilka case 9.svg" alt="Abilka visual identity 6" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 10.png" alt="Abilka visual identity 7" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 11.png" alt="Abilka visual identity 8" class="abilka-image">
+                            </div>
+                            <div class="abilka-img-wrapper">
+                                <img src="img/abilka_case/Abilka case 12.png" alt="Abilka visual identity 9" class="abilka-image">
                             </div>
                         </section>
                     </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section">
-                            <div class="abilka-palette">
-                                <div class="abilka-palette-item abilka-palette-item-1">
-                                    <span class="abilka-palette-hex">#827873</span>
-                                    <span class="abilka-palette-label">Ashes of the Forgotten Forge</span>
-                                </div>
-                                <div class="abilka-palette-item abilka-palette-item-2">
-                                    <span class="abilka-palette-hex">#e18d5a</span>
-                                    <span class="abilka-palette-label">Dragon's Ember Glow</span>
-                                </div>
-                                <div class="abilka-palette-item abilka-palette-item-3">
-                                    <span class="abilka-palette-hex">65a0ee</span>
-                                    <span class="abilka-palette-label">Wings of the Sapphire Sprite</span>
-                                </div>
-                                <div class="abilka-palette-item abilka-palette-item-4">
-                                    <span class="abilka-palette-hex">#b6dbfd</span>
-                                    <span class="abilka-palette-label">Frostmoss Veil</span>
-                                </div>
-                                <div class="abilka-palette-item abilka-palette-item-5">
-                                    <span class="abilka-palette-hex">#f0f1f2</span>
-                                    <span class="abilka-palette-label">Moonlit Whisper</span>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section">
-                            <div class="abilka-pair">
-                                <img src="img/abilka_case/abilka_07.png" alt="Abilka logo inspiration"
-                                    class="abilka-pair-image zoomable-media abilka-grow-1704">
-                                <img src="img/abilka_case/abilka_08.png" alt="Abilka logo form construction"
-                                    class="abilka-pair-image zoomable-media abilka-grow-2168">
-                            </div>
-                            <img src="img/abilka_case/abilka_09.png" alt="Abilka logo elements on chains"
-                                class="abilka-image zoomable-media abilka-after-pair">
-                        </section>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section">
-                            <img src="img/abilka_case/abilka_10.png" alt="Abilka full social media support"
-                                class="abilka-image zoomable-media">
-                        </section>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section abilka-section">
-                            <img src="img/abilka_case/abilka_11.png" alt="Abilka merch and print"
-                                class="abilka-image zoomable-media">
-                        </section>
                     </div>
                 </main>
-
-                <div class="designer-card">
-                    <img src="/img/Anika_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">BRAND DESIGNER</span>
-                        <span class="name">NIKA PIZHMA</span>
+                <!-- Look Other Projects Carousel -->
+                <section class="other-projects-section">
+                    <h2 class="other-projects-title">LOOK OTHER PROJECTS</h2>
+                    <div class="carousel-container">
+                        <div class="projects-carousel">
+                            <div class="carousel-track">
+                                <a href="frozenbro.html" class="carousel-item">
+                                    <img src="img/сase cards/frozen bro.png" alt="Frozen Bro" class="carousel-full-card">
+                                </a>
+                                <a href="boilingbrains.html" class="carousel-item">
+                                    <img src="img/сase cards/boiling bains.png" alt="Boiling Brains" class="carousel-full-card">
+                                </a>
+                                <a href="drwdy.html" class="carousel-item">
+                                    <img src="img/сase cards/dr wdy.png" alt="Dr.WDY" class="carousel-full-card">
+                                </a>
+                                <a href="#" class="carousel-item">
+                                    <img src="img/сase cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="years">
-                        <span>2024</span>
-                    </div>
-                </div>
+                </section>
 
-                <div class="nav-arrow">
-                    <img src="img/ArrowBack.png" alt="Arrow Back" class="arrow-img">
-                </div>
+                <section id="request-form" class="request-form-section">
+                    <div class="request-form-layout">
+                        <div class="request-form-copy">
+                            <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                            <p class="request-form-description">
+                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what you
+                                have, listen to your ideas, and
+                                propose a clear direction for how the project should look, sound, and communicate.
+                            </p>
+                        </div>
+
+                        <form id="services-form" class="request-form variant-refined state-default" action="#" method="post"
+                            enctype="multipart/form-data">
+                                <div class="request-form-fields">
+                                    <div class="request-input-group">
+                                        <input id="request-name" name="name" type="text" placeholder="NAME">
+                                    </div>
+                                    <div class="request-input-group">
+                                        <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                    </div>
+                                <div class="request-input-group request-media-group">
+                                    <div class="request-textarea-wrapper">
+                                        <textarea id="request-message" name="message"
+                                            placeholder="Tell us about your project and task" rows="3"></textarea>
+                                    </div>
+                                    <!-- Attached Files List (visible in file state) -->
+                                    <div class="request-files-section">
+                                        <div class="files-label">ATTACHED FILES</div>
+                                        <div class="files-list"></div>
+                                    </div>
+
+                                    <!-- Voice Recording Panel (visible in voice state) -->
+                                    <div class="request-voice-recording-panel">
+                                        <div class="voice-recording-header">
+                                            <div class="recording-indicator">
+                                                <span class="recording-dot"></span>
+                                                <span class="recording-label">RECORDING</span>
+                                            </div>
+                                            <span class="recording-timer">00:00</span>
+                                        </div>
+
+                                        <div class="voice-waveform">
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h1 opac"></div>
+                                            <div class="wave-bar h2 opac"></div>
+                                        </div>
+
+                                        <div class="voice-controls">
+                                            <button type="button" class="btn-stop-record"><span
+                                                    class="stop-icon"></span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="request-helper-row">
+                                        <div class="helper-text" id="helper-status">If you can't be bothered to type,
+                                            just say what's on your mind.</div>
+                                        <div class="helper-icons">
+                                            <button type="button" class="icon-btn btn-mic-toggle">
+                                                <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                            </button>
+                                            <input type="file" id="request-file-upload"
+                                                accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
+                                            <button type="button" class="icon-btn btn-clip-toggle">
+                                                <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY PROJECT</button>
+                        </form>
+                    </div>
+                </section>
+                <footer class="new-site-footer">
+                    <div class="footer-main-row">
+                        <div class="footer-brand-col">
+                            <div class="footer-brand-logo">
+                                <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="KISAW Logo" class="logo-img">
+                            </div>
+                            <div class="footer-socials">
+                                <a href="#" class="footer-social-link" aria-label="X (Twitter)">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="Instagram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="YouTube">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
+                        </div>
+                        <div class="footer-nav-col">
+                            <a href="about.html" class="footer-nav-link">About</a>
+                            <a href="services.html" class="footer-nav-link">Services</a>
+                            <a href="/" class="footer-nav-link">Cases</a>
+                        </div>
+                    </div>
+                    <div class="footer-copyright-row">
+                        <span>Made by</span>
+                        <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="" class="footer-bone-icon">
+                        <span>KISAW 2026</span>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
 
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="success-modal" style="display:none;">
+        <div class="success-modal-card">
+            <div class="success-image-wrap">
+                <img src="img/catalien.png" alt="Signal Sent" class="success-mascot">
+            </div>
+            <div class="success-text-content">
+                <h3 class="success-title">SIGNAL SENT!</h3>
+                <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
+            </div>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
+        </div>
+    </div>
+
+    <!-- Lightbox for images -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" src="" alt="Full Screen Image">
+        <div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
     </div>
 
     <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('services-form');
+            if (!form) return;
 
+            const fileInput = document.getElementById('request-file-upload');
+            const clipBtn = form.querySelector('.btn-clip-toggle');
+            const micBtn = form.querySelector('.btn-mic-toggle');
+            const filesListContainer = form.querySelector('.files-list');
+            const helperStatus = document.getElementById('helper-status');
+            const submitBtn = document.getElementById('btn-submit');
+            const stopRecordBtn = form.querySelector('.btn-stop-record');
+            const voiceTimer = form.querySelector('.recording-timer');
+
+            let selectedFiles = [];
+            const MAX_FILE_SIZE = 20 * 1024 * 1024;
+
+            let mediaRecorder;
+            let audioChunks = [];
+            let recordInterval;
+            let recordStartTime;
+            let audioContext;
+            let analyser;
+            let dataArray;
+            let animationId;
+
+            if (clipBtn && fileInput) {
+                clipBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener('change', (e) => {
+                    addFiles(Array.from(e.target.files));
+                    fileInput.value = '';
+                });
+            }
+
+            function addFiles(newFiles) {
+                newFiles.forEach(f => {
+                    if (f.size > MAX_FILE_SIZE) {
+                        alert(`File ${f.name} is too large. Max size is 20MB.`);
+                    } else if (!selectedFiles.find(x => x.name === f.name && x.size === f.size)) {
+                        selectedFiles.push(f);
+                    }
+                });
+                updateFilesUI();
+            }
+
+            if (filesListContainer) {
+                filesListContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('file-remove')) {
+                        selectedFiles.splice(parseInt(e.target.getAttribute('data-index')), 1);
+                        updateFilesUI();
+                    }
+                });
+            }
+
+            function updateFilesUI() {
+                if (!filesListContainer) return;
+                filesListContainer.innerHTML = '';
+                let totalBytes = 0;
+                selectedFiles.forEach((file, index) => {
+                    totalBytes += file.size;
+                    const item = document.createElement('div');
+                    item.className = 'file-item';
+                    item.innerHTML = `
+                        <div class="file-info-left">
+                            <span class="file-icon">${file.type.startsWith('image/') ? '🖼️' : '📄'}</span>
+                            <div class="file-details">
+                                <span class="file-name">${file.name}</span>
+                                <span class="file-size">${formatBytes(file.size)}</span>
+                            </div>
+                        </div>
+                        <span class="file-remove" data-index="${index}">✕</span>`;
+                    filesListContainer.appendChild(item);
+                });
+
+                if (selectedFiles.length > 0) {
+                    form.classList.remove('state-default', 'state-error', 'state-voice');
+                    form.classList.add('state-files');
+                    const count = selectedFiles.length === 1 ? '1 FILE' : `${selectedFiles.length} FILES`;
+                    if (helperStatus) helperStatus.textContent = `${count} ATTACHED (${formatBytes(totalBytes)} TOTAL)`;
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                } else {
+                    form.classList.remove('state-files', 'state-voice');
+                    form.classList.add('state-default');
+                    if (helperStatus) helperStatus.textContent = "If you can't be bothered to type, just say what's on your mind.";
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                }
+            }
+
+            function formatBytes(bytes, decimals = 1) {
+                if (!+bytes) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(decimals))} ${sizes[i]}`;
+            }
+
+            if (micBtn && stopRecordBtn && voiceTimer) {
+                micBtn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        startRecording(stream);
+                    } catch (err) {
+                        alert("Microphone access is required to record a voice message.");
+                    }
+                });
+
+                stopRecordBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    stopRecording();
+                });
+            }
+
+            if (submitBtn) {
+                submitBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) {
+                        stopRecording();
+                    } else {
+                        // --- Confetti Effect ---
+                        const rect = submitBtn.getBoundingClientRect();
+                        const x = (rect.left + rect.width / 2) / window.innerWidth;
+                        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                        const bonePath = 'M24.4835 5.49995C25.0877 4.89575 25.4271 4.07627 25.4271 3.2218C25.4271 2.36732 25.0877 1.54785 24.4835 0.943643C23.8793 0.339439 23.0598 0 22.2053 0C21.3508 0 20.5314 0.339439 19.9272 0.943643C19.3275 1.54967 18.9912 2.36828 18.9943 3.2218L6.43279 3.22189C6.43453 2.79951 6.35305 2.38091 6.19299 1.99002C6.03293 1.59913 5.79744 1.2436 5.49995 0.943741C4.89575 0.339537 4.07627 9.84241e-05 3.2218 9.84241e-05C2.36732 9.84241e-05 1.54785 0.339537 0.943642 0.943741C0.339438 1.54795 1.89119e-07 2.36742 1.89119e-07 3.2219C1.89119e-07 4.07637 0.339439 4.89585 0.943643 5.50005C0.339439 6.10425 0 6.92373 0 7.7782C0 8.63268 0.339439 9.45215 0.943643 10.0564C1.54785 10.6606 2.36732 11 3.2218 11C4.07627 11 4.89575 10.6606 5.49995 10.0564C5.79744 9.7565 6.03293 9.40097 6.19299 9.01008C6.35305 8.61919 6.43453 8.20059 6.43279 7.7782L18.9943 7.77811C18.9912 8.63162 19.3275 9.45023 19.9272 10.0563C20.5314 10.6605 21.3508 10.9999 22.2053 10.9999C23.0598 10.9999 23.8793 10.6605 24.4835 10.0563C25.0877 9.45206 25.4271 8.63258 25.4271 7.77811C25.4271 6.92363 25.0877 6.10415 24.4835 5.49995Z';
+                        const boneShape = confetti.shapeFromPath({ path: bonePath });
+
+                        confetti({
+                            particleCount: 80,
+                            spread: 80,
+                            origin: { x, y },
+                            shapes: [boneShape],
+                            colors: ['#47E194', '#FBFBFB', '#1E1E1E', '#A6D3FF', '#FFDAEF', '#DD3737'],
+                            zIndex: 9999,
+                            scalar: 2.2
+                        });
+
+                        const sModal = document.getElementById('success-modal');
+                        if (sModal) sModal.style.display = 'flex';
+                    }
+                });
+            }
+
+            function startRecording(stream) {
+                form.classList.remove('state-default', 'state-error', 'state-files');
+                form.classList.add('state-voice');
+                if (helperStatus) helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
+                if (submitBtn) submitBtn.textContent = 'STOP & SAVE RECORDING';
+
+                audioChunks = [];
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    const fileName = `voice_message_${new Date().toISOString().replace(/[:.]/g, '-')}.webm`;
+                    addFiles([new File([audioBlob], fileName, { type: 'audio/webm', lastModified: Date.now() })]);
+                    stream.getTracks().forEach(t => t.stop());
+                };
+                mediaRecorder.start();
+
+                recordStartTime = Date.now();
+                voiceTimer.textContent = '00:00';
+                clearInterval(recordInterval);
+                recordInterval = setInterval(updateTimer, 1000);
+
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                audioContext.createMediaStreamSource(stream).connect(analyser);
+                analyser.fftSize = 64;
+                dataArray = new Uint8Array(analyser.frequencyBinCount);
+                drawWaveform();
+            }
+
+            function drawWaveform() {
+                if (!form.classList.contains('state-voice')) return;
+                animationId = requestAnimationFrame(drawWaveform);
+                analyser.getByteFrequencyData(dataArray);
+                form.querySelectorAll('.wave-bar').forEach((bar, i) => {
+                    const val = dataArray[Math.floor(i * (dataArray.length / 22))] / 255;
+                    bar.style.transform = `scaleY(${0.1 + val * 1.7})`;
+                });
+            }
+
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+                clearInterval(recordInterval);
+                cancelAnimationFrame(animationId);
+                if (audioContext && audioContext.state !== 'closed') audioContext.close();
+                form.querySelectorAll('.wave-bar').forEach(b => b.style.transform = '');
+            }
+
+            function updateTimer() {
+                const diff = Math.floor((Date.now() - recordStartTime) / 1000);
+                if (diff >= 120) { stopRecording(); return; }
+                voiceTimer.textContent = `${String(Math.floor(diff / 60)).padStart(2, '0')}:${String(diff % 60).padStart(2, '0')}`;
+            }
+        });
+    </script>
+</body>
 </html>

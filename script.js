@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxThumbs = document.getElementById('lightbox-thumbnails');
 
     let scale = 1;
     let panning = false;
@@ -66,34 +67,79 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
     }
 
+    function updateLightboxImage(src, clickedElement) {
+        lightboxImg.src = src;
+        
+        // Reset Zoom/Pan state
+        scale = 1;
+        pointX = 0;
+        pointY = 0;
+        setTransform();
+        lightboxImg.style.cursor = 'grab';
+
+        // Update active thumbnail
+        if (lightboxThumbs) {
+            const allThumbs = lightboxThumbs.querySelectorAll('.lightbox-thumb');
+            allThumbs.forEach(thumb => {
+                thumb.classList.toggle('active', thumb.src === src);
+            });
+        }
+    }
+
     // Select all zoomable elements
     const zoomableElements = document.querySelectorAll(
-        '.graphic-logo-card, .graphic-color-palette, .graphic-labels, .graphic-graphics, .graphic-social-media, .strategy-img, .zoomable-media'
+        '.graphic-logo-card, .graphic-color-palette, .graphic-labels, .graphic-graphics, .graphic-social-media, .strategy-img, .zoomable-media, .abilka-img-wrapper'
     );
 
     zoomableElements.forEach(element => {
         element.addEventListener('click', () => {
-            let src = '';
+            // Check if element is inside the 'other-projects-section'
+            if (element.closest('.other-projects-section')) return;
+
+            let currentSrc = '';
+            const nestedImg = element.querySelector('img');
             if (element.tagName === 'IMG') {
-                src = element.src;
+                currentSrc = element.src;
+            } else if (nestedImg) {
+                currentSrc = nestedImg.src;
             } else {
-                // Get background image url
                 const style = window.getComputedStyle(element);
                 const bgImage = style.backgroundImage;
-                // Remove url("...") wrapper
-                src = bgImage.slice(4, -1).replace(/"/g, "");
+                currentSrc = bgImage.slice(4, -1).replace(/"/g, "");
             }
 
-            if (src && src !== 'none') {
-                lightboxImg.src = src;
-                lightbox.classList.add('active');
+            if (currentSrc && currentSrc !== 'none') {
+                // Clear and rebuild thumbnails for this specific context/page
+                if (lightboxThumbs) {
+                    lightboxThumbs.innerHTML = '';
+                    zoomableElements.forEach(el => {
+                        let thumbSrc = '';
+                        const thumbNested = el.querySelector('img');
+                        if (el.tagName === 'IMG') thumbSrc = el.src;
+                        else if (thumbNested) thumbSrc = thumbNested.src;
+                        else {
+                            const s = window.getComputedStyle(el);
+                            const bg = s.backgroundImage;
+                            thumbSrc = bg.slice(4, -1).replace(/"/g, "");
+                        }
 
-                // Reset Zoom/Pan state
-                scale = 1;
-                pointX = 0;
-                pointY = 0;
-                setTransform();
-                lightboxImg.style.cursor = 'grab';
+                        if (thumbSrc && thumbSrc !== 'none') {
+                            const thumbImg = document.createElement('img');
+                            thumbImg.src = thumbSrc;
+                            thumbImg.classList.add('lightbox-thumb');
+                            if (thumbSrc === currentSrc) thumbImg.classList.add('active');
+                            
+                            thumbImg.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                updateLightboxImage(thumbSrc, el);
+                            });
+                            lightboxThumbs.appendChild(thumbImg);
+                        }
+                    });
+                }
+
+                updateLightboxImage(currentSrc, element);
+                lightbox.classList.add('active');
             }
         });
     });
@@ -173,4 +219,38 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation(); // Prevent bubbling to lightbox click
         lightbox.classList.remove('active');
     });
+
+    // --- Carousel Navigation ---
+    const track = document.querySelector('.carousel-track');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    
+    if (track && carouselItems.length > 0) {
+        let currentIndex = 0;
+        const gap = 24;
+        const itemWidth = 380;
+        const totalItems = carouselItems.length;
+        
+        function updateCarousel() {
+            const offset = -(itemWidth + gap) * currentIndex;
+            track.style.transform = `translateX(${offset}px)`;
+        }
+        
+        // "Smart Click" logic
+        carouselItems.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                // If it's to the right of the current view, slide instead of following link
+                if (index > currentIndex) {
+                    e.preventDefault();
+                    currentIndex = index;
+                    updateCarousel();
+                } else if (index < currentIndex) {
+                    // Allow going back if clicking items to the left
+                    e.preventDefault();
+                    currentIndex = index;
+                    updateCarousel();
+                }
+                // If index === currentIndex, allow following the link
+            });
+        });
+    }
 });
