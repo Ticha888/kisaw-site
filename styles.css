@@ -400,7 +400,8 @@ a {
 }
 
 .frozenbro-page .main-left,
-.abilka-case-page .main-left {
+.abilka-case-page .main-left,
+.drwdy-page .main-left {
     padding-top: 88px;
     /* Removed padding-left to align with new layout */
 }

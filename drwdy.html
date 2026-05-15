@@ -10,7 +10,262 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=204.0">
+    <style>
+        /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
+        .abilka-centered-group {
+            margin: 0 auto !important;
+            width: 1000px !important;
+            max-width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .abilka-case-images {
+            margin-top: 40px !important;
+            margin-bottom: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-intro-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-img-wrapper {
+            width: 1000px !important;
+            max-width: 100% !important;
+            border-radius: 6.74px !important;
+            margin-bottom: 40px !important;
+            overflow: hidden !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            cursor: pointer !important;
+        }
+
+        .abilka-img-small {
+            width: 500px !important;
+            align-self: center !important;
+        }
+
+        .abilka-img-wrapper:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .abilka-image {
+            width: 100% !important;
+            display: block !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 6.74px !important;
+        }
+
+        .other-projects-section {
+            padding: 100px 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .other-projects-title {
+            width: 1000px !important;
+            max-width: calc(100% - 80px) !important;
+            margin: 0 auto 40px auto !important;
+            padding: 0 !important;
+            text-align: left !important;
+        }
+
+        .projects-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            padding: 40px 0 !important;
+        }
+
+        .carousel-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .carousel-track {
+            display: flex !important;
+            gap: 24px !important;
+            padding-left: calc((100% - 1000px) / 2) !important;
+            padding-right: 40px !important;
+            width: max-content !important;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+
+        @media (max-width: 1100px) {
+            .carousel-track {
+                padding-left: 40px !important;
+            }
+        }
+
+        .carousel-item {
+            flex: 0 0 380px !important;
+        }
+
+        .carousel-full-card {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 6.74px !important;
+        }
+
+        .request-form-section {
+            margin-top: 0 !important;
+            padding-top: 100px !important;
+            padding-bottom: 80px !important;
+            background-color: #353535 !important;
+        }
+
+        .request-form-layout {
+            width: 1230px !important;
+            max-width: calc(100% - 40px) !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 80px !important;
+        }
+
+        .request-form-copy {
+            flex: 1 !important;
+            max-width: 550px !important;
+        }
+
+        .request-form {
+            flex: 0 0 600px !important;
+            width: 600px !important;
+        }
+
+        .request-form-title {
+            font-size: 60px !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+        }
+
+        .tags {
+            display: flex;
+            gap: 13px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            color: #1E1E1E !important;
+            text-transform: uppercase;
+            line-height: 1.13 !important;
+            opacity: 0.6 !important;
+        }
+
+        .tag-hash {
+            color: #1E1E1E !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            opacity: 0.6 !important;
+        }
+
+        .request-form-description {
+            font-size: 24px !important;
+            line-height: 1.4 !important;
+        }
+
+        .buttons-wrap {
+            margin: 40px auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 6px !important;
+            width: fit-content !important;
+            padding: 4px !important;
+            position: relative !important;
+            background: #E4ECF3 !important; /* Light blue for drwdy */
+            border-radius: 26px !important;
+            overflow: hidden !important;
+        }
+
+        .active-pill {
+            position: absolute !important;
+            top: 4px;
+            left: 4px;
+            height: 44px;
+            background: #EE716C !important;
+            border-radius: 22px !important;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            z-index: 1 !important;
+        }
+
+        .buttons-wrap .btn {
+            font-weight: 600 !important;
+            padding: 0 32px !important;
+            height: 44px !important;
+            font-size: 17px !important;
+            border-radius: 22px !important;
+            transition: color 0.3s ease !important;
+            color: #386088 !important;
+            position: relative !important;
+            z-index: 2 !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+        }
+
+        .buttons-wrap .btn.active-text {
+            color: #fff !important;
+        }
+
+        .buttons-wrap .btn:not(.active-text):hover {
+            background-color: rgba(56, 96, 136, 0.08) !important;
+            transform: translateY(1px);
+        }
+
+        body.drwdy-page {
+            background-color: #b8b8b8 !important; /* Grey background */
+        }
+
+        .container-drwdy {
+            background-color: #FBFBFB !important; /* White sub-container */
+        }
+
+        /* LIGHT LIGHTBOX THEME */
+        .lightbox {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+
+        .lightbox-close { color: #000 !important; }
+        .lightbox-thumbnails {
+            background: rgba(0, 0, 0, 0.05) !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        }
+        .lightbox-thumb { border: 2px solid transparent !important; }
+        .lightbox-thumb.active { border-color: #000 !important; }
+
+        /* DrWdy specific typography */
+        .drwdy-copy {
+            color: #1E1E1E !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 20px !important;
+            line-height: 1.55 !important;
+            margin-bottom: 32px;
+            font-weight: 400 !important;
+        }
+        .section-title {
+            color: #1E1E1E !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 24px !important;
+            font-weight: 900 !important;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
 <body class="drwdy-page">
@@ -21,7 +276,6 @@
             </div>
 
             <div class="container container-drwdy">
-                <!-- Header -->
                 <header class="header header--light">
                     <div class="header-desktop-layout">
                         <div class="header-left">
@@ -43,282 +297,204 @@
                             <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
                         </button>
                     </div>
-
-                    <!-- Mobile Hero Layout -->
-                    <div class="header-mobile-hero">
-                        <div class="logo-stack">
-                            <img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main">
-                        </div>
-                        <p class="tagline">a Design studio by visual enthusiasts</p>
-                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
-                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
-                        </button>
-                    </div>
-
-                    <!-- Popup Menu -->
-                    <div class="nav-overlay">
-                        <nav class="nav-popup">
-                            <button class="menu-close-btn" aria-label="Close Menu">
-                                <img src="img/closewindow.svg" alt="Close">
-                            </button>
-                            <div class="nav-links">
-                                <a href="/#cases">cases</a>
-                                <a href="services.html">Services</a>
-                                <a href="about.html">About</a>
-                            </div>
-                            <a href="/#request-form" class="send-signal-btn-mobile">Send the Signal</a>
-                        </nav>
-                    </div>
                 </header>
 
                 <main class="main">
-                    <div class="main-left drwdy-main-left">
-                        <section class="title-section">
-                            <h1 class="main-title"><span class="light">USA\</span>DOCTOR WDY</h1>
-                            <h2 class="sub-title">BRAND IDENTITY&amp;SITE</h2>
-                        </section>
-
-                        <span class="tag-hash">#</span>
-                        <div class="tags drwdy-tags">
-                            <span>TELEMEDICINE</span>
-                            <span>BRAND IDENTITY</span>
-                            <span>GRAPHIC/WEB DESIGN</span>
-                            <span>SITE</span>
-                            <span>SOCIAL MEDIA</span>
-                        </div>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section drwdy-section drwdy-section-first">
-                            <img src="img/drwdy/drwdy_01.png" alt="Dr WDY hero"
-                                class="drwdy-image zoomable-media">
-                        </section>
-                    </div>
-                    <div class="buttons-wrap drwdy-buttons">
-                        <button class="btn black" data-tab="visuals">VISUALS</button>
-                        <button class="btn purple" data-tab="history">HISTORY</button>
-                    </div>
-                   
-
-                    
-                    <!-- VISUALS TAB CONTENT -->
-                    <div id="visuals" class="tab-content active">
-                         <div class="content-wrap">
-                        <section class="logo-section drwdy-section">
-                            <img src="img/drwdy/drwdy_02.png" alt="Dr WDY new brand vibe"
-                                class="drwdy-image zoomable-media">
-                        </section>
-                    </div>
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section drwdy-brandbook-section">
-                                <h3 class="section-title drwdy-brandbook-title">Brandbook parts:</h3>
-                                <img src="img/drwdy/brandbook_parts.png" alt="Brandbook parts"
-                                    class="drwdy-image zoomable-media">
+                    <div class="abilka-centered-group">
+                        <div class="main-left">
+                            <section class="title-section">
+                                <h1 class="main-title"><span class="light">USA\</span>DOCTOR WDY</h1>
+                                <h2 class="sub-title">BRAND IDENTITY&amp;SITE</h2>
                             </section>
+
+                            <span class="tag-hash">#</span>
+                            <div class="tags">
+                                <span>TELEMEDICINE</span>
+                                <span>BRAND IDENTITY</span>
+                                <span>GRAPHIC/WEB DESIGN</span>
+                                <span>SITE</span>
+                                <span>SOCIAL MEDIA</span>
+                            </div>
                         </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <img src="img/drwdy/drwdy_12.png" alt="New product campaign"
-                                    class="drwdy-image zoomable-media">
-                            </section>
-                        </div>
+                        <div class="abilka-case-images">
+                            <div class="abilka-img-wrapper zoomable-media">
+                                <img src="img/drwdy/visuals/drwdy 1.png" alt="Dr WDY hero" class="abilka-image">
+                            </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <img src="img/drwdy/drwdy_13.png" alt="Website redesign"
-                                    class="drwdy-image zoomable-media">
-                            </section>
-                        </div>
+                            <div class="buttons-wrap">
+                                <div class="active-pill"></div>
+                                <button class="btn active-text" data-tab="visuals">VISUALS</button>
+                                <button class="btn" data-tab="history">HISTORY</button>
+                            </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <img src="img/drwdy/drwdy_14.png" alt="Website layouts"
-                                    class="drwdy-image zoomable-media">
-                            </section>
-                        </div>
-
-                    </div>
-                    <!-- HISTORY TAB CONTENT -->
-                    <div id="history" class="tab-content">
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">PROJECT CONTEXT</h3>
-                                <div class="drwdy-copy">
-                                    <p>Dr WDY is a U.S.-based telemedicine service working in a sensitive and legally complex category: medical cannabis. The product is built as a subscription that gives people access to licensed doctors.</p>
-                                    <p>When I stepped in in Spring 2022, the brand was basically in its early, unfinished stage. The product existed, but the brand did not.</p>
-                                    <p>This project was initiated by me with a clear decision to build the brand from scratch and turn it into a system that could actually live across channels.</p>
-                                </div>
-                            </section>
-                        </div>
-
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section drwdy-visual-concept">
-                                <h3 class="section-title">VISUAL CONCEPT</h3>
-                                <div class="drwdy-visual-concept-layout">
-                                    <div class="drwdy-copy drwdy-visual-concept-intro">
-                                        At the beginning, the brand voice and visual language hadn't been shaped into a consistent system yet, so the overall communication didn't always reflect the calm, supportive experience we wanted users to feel.
+                            <!-- VISUALS TAB CONTENT -->
+                            <div id="visuals" class="tab-content active" style="width: 100%;">
+                                <div class="abilka-intro-section">
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/drwdy 2.png" alt="Dr WDY visual 2" class="abilka-image">
                                     </div>
-
-                                    <div class="drwdy-visual-before">
-                                        <div class="drwdy-visual-before-label">Before:</div>
-                                        <img src="img/drwdy/drwdy_15.png" alt="Before visual concept composition"
-                                            class="drwdy-image zoomable-media drwdy-visual-before-image">
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/drwdy  3.png" alt="Dr WDY visual 3" class="abilka-image">
                                     </div>
-
-                                    <div class="drwdy-copy drwdy-visual-concept-outro">
-                                        <p>We consciously avoided traditional clinical aesthetics. In this category, "medical" visuals can easily feel cold, scary, and distancing.</p>
-                                        <p>Instead, we chose a direction that references a 90s vibe and a sporty, "healthy" aesthetic: something relaxed, friendly, and grounded in real life rather than institutional design.</p>
-                                        <b class="drwdy-visual-lead">That choice helped to:</b>
-                                        <ul class="drwdy-visual-points">
-                                            <li>lower anxiety</li>
-                                            <li>normalize the topic of medical cannabis</li>
-                                            <li>avoid subcultural and marginal cliches</li>
-                                            <li>create a sense of physicality, life, and calm</li>
-                                        </ul>
-                                        <p>The visuals were designed to carry the same emotional message:<br>
-                                            <b>"we're here to help you."</b></p>
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/drwdy 4.png" alt="Dr WDY visual 4" class="abilka-image">
                                     </div>
-                                     <div class="drwdy-visual-before">
-                                        <div class="drwdy-visual-before-label">During an identity development:</div>
-                                        <img src="img/drwdy/drwdy_16.png" alt="Before visual concept composition"
-                                            class="drwdy-image zoomable-media drwdy-visual-before-image">
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/drwdy 5.png" alt="Dr WDY visual 5" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/drwdy 6.png" alt="Dr WDY visual 6" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper zoomable-media">
+                                        <img src="img/drwdy/visuals/Frame 1321314421.png" alt="Dr WDY visual 7" class="abilka-image">
                                     </div>
                                 </div>
-                            </section>
-                        </div>
+                            </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">A SYSTEM, NOT ISOLATED ASSETS</h3>
-                                <div class="drwdy-copy drwdy-visual-concept-outro">
-                                        <p>One of the key priorities of the project was system building. The identity, website, social media, and marketing materials were designed as a single ecosystem rather than a collection of disconnected elements.</p>
-                                        <b class="drwdy-visual-lead">Within the project, we:</b>
-                                        <ul class="drwdy-visual-points">
-                                            <li>developed visual and communication principles</li>
-                                            <li>defined and documented the tone of voice</li>
-                                            <li>fully reworked the website structure and visual design</li>
-                                            <li>styled Instagram as part of the brand system</li>
-                                            <li>prepared post templates</li>
-                                            <li>created email and advertising materials</li>
-                                        </ul>
-                                        <p>The goal was also to give the team tools for independent, consistent use of the system.</p>
-                                    </div>
-                            </section>
-                        </div>
+                            <!-- HISTORY TAB CONTENT -->
+                            <div id="history" class="tab-content" style="width: 100%;">
+                                <div class="abilka-centered-group" style="margin-top: 0 !important;">
+                                    <section class="strategy-section">
+                                        <h3 class="section-title">PROJECT CONTEXT</h3>
+                                        <div class="drwdy-copy">
+                                            Dr WDY is a U.S.-based telemedicine service working in a sensitive and legally complex category: medical cannabis. The product is built as a subscription that gives people access to licensed doctors.
+                                            <br><br>
+                                            When I stepped in in Spring 2022, the brand was basically in its early, unfinished stage. The product existed, but the brand did not. This project was initiated by me with a clear decision to build the brand from scratch and turn it into a system that could actually live across channels.
+                                        </div>
+                                    </section>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">PROCESS</h3>
-                                <div class="drwdy-copy">
-                                    <b>The project took approximately three months and included:</b>
-                                    <ul class="drwdy-visual-points">
-                                            <li>an audit of the brand’s current state</li>
-                                            <li>competitive landscape review</li>
-                                            <li>concept development</li>
-                                            <li>exploration and testing of visual directions</li>
-                                            <li>iterative system building across multiple touchpoints</li>
-                                        </ul>
-                                        <p>The process was non-linear and required constant alignment with the sensitivity of the category and the constraints of the market.</p>
+                                    <section class="strategy-section">
+                                        <h3 class="section-title">VISUAL CONCEPT</h3>
+                                        <div class="drwdy-copy">
+                                            At the beginning, the brand voice and visual language hadn't been shaped into a consistent system yet, so the overall communication didn't always reflect the calm, supportive experience we wanted users to feel.
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px;">Before:</p>
+                                        <div class="abilka-img-wrapper zoomable-media">
+                                            <img src="img/drwdy/lore/wdylore 1.png" alt="Before" class="abilka-image">
+                                        </div>
+                                        <div class="drwdy-copy" style="margin-top: 40px;">
+                                            We consciously avoided traditional clinical aesthetics. In this category, "medical" visuals can easily feel cold, scary, and distancing. Instead, we chose a direction that references a 90s vibe and a sporty, "healthy" aesthetic: something relaxed, friendly, and grounded in real life.
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px;">During identity development:</p>
+                                        <div class="abilka-img-wrapper zoomable-media">
+                                            <img src="img/drwdy/lore/wdylore 2.png" alt="Identity development" class="abilka-image">
+                                        </div>
+                                    </section>
+
+                                    <section class="strategy-section">
+                                        <h3 class="section-title">A SYSTEM, NOT ASSETS</h3>
+                                        <div class="drwdy-copy">
+                                            One of the key priorities was system building. The identity, website, social media, and marketing materials were designed as a single ecosystem. We developed visual and communication principles, defined the tone of voice, and fully reworked the website.
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px;">Site developing:</p>
+                                        <div class="abilka-img-wrapper zoomable-media">
+                                            <img src="img/drwdy/lore/wdylore 3.png" alt="Site development" class="abilka-image">
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; margin-top: 40px;">Social media content:</p>
+                                        <div class="abilka-img-wrapper zoomable-media">
+                                            <img src="img/drwdy/lore/wdylore 4.png" alt="Social Media" class="abilka-image">
+                                        </div>
+                                    </section>
+
+                                    <section class="strategy-section">
+                                        <h3 class="section-title">TAKEAWAYS</h3>
+                                        <div class="drwdy-copy">
+                                            This project became an important experience in working under high uncertainty in a sensitive medical category. It reinforced a key principle: design and identity create real value only when they are embedded into communication and processes.
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; margin-top: 40px;">Promo & e-mails:</p>
+                                        <div class="abilka-img-wrapper zoomable-media">
+                                            <img src="img/drwdy/lore/wdylore 5.png" alt="Takeaways" class="abilka-image">
+                                        </div>
+                                    </section>
                                 </div>
-                                <div class="drwdy-visual-before" style="margin-top: 64px;">
-                                        <div class="drwdy-visual-before-label">Site developing:</div>
-                                        <img src="img/drwdy/drwdy_17.png" alt="Before visual concept composition"
-                                            class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                    </div>
-                                     <div class="drwdy-visual-before" style="margin-top: 64px;">
-                                        <div class="drwdy-visual-before-label">Social media content:</div>
-                                        <img src="img/drwdy/drwdy_smm_img.png" alt="Before visual concept composition"
-                                            class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                    </div>
-                            </section>
-                        </div>
-
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">TAKEAWAYS</h3>
-                                <div class="drwdy-copy">
-                                    <p>This project became an important experience in working:</p>
-                                    <ul class="drwdy-visual-points">
-                                            <li>under high uncertainty</li>
-                                            <li>without access to data</li>
-                                            <li>in a sensitive medical category</li>
-                                            <li>with a focus on trust-building and anxiety reduction</li>
-                                        </ul>
-                                        <p>It reinforced a key principle: design and identity create real value only when they are embedded into communication and processes, not when they exist as a standalone visual layer.</p>
-                                        <p class="drwdy-italic-note">This case study is published with the client’s consent and reflects the brand state and decisions at the time the project was completed.</p>
-                                </div>
-                            </section>
+                            </div>
                         </div>
                     </div>
                 </main>
 
-                <div class="designer-card">
-                    <img src="/img/Anika_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">BRAND DESIGNER</span>
-                        <span class="name">NIKA PIZHMA</span>
-                    </div>
-                    <div class="years">
-                        <span>2022</span>
-                    </div>
-                </div>
-
-                <div class="designer-card">
-                    <img src="/img/tasya_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">GRAPHIC DESIGN, UI\UX DESIGN</span>
-                        <span class="name">TASYA ZHDAN</span>
-                    </div>
-                    <div class="years">
-                        <span>2022</span>
-                    </div>
-                </div>
-
-                <div class="nav-arrow">
-                    <img src="img/ArrowBack.png" alt="Arrow Back" class="arrow-img">
-                </div>
-
-                <!-- Look Other Projects Carousel -->
+                <!-- Carousel -->
                 <section class="other-projects-section">
                     <h2 class="other-projects-title">LOOK OTHER PROJECTS</h2>
-                    <div class="projects-carousel">
-                        <div class="carousel-track">
-                            <!-- Abilka -->
-                            <a href="abilka.html" class="carousel-item">
-                                <div class="carousel-card-img abilka-bg">
-                                    <img src="img/imgs_for_main/Abilka_cover.png" alt="Abilka">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>ABILKA</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Frozen Bro -->
-                            <a href="frozenbro.html" class="carousel-item">
-                                <div class="carousel-card-img frozen-bg">
-                                    <img src="img/imgs_for_main/FRozenBro_cover.png" alt="Frozen Bro">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>FROZEN BRO</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Boiling Brains -->
-                            <a href="boilingbrains.html" class="carousel-item">
-                                <div class="carousel-card-img boiling-bg">
-                                    <img src="img/imgs_for_main/BB_cover.png" alt="Boiling Brains">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>BOILING BRAINS</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
+                    <div class="carousel-container">
+                        <div class="projects-carousel">
+                            <div class="carousel-track">
+                                <a href="abilka.html" class="carousel-item">
+                                    <img src="img/сase cards/abilka.png" alt="Abilka" class="carousel-full-card">
+                                </a>
+                                <a href="frozenbro.html" class="carousel-item">
+                                    <img src="img/сase cards/frbr.png" alt="Frozen Bro" class="carousel-full-card">
+                                </a>
+                                <a href="boilingbrains.html" class="carousel-item">
+                                    <img src="img/сase cards/bb.png" alt="Boiling Brains" class="carousel-full-card">
+                                </a>
+                                <a href="#" class="carousel-item">
+                                    <img src="img/сase cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Footer -->
+                <!-- Form Section -->
+                <section id="request-form" class="request-form-section">
+                    <div class="request-form-layout">
+                        <div class="request-form-copy">
+                            <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                            <p class="request-form-description">
+                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what you have, listen to your ideas, and propose a clear direction.
+                            </p>
+                        </div>
+                        <form id="services-form" class="request-form variant-refined state-default" action="#" method="post" enctype="multipart/form-data">
+                            <div class="request-form-fields">
+                                <div class="request-input-group">
+                                    <input id="request-name" name="name" type="text" placeholder="NAME">
+                                </div>
+                                <div class="request-input-group">
+                                    <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                </div>
+                                <div class="request-input-group request-media-group">
+                                    <div class="request-textarea-wrapper">
+                                        <textarea id="request-message" name="message" placeholder="Tell us about your project and task" rows="3"></textarea>
+                                    </div>
+                                    <div class="request-files-section">
+                                        <div class="files-label">ATTACHED FILES</div>
+                                        <div class="files-list"></div>
+                                    </div>
+                                    <div class="request-voice-recording-panel">
+                                        <div class="voice-recording-header">
+                                            <div class="recording-indicator">
+                                                <span class="recording-dot"></span>
+                                                <span class="recording-label">RECORDING</span>
+                                            </div>
+                                            <span class="recording-timer">00:00</span>
+                                        </div>
+                                        <div class="voice-waveform">
+                                            <div class="wave-bar h1"></div><div class="wave-bar h4"></div><div class="wave-bar h2"></div><div class="wave-bar h5"></div><div class="wave-bar h3"></div><div class="wave-bar h4"></div><div class="wave-bar h1"></div><div class="wave-bar h5"></div><div class="wave-bar h2"></div><div class="wave-bar h3"></div><div class="wave-bar h4"></div><div class="wave-bar h1"></div><div class="wave-bar h5"></div><div class="wave-bar h2"></div><div class="wave-bar h3"></div><div class="wave-bar h4"></div><div class="wave-bar h1"></div><div class="wave-bar h5"></div><div class="wave-bar h2"></div><div class="wave-bar h3"></div><div class="wave-bar h1 opac"></div><div class="wave-bar h2 opac"></div>
+                                        </div>
+                                        <div class="voice-controls">
+                                            <button type="button" class="btn-stop-record"><span class="stop-icon"></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="request-helper-row">
+                                        <div class="helper-text" id="helper-status">If you can't be bothered to type, just say what's on your mind.</div>
+                                        <div class="helper-icons">
+                                            <button type="button" class="icon-btn btn-mic-toggle">
+                                                <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                            </button>
+                                            <input type="file" id="request-file-upload" accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
+                                            <button type="button" class="icon-btn btn-clip-toggle">
+                                                <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY PROJECT</button>
+                        </form>
+                    </div>
+                </section>
+
                 <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
@@ -326,40 +502,14 @@
                                 <img src="img/imgs_for_main/kisaw_logo_white.svg" alt="KISAW Logo" class="logo-img">
                             </div>
                             <div class="footer-socials">
-                                <a href="#" class="footer-social-link" aria-label="X (Twitter)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="footer-social-link" aria-label="Instagram">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="footer-social-link" aria-label="YouTube">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
+                                <!-- Social Icons ... -->
                             </div>
-                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
+                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@hello@kisaw.studio</a>
                         </div>
                         <div class="footer-nav-col">
                             <a href="about.html" class="footer-nav-link">About</a>
                             <a href="services.html" class="footer-nav-link">Services</a>
-                            <a href="/#cases" class="footer-nav-link">Cases</a>
-                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
+                            <a href="/" class="footer-nav-link">Cases</a>
                         </div>
                     </div>
                     <div class="footer-copyright-row">
@@ -372,6 +522,21 @@
         </div>
     </div>
 
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="success-modal" style="display:none;">
+        <div class="success-modal-card">
+            <div class="success-image-wrap">
+                <img src="img/catalien.png" alt="Signal Sent" class="success-mascot">
+            </div>
+            <div class="success-text-content">
+                <h3 class="success-title">SIGNAL SENT!</h3>
+                <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
+            </div>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" src="" alt="Full Screen Image">
@@ -379,6 +544,129 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pill = document.querySelector('.active-pill');
+
+            function updatePill(btn) {
+                if (!pill || !btn) return;
+                pill.style.width = `${btn.offsetWidth}px`;
+                pill.style.left = `${btn.offsetLeft}px`;
+            }
+
+            const activeBtn = document.querySelector('.buttons-wrap .btn.active-text');
+            if (activeBtn) setTimeout(() => updatePill(activeBtn), 50);
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active-text'));
+                    btn.classList.add('active-text');
+                    updatePill(btn);
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+                });
+            });
+
+            // --- Form Logic ---
+            const form = document.getElementById('services-form');
+            if (form) {
+                const fileInput = document.getElementById('request-file-upload');
+                const clipBtn = form.querySelector('.btn-clip-toggle');
+                const micBtn = form.querySelector('.btn-mic-toggle');
+                const filesListContainer = form.querySelector('.files-list');
+                const helperStatus = document.getElementById('helper-status');
+                const submitBtn = document.getElementById('btn-submit');
+                const stopRecordBtn = form.querySelector('.btn-stop-record');
+                const voiceTimer = form.querySelector('.recording-timer');
+
+                let selectedFiles = [];
+                const MAX_FILE_SIZE = 20 * 1024 * 1024;
+                let mediaRecorder, audioChunks = [], recordInterval, recordStartTime, audioContext, analyser, dataArray, animationId;
+
+                if (clipBtn && fileInput) {
+                    clipBtn.addEventListener('click', e => { e.preventDefault(); fileInput.click(); });
+                    fileInput.addEventListener('change', e => { addFiles(Array.from(e.target.files)); fileInput.value = ''; });
+                }
+
+                function addFiles(newFiles) {
+                    newFiles.forEach(f => {
+                        if (f.size <= MAX_FILE_SIZE && !selectedFiles.find(x => x.name === f.name)) selectedFiles.push(f);
+                    });
+                    updateFilesUI();
+                }
+
+                function updateFilesUI() {
+                    if (!filesListContainer) return;
+                    filesListContainer.innerHTML = '';
+                    selectedFiles.forEach((file, index) => {
+                        const item = document.createElement('div');
+                        item.className = 'file-item';
+                        item.innerHTML = `<div class="file-info-left"><span class="file-name">${file.name}</span></div><span class="file-remove" data-index="${index}">✕</span>`;
+                        filesListContainer.appendChild(item);
+                    });
+                    if (selectedFiles.length > 0) {
+                        form.classList.add('state-files');
+                        helperStatus.textContent = `${selectedFiles.length} FILES ATTACHED`;
+                    } else {
+                        form.classList.remove('state-files');
+                        helperStatus.textContent = "If you can't be bothered to type, just say what's on your mind.";
+                    }
+                }
+
+                if (filesListContainer) {
+                    filesListContainer.addEventListener('click', e => {
+                        if (e.target.classList.contains('file-remove')) {
+                            selectedFiles.splice(parseInt(e.target.getAttribute('data-index')), 1);
+                            updateFilesUI();
+                        }
+                    });
+                }
+
+                if (micBtn) {
+                    micBtn.addEventListener('click', async e => {
+                        e.preventDefault();
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        startRecording(stream);
+                    });
+                    stopRecordBtn.addEventListener('click', e => { e.preventDefault(); stopRecording(); });
+                }
+
+                function startRecording(stream) {
+                    form.classList.add('state-voice');
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+                    mediaRecorder.onstop = () => {
+                        const file = new File([new Blob(audioChunks)], "voice_message.webm", { type: 'audio/webm' });
+                        addFiles([file]);
+                    };
+                    mediaRecorder.start();
+                    recordStartTime = Date.now();
+                    recordInterval = setInterval(() => {
+                        const diff = Math.floor((Date.now() - recordStartTime) / 1000);
+                        voiceTimer.textContent = `${String(Math.floor(diff / 60)).padStart(2, '0')}:${String(diff % 60).padStart(2, '0')}`;
+                    }, 1000);
+                }
+
+                function stopRecording() {
+                    if (mediaRecorder) mediaRecorder.stop();
+                    clearInterval(recordInterval);
+                    form.classList.remove('state-voice');
+                }
+
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', e => {
+                        e.preventDefault();
+                        const rect = submitBtn.getBoundingClientRect();
+                        confetti({ particleCount: 80, spread: 80, origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight } });
+                        document.getElementById('success-modal').style.display = 'flex';
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
