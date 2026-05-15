@@ -10,7 +10,240 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=46.0">
+    <style>
+        /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
+        .abilka-centered-group {
+            margin: 0 auto !important;
+            width: 1000px !important;
+            max-width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .abilka-case-images {
+            margin-top: 40px !important;
+            margin-bottom: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            padding: 0 !important;
+        }
+
+        .abilka-intro-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-img-wrapper {
+            width: 1000px !important;
+            max-width: 100% !important;
+            border-radius: 12px !important;
+            margin-bottom: 40px !important;
+            overflow: hidden !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            cursor: pointer !important;
+        }
+
+        .abilka-img-small {
+            width: 500px !important;
+            align-self: center !important;
+        }
+
+        .abilka-img-wrapper:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: none !important;
+        }
+
+        .abilka-image {
+            width: 100% !important;
+            display: block !important;
+            height: auto !important;
+            object-fit: cover !important;
+        }
+
+        .other-projects-section {
+            padding: 100px 0 !important;
+            margin-top: 0 !important;
+            background-color: #1E1E1E !important;
+        }
+
+        .other-projects-title {
+            width: 1000px !important;
+            max-width: calc(100% - 80px) !important;
+            margin: 0 auto 40px auto !important;
+            padding: 0 !important;
+            text-align: left !important;
+            color: #fff !important;
+            font-size: 48px !important;
+            font-weight: 900 !important;
+        }
+
+        .projects-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            padding: 40px 0 !important;
+        }
+
+        .carousel-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .carousel-track {
+            display: flex !important;
+            gap: 24px !important;
+            padding-left: calc((100% - 1000px) / 2) !important;
+            padding-right: 40px !important;
+            width: max-content !important;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+
+        @media (max-width: 1100px) {
+            .carousel-track {
+                padding-left: 40px !important;
+            }
+        }
+
+        .carousel-item {
+            flex: 0 0 380px !important;
+        }
+
+        .carousel-full-card {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 12px !important;
+        }
+
+        .request-form-section {
+            margin-top: 0 !important;
+            padding-top: 100px !important;
+            padding-bottom: 80px !important;
+            background-color: #353535 !important;
+        }
+
+        .request-form-layout {
+            width: 1230px !important;
+            max-width: calc(100% - 40px) !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 80px !important;
+        }
+
+        .request-form-copy {
+            flex: 1 !important;
+            max-width: 550px !important;
+        }
+
+        .request-form {
+            flex: 0 0 600px !important;
+            width: 600px !important;
+        }
+
+        .request-form-title {
+            font-size: 60px !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+            color: #fff !important;
+        }
+
+        .request-form-description {
+            font-size: 24px !important;
+            line-height: 1.4 !important;
+            color: #fff !important;
+        }
+
+        .tags {
+            display: flex;
+            gap: 13px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            color: #1E1E1E !important;
+            text-transform: uppercase;
+            line-height: 1.13 !important;
+        }
+
+        .tag-hash {
+            color: #1E1E1E !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+        }
+
+        /* Tab Switcher Styles for Boiling Brains */
+        .buttons-wrap.bb-buttons {
+            margin: 40px auto 80px auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 6px !important;
+            width: fit-content !important;
+            padding: 4px !important;
+            position: relative !important;
+            background: rgb(206, 227, 239) !important;
+            border-radius: 26px !important;
+            overflow: hidden !important;
+            z-index: 10 !important;
+        }
+
+        .active-pill {
+            position: absolute !important;
+            top: 4px;
+            left: 4px;
+            height: 44px;
+            background: rgb(238, 239, 205) !important; /* BB Accent */
+            border-radius: 22px !important;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            z-index: 1 !important;
+        }
+
+        .buttons-wrap .btn {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            padding: 0 32px !important;
+            height: 44px !important;
+            font-size: 17px !important;
+            border-radius: 22px !important;
+            transition: color 0.3s ease !important;
+            color: rgb(67, 67, 67) !important;
+            position: relative !important;
+            z-index: 2 !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        .buttons-wrap .btn.active-text {
+            color: rgb(67, 67, 67) !important;
+        }
+
+        .buttons-wrap .btn:not(.active-text):hover {
+            color: #000 !important;
+            opacity: 0.8;
+        }
+
+        /* Tab Content visibility */
+        .tab-content {
+            display: none !important;
+            width: 100% !important;
+        }
+
+        .tab-content.active {
+            display: block !important;
+        }
+    </style>
 </head>
 
 <body class="drwdy-page">
@@ -72,209 +305,263 @@
                 </header>
 
                 <main class="main">
-                    <div class="main-left drwdy-main-left">
-                        <section class="title-section">
-                            <h1 class="main-title"><span class="light">ESTONIA\</span>BOILING BRAINS</h1>
-                            <h2 class="sub-title">BRAND IDENTITY&amp;SM</h2>
-                        </section>
-
-                        <span class="tag-hash">#</span>
-                        <div class="tags drwdy-tags">
-                            <span>UI/UX</span>
-                            <span>BRAND IDENTITY</span>
-                            <span>SOCIAL MEDIA</span>
-                            <span>CONTENT SYSTEM</span>
-                        </div>
-                    </div>
-
-                    <div class="content-wrap">
-                        <section class="logo-section drwdy-section drwdy-section-first">
-                            <img src="img/bb/bb_05.png" alt="Boiling Brains hero" class="drwdy-image zoomable-media">
-                        </section>
-                    </div>
-
-                    <div class="buttons-wrap drwdy-buttons bb-buttons">
-                        <button class="btn black" data-tab="visuals">VISUALS</button>
-                        <button class="btn purple" data-tab="history">HISTORY</button>
-                    </div>
-
-                    <div id="visuals" class="tab-content active">
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section drwdy-section-first">
-                                <img src="img/bb/bb_04.png" alt="Boiling Brains visual language"
-                                    class="drwdy-image zoomable-media">
+                    <div class="abilka-centered-group">
+                        <div class="main-left">
+                            <section class="title-section">
+                                <h1 class="main-title"><span class="light">ESTONIA\</span>BOILING BRAINS</h1>
+                                <h2 class="sub-title">BRAND IDENTITY&amp;SM</h2>
                             </section>
+
+                            <span class="tag-hash">#</span>
+                            <div class="tags">
+                                <span>UI/UX</span>
+                                <span>BRAND IDENTITY</span>
+                                <span>SOCIAL MEDIA</span>
+                                <span>CONTENT SYSTEM</span>
+                            </div>
                         </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title drwdy-brandbook-title">Brandbook parts:</h3>
-                                <img src="img/bb/bb_03.png" alt="Boiling Brains brandbook parts"
-                                    class="drwdy-image zoomable-media">
-                            </section>
+                        <!-- 1st Image (Hero) -->
+                        <div class="abilka-img-wrapper" style="margin-top: 40px;">
+                            <img src="img/bb/VISUALS/BB 1.png" alt="Boiling Brains visual 1" class="abilka-image">
                         </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title drwdy-brandbook-title">Social Media Profile Design:</h3>
-                                <img src="img/bb/bb_02.png" alt="Boiling Brains social media profile design"
-                                    class="drwdy-image zoomable-media">
-                            </section>
+                        <!-- Switcher -->
+                        <div class="buttons-wrap drwdy-buttons bb-buttons">
+                            <div class="active-pill"></div>
+                            <button class="btn active-text" data-tab="visuals">VISUALS</button>
+                            <button class="btn" data-tab="lore">LORE</button>
                         </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title drwdy-brandbook-title">Social Media Blog Content:</h3>
-                                <img src="img/bb/bb_01.png" alt="Boiling Brains social media blog content"
-                                    class="drwdy-image zoomable-media">
-                            </section>
-                        </div>
-                    </div>
-
-                    <div id="history" class="tab-content">
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">PROJECT CONTEXT</h3>
-                                <div class="drwdy-copy">
-                                    <p>Boiling Brains is a UI/UX studio run by two strong specialists. They
-                                        initially
-                                        reached out to me for social media content and planning.</p>
-                                    <p>The goal was clear: start showing up as "studio bloggers", publishing ideas,
-                                        experience, and breakdowns on a regular basis, building a recognizable
-                                        presence and gradually attracting the right audience and inquiries.</p>
-                                    <p>At the beginning of the project, we noted a simple fact: the studio didn’t yet
-                                        have a brand book or a unified system that defined tone of voice, key
-                                        messages, and visual rules. So we structured the work in two stages: first,
-                                        build the brand foundation, and then move into social content planning based on
-                                        that foundation.</p>
-                                </div>
-                                <div class="drwdy-visual-before" style="margin-top: 40px;">
-                                    <div class="drwdy-visual-before-label">Big Brief:</div>
-                                    <img src="img/bb/bb_09.png" alt="Boiling Brains kickoff note"
-                                        class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                </div>
-                            </section>
+                        <!-- 2, 3, 4 images etc (Inside Visuals) -->
+                        <div id="visuals" class="tab-content active">
+                            <div class="abilka-case-images">
+                                <section class="abilka-intro-section">
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/bb/VISUALS/BB 2.png" alt="Boiling Brains visual 2"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/bb/VISUALS/BB 3.png" alt="Boiling Brains visual 3"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/bb/VISUALS/BB 4.png" alt="Boiling Brains visual 4"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/bb/VISUALS/BB 5.png" alt="Boiling Brains visual 5"
+                                            class="abilka-image">
+                                    </div>
+                                </section>
+                            </div>
                         </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">BRAND BOOK</h3>
-                                <div class="drwdy-copy">
-                                    <p>We started with a deep briefing and analysis of the studio: the team, their
-                                        experience, working style, strengths, typical clients, values, and
-                                        communication goals.</p>
-                                    <p>From there, we defined the brand direction: how the studio should sound, what
-                                        it should stand for, which themes and positions support trust and expertise.
-                                    </p>
-                                    <p>Then I created a brand book that captured the core brand foundation and
-                                        communication rules, so future content would stay consistent and recognizable.
-                                    </p>
-                                </div>
-                                <div class="drwdy-visual-before" style="margin-top: 40px;">
-                                    <div class="drwdy-visual-before-label">Early working deck: defining Boiling
-                                        Brains' focus split between core client work and media/public layer:</div>
-                                    <img src="img/bb/bb_08.png" alt="Early Boiling Brains working deck"
-                                        class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                </div>
-                                <div class="drwdy-visual-before" style="margin-top: 40px;">
-                                    <div class="drwdy-visual-before-label">Palette Development:</div>
-                                    <img src="img/bb/bb_07.png" alt="Boiling Brains palette development"
-                                        class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                </div>
-                            </section>
-                        </div>
+                        <div id="lore" class="tab-content">
+                            <div class="abilka-case-images">
+                                <section class="abilka-intro-section">
+                                    <div style="width: 1000px; max-width: 100%; color: #1E1E1E;">
+                                        <h3 class="section-title"
+                                            style="font-size: 24px; font-weight: 900; margin-bottom: 24px; text-transform: uppercase; color: #1E1E1E;">
+                                            PROJECT CONTEXT</h3>
+                                        <div class="drwdy-copy"
+                                            style="font-size: 20px; line-height: 1.55; margin-bottom: 32px; color: #1E1E1E;">
+                                            <p style="margin-bottom: 20px;">Boiling Brains is a UI/UX studio run by two
+                                                strong specialists. They
+                                                initially reached out to me for social media content and planning.</p>
+                                            <p style="margin-bottom: 20px;">The goal was clear: start showing up as
+                                                "studio bloggers", publishing ideas,
+                                                experience, and breakdowns on a regular basis, building a recognizable
+                                                presence and gradually attracting the right audience and inquiries.</p>
+                                            <p>At the beginning of the project, we noted a simple fact: the studio
+                                                didn’t yet
+                                                have a brand book or a unified system that defined tone of voice, key
+                                                messages, and visual rules. So we structured the work in two stages:
+                                                first,
+                                                build the brand foundation, and then move into social content planning
+                                                based on
+                                                that foundation.</p>
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; font-size: 20px;">Big Brief:</p>
+                                        <div class="abilka-img-wrapper">
+                                            <img src="img/bb/lore/bb_09.png" alt="Big Brief" class="abilka-image">
+                                        </div>
 
-                        <div class="content-wrap">
-                            <section class="logo-section drwdy-section">
-                                <h3 class="section-title">CONTENT PLANNING AND SOCIAL PROFILES.</h3>
-                                <div class="drwdy-copy">
-                                    <p>Once the brand book was complete, we moved into content planning.</p>
-                                    <p>I ran a detailed discovery to understand what topics the team genuinely wanted
-                                        to speak about, who they wanted to reach, and what kind of audience they wanted
-                                        to build.</p>
-                                    <p>Social media was a long-term strategic channel for them: they planned to launch
-                                        their own courses in the future, so the goal was to build consistent
-                                        visibility, sharpen their voice in public, and develop a repeatable posting
-                                        rhythm that could grow their follower base over time.</p>
-                                </div>
-                                <div class="drwdy-visual-before" style="margin-top: 40px;">
-                                    <div class="drwdy-visual-before-label">Content plan dashboard: weekly publishing
-                                        structure for Month 1, with topics, post types, ownership, status tracking,
-                                        and visual content requirements:</div>
-                                    <img src="img/bb/bb_06.png" alt="Boiling Brains content plan"
-                                        class="drwdy-image zoomable-media drwdy-visual-before-image">
-                                </div>
-                                <div class="drwdy-copy">
-                                    <p>I built a structured monthly content planning system and produced three months
-                                        of weekly post schedules.</p>
-                                    <p>We mapped out themes, recurring topics, and communication techniques for both
-                                        LinkedIn and Instagram, with a clear rotation logic across post types:
-                                        introductions, expertise, case snippets, workflow insights, and personal
-                                        micro-notes.</p>
-                                    <p>In parallel, I supported the writing and communication side through
-                                        consultations: helping shape post structure, tone of voice, and copy direction
-                                        so the content stayed consistent and aligned with the brand foundation.</p>
-                                </div>
-                            </section>
+                                        <h3 class="section-title"
+                                            style="font-size: 24px; font-weight: 900; margin-bottom: 24px; text-transform: uppercase; margin-top: 80px; color: #1E1E1E;">
+                                            BRAND BOOK</h3>
+                                        <div class="drwdy-copy"
+                                            style="font-size: 20px; line-height: 1.55; margin-bottom: 32px; color: #1E1E1E;">
+                                            <p style="margin-bottom: 20px;">We started with a deep briefing and analysis
+                                                of the studio: the team, their
+                                                experience, working style, strengths, typical clients, values, and
+                                                communication goals.</p>
+                                            <p style="margin-bottom: 20px;">From there, we defined the brand direction:
+                                                how the studio should sound, what
+                                                it should stand for, which themes and positions support trust and
+                                                expertise.
+                                            </p>
+                                            <p>Then I created a brand book that captured the core brand foundation and
+                                                communication rules, so future content would stay consistent and
+                                                recognizable.
+                                            </p>
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; font-size: 20px;">Early working deck:</p>
+                                        <div class="abilka-img-wrapper">
+                                            <img src="img/bb/lore/bb_08.png" alt="Early working deck" class="abilka-image">
+                                        </div>
+                                        
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; margin-top: 40px; font-size: 20px;">Palette Development:</p>
+                                        <div class="abilka-img-wrapper">
+                                            <img src="img/bb/lore/bb_07.png" alt="Palette Development" class="abilka-image">
+                                        </div>
+
+                                        <h3 class="section-title"
+                                            style="font-size: 24px; font-weight: 900; margin-bottom: 24px; text-transform: uppercase; margin-top: 80px; color: #1E1E1E;">
+                                            CONTENT PLANNING AND SOCIAL PROFILES.</h3>
+                                        <div class="drwdy-copy"
+                                            style="font-size: 20px; line-height: 1.55; margin-bottom: 32px; color: #1E1E1E;">
+                                            <p style="margin-bottom: 20px;">Once the brand book was complete, we moved
+                                                into content planning.</p>
+                                            <p style="margin-bottom: 20px;">I ran a detailed discovery to understand
+                                                what topics the team genuinely wanted
+                                                to speak about, who they wanted to reach, and what kind of audience they
+                                                wanted
+                                                to build.</p>
+                                            <p>Social media was a long-term strategic channel for them: they planned to
+                                                launch
+                                                their own courses in the future, so the goal was to build consistent
+                                                visibility, sharpen their voice in public, and develop a repeatable
+                                                posting
+                                                rhythm that could grow their follower base over time.</p>
+                                        </div>
+                                        <p class="strategy-subtitle" style="font-style: italic; margin-bottom: 8px; font-size: 20px;">Content plan:</p>
+                                        <div class="abilka-img-wrapper">
+                                            <img src="img/bb/lore/bb_06.png" alt="Content plan" class="abilka-image">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </main>
 
-                <div class="designer-card">
-                    <img src="/img/Anika_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">BRAND DESIGNER</span>
-                        <span class="name">NIKA PIZHMA</span>
-                    </div>
-                    <div class="years">
-                        <span>2023<br>2025</span>
-                    </div>
-                </div>
-
-                <div class="nav-arrow">
-                    <img src="img/ArrowBack.png" alt="Arrow Back" class="arrow-img">
-                </div>
-
                 <!-- Look Other Projects Carousel -->
                 <section class="other-projects-section">
                     <h2 class="other-projects-title">LOOK OTHER PROJECTS</h2>
-                    <div class="projects-carousel">
-                        <div class="carousel-track">
-                            <!-- Abilka -->
-                            <a href="abilka.html" class="carousel-item">
-                                <div class="carousel-card-img abilka-bg">
-                                    <img src="img/imgs_for_main/Abilka_cover.png" alt="Abilka">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>ABILKA</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Frozen Bro -->
-                            <a href="frozenbro.html" class="carousel-item">
-                                <div class="carousel-card-img frozen-bg">
-                                    <img src="img/imgs_for_main/FRozenBro_cover.png" alt="Frozen Bro">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>FROZEN BRO</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Dr.WDY -->
-                            <a href="drwdy.html" class="carousel-item">
-                                <div class="carousel-card-img drwdy-bg">
-                                    <img src="img/imgs_for_main/wdy_cover.png" alt="Dr.WDY">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>DR.WDY</h3>
-                                    <p>USA</p>
-                                </div>
-                            </a>
+                    <div class="carousel-container">
+                        <div class="projects-carousel">
+                            <div class="carousel-track">
+                                <a href="frozenbro.html" class="carousel-item">
+                                    <img src="img/сase cards/frbr.png" alt="Frozen Bro" class="carousel-full-card">
+                                </a>
+                                <a href="abilka.html" class="carousel-item">
+                                    <img src="img/сase cards/abilka.png" alt="Abilka" class="carousel-full-card">
+                                </a>
+                                <a href="drwdy.html" class="carousel-item">
+                                    <img src="img/сase cards/wdy.png" alt="Dr.WDY" class="carousel-full-card">
+                                </a>
+                                <a href="skrepki.html" class="carousel-item">
+                                    <img src="img/сase cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Footer -->
+                <section id="request-form" class="request-form-section">
+                    <div class="request-form-layout">
+                        <div class="request-form-copy">
+                            <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                            <p class="request-form-description">
+                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what
+                                you
+                                have, listen to your ideas, and
+                                propose a clear direction for how the project should look, sound, and communicate.
+                            </p>
+                        </div>
+
+                        <form id="services-form" class="request-form variant-refined state-default" action="#"
+                            method="post" enctype="multipart/form-data">
+                            <div class="request-form-fields">
+                                <div class="request-input-group">
+                                    <input id="request-name" name="name" type="text" placeholder="NAME">
+                                </div>
+                                <div class="request-input-group">
+                                    <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                </div>
+                                <div class="request-input-group request-media-group">
+                                    <div class="request-textarea-wrapper">
+                                        <textarea id="request-message" name="message"
+                                            placeholder="Tell us about your project and task" rows="3"></textarea>
+                                    </div>
+                                    <!-- Attached Files List (visible in file state) -->
+                                    <div class="request-files-section">
+                                        <div class="files-label">ATTACHED FILES</div>
+                                        <div class="files-list"></div>
+                                    </div>
+
+                                    <!-- Voice Recording Panel (visible in voice state) -->
+                                    <div class="request-voice-recording-panel">
+                                        <div class="voice-recording-header">
+                                            <div class="recording-indicator">
+                                                <span class="recording-dot"></span>
+                                                <span class="recording-label">RECORDING</span>
+                                            </div>
+                                            <span class="recording-timer">00:00</span>
+                                        </div>
+
+                                        <div class="voice-waveform">
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h1 opac"></div>
+                                            <div class="wave-bar h2 opac"></div>
+                                        </div>
+
+                                        <div class="voice-controls">
+                                            <button type="button" class="btn-stop-record"><span
+                                                    class="stop-icon"></span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="request-helper-row">
+                                        <div class="helper-text" id="helper-status">If you can't be bothered to type,
+                                            just say what's on your mind.</div>
+                                        <div class="helper-icons">
+                                            <button type="button" class="icon-btn btn-mic-toggle">
+                                                <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                            </button>
+                                            <input type="file" id="request-file-upload"
+                                                accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
+                                            <button type="button" class="icon-btn btn-clip-toggle">
+                                                <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY PROJECT</button>
+                        </form>
+                    </div>
+                </section>
                 <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
@@ -314,8 +601,7 @@
                         <div class="footer-nav-col">
                             <a href="about.html" class="footer-nav-link">About</a>
                             <a href="services.html" class="footer-nav-link">Services</a>
-                            <a href="/#cases" class="footer-nav-link">Cases</a>
-                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
+                            <a href="/" class="footer-nav-link">Cases</a>
                         </div>
                     </div>
                     <div class="footer-copyright-row">
@@ -328,6 +614,22 @@
         </div>
     </div>
 
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="success-modal" style="display:none;">
+        <div class="success-modal-card">
+            <div class="success-image-wrap">
+                <img src="img/catalien.png" alt="Signal Sent" class="success-mascot">
+            </div>
+            <div class="success-text-content">
+                <h3 class="success-title">SIGNAL SENT!</h3>
+                <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
+            </div>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT
+                YA!</button>
+        </div>
+    </div>
+
+    <!-- Lightbox for images -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" src="" alt="Full Screen Image">
@@ -335,6 +637,249 @@
     </div>
 
     <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Tab Logic ---
+            const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pill = document.querySelector('.active-pill');
 
+            function updatePill(btn) {
+                if (!pill || !btn) return;
+                pill.style.width = `${btn.offsetWidth}px`;
+                pill.style.left = `${btn.offsetLeft}px`;
+            }
+
+            // Initialize pill position
+            const activeBtn = document.querySelector('.buttons-wrap .btn.active-text');
+            if (activeBtn) {
+                setTimeout(() => updatePill(activeBtn), 100);
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active-text'));
+                    btn.classList.add('active-text');
+                    updatePill(btn);
+
+                    const targetId = btn.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === targetId) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Handle window resize for pill positioning
+            window.addEventListener('resize', () => {
+                const currentActive = document.querySelector('.buttons-wrap .btn.active-text');
+                if (currentActive) updatePill(currentActive);
+            });
+
+            const form = document.getElementById('services-form');
+            if (!form) return;
+
+            const fileInput = document.getElementById('request-file-upload');
+            const clipBtn = form.querySelector('.btn-clip-toggle');
+            const micBtn = form.querySelector('.btn-mic-toggle');
+            const filesListContainer = form.querySelector('.files-list');
+            const helperStatus = document.getElementById('helper-status');
+            const submitBtn = document.getElementById('btn-submit');
+            const stopRecordBtn = form.querySelector('.btn-stop-record');
+            const voiceTimer = form.querySelector('.recording-timer');
+
+            let selectedFiles = [];
+            const MAX_FILE_SIZE = 20 * 1024 * 1024;
+
+            let mediaRecorder;
+            let audioChunks = [];
+            let recordInterval;
+            let recordStartTime;
+            let audioContext;
+            let analyser;
+            let dataArray;
+            let animationId;
+
+            if (clipBtn && fileInput) {
+                clipBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener('change', (e) => {
+                    addFiles(Array.from(e.target.files));
+                    fileInput.value = '';
+                });
+            }
+
+            function addFiles(newFiles) {
+                newFiles.forEach(f => {
+                    if (f.size > MAX_FILE_SIZE) {
+                        alert(`File ${f.name} is too large. Max size is 20MB.`);
+                    } else if (!selectedFiles.find(x => x.name === f.name && x.size === f.size)) {
+                        selectedFiles.push(f);
+                    }
+                });
+                updateFilesUI();
+            }
+
+            if (filesListContainer) {
+                filesListContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('file-remove')) {
+                        selectedFiles.splice(parseInt(e.target.getAttribute('data-index')), 1);
+                        updateFilesUI();
+                    }
+                });
+            }
+
+            function updateFilesUI() {
+                if (!filesListContainer) return;
+                filesListContainer.innerHTML = '';
+                let totalBytes = 0;
+                selectedFiles.forEach((file, index) => {
+                    totalBytes += file.size;
+                    const item = document.createElement('div');
+                    item.className = 'file-item';
+                    item.innerHTML = `
+                        <div class="file-info-left">
+                            <span class="file-icon">${file.type.startsWith('image/') ? '🖼️' : '📄'}</span>
+                            <div class="file-details">
+                                <span class="file-name">${file.name}</span>
+                                <span class="file-size">${formatBytes(file.size)}</span>
+                            </div>
+                        </div>
+                        <span class="file-remove" data-index="${index}">✕</span>`;
+                    filesListContainer.appendChild(item);
+                });
+
+                if (selectedFiles.length > 0) {
+                    form.classList.remove('state-default', 'state-error', 'state-voice');
+                    form.classList.add('state-files');
+                    const count = selectedFiles.length === 1 ? '1 FILE' : `${selectedFiles.length} FILES`;
+                    if (helperStatus) helperStatus.textContent = `${count} ATTACHED (${formatBytes(totalBytes)} TOTAL)`;
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                } else {
+                    form.classList.remove('state-files', 'state-voice');
+                    form.classList.add('state-default');
+                    if (helperStatus) helperStatus.textContent = "If you can't be bothered to type, just say what's on your mind.";
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                }
+            }
+
+            function formatBytes(bytes, decimals = 1) {
+                if (!+bytes) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(decimals))} ${sizes[i]}`;
+            }
+
+            if (micBtn && stopRecordBtn && voiceTimer) {
+                micBtn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        startRecording(stream);
+                    } catch (err) {
+                        alert("Microphone access is required to record a voice message.");
+                    }
+                });
+
+                stopRecordBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    stopRecording();
+                });
+            }
+
+            if (submitBtn) {
+                submitBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) {
+                        stopRecording();
+                    } else {
+                        // --- Confetti Effect ---
+                        const rect = submitBtn.getBoundingClientRect();
+                        const x = (rect.left + rect.width / 2) / window.innerWidth;
+                        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                        const bonePath = 'M24.4835 5.49995C25.0877 4.89575 25.4271 4.07627 25.4271 3.2218C25.4271 2.36732 25.0877 1.54785 24.4835 0.943643C23.8793 0.339439 23.0598 0 22.2053 0C21.3508 0 20.5314 0.339439 19.9272 0.943643C19.3275 1.54967 18.9912 2.36828 18.9943 3.2218L6.43279 3.22189C6.43453 2.79951 6.35305 2.38091 6.19299 1.99002C6.03293 1.59913 5.79744 1.2436 5.49995 0.943741C4.89575 0.339537 4.07627 9.84241e-05 3.2218 9.84241e-05C2.36732 9.84241e-05 1.54785 0.339537 0.943642 0.943741C0.339438 1.54795 1.89119e-07 2.36742 1.89119e-07 3.2219C1.89119e-07 4.07637 0.339439 4.89585 0.943643 5.50005C0.339439 6.10425 0 6.92373 0 7.7782C0 8.63268 0.339439 9.45215 0.943643 10.0564C1.54785 10.6606 2.36732 11 3.2218 11C4.07627 11 4.89575 10.6606 5.49995 10.0564C5.79744 9.7565 6.03293 9.40097 6.19299 9.01008C6.35305 8.61919 6.43453 8.20059 6.43279 7.7782L18.9943 7.77811C18.9912 8.63162 19.3275 9.45023 19.9272 10.0563C20.5314 10.6605 21.3508 10.9999 22.2053 10.9999C23.0598 10.9999 23.8793 10.6605 24.4835 10.0563C25.0877 9.45206 25.4271 8.63258 25.4271 7.77811C25.4271 6.92363 25.0877 6.10415 24.4835 5.49995Z';
+                        const boneShape = confetti.shapeFromPath({ path: bonePath });
+
+                        confetti({
+                            particleCount: 80,
+                            spread: 80,
+                            origin: { x, y },
+                            shapes: [boneShape],
+                            colors: ['#47E194', '#FBFBFB', '#1E1E1E', '#A6D3FF', '#FFDAEF', '#DD3737'],
+                            zIndex: 9999,
+                            scalar: 2.2
+                        });
+
+                        const sModal = document.getElementById('success-modal');
+                        if (sModal) sModal.style.display = 'flex';
+                    }
+                });
+            }
+
+            function startRecording(stream) {
+                form.classList.remove('state-default', 'state-error', 'state-files');
+                form.classList.add('state-voice');
+                if (helperStatus) helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
+                if (submitBtn) submitBtn.textContent = 'STOP & SAVE RECORDING';
+
+                audioChunks = [];
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    const fileName = `voice_message_${new Date().toISOString().replace(/[:.]/g, '-')}.webm`;
+                    addFiles([new File([audioBlob], fileName, { type: 'audio/webm', lastModified: Date.now() })]);
+                    stream.getTracks().forEach(t => t.stop());
+                };
+                mediaRecorder.start();
+
+                recordStartTime = Date.now();
+                voiceTimer.textContent = '00:00';
+                clearInterval(recordInterval);
+                recordInterval = setInterval(updateTimer, 1000);
+
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                audioContext.createMediaStreamSource(stream).connect(analyser);
+                analyser.fftSize = 64;
+                dataArray = new Uint8Array(analyser.frequencyBinCount);
+                drawWaveform();
+            }
+
+            function drawWaveform() {
+                if (!form.classList.contains('state-voice')) return;
+                animationId = requestAnimationFrame(drawWaveform);
+                analyser.getByteFrequencyData(dataArray);
+                form.querySelectorAll('.wave-bar').forEach((bar, i) => {
+                    const val = dataArray[Math.floor(i * (dataArray.length / 22))] / 255;
+                    bar.style.transform = `scaleY(${0.1 + val * 1.7})`;
+                });
+            }
+
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+                clearInterval(recordInterval);
+                cancelAnimationFrame(animationId);
+                if (audioContext && audioContext.state !== 'closed') audioContext.close();
+                form.querySelectorAll('.wave-bar').forEach(b => b.style.transform = '');
+            }
+
+            function updateTimer() {
+                const diff = Math.floor((Date.now() - recordStartTime) / 1000);
+                if (diff >= 120) { stopRecording(); return; }
+                voiceTimer.textContent = `${String(Math.floor(diff / 60)).padStart(2, '0')}:${String(diff % 60).padStart(2, '0')}`;
+            }
+        });
+    </script>
+</body>
 </html>
