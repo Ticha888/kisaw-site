@@ -10,7 +10,264 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=195.0">
+    <style>
+        /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
+        .abilka-centered-group {
+            margin: 0 auto !important;
+            width: 1000px !important;
+            max-width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .abilka-case-images {
+            margin-top: 40px !important;
+            margin-bottom: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-intro-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-img-wrapper {
+            width: 1000px !important;
+            max-width: 100% !important;
+            border-radius: 6.74px !important;
+            margin-bottom: 40px !important;
+            overflow: hidden !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            cursor: pointer !important;
+        }
+
+        .abilka-img-small {
+            width: 500px !important;
+            align-self: center !important;
+        }
+
+        .abilka-img-wrapper:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .abilka-image {
+            width: 100% !important;
+            display: block !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 6.74px !important;
+        }
+
+        .other-projects-section {
+            padding: 100px 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .other-projects-title {
+            width: 1000px !important;
+            max-width: calc(100% - 80px) !important;
+            margin: 0 auto 40px auto !important;
+            padding: 0 !important;
+            text-align: left !important;
+        }
+
+        .projects-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            padding: 40px 0 !important;
+        }
+
+        .carousel-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .carousel-track {
+            display: flex !important;
+            gap: 24px !important;
+            padding-left: calc((100% - 1000px) / 2) !important;
+            padding-right: 40px !important;
+            width: max-content !important;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+
+        @media (max-width: 1100px) {
+            .carousel-track {
+                padding-left: 40px !important;
+            }
+        }
+
+        .carousel-item {
+            flex: 0 0 380px !important;
+        }
+
+        .carousel-full-card {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 6.74px !important;
+        }
+
+        .request-form-section {
+            margin-top: 0 !important;
+            padding-top: 100px !important;
+            padding-bottom: 80px !important;
+            background-color: #353535 !important;
+        }
+
+        .request-form-layout {
+            width: 1230px !important;
+            max-width: calc(100% - 40px) !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 80px !important;
+        }
+
+        .request-form-copy {
+            flex: 1 !important;
+            max-width: 550px !important;
+        }
+
+        .request-form {
+            flex: 0 0 600px !important;
+            width: 600px !important;
+        }
+
+        .request-form-title {
+            font-size: 60px !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+        }
+
+        .tags {
+            display: flex;
+            gap: 13px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            color: #1E1E1E !important;
+            text-transform: uppercase;
+            line-height: 1.13 !important;
+            opacity: 0.6 !important;
+            /* Transparent by total 40% */
+        }
+
+        .tag-hash {
+            color: #1E1E1E !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            opacity: 0.6 !important;
+            /* Transparent by total 40% */
+        }
+
+        .request-form-description {
+            font-size: 24px !important;
+            line-height: 1.4 !important;
+        }
+
+        .buttons-wrap {
+            margin: 40px auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 6px !important;
+            width: fit-content !important;
+            padding: 4px !important;
+            position: relative !important;
+            background: #e4c1f5 !important;
+            border-radius: 26px !important;
+            overflow: hidden !important;
+        }
+
+        /* The sliding background pill */
+        .active-pill {
+            position: absolute !important;
+            top: 4px;
+            left: 4px;
+            height: 44px;
+            background: #000 !important;
+            border-radius: 22px !important;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            z-index: 1 !important;
+        }
+
+        .buttons-wrap .btn {
+            font-weight: 600 !important;
+            /* Semi-bold */
+            padding: 0 32px !important;
+            /* Increased for better slide feel */
+            height: 44px !important;
+            font-size: 17px !important;
+            border-radius: 22px !important;
+            transition: color 0.3s ease !important;
+            color: #000 !important;
+            position: relative !important;
+            z-index: 2 !important;
+            /* Above the pill */
+            background: transparent !important;
+            /* Background is now handled by the pill */
+            border: none !important;
+        }
+
+        .buttons-wrap .btn.active-text {
+            color: #fff !important;
+        }
+
+        .buttons-wrap .btn:not(.active-text):hover {
+            background-color: #D0A9E7 !important;
+            transform: translateY(1px);
+        }
+
+        body.frozenbro-page {
+            background-color: #b8b8b8 !important;
+            /* Original grey */
+        }
+
+        .container-abilka {
+            background-color: #F6F5F5 !important;
+            /* Targeted light background */
+        }
+
+        /* LIGHT LIGHTBOX THEME */
+        .lightbox {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            /* Slightly more transparent */
+            backdrop-filter: blur(10px) !important;
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px) !important;
+            /* Safari support */
+        }
+
+        .lightbox-close {
+            color: #000 !important;
+        }
+
+        .lightbox-thumbnails {
+            background: rgba(0, 0, 0, 0.05) !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .lightbox-thumb {
+            border: 2px solid transparent !important;
+        }
+
+        .lightbox-thumb.active {
+            border-color: #000 !important;
+        }
+    </style>
 </head>
 
 <body class="frozenbro-page">
@@ -21,8 +278,7 @@
                 <img src="img/Frozen bro badge.png" alt="Frozen Bro" class="sticky-sidebar-img">
             </div>
 
-            <div class="container">
-                <!-- Header -->
+            <div class="container container-abilka">
                 <!-- Header -->
                 <header class="header header--light">
                     <div class="header-desktop-layout">
@@ -73,87 +329,305 @@
                     </div>
                 </header>
 
-                <!-- Main -->
                 <main class="main">
-                    <div class="main-left">
-                        <!-- Title -->
-                        <section class="title-section">
-                            <h1 class="main-title"><span class="light">ESTONIA\</span>FROZEN.BRO</h1>
-                            <h2 class="sub-title">BRAND IDENTITY&amp;PACKAGING</h2>
-                        </section>
+                    <div class="abilka-centered-group">
+                        <div class="main-left">
+                            <section class="title-section">
+                                <h1 class="main-title"><span class="light">ESTONIA\</span>FROZEN.BRO</h1>
+                                <h2 class="sub-title">BRAND IDENTITY&amp;PACKAGING</h2>
+                            </section>
 
-                        <!-- Tags -->
-                        <span class="tag-hash">#</span>
-                        <div class="tags">
-                            <span>FOOD</span>
-                            <span>BRAND IDENTITY</span>
-                            <span>GRAPHIC/<span class="orange">WEB</span> DESIGN</span>
-                            <span>CONCEPT</span>
+                            <span class="tag-hash">#</span>
+                            <div class="tags">
+                                <span>FOOD</span>
+                                <span>BRAND IDENTITY</span>
+                                <span>GRAPHIC/<span class="orange">WEB</span> DESIGN</span>
+                                <span>CONCEPT</span>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Brand Card -->
-                    <div class="brand-card_container">
-                        <div class="brand-card"></div>
-                    </div>
 
-                    <!-- Buttons -->
-                    <div class="buttons-wrap">
-                        <button class="btn black" data-tab="visuals">VISUALS</button>
-                        <button class="btn purple" data-tab="strategy">STRATEGY</button>
-                    </div>
+                        <!-- Lead Image -->
+                        <div class="abilka-img-wrapper" style="margin-top: 40px;">
+                            <img src="img/frozen_case/frozen.bro  1.png" alt="Frozen Bro Case 1" class="abilka-image">
+                        </div>
 
-                    <!-- Tab Content: VISUALS -->
-                    <div id="visuals" class="tab-content active">
-                        <!-- Graphic Logo -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">GRAPHIC LOGO</h3>
-                                <div class="graphic-logo-card">
-                                </div>
-                            </section>
+                        <!-- Tab Switcher -->
+                        <div class="buttons-wrap">
+                            <div class="active-pill"></div>
+                            <button class="btn active-text" data-tab="visuals">VISUALS</button>
+                            <button class="btn" data-tab="lore">LORE</button>
                         </div>
-                        <!-- Color Palette -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">COLOR PALETTE</h3>
-                                <div class="graphic-color-palette">
-                                </div>
-                            </section>
+
+                        <!-- Tab Content: VISUALS -->
+                        <div id="visuals" class="tab-content active">
+                            <div class="abilka-case-images">
+                                <section class="abilka-intro-section">
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 2.png" alt="Frozen Bro visual identity 2"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 3.png" alt="Frozen Bro visual identity 3"
+                                            class="abilka-image">
+                                    </div>
+
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro  6.png" alt="Frozen Bro visual identity 6"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 7.1.png"
+                                            alt="Frozen Bro visual identity 7.1" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 8.png" alt="Frozen Bro visual identity 8"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 8-1.png"
+                                            alt="Frozen Bro visual identity 8-1" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 9.png" alt="Frozen Bro visual identity 9"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 10.1.png"
+                                            alt="Frozen Bro visual identity 10.1" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 11.png" alt="Frozen Bro visual identity 11"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 12.png" alt="Frozen Bro visual identity 12"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 13.png" alt="Frozen Bro visual identity 13"
+                                            class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <video src="img/fr.br video.mp4" class="abilka-image" loop playsinline controls
+                                            style="width: 100%; border-radius: 6.74px;"></video>
+                                    </div>
+                                </section>
+                            </div>
                         </div>
-                        <!-- Labels -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">LABELS</h3>
-                                <div class="graphic-labels">
+
+                        <!-- Tab Content: LORE -->
+                        <div id="lore" class="tab-content">
+                            <div class="strategy-content-wrapper" style="width: 1000px; max-width: 100%;">
+                                <style>
+                                    .strategy-content-wrapper {
+                                        color: #1E1E1E !important;
+                                    }
+
+                                    .strategy-section {
+                                        margin-bottom: 80px;
+                                    }
+
+                                    .strategy-title {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 24px !important;
+                                        font-weight: 900 !important;
+                                        margin-bottom: 24px;
+                                        text-transform: uppercase;
+                                        opacity: 1 !important;
+                                        line-height: normal !important;
+                                    }
+
+                                    .strategy-text {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 20px !important;
+                                        line-height: 1.55 !important;
+                                        margin-bottom: 32px;
+                                        font-weight: 400 !important;
+                                        letter-spacing: 0 !important;
+                                        opacity: 1 !important;
+                                    }
+
+                                    .strategy-img {
+                                        width: 1000px;
+                                        max-width: 100%;
+                                        border-radius: 6.74px !important;
+                                        margin-bottom: 40px;
+                                    }
+
+                                    .strategy-subtitle {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 16px !important;
+                                        font-style: italic !important;
+                                        font-weight: 400 !important;
+                                        line-height: 1.55 !important;
+                                        margin: 0 !important;
+                                        /* Reset margin for group control */
+                                        opacity: 1 !important;
+                                    }
+
+                                    .subtitle-media-group {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        gap: 4px;
+                                        /* Exact gap */
+                                        margin-bottom: 40px;
+                                    }
+                                </style>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title">Project Context</h3>
+                                    <div class="strategy-text">
+                                        Frozen Bro reached out to me in 2023 for a systematic branding project. They
+                                        already
+                                        had a frozen product line and basic communications, and the team’s vibe was
+                                        instantly clear: lively, creative, and genuinely funny. The brand already felt
+                                        human
+                                        and warm. At the same time, the packaging and supporting materials were produced
+                                        in
+                                        different ways: some layouts were printed at home, and many decisions were made
+                                        case
+                                        by case depending on the task.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Early visuals by the founders:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 1.png" alt="Early visuals"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title">process</h3>
+                                    <div class="strategy-text">
+                                        We started with briefing and deep context work. On the strategic side, we
+                                        defined
+                                        what Frozen Bro is selling, how the lineup is structured, who the customer is,
+                                        and
+                                        where people meet the brand. A key intention was to support their own style and
+                                        taste in design and messaging, and to keep their tone of voice intact: warm,
+                                        friendly, and human, like good friends or neighbors, the kind of people you can
+                                        meet
+                                        through everyday life and end up sharing a good table and a fun evening with.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Process visuals:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 2.png" alt="Process"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title">Three guides</h3>
+                                    <div class="strategy-text">
+                                        The project was structured into three blocks so the brand could immediately
+                                        function
+                                        as a practical tool.
+                                    </div>
+                                    <div class="strategy-text">
+                                        We built the foundation of the brand system, with a stronger emphasis on
+                                        communication and tone of voice. Frozen Bro has a focused, niche audience, and
+                                        the
+                                        founders meet people in person at festivals and events, so the way the brand
+                                        speaks
+                                        matters as much as how it looks. At this stage, the priority was to define a
+                                        clear,
+                                        human voice for everyday conversations and content: approachable, recognizable,
+                                        and
+                                        consistent across touchpoints.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <h4 class="strategy-subtitle" style="margin-bottom: 4px;">Base branding and
+                                            guideline</h4>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Part of Base Brandbook:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 3.png" alt="Brandbook"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title">Packaging guideline</h3>
+                                    <div class="strategy-text">
+                                        This was the most practical part of the project. For the frozen product line, we
+                                        designed belly bands for the packaging as well as additional stickers. The goal
+                                        was
+                                        to strengthen shelf presence and standardize the look of the lineup.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Part of Package Brandbook:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 4.png" alt="Packaging"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+
+                                    <div class="strategy-text" style="margin-top: 40px;">
+                                        One of the brand’s most recognizable signatures is the “logo” itself: a real
+                                        face,
+                                        used as a bold and memorable marker across touchpoints. We leaned into that idea
+                                        and
+                                        made it a repeating motif in the packaging system, so the lineup stays instantly
+                                        identifiable even when formats, flavors, or product types change. Instead of
+                                        following the typical frozen-food visual codes, we chose a minimal, distinctive
+                                        direction that feels true to Frozen Bro and stands apart from competitors.
+                                        Alongside
+                                        the design work, we organized food photoshoots, handled retouching, and prepared
+                                        a
+                                        consistent set of visual assets for packaging and content production.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Food Photo and Retouche:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 5.png" alt="Retouche"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title">Social media guideline</h3>
+                                    <div class="strategy-text">
+                                        Frozen Bro is constantly filming and sharing what they do: day-to-day kitchen
+                                        life,
+                                        work process, product moments, and real meetings with people around food. The
+                                        brand
+                                        system was built to support that rhythm, so it integrates naturally with short
+                                        videos, posts, stories, and quick announcements without losing consistency. We
+                                        documented the rules and templates in a clear, practical way, so the team can
+                                        produce and format their own creatives independently. This removed the need to
+                                        hire
+                                        a designer for every post and helped them keep the channel active, recognizable,
+                                        and
+                                        true to their voice.
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle">Part of Content (SM) Brandbook:</p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 6.png" alt="Social Media"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section" style="text-align: center; margin-top: 80px;">
+                                    <h3 class="strategy-title" style="margin-bottom: 0;">VISIT US <a
+                                            href="https://frozenbro.ee" target="_blank"
+                                            style="color: inherit; text-decoration: none; border-bottom: 2px solid #47E194;">FROZENBRO.EE</a>
+                                    </h3>
+                                </section>
+
+                                <h3 class="strategy-title">Site</h3>
+                                <div class="strategy-text">
+                                    Alongside social media, we built a website on WordPress so the team could update it
+                                    independently without relying on a developer. We designed and laid out the full site
+                                    structure and page templates, then we populated it with the key content and set up
+                                    the essentials for day-to-day use. A shop module was connected so products could be
+                                    added, edited, and managed in one place.
                                 </div>
-                            </section>
-                        </div>
-                        <!-- Graphics -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">GRAPHICS</h3>
-                                <div class="graphic-graphics">
-                                </div>
-                            </section>
-                        </div>
-                        <!-- Social Media -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">SOCIAL MEDIA</h3>
-                                <div class="graphic-social-media">
-                                </div>
-                            </section>
-                        </div>
-                        <!-- web site -->
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">WEB SITE</h3>
-                                <div class="graphic-web-site">
-                                    <div class="web-site-text">visit us <a href="https://frozenbro.ee"
-                                            target="_blank">frozenbro.ee</a></div>
+                                <div class="subtitle-media-group">
+                                    <p class="strategy-subtitle">Site <a href="https://frozenbro.ee" target="_blank"
+                                            style="color: #47E194;">frozenbro.ee</a></p>
                                     <div class="video-wrapper"
-                                        style="width: 824px; height: 464px; border-radius: 8px; overflow: hidden; position: relative;">
-                                        <iframe id="website-video" width="100%" height="100%"
+                                        style="width: 1000px; height: 562px; margin: 0; border-radius: 12px; overflow: hidden; position: relative;">
+                                        <iframe id="strategy-video" width="100%" height="100%"
                                             src="https://www.youtube.com/embed/YtER1Fc0NJM?enablejsapi=1&mute=1&loop=1&playlist=YtER1Fc0NJM&controls=0"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -161,225 +635,134 @@
                                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
                                     </div>
                                 </div>
-                            </section>
-                        </div>
-                    </div>
+                                <div class="subtitle-media-group">
+                                    <p class="strategy-subtitle">Final result:</p>
+                                    <img src="img/frozen_case/frozen lore/lore frozen 7.png" alt="Final result"
+                                        class="strategy-img" style="margin-bottom: 0;">
+                                </div>
 
-                    <!-- Tab Content: STRATEGY -->
-                    <div id="strategy" class="tab-content">
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">Project Context</h3>
-                                <div class="strategy-project-context">
-                                    Frozen Bro reached out to me in 2023 for a systematic branding project. They already
-                                    had a frozen product line and basic communications, and the team’s vibe was
-                                    instantly clear: lively, creative, and genuinely funny. The brand already felt human
-                                    and warm. At the same time, the packaging and supporting materials were produced in
-                                    different ways: some layouts were printed at home, and many decisions were made case
-                                    by case depending on the task.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Early visuals by the founders:
-                                </span>
-                                <img src="img/fr_8.png" alt="frozenbro" class="strategy-img" class="strategy-img">
-                            </section>
-                        </div>
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">process</h3>
-                                <div class="strategy-project-context">
-                                    We started with briefing and deep context work. On the strategic side, we defined
-                                    what Frozen Bro is selling, how the lineup is structured, who the customer is, and
-                                    where people meet the brand. A key intention was to support their own style and
-                                    taste in design and messaging, and to keep their tone of voice intact: warm,
-                                    friendly, and human, like good friends or neighbors, the kind of people you can meet
-                                    through everyday life and end up sharing a good table and a fun evening with.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Early visuals by the founders:
-                                </span>
-                                <img src="img/fr_9.png" alt="Strategy" class="strategy-img">
-                            </section>
-                        </div>
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h3 class="section-title">Three guides</h3>
-                                <div class="strategy-project-context">
-                                    The project was structured into three blocks so the brand could immediately function
-                                    as a practical tool.
-                                </div>
-                                <h4 class="section-title"
-                                    style="font-size: 18px; margin-bottom: 8px; text-transform:lowercase;">Base branding
-                                    and guideline</h4>
-                                <div class="strategy-project-context">
-                                    We built the foundation of the brand system, with a stronger emphasis on
-                                    communication and tone of voice. Frozen Bro has a focused, niche audience, and the
-                                    founders meet people in person at festivals and events, so the way the brand speaks
-                                    matters as much as how it looks. At this stage, the priority was to define a clear,
-                                    human voice for everyday conversations and content: approachable, recognizable, and
-                                    consistent across touchpoints.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Part of Base Brandbook:
-                                </span>
-                                <img src="img/fr_10.png" alt="Strategy" class="strategy-img">
-                            </section>
-                        </div>
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h4 class="section-title"
-                                    style="font-size: 18px; margin-bottom: 8px; text-transform:none;">Packaging
-                                    guideline</h4>
-                                <div class="strategy-project-context">
-                                    This was the most practical part of the project. For the frozen product line, we
-                                    designed belly bands for the packaging as well as additional stickers. The goal was
-                                    to strengthen shelf presence and standardize the look of the lineup.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Part of Package Brandbook:
-                                </span>
-                                <img src="img/fr_11.png" alt="Strategy" class="strategy-img">
-                                <div class="strategy-project-context" style="margin-top: 64px;">
-                                    One of the brand’s most recognizable signatures is the “logo” itself: a real face,
-                                    used as a bold and memorable marker across touchpoints. We leaned into that idea and
-                                    made it a repeating motif in the packaging system, so the lineup stays instantly
-                                    identifiable even when formats, flavors, or product types change. Instead of
-                                    following the typical frozen-food visual codes, we chose a minimal, distinctive
-                                    direction that feels true to Frozen Bro and stands apart from competitors. Alongside
-                                    the design work, we organized food photoshoots, handled retouching, and prepared a
-                                    consistent set of visual assets for packaging and content production.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Food Photo and Retouche:
-                                </span>
-                                <img src="img/fr_12.png" alt="Strategy" class="strategy-img">
-                            </section>
-                        </div>
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h4 class="section-title"
-                                    style="font-size: 18px; margin-bottom: 8px; text-transform:none;">Social media
-                                    guideline</h4>
-                                <div class="strategy-project-context">
-                                    Frozen Bro is constantly filming and sharing what they do: day-to-day kitchen life,
-                                    work process, product moments, and real meetings with people around food. The brand
-                                    system was built to support that rhythm, so it integrates naturally with short
-                                    videos, posts, stories, and quick announcements without losing consistency. We
-                                    documented the rules and templates in a clear, practical way, so the team can
-                                    produce and format their own creatives independently. This removed the need to hire
-                                    a designer for every post and helped them keep the channel active, recognizable, and
-                                    true to their voice.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Part of Content (SM) Brandbook:
-                                </span>
-                                <img src="img/fr_13.png" alt="Strategy" class="strategy-img">
-                            </section>
-                        </div>
-                        <div class="content-wrap">
-                            <section class="logo-section">
-                                <h4 class="section-title"
-                                    style="font-size: 18px; margin-bottom: 8px; text-transform:none;">Site</h4>
-                                <div class="strategy-project-context" style="margin-bottom: 16px;">
-                                    Alongside social media, we built a website on WordPress so the team could update it
-                                    independently without relying on a developer. We designed and laid out the full site
-                                    structure and page templates, then we populated it with the key content and set up
-                                    the essentials for day-to-day use. A shop module was connected so products could be
-                                    added, edited, and managed in one place.
-                                </div>
-                                <div class="strategy-project-context">
-                                    Each product page was designed as a clear, practical “card”: ingredients, cooking
-                                    instructions, and supporting details. Where it made sense, we added rich content
-                                    such as photos, short videos showing how to cook the product, and structured blocks
-                                    for FAQs or storage tips. The result is a site that works both as a storefront and
-                                    as a simple guide for customers, while staying easy for the team to maintain.
-                                </div>
-                                <span class="strategy-early-visuals">
-                                    Site <a href="https://frozenbro.ee" target="_blank">frozenbro.ee</a>
-                                </span>
-                                <div class="video-wrapper"
-                                    style="width: 952px; height: 535px; margin: 32px auto 0; border-radius: 8px; overflow: hidden; position: relative;">
-                                    <iframe id="strategy-video" width="100%" height="100%"
-                                        src="https://www.youtube.com/embed/YtER1Fc0NJM?enablejsapi=1&mute=1&loop=1&playlist=YtER1Fc0NJM&controls=0"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                                </div>
-                            </section>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </main>
 
-                <!-- Designer -->
-                <div class="designer-card">
-                    <img src="/img/Anika_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">BRAND DESIGNER</span>
-                        <span class="name">NIKA PIZHMA</span>
-                    </div>
-                    <div class="years">
-                        <span>2023</span>
-                        <span>2025</span>
-                    </div>
-                </div>
-                <div class="designer-card">
-                    <img src="/img/ivan_avatar.png" alt="Designer" class="designer-img">
-                    <div class="designer-info">
-                        <span class="role">ui\ux design, web development</span>
-                        <span class="name">Ivan DIACHKOV</span>
-                    </div>
-                    <div class="years">
-                        <span>2023</span>
-                        <span>2025</span>
-                    </div>
-                </div>
-
-                <!-- Nav Arrow -->
-                <div class="nav-arrow">
-                    <img src="img/ArrowBack.png" alt="Arrow Back" class="arrow-img">
-                </div>
-
                 <!-- Look Other Projects Carousel -->
                 <section class="other-projects-section">
                     <h2 class="other-projects-title">LOOK OTHER PROJECTS</h2>
-                    <div class="projects-carousel">
-                        <div class="carousel-track">
-                            <!-- Abilka -->
-                            <a href="abilka.html" class="carousel-item">
-                                <div class="carousel-card-img abilka-bg">
-                                    <img src="img/imgs_for_main/Abilka_cover.png" alt="Abilka">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>ABILKA</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Boiling Brains -->
-                            <a href="boilingbrains.html" class="carousel-item">
-                                <div class="carousel-card-img boiling-bg">
-                                    <img src="img/imgs_for_main/BB_cover.png" alt="Boiling Brains">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>BOILING BRAINS</h3>
-                                    <p>ESTONIA</p>
-                                </div>
-                            </a>
-                            <!-- Dr.WDY -->
-                            <a href="drwdy.html" class="carousel-item">
-                                <div class="carousel-card-img drwdy-bg">
-                                    <img src="img/imgs_for_main/wdy_cover.png" alt="Dr.WDY">
-                                </div>
-                                <div class="carousel-card-info">
-                                    <h3>DR.WDY</h3>
-                                    <p>USA</p>
-                                </div>
-                            </a>
+                    <div class="carousel-container">
+                        <div class="projects-carousel">
+                            <div class="carousel-track">
+                                <a href="abilka.html" class="carousel-item">
+                                    <img src="img/сase cards/abilka.png" alt="Abilka" class="carousel-full-card">
+                                </a>
+                                <a href="boilingbrains.html" class="carousel-item">
+                                    <img src="img/сase cards/bb.png" alt="Boiling Brains" class="carousel-full-card">
+                                </a>
+                                <a href="drwdy.html" class="carousel-item">
+                                    <img src="img/сase cards/wdy.png" alt="Dr.WDY" class="carousel-full-card">
+                                </a>
+                                <a href="#" class="carousel-item">
+                                    <img src="img/сase cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Footer -->
+                <section id="request-form" class="request-form-section">
+                    <div class="request-form-layout">
+                        <div class="request-form-copy">
+                            <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                            <p class="request-form-description">
+                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what
+                                you
+                                have, listen to your ideas, and
+                                propose a clear direction for how the project should look, sound, and communicate.
+                            </p>
+                        </div>
+
+                        <form id="services-form" class="request-form variant-refined state-default" action="#"
+                            method="post" enctype="multipart/form-data">
+                            <div class="request-form-fields">
+                                <div class="request-input-group">
+                                    <input id="request-name" name="name" type="text" placeholder="NAME">
+                                </div>
+                                <div class="request-input-group">
+                                    <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                </div>
+                                <div class="request-input-group request-media-group">
+                                    <div class="request-textarea-wrapper">
+                                        <textarea id="request-message" name="message"
+                                            placeholder="Tell us about your project and task" rows="3"></textarea>
+                                    </div>
+                                    <!-- Attached Files List (visible in file state) -->
+                                    <div class="request-files-section">
+                                        <div class="files-label">ATTACHED FILES</div>
+                                        <div class="files-list"></div>
+                                    </div>
+
+                                    <!-- Voice Recording Panel (visible in voice state) -->
+                                    <div class="request-voice-recording-panel">
+                                        <div class="voice-recording-header">
+                                            <div class="recording-indicator">
+                                                <span class="recording-dot"></span>
+                                                <span class="recording-label">RECORDING</span>
+                                            </div>
+                                            <span class="recording-timer">00:00</span>
+                                        </div>
+
+                                        <div class="voice-waveform">
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h4"></div>
+                                            <div class="wave-bar h1"></div>
+                                            <div class="wave-bar h5"></div>
+                                            <div class="wave-bar h2"></div>
+                                            <div class="wave-bar h3"></div>
+                                            <div class="wave-bar h1 opac"></div>
+                                            <div class="wave-bar h2 opac"></div>
+                                        </div>
+
+                                        <div class="voice-controls">
+                                            <button type="button" class="btn-stop-record"><span
+                                                    class="stop-icon"></span></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="request-helper-row">
+                                        <div class="helper-text" id="helper-status">If you can't be bothered to type,
+                                            just say what's on your mind.</div>
+                                        <div class="helper-icons">
+                                            <button type="button" class="icon-btn btn-mic-toggle">
+                                                <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                            </button>
+                                            <input type="file" id="request-file-upload"
+                                                accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
+                                            <button type="button" class="icon-btn btn-clip-toggle">
+                                                <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY PROJECT</button>
+                        </form>
+                    </div>
+                </section>
                 <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
@@ -419,8 +802,7 @@
                         <div class="footer-nav-col">
                             <a href="about.html" class="footer-nav-link">About</a>
                             <a href="services.html" class="footer-nav-link">Services</a>
-                            <a href="/#cases" class="footer-nav-link">Cases</a>
-                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
+                            <a href="/" class="footer-nav-link">Cases</a>
                         </div>
                     </div>
                     <div class="footer-copyright-row">
@@ -432,7 +814,23 @@
             </div>
         </div>
     </div>
-    <!-- Lightbox -->
+
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="success-modal" style="display:none;">
+        <div class="success-modal-card">
+            <div class="success-image-wrap">
+                <img src="img/catalien.png" alt="Signal Sent" class="success-mascot">
+            </div>
+            <div class="success-text-content">
+                <h3 class="success-title">SIGNAL SENT!</h3>
+                <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
+            </div>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT
+                YA!</button>
+        </div>
+    </div>
+
+    <!-- Lightbox for images -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img id="lightbox-img" src="" alt="Full Screen Image">
@@ -440,6 +838,250 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Tab Switching Logic (with Sliding Pill) ---
+            const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pill = document.querySelector('.active-pill');
+
+            function updatePill(btn) {
+                if (!pill || !btn) return;
+                pill.style.width = `${btn.offsetWidth}px`;
+                pill.style.left = `${btn.offsetLeft}px`;
+            }
+
+            // Initial position
+            const activeBtn = document.querySelector('.buttons-wrap .btn.active-text');
+            if (activeBtn) {
+                // Small delay to ensure layout is ready
+                setTimeout(() => updatePill(activeBtn), 50);
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+
+                    tabBtns.forEach(b => b.classList.remove('active-text'));
+                    btn.classList.add('active-text');
+                    updatePill(btn);
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tabId) content.classList.add('active');
+                    });
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const currentActive = document.querySelector('.buttons-wrap .btn.active-text');
+                if (currentActive) updatePill(currentActive);
+            });
+
+            // --- Form Logic ---
+            const form = document.getElementById('services-form');
+            if (!form) return;
+
+            const fileInput = document.getElementById('request-file-upload');
+            const clipBtn = form.querySelector('.btn-clip-toggle');
+            const micBtn = form.querySelector('.btn-mic-toggle');
+            const filesListContainer = form.querySelector('.files-list');
+            const helperStatus = document.getElementById('helper-status');
+            const submitBtn = document.getElementById('btn-submit');
+            const stopRecordBtn = form.querySelector('.btn-stop-record');
+            const voiceTimer = form.querySelector('.recording-timer');
+
+            let selectedFiles = [];
+            const MAX_FILE_SIZE = 20 * 1024 * 1024;
+
+            let mediaRecorder;
+            let audioChunks = [];
+            let recordInterval;
+            let recordStartTime;
+            let audioContext;
+            let analyser;
+            let dataArray;
+            let animationId;
+
+            if (clipBtn && fileInput) {
+                clipBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    fileInput.click();
+                });
+
+                fileInput.addEventListener('change', (e) => {
+                    addFiles(Array.from(e.target.files));
+                    fileInput.value = '';
+                });
+            }
+
+            function addFiles(newFiles) {
+                newFiles.forEach(f => {
+                    if (f.size > MAX_FILE_SIZE) {
+                        alert(`File ${f.name} is too large. Max size is 20MB.`);
+                    } else if (!selectedFiles.find(x => x.name === f.name && x.size === f.size)) {
+                        selectedFiles.push(f);
+                    }
+                });
+                updateFilesUI();
+            }
+
+            if (filesListContainer) {
+                filesListContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('file-remove')) {
+                        selectedFiles.splice(parseInt(e.target.getAttribute('data-index')), 1);
+                        updateFilesUI();
+                    }
+                });
+            }
+
+            function updateFilesUI() {
+                if (!filesListContainer) return;
+                filesListContainer.innerHTML = '';
+                let totalBytes = 0;
+                selectedFiles.forEach((file, index) => {
+                    totalBytes += file.size;
+                    const item = document.createElement('div');
+                    item.className = 'file-item';
+                    item.innerHTML = `
+                        <div class="file-info-left">
+                            <span class="file-icon">${file.type.startsWith('image/') ? '🖼️' : '📄'}</span>
+                            <div class="file-details">
+                                <span class="file-name">${file.name}</span>
+                                <span class="file-size">${formatBytes(file.size)}</span>
+                            </div>
+                        </div>
+                        <span class="file-remove" data-index="${index}">✕</span>`;
+                    filesListContainer.appendChild(item);
+                });
+
+                if (selectedFiles.length > 0) {
+                    form.classList.remove('state-default', 'state-error', 'state-voice');
+                    form.classList.add('state-files');
+                    const count = selectedFiles.length === 1 ? '1 FILE' : `${selectedFiles.length} FILES`;
+                    if (helperStatus) helperStatus.textContent = `${count} ATTACHED (${formatBytes(totalBytes)} TOTAL)`;
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                } else {
+                    form.classList.remove('state-files', 'state-voice');
+                    form.classList.add('state-default');
+                    if (helperStatus) helperStatus.textContent = "If you can't be bothered to type, just say what's on your mind.";
+                    if (submitBtn) submitBtn.textContent = "HERE'S MY PROJECT";
+                }
+            }
+
+            function formatBytes(bytes, decimals = 1) {
+                if (!+bytes) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(decimals))} ${sizes[i]}`;
+            }
+
+            if (micBtn && stopRecordBtn && voiceTimer) {
+                micBtn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) return;
+                    try {
+                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        startRecording(stream);
+                    } catch (err) {
+                        alert("Microphone access is required to record a voice message.");
+                    }
+                });
+
+                stopRecordBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    stopRecording();
+                });
+            }
+
+            if (submitBtn) {
+                submitBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (form.classList.contains('state-voice')) {
+                        stopRecording();
+                    } else {
+                        // --- Confetti Effect ---
+                        const rect = submitBtn.getBoundingClientRect();
+                        const x = (rect.left + rect.width / 2) / window.innerWidth;
+                        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                        const bonePath = 'M24.4835 5.49995C25.0877 4.89575 25.4271 4.07627 25.4271 3.2218C25.4271 2.36732 25.0877 1.54785 24.4835 0.943643C23.8793 0.339439 23.0598 0 22.2053 0C21.3508 0 20.5314 0.339439 19.9272 0.943643C19.3275 1.54967 18.9912 2.36828 18.9943 3.2218L6.43279 3.22189C6.43453 2.79951 6.35305 2.38091 6.19299 1.99002C6.03293 1.59913 5.79744 1.2436 5.49995 0.943741C4.89575 0.339537 4.07627 9.84241e-05 3.2218 9.84241e-05C2.36732 9.84241e-05 1.54785 0.339537 0.943642 0.943741C0.339438 1.54795 1.89119e-07 2.36742 1.89119e-07 3.2219C1.89119e-07 4.07637 0.339439 4.89585 0.943643 5.50005C0.339439 6.10425 0 6.92373 0 7.7782C0 8.63268 0.339439 9.45215 0.943643 10.0564C1.54785 10.6606 2.36732 11 3.2218 11C4.07627 11 4.89575 10.6606 5.49995 10.0564C5.79744 9.7565 6.03293 9.40097 6.19299 9.01008C6.35305 8.61919 6.43453 8.20059 6.43279 7.7782L18.9943 7.77811C18.9912 8.63162 19.3275 9.45023 19.9272 10.0563C20.5314 10.6605 21.3508 10.9999 22.2053 10.9999C23.0598 10.9999 23.8793 10.6605 24.4835 10.0563C25.0877 9.45206 25.4271 8.63258 25.4271 7.77811C25.4271 6.92363 25.0877 6.10415 24.4835 5.49995Z';
+                        const boneShape = confetti.shapeFromPath({ path: bonePath });
+
+                        confetti({
+                            particleCount: 80,
+                            spread: 80,
+                            origin: { x, y },
+                            shapes: [boneShape],
+                            colors: ['#47E194', '#FBFBFB', '#1E1E1E', '#A6D3FF', '#FFDAEF', '#DD3737'],
+                            zIndex: 9999,
+                            scalar: 2.2
+                        });
+
+                        const sModal = document.getElementById('success-modal');
+                        if (sModal) sModal.style.display = 'flex';
+                    }
+                });
+            }
+
+            function startRecording(stream) {
+                form.classList.remove('state-default', 'state-error', 'state-files');
+                form.classList.add('state-voice');
+                if (helperStatus) helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
+                if (submitBtn) submitBtn.textContent = 'STOP & SAVE RECORDING';
+
+                audioChunks = [];
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    const fileName = `voice_message_${new Date().toISOString().replace(/[:.]/g, '-')}.webm`;
+                    addFiles([new File([audioBlob], fileName, { type: 'audio/webm', lastModified: Date.now() })]);
+                    stream.getTracks().forEach(t => t.stop());
+                };
+                mediaRecorder.start();
+
+                recordStartTime = Date.now();
+                voiceTimer.textContent = '00:00';
+                clearInterval(recordInterval);
+                recordInterval = setInterval(updateTimer, 1000);
+
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                audioContext.createMediaStreamSource(stream).connect(analyser);
+                analyser.fftSize = 64;
+                dataArray = new Uint8Array(analyser.frequencyBinCount);
+                drawWaveform();
+            }
+
+            function drawWaveform() {
+                if (!form.classList.contains('state-voice')) return;
+                animationId = requestAnimationFrame(drawWaveform);
+                analyser.getByteFrequencyData(dataArray);
+                form.querySelectorAll('.wave-bar').forEach((bar, i) => {
+                    const val = dataArray[Math.floor(i * (dataArray.length / 22))] / 255;
+                    bar.style.transform = `scaleY(${0.1 + val * 1.7})`;
+                });
+            }
+
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+                clearInterval(recordInterval);
+                cancelAnimationFrame(animationId);
+                if (audioContext && audioContext.state !== 'closed') audioContext.close();
+                form.querySelectorAll('.wave-bar').forEach(b => b.style.transform = '');
+            }
+
+            function updateTimer() {
+                const diff = Math.floor((Date.now() - recordStartTime) / 1000);
+                if (diff >= 120) { stopRecording(); return; }
+                voiceTimer.textContent = `${String(Math.floor(diff / 60)).padStart(2, '0')}:${String(diff % 60).padStart(2, '0')}`;
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -8,8 +8,9 @@
     <title>KISAW - Design Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=38.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=46.0">
     <style>
         /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
         .abilka-centered-group {
@@ -56,7 +57,7 @@
             transform: translateY(-8px) !important;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
         }
-        
+
         .abilka-image {
             width: 100% !important;
             display: block !important;
@@ -116,8 +117,8 @@
 
         .request-form-section {
             margin-top: 0 !important;
-            padding-top: 180px !important;
-            padding-bottom: 120px !important;
+            padding-top: 100px !important;
+            padding-bottom: 80px !important;
             background-color: #353535 !important;
         }
 
@@ -150,9 +151,42 @@
             text-transform: uppercase !important;
         }
 
+        .tags {
+            display: flex;
+            gap: 13px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            color: #1E1E1E !important;
+            text-transform: uppercase;
+            line-height: 1.13 !important;
+        }
+
+        .tag-hash {
+            color: #1E1E1E !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+        }
+
         .request-form-description {
             font-size: 24px !important;
             line-height: 1.4 !important;
+        }
+
+        .buttons-wrap {
+            margin: 40px auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 12px !important;
+            /* Added gap between buttons */
+            width: fit-content !important;
+            padding: 4px !important;
+            /* Thinner outer frame */
+            position: relative !important;
+            background: #e4c1f5 !important;
+            border-radius: 26px !important;
+            overflow: hidden !important;
         }
     </style>
 </head>
@@ -220,49 +254,58 @@
                     <div class="abilka-centered-group">
                         <div class="main-left">
                             <section class="title-section">
-                            <h1 class="main-title"><span class="light">MONTENEGRO\</span>ABILKA SPACE</h1>
-                            <h2 class="sub-title">BRAND IDENTITY</h2>
-                        </section>
+                                <h1 class="main-title"><span class="light">MONTENEGRO\</span>ABILKA SPACE</h1>
+                                <h2 class="sub-title">BRAND IDENTITY</h2>
+                            </section>
 
-                        <span class="tag-hash">#</span>
-                        <div class="tags">
-                            <span>EDUCATION</span>
-                            <span>BRAND IDENTITY</span>
-                            <span>SOCIAL MEDIA</span>
-                            <span>CONCEPT</span>
+                            <span class="tag-hash">#</span>
+                            <div class="tags">
+                                <span>EDUCATION</span>
+                                <span>BRAND IDENTITY</span>
+                                <span>SOCIAL MEDIA</span>
+                                <span>CONCEPT</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="abilka-case-images">
-                        <section class="abilka-intro-section">
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 1.svg" alt="Abilka visual identity 1" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 2.svg" alt="Abilka visual identity 2" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 4.svg" alt="Abilka visual identity 3" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 7.svg" alt="Abilka visual identity 4" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 8.png" alt="Abilka visual identity 5" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper abilka-img-small">
-                                <img src="img/abilka_case/Abilka case 9.svg" alt="Abilka visual identity 6" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 10.png" alt="Abilka visual identity 7" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 11.png" alt="Abilka visual identity 8" class="abilka-image">
-                            </div>
-                            <div class="abilka-img-wrapper">
-                                <img src="img/abilka_case/Abilka case 12.png" alt="Abilka visual identity 9" class="abilka-image">
-                            </div>
-                        </section>
-                    </div>
+                        <div class="abilka-case-images">
+                            <section class="abilka-intro-section">
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 1.svg" alt="Abilka visual identity 1"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 2.svg" alt="Abilka visual identity 2"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 4.svg" alt="Abilka visual identity 3"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 7.svg" alt="Abilka visual identity 4"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 8.png" alt="Abilka visual identity 5"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper abilka-img-small">
+                                    <img src="img/abilka_case/Abilka case 9.svg" alt="Abilka visual identity 6"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 10.png" alt="Abilka visual identity 7"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 11.png" alt="Abilka visual identity 8"
+                                        class="abilka-image">
+                                </div>
+                                <div class="abilka-img-wrapper">
+                                    <img src="img/abilka_case/Abilka case 12.png" alt="Abilka visual identity 9"
+                                        class="abilka-image">
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </main>
                 <!-- Look Other Projects Carousel -->
@@ -272,13 +315,13 @@
                         <div class="projects-carousel">
                             <div class="carousel-track">
                                 <a href="frozenbro.html" class="carousel-item">
-                                    <img src="img/сase cards/frozen bro.png" alt="Frozen Bro" class="carousel-full-card">
+                                    <img src="img/сase cards/frbr.png" alt="Frozen Bro" class="carousel-full-card">
                                 </a>
                                 <a href="boilingbrains.html" class="carousel-item">
-                                    <img src="img/сase cards/boiling bains.png" alt="Boiling Brains" class="carousel-full-card">
+                                    <img src="img/сase cards/bb.png" alt="Boiling Brains" class="carousel-full-card">
                                 </a>
                                 <a href="drwdy.html" class="carousel-item">
-                                    <img src="img/сase cards/dr wdy.png" alt="Dr.WDY" class="carousel-full-card">
+                                    <img src="img/сase cards/wdy.png" alt="Dr.WDY" class="carousel-full-card">
                                 </a>
                                 <a href="#" class="carousel-item">
                                     <img src="img/сase cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
@@ -293,21 +336,22 @@
                         <div class="request-form-copy">
                             <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
                             <p class="request-form-description">
-                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what you
+                                <span class="text-accent-green">Tell us about your project.</span><br>We'll review what
+                                you
                                 have, listen to your ideas, and
                                 propose a clear direction for how the project should look, sound, and communicate.
                             </p>
                         </div>
 
-                        <form id="services-form" class="request-form variant-refined state-default" action="#" method="post"
-                            enctype="multipart/form-data">
-                                <div class="request-form-fields">
-                                    <div class="request-input-group">
-                                        <input id="request-name" name="name" type="text" placeholder="NAME">
-                                    </div>
-                                    <div class="request-input-group">
-                                        <input id="request-email" name="email" type="email" placeholder="EMAIL">
-                                    </div>
+                        <form id="services-form" class="request-form variant-refined state-default" action="#"
+                            method="post" enctype="multipart/form-data">
+                            <div class="request-form-fields">
+                                <div class="request-input-group">
+                                    <input id="request-name" name="name" type="text" placeholder="NAME">
+                                </div>
+                                <div class="request-input-group">
+                                    <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                </div>
                                 <div class="request-input-group request-media-group">
                                     <div class="request-textarea-wrapper">
                                         <textarea id="request-message" name="message"
@@ -442,7 +486,8 @@
                 <h3 class="success-title">SIGNAL SENT!</h3>
                 <p class="success-desc">WE'VE RECEIVED YOUR MESSAGE AND WILL GET BACK TO YOU SHORTLY.</p>
             </div>
-            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
+            <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT
+                YA!</button>
         </div>
     </div>
 
@@ -660,4 +705,5 @@
         });
     </script>
 </body>
+
 </html>
