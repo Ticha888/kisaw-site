@@ -138,9 +138,10 @@ a {
 }
 
 .logo-link:hover .logo-img {
-    transform: rotate(315deg);
-    /* -45 + 360 */
+    animation: spinFast 0.6s linear infinite;
 }
+
+
 
 
 
@@ -302,8 +303,9 @@ a {
 }
 
 .logo-link:hover {
-    animation: logoFloat 2s infinite ease-in-out;
+    /* Animation moved to .logo-img */
 }
+
 
 @keyframes logoFloat {
     0% {
@@ -319,6 +321,16 @@ a {
     }
 }
 
+@keyframes spinFast {
+    from {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(315deg);
+    }
+}
+
+
 /* logo-img is defined above */
 
 .logo {
@@ -330,8 +342,9 @@ a {
 }
 
 .logo-link:hover .logo {
-    letter-spacing: 0.1em;
+    /* Animation removed for letters */
 }
+
 
 .header--dark .logo {
     color: #FBFBFB;
@@ -951,9 +964,10 @@ a {
 
 .illustrations-grid {
     display: flex;
-    gap: 20px;
+    gap: 48px;
     flex-wrap: wrap;
 }
+
 
 .illustration-item {
     display: block;
@@ -2939,10 +2953,49 @@ a {
     justify-content: flex-start;
 }
 
+.footer-animated-bone {
+    width: 50px;
+    height: auto;
+    transform: rotate(-45deg);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-animated-bone:hover {
+    animation: spinFast 0.6s linear infinite;
+}
+
+
+
 .footer-copyright-row .footer-bone-icon {
     width: 21px;
-    height: 22px;
+    height: auto;
+    cursor: pointer;
 }
+
+.footer-copyright-row .footer-bone-icon:hover {
+    animation: spinSmall 0.6s linear infinite;
+}
+
+@keyframes spinSmall {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.footer-animated-bone-link,
+.footer-bone-link {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 0;
+}
+
+
+
+
+
+
 
 /* Lightbox & Hover Effects */
 .graphic-logo-card,
@@ -3018,7 +3071,10 @@ a {
     margin-bottom: 64px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    scroll-margin-top: 64px;
 }
+
+
 
 /* Abilka Case Page */
 .sticky-sidebar-abilka {
