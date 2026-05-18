@@ -1268,7 +1268,7 @@ a {
 /* ─── Why Us V3 ──────────────────────────────────────────────────────── */
 
 .why-us-v3 {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #1E1E1E;
 }
 
@@ -1276,8 +1276,8 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 120px;
-    max-width: 1400px;
+    gap: 80px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
@@ -1286,7 +1286,6 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     flex-shrink: 0;
-    padding-top: 4px; /* Slight offset to align with card text if needed */
 }
 
 .why-us-v3-title {
@@ -1302,14 +1301,14 @@ a {
 .why-us-v3-grid {
     display: grid;
     grid-template-columns: repeat(2, 420px);
-    grid-auto-rows: minmax(240px, auto);
+    grid-auto-rows: auto;
     gap: 12px;
 }
 
 .why-us-v3-card {
     background: #FBFBFB;
     border-radius: 16px;
-    padding: 44px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1343,10 +1342,10 @@ a {
 }
 
 .why-us-v3-card-title {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 900;
     color: #1E1E1E;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     line-height: 1.1;
     letter-spacing: -0.01em;
     text-transform: uppercase;
@@ -1354,7 +1353,7 @@ a {
 
 .why-us-v3-card-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: #595959;
     line-height: 1.55;
