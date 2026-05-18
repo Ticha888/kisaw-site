@@ -1289,7 +1289,7 @@ a {
 }
 
 .why-us-v3-title {
-    font-size: 32px;
+    font-size: 45px;
     font-weight: 900;
     color: #FBFBFB;
     margin: 0;
@@ -1301,7 +1301,7 @@ a {
 .why-us-v3-grid {
     display: grid;
     grid-template-columns: repeat(2, 420px);
-    grid-auto-rows: auto;
+    grid-auto-rows: 1fr;
     gap: 12px;
 }
 
@@ -1342,7 +1342,7 @@ a {
 }
 
 .why-us-v3-card-title {
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 900;
     color: #1E1E1E;
     margin: 0 0 16px;
@@ -1421,6 +1421,13 @@ a {
     background: #353535;
     padding: 72px 80px;
     overflow: hidden;
+}
+
+.main-page .request-form-section {
+    margin-top: 0 !important;
+    border-radius: 12px !important;
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
 }
 
 .request-form-layout {
