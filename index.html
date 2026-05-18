@@ -350,7 +350,7 @@
                         </div>
                     </section>
 
-                                    <section id="request-form" class="request-form-section">
+                                    <section id="request-form" class="request-form-section variant-refined">
                     <div class="request-form-layout">
                         <div class="request-form-copy">
                             <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
@@ -511,6 +511,101 @@
         </div>
     </div>
 
+    <!-- Quest Modal -->
+    <div id="quest-modal" class="quest-modal-overlay">
+        <div class="quest-modal-card">
+            <!-- Close Button -->
+            <button type="button" class="quest-modal-close" id="btn-close-quest-modal" aria-label="Close modal">
+                <img src="img/closewindow.svg" alt="Close">
+            </button>
+
+            <div class="quest-modal-header">
+                <h2 class="quest-modal-title">DROP YOUR QUEST HERE</h2>
+                <p class="quest-modal-description">
+                    <span class="text-accent-green">Tell us about your project.</span> We’ll review what you have, listen to your ideas, and propose a clear direction for how the project should look, sound, and communicate.
+                </p>
+            </div>
+
+            <form id="quest-modal-form" class="request-form variant-refined state-default" action="#" method="post" enctype="multipart/form-data">
+                <div class="request-form-fields">
+                    <div class="request-input-group">
+                        <input id="quest-name" name="name" type="text" placeholder="NAME" required>
+                        <span class="request-error-msg">Please enter your name</span>
+                    </div>
+                    <div class="request-input-group">
+                        <input id="quest-email" name="email" type="email" placeholder="EMAIL" required>
+                        <span class="request-error-msg">Please enter a valid email</span>
+                    </div>
+                    <div class="request-input-group request-media-group">
+                        <div class="request-textarea-wrapper">
+                            <textarea id="quest-message" name="message" placeholder="TELL US ABOUT YOUR PROJECT AND TASK" rows="3"></textarea>
+                        </div>
+
+                        <!-- Attached Files List (visible in file state) -->
+                        <div class="request-files-section">
+                            <div class="files-label">ATTACHED FILES</div>
+                            <div class="files-list"></div>
+                        </div>
+
+                        <!-- Voice Recording Panel (visible in voice state) -->
+                        <div class="request-voice-recording-panel">
+                            <div class="voice-recording-header">
+                                <div class="recording-indicator">
+                                    <span class="recording-dot"></span>
+                                    <span class="recording-label">RECORDING</span>
+                                </div>
+                                <span class="recording-timer">00:00</span>
+                            </div>
+
+                            <div class="voice-waveform">
+                                <div class="wave-bar h1"></div>
+                                <div class="wave-bar h4"></div>
+                                <div class="wave-bar h2"></div>
+                                <div class="wave-bar h5"></div>
+                                <div class="wave-bar h3"></div>
+                                <div class="wave-bar h4"></div>
+                                <div class="wave-bar h1"></div>
+                                <div class="wave-bar h5"></div>
+                                <div class="wave-bar h2"></div>
+                                <div class="wave-bar h3"></div>
+                                <div class="wave-bar h4"></div>
+                                <div class="wave-bar h1"></div>
+                                <div class="wave-bar h5"></div>
+                                <div class="wave-bar h2"></div>
+                                <div class="wave-bar h3"></div>
+                                <div class="wave-bar h4"></div>
+                                <div class="wave-bar h1"></div>
+                                <div class="wave-bar h5"></div>
+                                <div class="wave-bar h2"></div>
+                                <div class="wave-bar h3"></div>
+                                <div class="wave-bar h1 opac"></div>
+                                <div class="wave-bar h2 opac"></div>
+                            </div>
+
+                            <div class="voice-controls">
+                                <button type="button" class="btn-stop-record"><span class="stop-icon"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="request-helper-row">
+                            <div class="helper-text font-sub" id="quest-helper-status">IF YOU CAN’T BE BOTHERED TO TYPE, JUST SAY WHAT’S ON YOUR MIND.</div>
+                            <div class="helper-icons">
+                                <button type="button" class="icon-btn btn-mic-toggle">
+                                    <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                </button>
+                                <input type="file" id="quest-file-upload" accept="image/*,.txt,.pdf,.doc,.docx" multiple style="display: none;">
+                                <button type="button" class="icon-btn btn-clip-toggle">
+                                    <img src="img/Paperclip.svg" alt="Paperclip" width="28" height="28">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="request-submit-btn" id="quest-btn-submit">HERE'S MY PROJECT</button>
+            </form>
+        </div>
+    </div>
+
     <!-- GSAP + Flip plugin for card stack (DISABLED AS REQUESTED)
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
@@ -595,279 +690,6 @@
     </script>
     -->
 
-    <!-- JS script for form states -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('services');
-            if (!form) return;
-
-            const fileInput = document.getElementById('request-file-upload');
-            const clipBtn = form.querySelector('.btn-clip-toggle');
-            const micBtn = form.querySelector('.btn-mic-toggle');
-            const filesListContainer = form.querySelector('.files-list');
-            const helperStatus = document.getElementById('helper-status');
-            const submitBtn = document.getElementById('btn-submit');
-
-            const stopRecordBtn = form.querySelector('.btn-stop-record');
-            const voiceTimer = form.querySelector('.recording-timer');
-
-            let selectedFiles = [];
-            const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20 MB
-
-            let mediaRecorder;
-            let audioChunks = [];
-            let recordInterval;
-            let recordStartTime;
-
-            let audioContext;
-            let analyser;
-            let dataArray;
-            let animationId;
-
-            // --- FILE UPLOAD LOGIC ---
-            if (clipBtn && fileInput) {
-                clipBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (form.classList.contains('state-voice')) return; // Disabled while recording
-                    fileInput.click();
-                });
-
-                fileInput.addEventListener('change', (e) => {
-                    const newFiles = Array.from(e.target.files);
-                    addFiles(newFiles);
-                    fileInput.value = '';
-                });
-            }
-
-            function addFiles(newFiles) {
-                const validFiles = [];
-                newFiles.forEach(f => {
-                    if (f.size > MAX_FILE_SIZE) {
-                        alert(`File ${f.name} is too large. Max size is 20MB.`);
-                    } else {
-                        if (!selectedFiles.find(extF => extF.name === f.name && extF.size === f.size)) {
-                            validFiles.push(f);
-                        }
-                    }
-                });
-
-                selectedFiles = [...selectedFiles, ...validFiles];
-                updateFilesUI();
-            }
-
-            // Delegation for remove buttons
-            if (filesListContainer) {
-                filesListContainer.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('file-remove')) {
-                        const idx = parseInt(e.target.getAttribute('data-index'));
-                        selectedFiles.splice(idx, 1);
-                        updateFilesUI();
-                    }
-                });
-            }
-
-            function updateFilesUI() {
-                if (!filesListContainer) return;
-                filesListContainer.innerHTML = '';
-
-                let totalBytes = 0;
-                selectedFiles.forEach((file, index) => {
-                    totalBytes += file.size;
-
-                    const item = document.createElement('div');
-                    item.className = 'file-item';
-
-                    const isImage = file.type.startsWith('image/');
-                    const icon = isImage ? '🖼️' : '📄';
-                    const sizeStr = formatBytes(file.size);
-
-                    item.innerHTML = `
-                        <div class="file-info-left">
-                            <span class="file-icon">${icon}</span>
-                            <div class="file-details">
-                                <span class="file-name">${file.name}</span>
-                                <span class="file-size">${sizeStr}</span>
-                            </div>
-                        </div>
-                        <span class="file-remove" data-index="${index}">✕</span>
-                    `;
-
-                    filesListContainer.appendChild(item);
-                });
-
-                if (selectedFiles.length > 0) {
-                    form.classList.remove('state-default', 'state-error', 'state-voice');
-                    form.classList.add('state-files');
-
-                    const totalSizeStr = formatBytes(totalBytes);
-                    const fileCountStr = selectedFiles.length === 1 ? '1 FILE' : `${selectedFiles.length} FILES`;
-                    if (helperStatus) {
-                        helperStatus.textContent = `${fileCountStr} ATTACHED (${totalSizeStr} TOTAL)`;
-                    }
-                    submitBtn.textContent = "HERE'S MY PROJECT";
-                } else {
-                    form.classList.remove('state-files', 'state-voice');
-                    form.classList.add('state-default');
-                    if (helperStatus) {
-                        helperStatus.textContent = 'If you can’t be bothered to type, just say what’s on your mind.';
-                    }
-                    submitBtn.textContent = "HERE'S MY PROJECT";
-                }
-            }
-
-            function formatBytes(bytes, decimals = 1) {
-                if (!+bytes) return '0 Bytes';
-                const k = 1024;
-                const dm = decimals < 0 ? 0 : decimals;
-                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-                const i = Math.floor(Math.log(bytes) / Math.log(k));
-                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
-            }
-
-            // --- VOICE RECORDING LOGIC ---
-            if (micBtn && stopRecordBtn && voiceTimer) {
-                micBtn.addEventListener('click', async (e) => {
-                    e.preventDefault();
-                    if (form.classList.contains('state-voice')) return; // Already recording
-                    try {
-                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                        startRecording(stream);
-                    } catch (err) {
-                        console.error("Error accessing microphone:", err);
-                        alert("Microphone access is required to record a voice message.");
-                    }
-                });
-
-                stopRecordBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    stopRecording();
-                });
-            }
-
-            // Also stop recording if main submit button is clicked during recording
-            submitBtn.addEventListener('click', (e) => {
-                if (form.classList.contains('state-voice')) {
-                    e.preventDefault();
-                    stopRecording();
-                } else {
-                    // Normal form submission
-                    e.preventDefault();
-
-                    // --- Confetti Effect ---
-                    const rect = submitBtn.getBoundingClientRect();
-                    const x = (rect.left + rect.width / 2) / window.innerWidth;
-                    const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-                    const bonePath = 'M24.4835 5.49995C25.0877 4.89575 25.4271 4.07627 25.4271 3.2218C25.4271 2.36732 25.0877 1.54785 24.4835 0.943643C23.8793 0.339439 23.0598 0 22.2053 0C21.3508 0 20.5314 0.339439 19.9272 0.943643C19.3275 1.54967 18.9912 2.36828 18.9943 3.2218L6.43279 3.22189C6.43453 2.79951 6.35305 2.38091 6.19299 1.99002C6.03293 1.59913 5.79744 1.2436 5.49995 0.943741C4.89575 0.339537 4.07627 9.84241e-05 3.2218 9.84241e-05C2.36732 9.84241e-05 1.54785 0.339537 0.943642 0.943741C0.339438 1.54795 1.89119e-07 2.36742 1.89119e-07 3.2219C1.89119e-07 4.07637 0.339439 4.89585 0.943643 5.50005C0.339439 6.10425 0 6.92373 0 7.7782C0 8.63268 0.339439 9.45215 0.943643 10.0564C1.54785 10.6606 2.36732 11 3.2218 11C4.07627 11 4.89575 10.6606 5.49995 10.0564C5.79744 9.7565 6.03293 9.40097 6.19299 9.01008C6.35305 8.61919 6.43453 8.20059 6.43279 7.7782L18.9943 7.77811C18.9912 8.63162 19.3275 9.45023 19.9272 10.0563C20.5314 10.6605 21.3508 10.9999 22.2053 10.9999C23.0598 10.9999 23.8793 10.6605 24.4835 10.0563C25.0877 9.45206 25.4271 8.63258 25.4271 7.77811C25.4271 6.92363 25.0877 6.10415 24.4835 5.49995Z';
-                    const boneShape = confetti.shapeFromPath({ path: bonePath });
-
-                    confetti({
-                        particleCount: 80,
-                        spread: 80,
-                        origin: { x, y },
-                        shapes: [boneShape],
-                        colors: ['#47E194', '#FBFBFB', '#1E1E1E', '#A6D3FF', '#FFDAEF', '#DD3737'],
-                        zIndex: 9999,
-                        scalar: 2.2
-                    });
-
-                    const sModal = document.getElementById('success-modal');
-                    if (sModal) sModal.style.display = 'flex';
-                }
-            });
-
-            function startRecording(stream) {
-                form.classList.remove('state-default', 'state-error', 'state-files');
-                form.classList.add('state-voice');
-
-                if (helperStatus) helperStatus.textContent = 'RECORDING YOUR VOICE MESSAGE...';
-                if (submitBtn) submitBtn.textContent = 'STOP & SAVE RECORDING';
-
-                audioChunks = [];
-                mediaRecorder = new MediaRecorder(stream);
-
-                mediaRecorder.ondataavailable = e => {
-                    if (e.data.size > 0) audioChunks.push(e.data);
-                };
-
-                mediaRecorder.onstop = () => {
-                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-                    const fileName = `voice_message_${new Date().toISOString().replace(/[:.]/g, '-')}.webm`;
-                    const audioFile = new File([audioBlob], fileName, { type: 'audio/webm', lastModified: Date.now() });
-
-                    addFiles([audioFile]);
-
-                    stream.getTracks().forEach(track => track.stop());
-                };
-
-                mediaRecorder.start();
-
-                recordStartTime = Date.now();
-                voiceTimer.textContent = '00:00';
-                clearInterval(recordInterval);
-                recordInterval = setInterval(updateTimer, 1000);
-
-                // Setup AudioContext for visualization
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                analyser = audioContext.createAnalyser();
-                const source = audioContext.createMediaStreamSource(stream);
-                source.connect(analyser);
-                analyser.fftSize = 64; // Small size for performance and general volume
-                const bufferLength = analyser.frequencyBinCount;
-                dataArray = new Uint8Array(bufferLength);
-
-                drawWaveform();
-            }
-
-            function drawWaveform() {
-                if (!form.classList.contains('state-voice')) return;
-
-                animationId = requestAnimationFrame(drawWaveform);
-                analyser.getByteFrequencyData(dataArray);
-
-                const waveBars = form.querySelectorAll('.wave-bar');
-                // We have ~22 bars, map values from frequency data
-                for (let i = 0; i < waveBars.length; i++) {
-                    // Use a slightly shifted index to pick up varied frequencies
-                    const dataIndex = Math.floor(i * (dataArray.length / waveBars.length));
-                    const val = dataArray[dataIndex] / 255;
-                    // Scale from 0.1 to 1.8 depending on volume
-                    const scale = 0.1 + (val * 1.7);
-                    waveBars[i].style.transform = `scaleY(${scale})`;
-                }
-            }
-
-            function stopRecording() {
-                if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-                    mediaRecorder.stop();
-                }
-                clearInterval(recordInterval);
-
-                // Cleanup AudioContext
-                cancelAnimationFrame(animationId);
-                if (audioContext && audioContext.state !== 'closed') {
-                    audioContext.close();
-                }
-                // Reset bars transform
-                form.querySelectorAll('.wave-bar').forEach(b => b.style.transform = '');
-            }
-
-            function updateTimer() {
-                const diff = Math.floor((Date.now() - recordStartTime) / 1000);
-
-                // 2-minute constraint (120 seconds)
-                if (diff >= 120) {
-                    stopRecording();
-                    return;
-                }
-
-                const mins = String(Math.floor(diff / 60)).padStart(2, '0');
-                const secs = String(diff % 60).padStart(2, '0');
-                if (voiceTimer) voiceTimer.textContent = `${mins}:${secs}`;
-            }
-        });
-    </script>
     <!-- Matter.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script>
@@ -1162,6 +984,7 @@
             }
         });
     </script>
+    <script src="quest-modal.js"></script>
 </body>
 
 </html>

@@ -350,7 +350,7 @@
             const stopRecordBtn = form.querySelector('.btn-stop-record');
             const voiceTimer = form.querySelector('.recording-timer');
 
-            let selectedFiles = [];
+            let selectedFiles = form.selectedFiles = [];
             const MAX_FILE_SIZE = 20 * 1024 * 1024;
 
             let mediaRecorder;
@@ -540,6 +540,7 @@
             }
         });
     </script>
+    <script src="quest-modal.js"></script>
 </body>
 
 </html>

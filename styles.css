@@ -1492,7 +1492,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    width: 671px;
+    width: min(671px, 100%);
     flex-shrink: 0;
 }
 
@@ -4704,7 +4704,9 @@ a {
         text-decoration: none !important;
         width: auto !important;
         min-width: 220px !important;
-        text-align: center !impor
+        text-align: center !important;
+    }
+}
 
         /* Header & Container Integration */
         .header {
@@ -4717,7 +4719,7 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 0 64px;
+            padding: 64px 0 64px;
             width: 100%;
         }
 
@@ -5437,7 +5439,7 @@ a {
             font-weight: 600;
             color: rgba(0, 0, 0, 0.4);
             text-transform: uppercase;
-            margin: 0;
+        }
 
             .bone-pattern-bg {
                 width: 100%;
@@ -5767,3 +5769,237 @@ a {
             .abilka-img-wrapper:nth-child(even) {
                 background: #E8E8E8;
             }
+
+/* ==========================================================================
+   QUEST MODAL STYLES
+   ========================================================================== */
+
+/* QUEST MODAL OVERLAY */
+.quest-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85); /* Premium dark dim backdrop */
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px); /* Nice premium blur */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.quest-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+/* QUEST MODAL CARD */
+.quest-modal-card {
+    background: #353535; /* Figma Kisaw Grey/900 */
+    border-radius: 12px;
+    padding: 64px;
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Figma Width */
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(71, 225, 148, 0.15); /* Soft green glow */
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(251, 251, 251, 0.2) transparent;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quest-modal-overlay.active .quest-modal-card {
+    transform: scale(1);
+}
+
+.quest-modal-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.quest-modal-card::-webkit-scrollbar-thumb {
+    background: rgba(251, 251, 251, 0.2);
+    border-radius: 3px;
+}
+
+/* CLOSE BUTTON */
+.quest-modal-close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.quest-modal-close img {
+    width: 28px;
+    height: 28px;
+}
+
+.quest-modal-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.8;
+}
+
+/* HEADER STYLE */
+.quest-modal-header {
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.quest-modal-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #fbfbfb;
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.quest-modal-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.54;
+    color: #fbfbfb;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.quest-modal-description .text-accent-green {
+    color: #47e194; /* Kisaw Primary/Green */
+}
+
+/* Form fields styling inside modal to look like figma */
+.quest-modal-card .request-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.quest-modal-card .request-input-group {
+    border-bottom: 1.25px solid rgba(251, 251, 251, 0.3);
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.quest-modal-card .request-input-group.request-media-group {
+    border-bottom: none;
+}
+
+.quest-modal-card .request-input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #fbfbfb;
+    font-size: 18px;
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.quest-modal-card .request-input-group input::placeholder {
+    color: rgba(251, 251, 251, 0.5);
+    text-transform: uppercase;
+}
+
+.quest-modal-card .request-textarea-wrapper textarea {
+    border: 1.25px solid rgba(251, 251, 251, 0.3);
+    border-radius: 12px;
+    background: transparent;
+    padding: 16px 12px;
+    width: 100%;
+    height: 180px; /* Premium height for modal */
+    color: #fbfbfb;
+    font-size: 18px;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.quest-modal-card .request-textarea-wrapper textarea::placeholder {
+    color: rgba(251, 251, 251, 0.5);
+    text-transform: uppercase;
+}
+
+/* Submit button styling */
+.quest-modal-card .request-submit-btn {
+    background: #47e194;
+    color: #1e1e1e;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: uppercase;
+    border-radius: 12px;
+    padding: 16px 32px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    width: fit-content;
+}
+
+.quest-modal-card .request-submit-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.quest-modal-card .font-sub {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.54;
+    color: #fbfbfb;
+    opacity: 0.5;
+}
+
+.quest-modal-card .state-voice .font-sub {
+    color: #47e194;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quest-modal-card {
+        padding: 40px 24px;
+    }
+    
+    .quest-modal-title {
+        font-size: 32px;
+    }
+    
+    .quest-modal-description {
+        font-size: 15px;
+    }
+    
+    .quest-modal-close {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Ensure the form inside the modal card stretches to full width of the card */
+.quest-modal-card .request-form {
+    width: 100% !important;
+    max-width: 100% !important;
+}
