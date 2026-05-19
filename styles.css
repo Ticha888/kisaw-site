@@ -6019,3 +6019,82 @@ a {
     width: 100% !important;
     max-width: 100% !important;
 }
+
+/* ==========================================================================
+   STICKY HEADER NAVIGATION WITH DUAL-THEME GLASSMORPHISM
+   ========================================================================== */
+
+.header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    margin-left: -80px !important;
+    margin-right: -80px !important;
+    width: calc(100% + 160px) !important;
+    padding: 0 80px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    border-bottom: 1px solid transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: background 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
+                backdrop-filter 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
+                -webkit-backdrop-filter 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.header-desktop-layout {
+    padding: 64px 0 !important;
+    transition: padding 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.header-mobile-hero {
+    transition: padding 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* --- Scrolled / Sticky Active State --- */
+
+/* 1. Dark Theme Page Active State */
+.header--scrolled.header--dark {
+    background: rgba(30, 30, 30, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 2. Light Theme Page Active State */
+.header--scrolled.header--light {
+    background: rgba(251, 251, 251, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Compact padding transitions */
+.header--scrolled .header-desktop-layout {
+    padding: 24px 0 !important;
+}
+
+.header--scrolled .header-mobile-hero {
+    padding: 20px 18px 20px !important;
+}
+
+/* --- Responsive Alignments --- */
+@media (max-width: 1100px) {
+    .header {
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+        width: calc(100% + 80px) !important;
+        padding: 0 40px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        margin-left: -22px !important;
+        margin-right: -22px !important;
+        width: calc(100% + 44px) !important;
+        padding: 0 22px !important;
+        border-radius: 0 !important; /* Overrides parent boundary radius when sticky */
+    }
+}
