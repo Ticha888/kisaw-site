@@ -531,4 +531,28 @@
     } else {
         setupAllForms();
     }
+
+    // --- STICKY HEADER SCROLL OBSERVER ---
+    function setupStickyHeader() {
+        const header = document.querySelector('.header');
+        if (!header) return;
+
+        function checkScroll() {
+            if (window.scrollY > 15) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll, { passive: true });
+        // Run immediately in case the page is loaded scrolled
+        checkScroll();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupStickyHeader);
+    } else {
+        setupStickyHeader();
+    }
 })();
