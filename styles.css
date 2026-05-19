@@ -1268,7 +1268,7 @@ a {
 /* ─── Why Us V3 ──────────────────────────────────────────────────────── */
 
 .why-us-v3 {
-    padding: 80px 0;
+    padding: 148px 0;
     background: #1E1E1E;
 }
 
@@ -2317,7 +2317,7 @@ a {
 
 /* Cases Section */
 .cases-section {
-    margin-bottom: 128px;
+    margin-bottom: 148px;
 }
 
 .cases-rows-container {
@@ -3100,7 +3100,7 @@ a {
 
 /* Request Form Section on Case Pages */
 .request-form-section {
-    margin-top: -64px !important;
+    margin-top: 148px !important;
     border-radius: 0 !important;
     margin-top: 0;
     padding-top: 60px !important;
@@ -3854,121 +3854,128 @@ a {
 
 
 
-/* New Hero Physics */
-.new-hero-physics {
-    position: relative;
-    width: calc(100% + 160px);
-    margin-left: -80px;
-    margin-right: -80px;
-    height: 600px;
-    background: rgb(53, 53, 53);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.ph-el {
-    position: absolute;
-    top: 0;
-    left: 0;
-    will-change: transform;
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-    z-index: 10;
-}
-
-/* Increase hover area for better reactivity */
-.ph-el::after {
-    content: '';
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    right: -25px;
-    bottom: -25px;
-    pointer-events: auto;
-    z-index: -1;
-}
-
-.ph-grenade {
-    cursor: url('img/imgs_for_main/icons_hero_screen/boommouse.png') 16 16, pointer;
-}
-
-.ph-text {
-    background: transparent;
-    color: rgb(251, 251, 251);
-    padding: 2px 14px;
-    border-radius: 4px;
-    font-size: 64px;
-    line-height: 1.1;
-    font-weight: 900;
-    font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    white-space: nowrap;
+/* Brand Typography Hero Section */
+.hero-section.brand-typography-hero {
+    background: transparent !important;
+    border-radius: 0 !important;
+    min-height: 80vh !important;
+    overflow: visible !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.4s ease, background 0.4s ease, -webkit-background-clip 0.4s ease;
-    background-clip: padding-box;
-    /* Default */
 }
 
-.ph-img img {
-    display: block;
-    max-width: 100%;
-    pointer-events: none;
-}
-
-.ph-piano img {
-    height: 500px !important;
-    width: auto;
-}
-
-.avatar-circle img {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.ph-vector {
-    border: 2px solid rgb(251, 251, 251);
-    border-radius: 20px;
-}
-
-.ph-grenade:hover {
-    cursor: url('img/imgs_for_main/icons_hero_screen/boommouse.png'), auto !important;
-}
-
-.ph-blue {
-    background: rgb(180, 222, 246);
-    width: 134px;
-    height: 41px;
-}
-
-.ph-pink {
-    background: rgb(255, 218, 239);
-    width: 134px;
-    height: 41px;
-}
-
-.ph-green {
-    background: rgb(71, 225, 148);
-    width: 134px;
-    height: 41px;
-}
-
-.ph-color-bars {
+.hero-typo-container {
     display: flex;
-    width: 161px;
-    height: 32px;
-    border-radius: 4px;
-    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: clamp(6px, 0.82vw, 11.87px);
+    padding: 0 20px;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.ph-color-bars>div {
-    flex: 1;
+.hero-typo-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.76vw, 25.32px);
+    width: 100%;
+    white-space: nowrap;
 }
 
+.hero-word {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 9.5vw, 136.66px);
+    line-height: 0.9;
+    letter-spacing: normal;
+    display: inline-block;
+    cursor: pointer;
+    color: #FBFBFB;
+    -webkit-text-fill-color: #FBFBFB;
+    -webkit-text-stroke: 1.26px transparent;
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                -webkit-text-fill-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                -webkit-text-stroke 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                text-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, color, text-shadow;
+}
+
+/* Hover Accent States as defined in Brandbook node 2476:16868 */
+
+/* 1. Pink State */
+.hero-word.word-pink:hover {
+    transform: scale(1.06);
+    color: #FFDAEF;
+    -webkit-text-fill-color: #FFDAEF;
+    text-shadow: 0px 4px 10px rgba(255, 218, 239, 0.45);
+}
+
+/* 2. Blue State */
+.hero-word.word-blue:hover {
+    transform: scale(1.06);
+    color: #007EFA;
+    -webkit-text-fill-color: #007EFA;
+    text-shadow: 0px 4px 10px rgba(0, 126, 250, 0.45);
+}
+
+/* 3. Green State */
+.hero-word.word-green:hover {
+    transform: scale(1.06);
+    color: #47E194;
+    -webkit-text-fill-color: #47E194;
+    text-shadow: 0px 4px 10px rgba(71, 225, 148, 0.45);
+}
+
+/* 4. Glow White State */
+.hero-word.word-white:hover {
+    transform: scale(1.06);
+    color: #FBFBFB;
+    -webkit-text-fill-color: #FBFBFB;
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+}
+
+/* 5. Outlined White State */
+.hero-word.word-outline:hover {
+    transform: scale(1.06);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.26px #FBFBFB;
+}
+
+/* Tagline Style */
+.hero-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(1.6rem, 6.2vw, 90.2px);
+    line-height: 0.95;
+    color: #A6D3FF;
+    -webkit-text-fill-color: #A6D3FF;
+    -webkit-text-stroke: 0.83px #A6D3FF;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.hero-tagline:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Media Queries */
 @media (max-width: 1100px) {
-    .new-hero-physics {
+    .hero-section.brand-typography-hero {
         width: calc(100% + 80px);
         margin-left: -40px;
         margin-right: -40px;
@@ -3976,10 +3983,19 @@ a {
 }
 
 @media (max-width: 800px) {
-    .new-hero-physics {
+    .hero-section.brand-typography-hero {
         width: calc(100% + 44px);
         margin-left: -22px;
         margin-right: -22px;
+        min-height: 60vh !important;
+    }
+    .hero-typo-container {
+        gap: 8px;
+        padding: 0 16px;
+    }
+    .hero-typo-row {
+        gap: 12px;
+        flex-wrap: wrap; /* allow natural line breaks on small mobile viewports */
     }
 }
 
@@ -5201,9 +5217,9 @@ a {
         .philosophy-content {
             width: 100%;
             max-width: 1280px;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 120px;
             padding-bottom: 120px;
             margin: 0 auto;
