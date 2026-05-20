@@ -8,18 +8,18 @@
     <title>About - KISAW</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=1.4">
     <style>
         /* Base typography enforcement */
-        .about-content-inner, 
-        .about-content-inner h1, 
-        .about-content-inner p, 
+        .about-content-inner,
+        .about-content-inner h1,
+        .about-content-inner p,
         .about-content-inner span,
         .about-content-inner div {
-            color: #fbfbfb !important;
-            text-transform: uppercase !important;
+            color: #fbfbfb;
         }
 
         #about-tab-content {
@@ -31,25 +31,26 @@
         }
 
         .about-h1 {
-            font-family: 'Inter', sans-serif !important;
-            font-size: 60px !important;
-            font-weight: 900 !important;
-            line-height: 1 !important;
-            margin-bottom: 40px !important;
-            letter-spacing: -0.02em !important;
+            font-family: 'Bebas Neue', sans-serif !important;
+            font-size: clamp(3.5rem, 8vw, 110px) !important;
+            font-weight: 400 !important;
+            line-height: 0.9 !important;
+            margin-bottom: 0px !important;
+            letter-spacing: normal !important;
             text-align: left !important;
             width: 100%;
+            text-transform: uppercase !important;
         }
 
-        .about-h1 .gray { color: #a3a3a3 !important; font-size: 0.9em !important; margin: 0 4px !important; }
-        
+        .about-h1 .gray {
+            color: #a3a3a3 !important;
+            font-size: 0.9em !important;
+            margin: 0 4px !important;
+        }
+
         .about-tags-list {
-            display: flex;
-            gap: 42px !important;
-            flex-wrap: wrap;
-            justify-content: flex-start !important;
-            margin-bottom: 64px !important;
-            width: 100%;
+            display: none !important;
+            /* Hide tags list as shown in the screenshot */
         }
 
         .about-tag-item {
@@ -61,42 +62,53 @@
 
         .about-intro-section {
             width: 100%;
-            margin-bottom: 96px !important;
+            margin-bottom: 160px !important;
             text-align: left !important;
         }
 
         .about-intro-text p {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
-            font-weight: 600 !important;
-            line-height: 1.55 !important;
+            font-weight: 500 !important;
+            line-height: 1.5 !important;
             margin-bottom: 0 !important;
+            text-transform: none !important;
         }
 
         .about-info-stats {
-            margin-top: 38px !important;
+            margin-top: 32px !important;
             display: flex !important;
             flex-direction: column !important;
-            gap: 0 !important;
+            gap: 8px !important;
         }
 
         .about-stat-line {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 600 !important;
-            line-height: 1.55 !important;
+            line-height: 1.4 !important;
+            text-transform: uppercase !important;
         }
-        
-        .about-stat-line .value { color: #b3b3b3 !important; }
+
+        .about-stat-line .label {
+            color: #47e194 !important;
+            margin-right: 6px !important;
+        }
+
+        .about-stat-line .value {
+            color: #b3b3b3 !important;
+        }
 
         .about-team-grid {
             width: 100%;
             max-width: 974px !important;
             display: flex !important;
             flex-direction: column !important;
-            gap: 96px !important;
-            margin: 0 auto !important; /* Center the grid itself */
-            align-items: center !important; /* Center the cards inside */
+            gap: 80px !important;
+            margin: 0 auto !important;
+            /* Center the grid itself */
+            align-items: center !important;
+            /* Center the cards inside */
         }
 
         .about-member-card {
@@ -104,6 +116,7 @@
             flex-direction: row !important;
             gap: 60px !important;
             align-items: flex-start !important;
+            width: 100% !important;
         }
 
         .about-member-left {
@@ -118,19 +131,19 @@
             margin-bottom: 0 !important;
         }
 
-        .about-tg-msg { 
+        .about-tg-msg {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 500 !important;
             font-style: italic !important;
-            color: #dedede !important; 
+            color: #dedede !important;
             line-height: 1.2 !important;
             margin-bottom: 12px !important;
             text-align: left !important;
             display: block !important;
         }
 
-        .about-handle { 
+        .about-handle {
             font-family: 'Inter', sans-serif !important;
             font-size: 28px !important;
             font-weight: 900 !important;
@@ -142,38 +155,44 @@
         .about-member-right {
             padding-top: 0 !important;
             text-align: left !important;
-            flex: 1 !important; /* Allow it to take remaining space */
+            flex: 1 !important;
+            /* Allow it to take remaining space */
         }
 
         .about-member-name {
             font-family: 'Inter', sans-serif !important;
-            font-size: 18px !important;
-            font-weight: 600 !important;
-            margin-bottom: 12px !important; /* Increased gap to role */
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: #fbfbfb !important;
+            margin-bottom: 8px !important;
             display: block !important;
+            text-transform: uppercase !important;
         }
 
-        .about-content-inner .about-member-role { 
+        .about-content-inner .about-member-role {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 600 !important;
-            color: #47e194 !important; 
-            margin-bottom: 38px !important;
+            color: #47e194 !important;
+            margin-bottom: 24px !important;
             display: block !important;
+            text-transform: uppercase !important;
         }
 
-        .about-member-bio { 
+        .about-member-bio {
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
-            font-weight: 600 !important;
-            color: #dedede !important; 
-            line-height: 1.55 !important;
+            font-weight: 400 !important;
+            color: #dedede !important;
+            line-height: 1.6 !important;
+            text-transform: none !important;
         }
 
         .about-member-bio p {
-            margin-bottom: 1.55em !important;
+            margin-bottom: 16px !important;
+            text-transform: none !important;
         }
-        
+
         .about-member-bio p:last-child {
             margin-bottom: 0 !important;
         }
@@ -184,18 +203,19 @@
             padding: 4px !important;
             border-radius: 40px !important;
             gap: 8px !important;
-            margin: 0 auto 48px auto !important;
+            margin: 0 auto 96px auto !important;
         }
 
-        .about-tab-btn { 
+        .about-tab-btn {
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
-            width: 180px !important; /* Force equal width for perfect symmetry */
+            width: 180px !important;
+            /* Force equal width for perfect symmetry */
             font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
             font-weight: 600 !important;
-            color: #1e1e1e !important; 
+            color: #1e1e1e !important;
             padding: 12px 16px !important;
             border-radius: 40px !important;
             cursor: pointer !important;
@@ -203,10 +223,10 @@
             text-transform: uppercase !important;
             text-align: center !important;
         }
-        
-        .about-tab-btn.active { 
+
+        .about-tab-btn.active {
             background: #1e1e1e !important;
-            color: #fbfbfb !important; 
+            color: #fbfbfb !important;
         }
 
         /* Philosophy Styles (Forced) */
@@ -225,7 +245,8 @@
             width: 100% !important;
             max-width: 1008px !important;
             text-align: left !important;
-            padding: 0 20px !important; /* Safety for very narrow screens */
+            padding: 0 20px !important;
+            /* Safety for very narrow screens */
         }
 
         .philosophy-intro-text p {
@@ -249,6 +270,7 @@
                 margin-right: -20px !important;
                 gap: 64px !important;
             }
+
             .philosophy-intro-text {
                 padding: 0 40px !important;
             }
@@ -366,9 +388,11 @@
             .palette-overlay {
                 top: 30px !important;
             }
+
             .palette-squares {
                 margin-bottom: 24px !important;
             }
+
             .palette-square {
                 width: 30px !important;
                 height: 22px !important;
@@ -399,13 +423,60 @@
 
         /* Responsive overrides */
         @media (max-width: 1024px) {
-            .why-bone-title { font-size: 100px !important; }
+            .why-bone-title {
+                font-size: 100px !important;
+            }
         }
+
         @media (max-width: 768px) {
-            .why-bone-title { font-size: 60px !important; }
-            .palette-title { font-size: 48px !important; }
+            .why-bone-title {
+                font-size: 60px !important;
+            }
+
+            .palette-title {
+                font-size: 48px !important;
+            }
         }
-    </style></head>
+
+        .about-content-inner .request-form-section {
+            margin-top: 80px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .about-content-inner .request-form-section .request-form-title {
+            color: #fbfbfb !important;
+        }
+
+        .about-content-inner .request-form-section .request-form-description {
+            color: #dedede !important;
+        }
+
+        .about-content-inner .request-form-section .helper-text {
+            color: #8c8c8c !important;
+        }
+
+        .about-content-inner .request-form-section input,
+        .about-content-inner .request-form-section textarea {
+            color: #fbfbfb !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .about-content-inner .request-form-section .request-submit-btn {
+            color: #1e1e1e !important;
+            background: #47e194 !important;
+        }
+
+        @media (min-width: 769px) {
+            .about-content-inner .request-form-section {
+                width: calc(100% + 80px) !important;
+                margin-left: -40px !important;
+                margin-right: -40px !important;
+                margin-top: 120px !important;
+                border-radius: 12px !important;
+            }
+        }
+    </style>
+</head>
 
 <body class="main-page about-page-body">
     <div class="page">
@@ -425,7 +496,7 @@
                                 <img src="img/bone white.svg" alt="logo" class="logo-img">
                                 <span class="logo">KISAW</span>
                             </a>
-                            <p class="tagline">a Design studio by visual enthusiasts</p>
+                            <p class="tagline">by nika and vanya</p>
                         </div>
                         <nav class="nav">
                             <div class="nav-links">
@@ -445,7 +516,7 @@
                         <div class="logo-stack">
                             <img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main">
                         </div>
-                        <p class="tagline">a Design studio by visual enthusiasts</p>
+                        <p class="tagline">by nika and vanya</p>
                         <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
                             <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
                         </button>
@@ -477,22 +548,12 @@
                     </div>
 
                     <div id="about-tab-content">
-                        <h1 class="about-h1">BRANDING<span class="gray">&</span>CREATIVE<span class="gray">&</span>COMMUNICATION</h1>
-                        
-                        <div class="about-tags-list">
-                            <span class="about-tag-item">COMPANY BRAND</span>
-                            <span class="about-tag-item">PERSONAL BRAND</span>
-                            <span class="about-tag-item">GRAPHIC<span class="gray">/WEB</span> DESIGN</span>
-                            <span class="about-tag-item">CONCEPT</span>
-                            <span class="about-tag-item">UNIVERSES</span>
-                            <span class="about-tag-item">AI</span>
-                        </div>
+                        <h1 class="about-h1">HELLO, WE ARE A DESIGN CREW</h1>
 
                         <div class="about-intro-section">
                             <div class="about-intro-text">
-                                <p><span style="color: #47e194 !important;">KISAW</span> IS A BRANDING AND DIGITAL DESIGN STUDIO.</p>
-                                <p>WE WORK WITH BRANDS AS SYSTEMS, FROM MEANING AND STRUCTURE TO VISUAL IDENTITY AND DIGITAL PRODUCTS.</p>
-                                <p>PROJECTS ARE HANDLED BY A SMALL TEAM DIRECTLY INVOLVED IN THE PROCESS.</p>
+                                <p>Nika and Vanya, and we are looking for diverse projects. We work with brands,
+                                    specialists, creators, and manufacturers.</p>
                             </div>
                             <div class="about-info-stats">
                                 <div class="about-stat-line">
@@ -500,8 +561,10 @@
                                     <span class="value">2025 (PODGORICA, MONTENEGRO)</span>
                                 </div>
                                 <div class="about-stat-line">
-                                    <span class="label">PRODUCTS:</span>
-                                    <span class="value">ART DIRECTION, MANAGEMENT, CONCEPTION, DIGITAL DESIGN, GRAPHIC DESIGN, VISUAL IDENTITY</span>
+                                    <span class="label">SERVICES:</span>
+                                    <span class="value">GRAPHIC/WEB DESIGN, ART DIRECTION, MANAGEMENT, COMPANY BRAND,
+                                        CONCEPTION, PERSONAL BRAND, DIGITAL DESIGN, CONCEPT, GRAPHIC DESIGN, VISUAS,
+                                        CREATIVE, APP, ADS, UNIVERSES, AI</span>
                                 </div>
                             </div>
                         </div>
@@ -513,11 +576,21 @@
                                     <img src="img/Anika avatar.png" alt="Nika Pizhma" class="about-member-photo">
                                 </div>
                                 <div class="about-member-right">
-                                    <span class="about-member-name">Nika Pizhma</span>
-                                    <span class="about-member-role">art director</span>
-                                    <div class="about-member-bio">
-                                        <p>At Kisaw, I am responsible for strategy, visual foundations, and meaning. My background includes leading design teams and developing systems for diverse markets ranging from branding to complex digital products.</p>
-                                        <p>I don’t limit myself to identity alone; I’m driven to work on any project that requires creativity, narrative, and structure. My approach is about building an architecture where every element, from an illustration to an interface, is logically grounded and communicates the project's core values.</p>
+                                    <span class="about-member-name">Anika Pizhma</span>
+                                    <span class="about-member-role">art director and creator</span>
+                                    <div class="about-member-bio">services
+                                        <p>With a background in illustration and communication design, I transitioned
+                                            into brand design because I love managing processes and finding short cuts
+                                            to effective results. At Kisaw, I am responsible for strategy, visual
+                                            foundations, and core meanings.</p>
+                                        <p>I will guide your project from start to finish. My experience includes
+                                            leading design teams and developing systems for a wide range of markets.</p>
+                                        <p>I don't limit myself to identity alone. I am driven to work on any project
+                                            that requires creativity, narrative, and clear structure. I thrive on
+                                            diverse challenges and value efficiency, so I am always ready to pitch ideas
+                                            and discover new ways to achieve any goal. You will always be in the loop:
+                                            we provide daily updates, and I tightly control the process to eliminate
+                                            delays and wasted resources.</p>
                                     </div>
                                 </div>
                             </div>
@@ -529,28 +602,152 @@
                                 </div>
                                 <div class="about-member-right">
                                     <span class="about-member-name">Ivan diachkov</span>
-                                    <span class="about-member-role">Product Designer</span>
+                                    <span class="about-member-role">Product and Web Designer</span>
                                     <div class="about-member-bio">
-                                        <p>At Kisaw I am responsible for product design and technical implementation. My background includes 6 years of experience working on major digital platforms, including fintech and international projects. I design interfaces and landing pages based on data and analytics; in my recent cases, page redesigns led to conversion growth from 28% to 33%.</p>
-                                        <p>My profile sits at the intersection of design and frontend development. I understand how design translates into code, I am familiar with CMS limitations, and I know how to build systems that are technically sustainable. I integrate AI into Kisaw processes as a tool for prototyping, copywriting, and requirement analysis. This allows us to accelerate production while keeping the results manageable and consistent with the design system.</p>
+                                        <p>I guide projects through web development and analytics, completely bridging
+                                            the gaps between concept, design, and code. At Kisaw, I am responsible for
+                                            product design and technical implementation. My background includes 6 years
+                                            of experience working with major digital platforms, including fintech and
+                                            international projects. I design interfaces and landing pages based on data
+                                            and analytics; in my recent cases, page redesigns led to conversion growth
+                                            from 28% to 33%.</p>
+                                        <p>My profile sits at the intersection of design and frontend development. I
+                                            clearly understand how a layout translates into code, know CMS limitations,
+                                            and build technically sustainable systems. I practice vibecode and integrate
+                                            AI (Claude, Antigravity, ChatGPT, Stitch, Gemini) into the studio's
+                                            processes. Using them for prototyping, copywriting, and requirement analysis
+                                            allows us to accelerate production while keeping the results predictable and
+                                            consistent with the design system.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <section id="request-form" class="request-form-section variant-refined">
+                            <div class="request-form-layout">
+                                <div class="request-form-copy">
+                                    <h2 class="request-form-title">Drop Your<br>Quest Here</h2>
+                                    <p class="request-form-description">
+                                        <span class="text-accent-green">Tell us about your project.</span><br>We'll
+                                        review what you
+                                        have, listen to your ideas, and
+                                        propose a clear direction for how the project should look, sound, and
+                                        communicate.
+                                    </p>
+                                </div>
+
+                                <form id="services-form" class="request-form variant-refined state-default" action="#"
+                                    method="post" enctype="multipart/form-data">
+                                    <div class="request-form-fields">
+                                        <div class="request-input-group">
+                                            <input id="request-name" name="name" type="text" placeholder="NAME">
+                                        </div>
+                                        <div class="request-input-group">
+                                            <input id="request-email" name="email" type="email" placeholder="EMAIL">
+                                        </div>
+                                        <div class="request-input-group request-media-group">
+                                            <div class="request-textarea-wrapper">
+                                                <textarea id="request-message" name="message"
+                                                    placeholder="Tell us about your project and task"
+                                                    rows="3"></textarea>
+                                            </div>
+                                            <!-- Attached Files List (visible in file state) -->
+                                            <div class="request-files-section">
+                                                <div class="files-label">ATTACHED FILES</div>
+                                                <div class="files-list"></div>
+                                            </div>
+
+                                            <!-- Voice Recording Panel (visible in voice state) -->
+                                            <div class="request-voice-recording-panel">
+                                                <div class="voice-recording-header">
+                                                    <div class="recording-indicator">
+                                                        <span class="recording-dot"></span>
+                                                        <span class="recording-label">RECORDING</span>
+                                                    </div>
+                                                    <span class="recording-timer">00:00</span>
+                                                </div>
+
+                                                <div class="voice-waveform">
+                                                    <div class="wave-bar h1"></div>
+                                                    <div class="wave-bar h4"></div>
+                                                    <div class="wave-bar h2"></div>
+                                                    <div class="wave-bar h5"></div>
+                                                    <div class="wave-bar h3"></div>
+                                                    <div class="wave-bar h4"></div>
+                                                    <div class="wave-bar h1"></div>
+                                                    <div class="wave-bar h5"></div>
+                                                    <div class="wave-bar h2"></div>
+                                                    <div class="wave-bar h3"></div>
+                                                    <div class="wave-bar h4"></div>
+                                                    <div class="wave-bar h1"></div>
+                                                    <div class="wave-bar h5"></div>
+                                                    <div class="wave-bar h2"></div>
+                                                    <div class="wave-bar h3"></div>
+                                                    <div class="wave-bar h4"></div>
+                                                    <div class="wave-bar h1"></div>
+                                                    <div class="wave-bar h5"></div>
+                                                    <div class="wave-bar h2"></div>
+                                                    <div class="wave-bar h3"></div>
+                                                    <div class="wave-bar h1 opac"></div>
+                                                    <div class="wave-bar h2 opac"></div>
+                                                </div>
+
+                                                <div class="voice-controls">
+                                                    <button type="button" class="btn-stop-record"><span
+                                                            class="stop-icon"></span></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="request-helper-row">
+                                                <div class="helper-text" id="helper-status">If you can't be bothered to
+                                                    type,
+                                                    just say what's on your mind.</div>
+                                                <div class="helper-icons">
+                                                    <button type="button" class="icon-btn btn-mic-toggle">
+                                                        <img src="img/Mic.svg" alt="Mic" width="28" height="28">
+                                                    </button>
+                                                    <input type="file" id="request-file-upload"
+                                                        accept="image/*,.txt,.pdf,.doc,.docx" multiple
+                                                        style="display: none;">
+                                                    <button type="button" class="icon-btn btn-clip-toggle">
+                                                        <img src="img/Paperclip.svg" alt="Paperclip" width="28"
+                                                            height="28">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="request-submit-btn" id="btn-submit">HERE'S MY
+                                        PROJECT</button>
+                                </form>
+                            </div>
+                        </section>
                     </div>
 
 
                     <div id="philosophy-tab-content" style="display: none;" class="philosophy-content">
                         <div class="philosophy-intro-text">
-                            <p>We believe in systems that make you feel something. Design isn't just about making things look good — it's about creating a structure that holds emotion, logic, and intent. We strip away the unnecessary until what's left is undeniable.</p>
-                            <p>Our approach is rooted in clarity and impact. Whether it's a brand identity, a digital product, or an entire ecosystem, we build it to be resilient, scalable, and impossible to ignore. We don't do "okay". We do exceptional.</p>
-                            <p>We are a compact, highly specialized team. We don't have account managers or bureaucracy. You work directly with the creators. This means faster iterations, deeper understanding, and a final product</p>
+                            <p>We believe in systems that make you feel something. Design isn't just about making things
+                                look good — it's about creating a structure that holds emotion, logic, and intent. We
+                                strip away the unnecessary until what's left is undeniable.</p>
+                            <p>Our approach is rooted in clarity and impact. Whether it's a brand identity, a digital
+                                product, or an entire ecosystem, we build it to be resilient, scalable, and impossible
+                                to ignore. We don't do "okay". We do exceptional.</p>
+                            <p>We are a compact, highly specialized team. We don't have account managers or bureaucracy.
+                                You work directly with the creators. This means faster iterations, deeper understanding,
+                                and a final product</p>
                         </div>
-                        <img src="img/whybone.svg?v=5" alt="Why Bone?" style="width: 70%; height: auto; display: block; margin: 0 auto;">
+                        <img src="img/whybone.svg?v=5" alt="Why Bone?"
+                            style="width: 70%; height: auto; display: block; margin: 0 auto;">
                         <div class="philosophy-intro-text">
-                            <p>THE <img src="img/bone white.svg" alt="" class="inline-bone"> IN OUR MARK STANDS FOR STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF, BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT’S A REMINDER THAT THE RESULT IS BUILT ON A SYSTEM, NOT DECORATION.</p>
+                            <p>THE <img src="img/bone white.svg" alt="" class="inline-bone"> IN OUR MARK STANDS FOR
+                                STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF,
+                                BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER
+                                SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT’S A REMINDER THAT THE RESULT
+                                IS BUILT ON A SYSTEM, NOT DECORATION.</p>
                         </div>
-                        <img src="img/Kiss%20%2B%20Saw.svg?v=2" alt="Kiss + Saw" style="width: 80%; height: auto; display: block; margin: -120px auto 0 !important; transform: translateX(100px) !important;">
+                        <img src="img/Kiss%20%2B%20Saw.svg?v=2" alt="Kiss + Saw"
+                            style="width: 80%; height: auto; display: block; margin: -120px auto 0 !important; transform: translateX(100px) !important;">
                         <div class="philosophy-palette-container">
                             <div class="palette-overlay">
                                 <div class="palette-squares">
@@ -561,11 +758,16 @@
                                     <div class="palette-square" style="background: #007BFF;"></div>
                                 </div>
                                 <div class="palette-text philosophy-intro-text" style="padding: 0 20px !important;">
-                                    <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
-                                    <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW. THE ACCENT IS NOT DECORATION, IT’S NAVIGATION, PRIORITIZATION, AND PROCESS CONTROL.</p>
+                                    <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF
+                                        PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
+                                    <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT
+                                        MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW.
+                                        THE ACCENT IS NOT DECORATION, IT’S NAVIGATION, PRIORITIZATION, AND PROCESS
+                                        CONTROL.</p>
                                 </div>
                             </div>
-                            <img src="img/Palette.svg?v=2" alt="Palette" style="width: 100%; height: auto; display: block;">
+                            <img src="img/Palette.svg?v=2" alt="Palette"
+                                style="width: 100%; height: auto; display: block;">
                         </div>
                     </div>
                 </main>
@@ -574,7 +776,8 @@
                 <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
-                            <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
+                            <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img
+                                        src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
                             </div>
                             <div class="footer-socials">
                                 <a href="#" class="footer-social-link" aria-label="X (Twitter)">
@@ -615,7 +818,8 @@
                     </div>
                     <div class="footer-copyright-row">
                         <span>Made by</span>
-                        <a href="/" class="footer-bone-link"><img src="img/imgs_for_main/kisaw_logo_white.svg" alt="" class="footer-bone-icon"></a>
+                        <a href="/" class="footer-bone-link"><img src="img/imgs_for_main/kisaw_logo_white.svg" alt=""
+                                class="footer-bone-icon"></a>
                         <span>KISAW 2026</span>
                     </div>
                 </footer>
@@ -628,7 +832,7 @@
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.about-tab-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
+
                 const target = btn.getAttribute('data-tab');
                 const aboutTab = document.getElementById('about-tab-content');
                 const philoTab = document.getElementById('philosophy-tab-content');
@@ -640,11 +844,11 @@
                     if (badgeImg) badgeImg.src = 'img/badge about.png';
                 } else {
                     aboutTab.style.display = 'none';
-                    
+
                     philoTab.style.display = 'flex';
                     philoTab.style.flexDirection = 'column';
                     philoTab.style.alignItems = 'center';
-                    
+
                     if (badgeImg) badgeImg.src = 'img/brandbook badge.png';
                 }
             });
@@ -654,4 +858,3 @@
 </body>
 
 </html>
-
