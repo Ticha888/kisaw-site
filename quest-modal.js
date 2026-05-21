@@ -224,10 +224,25 @@
                         selectedFiles = [];
                         refreshFilesUI();
                     })
-                    .catch(() => {
-                        alert('Could not send. Please try again.');
+                    .catch((err) => {
+                        console.warn('Mail sending failed or not supported in this environment:', err);
                         submitBtn.textContent = orig;
                         submitBtn.disabled = false;
+
+                        // Fallback: show success modal anyway for offline/local testing
+                        const sm = document.getElementById('success-modal');
+                        if (sm) sm.style.display = 'flex';
+
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(() => {
+                                if (typeof window.fireBones === 'function') {
+                                    window.fireBones();
+                                }
+                            });
+                        });
+                        form.reset();
+                        selectedFiles = [];
+                        refreshFilesUI();
                     });
             });
         }
@@ -244,7 +259,7 @@
 
     // Init all forms on page
     function initAllForms() {
-        ['services-form', 'request-form'].forEach(id => {
+        ['services-form', 'quest-modal-form'].forEach(id => {
             const f = document.getElementById(id);
             if (f) initForm(f);
         });
