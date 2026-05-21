@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /* Brand Package Page Specific Styles */
 
 :root {
@@ -9,20 +11,24 @@
 }
 
 .brand-package-page {
-    background-color: #f9f9f9;
+    background-color: #b8b8b8;
 }
 
-/* Sticky Blue Sidebar Badge */
 .sticky-sidebar-blue-layer {
     grid-area: sidebar;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     pointer-events: none;
-    z-index: 10;
+    z-index: 1 !important;
     min-width: 60px;
     position: relative;
-    right: -8px;
+    right: -40px !important;
+}
+
+body.services-page .sticky-sidebar-blue-layer {
+    right: -40px !important;
+    z-index: 1 !important;
 }
 
 .sticky-sidebar-blue {
@@ -54,30 +60,40 @@
 /* Hero Section / Intro */
 .brand-intro {
     padding-bottom: 40px;
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .brand-intro h1 {
-    font-size: 75px;
-    font-weight: 900;
-    color: var(--text-dark);
-    margin-bottom: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 110px);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: normal;
     text-transform: uppercase;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
+    color: var(--text-dark);
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .brand-intro p {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--text-dark);
+    margin-bottom: 12px;
+    max-width: 760px;
+    line-height: 1.45;
+}
+
+.brand-intro p:last-child {
     margin-bottom: 40px;
-    max-width: 1156px;
-    line-height: 1.4;
 }
 
 /* Section Headings */
 .section-title-large {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 900;
     color: var(--text-dark);
     margin-top: 36px;
@@ -89,18 +105,18 @@
 .process-section {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
 }
 
 .process-step {
-    margin-bottom: 48px;
+    margin-bottom: 0;
 }
 
 .process-step h3 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 
@@ -110,15 +126,15 @@
 }
 
 .process-step li {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--text-dark);
     margin-bottom: 8px;
-    line-height: 1.4;
+    line-height: 1.45;
 }
 
 .process-text-block {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--text-dark);
     white-space: pre-line;
@@ -127,10 +143,14 @@
 /* What You Get & How We Work */
 .content-section {
     margin-bottom: 80px;
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .deliverables-list {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--text-dark);
     line-height: 1.6;
@@ -138,12 +158,12 @@
 
 .work-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 32px;
 }
 
 .work-item h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--text-dark);
     text-transform: uppercase;
@@ -151,7 +171,7 @@
 }
 
 .work-item p {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--text-dark);
 }
 
@@ -174,14 +194,56 @@
 
 /* Responsive adjustments */
 @media (max-width: 1440px) {
-    .brand-intro h1 { font-size: 64px; }
     .sticky-sidebar-blue { font-size: 60px; }
 }
 
 @media (max-width: 1024px) {
-    .brand-intro h1 { font-size: 48px; }
     .request-form-layout {
         grid-template-columns: 1fr;
         gap: 60px;
     }
+}
+
+/* Services Switcher Tabs Styling */
+.services-switcher {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.services-switcher::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari/Edge */
+}
+
+.services-switch-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #EAEAEA;
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.services-switch-btn:hover {
+    background-color: var(--brand-green) !important;
+    color: #000 !important;
+}
+
+.services-switch-btn.active {
+    background-color: var(--brand-green) !important;
+    color: #000 !important;
 }

@@ -39,7 +39,7 @@
 
 /* Main Content Layout */
 .privacy-main {
-    padding: 118px 80px 128px;
+    padding: 40px 80px 128px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -50,7 +50,7 @@
     text-transform: uppercase;
     color: #1e1e1e;
     margin-bottom: 24px;
-    margin-top: 64px;
+    margin-top: 0;
 }
 
 .privacy-updated-date {
@@ -86,7 +86,7 @@
 }
 
 .policy-section h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     color: #1e1e1e;
@@ -95,7 +95,7 @@
 }
 
 .policy-section p {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     color: #1e1e1e;
     line-height: 1.4;
@@ -111,7 +111,7 @@
 }
 
 .policy-section li {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
     color: #1e1e1e;
     line-height: 1.4;

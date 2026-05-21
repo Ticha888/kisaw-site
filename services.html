@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -559,7 +559,7 @@
                 </main>
 
                 <!-- Request Form Section -->
-                <section id="request-form" class="request-form-section variant-refined">
+                <section id="request-form" class="request-form-section variant-refined" style="margin-bottom: 200px;">
 
 
                     <div class="request-form-layout">
@@ -659,32 +659,15 @@
                         <div class="footer-brand-col">
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
                             </div>
-                            <div class="footer-socials">
-                                <a href="#" class="footer-social-link" aria-label="X (Twitter)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                    </svg>
+                                                                                                                <div class="footer-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="footer-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance" width="40" height="40">
                                 </a>
-                                <a href="#" class="footer-social-link" aria-label="Instagram">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                    </svg>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="footer-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram" width="40" height="40">
                                 </a>
-                                <a href="#" class="footer-social-link" aria-label="YouTube">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn" width="40" height="40">
                                 </a>
                             </div>
                             <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
@@ -693,12 +676,13 @@
                             <a href="about.html" class="footer-nav-link">About</a>
                             <a href="services.html" class="footer-nav-link">Services</a>
                             <a href="index.html#cases-nav" class="footer-nav-link">Cases</a>
+                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
                         </div>
                     </div>
                     <div class="footer-copyright-row">
-                        <span>Made by</span>
+                        <span>Vibecoded by</span>
                         <a href="/" class="footer-bone-link"><img src="img/imgs_for_main/kisaw_logo_white.svg" alt="" class="footer-bone-icon"></a>
-                        <span>KISAW 2026</span>
+                        <span><strong>KISAW</strong> <em>2026</em></span>
                     </div>
                 </footer>
 
@@ -720,8 +704,6 @@
                 YA!</button>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('services-form');
@@ -740,23 +722,10 @@
                     if (form.classList.contains('state-voice')) {
                         stopRecording();
                     } else {
-                        // --- Confetti Effect ---
-                        const rect = submitBtn.getBoundingClientRect();
-                        const x = (rect.left + rect.width / 2) / window.innerWidth;
-                        const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-                        const bonePath = 'M24.4835 5.49995C25.0877 4.89575 25.4271 4.07627 25.4271 3.2218C25.4271 2.36732 25.0877 1.54785 24.4835 0.943643C23.8793 0.339439 23.0598 0 22.2053 0C21.3508 0 20.5314 0.339439 19.9272 0.943643C19.3275 1.54967 18.9912 2.36828 18.9943 3.2218L6.43279 3.22189C6.43453 2.79951 6.35305 2.38091 6.19299 1.99002C6.03293 1.59913 5.79744 1.2436 5.49995 0.943741C4.89575 0.339537 4.07627 9.84241e-05 3.2218 9.84241e-05C2.36732 9.84241e-05 1.54785 0.339537 0.943642 0.943741C0.339438 1.54795 1.89119e-07 2.36742 1.89119e-07 3.2219C1.89119e-07 4.07637 0.339439 4.89585 0.943643 5.50005C0.339439 6.10425 0 6.92373 0 7.7782C0 8.63268 0.339439 9.45215 0.943643 10.0564C1.54785 10.6606 2.36732 11 3.2218 11C4.07627 11 4.89575 10.6606 5.49995 10.0564C5.79744 9.7565 6.03293 9.40097 6.19299 9.01008C6.35305 8.61919 6.43453 8.20059 6.43279 7.7782L18.9943 7.77811C18.9912 8.63162 19.3275 9.45023 19.9272 10.0563C20.5314 10.6605 21.3508 10.9999 22.2053 10.9999C23.0598 10.9999 23.8793 10.6605 24.4835 10.0563C25.0877 9.45206 25.4271 8.63258 25.4271 7.77811C25.4271 6.92363 25.0877 6.10415 24.4835 5.49995Z';
-                        const boneShape = confetti.shapeFromPath({ path: bonePath });
-
-                        confetti({
-                            particleCount: 80,
-                            spread: 80,
-                            origin: { x, y },
-                            shapes: [boneShape],
-                            colors: ['#47E194', '#FBFBFB', '#1E1E1E', '#A6D3FF', '#FFDAEF', '#DD3737'],
-                            zIndex: 9999,
-                            scalar: 2.2
-                        });
+                        // --- Bones Animation ---
+                        if (typeof window.fireBones === 'function') {
+                            window.fireBones(submitBtn);
+                        }
 
                         const sModal = document.getElementById('success-modal');
                         if (sModal) sModal.style.display = 'flex';
@@ -954,8 +923,12 @@
             }
         });
     </script>
+    <script src="bones-confetti.js"></script>
     <script src="quest-modal.js"></script>
 </body>
 
 </html>
+
+
+
 

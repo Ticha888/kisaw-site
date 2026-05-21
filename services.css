@@ -3,7 +3,8 @@
 /* Fix: sidebar behind the white container */
 .sticky-sidebar-blue-layer {
     z-index: 1;
-    right: -40px !important; /* Tuck slightly less under the white block */
+    right: -40px !important;
+    /* Tuck slightly less under the white block */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -13,7 +14,8 @@
 /* Image badge styles */
 .sticky-sidebar-blue-img {
     position: sticky;
-    top: 64px; /* Align perfectly to the top (safe because the corner is tucked 80px deep!) */
+    top: 64px;
+    /* Align perfectly to the top (safe because the corner is tucked 80px deep!) */
     margin-top: 0;
     height: auto;
     width: auto;
@@ -40,6 +42,12 @@ body.services-page {
 .services-page-container {
     background: #FBFBFB;
     padding-bottom: 0;
+}
+
+.services-main {
+    max-width: 1152px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* Page Background */
@@ -157,7 +165,7 @@ body.services-page {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #007efa;
     text-decoration: underline;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1.4">
+    <link rel="stylesheet" href="styles.css?v=7">
     <style>
         /* Base typography enforcement */
         .about-content-inner,
@@ -20,6 +20,10 @@
         .about-content-inner span,
         .about-content-inner div {
             color: #fbfbfb;
+        }
+
+        .about-content-inner {
+            width: 100% !important;
         }
 
         #about-tab-content {
@@ -206,7 +210,7 @@
             margin: 0 auto 96px auto !important;
         }
 
-        .about-tab-btn {
+        .about-content-inner .about-tab-btn {
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
@@ -224,7 +228,7 @@
             text-align: center !important;
         }
 
-        .about-tab-btn.active {
+        .about-content-inner .about-tab-btn.active {
             background: #1e1e1e !important;
             color: #fbfbfb !important;
         }
@@ -232,6 +236,7 @@
         /* Philosophy Styles (Forced) */
         .philosophy-content {
             width: calc(100% + 160px) !important;
+            max-width: none !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
             display: flex;
@@ -251,11 +256,11 @@
 
         .philosophy-intro-text p {
             font-family: 'Inter', sans-serif !important;
-            font-size: 21px !important;
-            font-weight: 600 !important;
+            font-size: 18px !important;
+            font-weight: 500 !important;
             line-height: 1.55 !important;
             color: #fbfbfb !important;
-            text-transform: uppercase !important;
+            text-transform: none !important;
             margin-bottom: 28px !important;
         }
 
@@ -273,6 +278,12 @@
 
             .philosophy-intro-text {
                 padding: 0 40px !important;
+            }
+
+            .philosophy-palette-container {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
         }
 
@@ -325,12 +336,13 @@
         }
 
         .philosophy-text-block p {
+            font-family: 'Inter', sans-serif !important;
             font-size: 18px !important;
-            font-weight: 600 !important;
+            font-weight: 500 !important;
             color: #fbfbfb !important;
             line-height: 1.55 !important;
             text-align: center !important;
-            text-transform: uppercase !important;
+            text-transform: none !important;
         }
 
         .inline-bone {
@@ -350,6 +362,11 @@
         .philosophy-palette-container {
             position: relative !important;
             width: 100% !important;
+            max-width: 100% !important;
+            margin-top: -30px !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            align-self: stretch !important;
         }
 
         .palette-overlay {
@@ -362,6 +379,42 @@
             align-items: center !important;
             z-index: 5 !important;
             pointer-events: none !important;
+        }
+
+        .philosophy-action-btn {
+            background: #47E194 !important;
+            color: #1E1E1E !important;
+            border: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-decoration: none !important;
+            padding: 36px 60px !important;
+            border-radius: 20px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            letter-spacing: -0.03em !important;
+            white-space: nowrap !important;
+            cursor: pointer !important;
+            transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.2s !important;
+            text-transform: uppercase !important;
+            box-shadow: none !important;
+            pointer-events: auto !important;
+        }
+
+        .philosophy-action-btn:hover {
+            transform: scale(1.05) translateY(-2px) !important;
+            box-shadow: none !important;
+            color: #1E1E1E !important;
+            background: #5effab !important;
+            /* Slightly brighter green on hover */
+        }
+
+        .philosophy-action-btn:active {
+            transform: scale(0.98) !important;
+            box-shadow: none !important;
         }
 
         .palette-squares {
@@ -578,7 +631,7 @@
                                 <div class="about-member-right">
                                     <span class="about-member-name">Anika Pizhma</span>
                                     <span class="about-member-role">art director and creator</span>
-                                    <div class="about-member-bio">services
+                                    <div class="about-member-bio">
                                         <p>With a background in illustration and communication design, I transitioned
                                             into brand design because I love managing processes and finding short cuts
                                             to effective results. At Kisaw, I am responsible for strategy, visual
@@ -727,24 +780,27 @@
 
                     <div id="philosophy-tab-content" style="display: none;" class="philosophy-content">
                         <div class="philosophy-intro-text">
-                            <p>We believe in systems that make you feel something. Design isn't just about making things
-                                look good — it's about creating a structure that holds emotion, logic, and intent. We
-                                strip away the unnecessary until what's left is undeniable.</p>
-                            <p>Our approach is rooted in clarity and impact. Whether it's a brand identity, a digital
-                                product, or an entire ecosystem, we build it to be resilient, scalable, and impossible
-                                to ignore. We don't do "okay". We do exceptional.</p>
-                            <p>We are a compact, highly specialized team. We don't have account managers or bureaucracy.
-                                You work directly with the creators. This means faster iterations, deeper understanding,
-                                and a final product</p>
+                            <p>We&nbsp;believe in&nbsp;systems that&nbsp;make you feel something.
+                                Design&nbsp;isn't&nbsp;just&nbsp;about making things look good — it's&nbsp;about
+                                creating a&nbsp;structure that&nbsp;holds emotion, logic, and&nbsp;intent. We&nbsp;strip
+                                away the&nbsp;unnecessary until what's left is&nbsp;undeniable.</p>
+                            <p>Our&nbsp;approach is&nbsp;rooted in&nbsp;clarity and&nbsp;impact. Whether
+                                it's&nbsp;a&nbsp;brand identity, a&nbsp;digital product, or an entire ecosystem,
+                                we&nbsp;build it to&nbsp;be resilient, scalable, and&nbsp;impossible to&nbsp;ignore.
+                                We&nbsp;don't do "okay". We&nbsp;do exceptional.</p>
+                            <p>We&nbsp;are&nbsp;a&nbsp;compact, highly specialized team. We&nbsp;don't have account
+                                managers or bureaucracy. You work directly with&nbsp;the&nbsp;creators. This&nbsp;means
+                                faster iterations, deeper understanding, and&nbsp;a&nbsp;final product</p>
                         </div>
                         <img src="img/whybone.svg?v=5" alt="Why Bone?"
                             style="width: 70%; height: auto; display: block; margin: 0 auto;">
                         <div class="philosophy-intro-text">
-                            <p>THE <img src="img/bone white.svg" alt="" class="inline-bone"> IN OUR MARK STANDS FOR
-                                STRUCTURE AND FOUNDATION. WE START EVERY PROJECT FROM THE CORE: WE CLARIFY THE BRIEF,
-                                BUILD THE BRAND FRAMEWORK, AND DEFINE THE KEY MEANINGS, LOGIC, AND RULES THAT LATER
-                                SHAPE THE VISUALS, COPY, WEBSITE, AND ALL TOUCHPOINTS. IT’S A REMINDER THAT THE RESULT
-                                IS BUILT ON A SYSTEM, NOT DECORATION.</p>
+                            <p>The&nbsp;<img src="img/bone white.svg" alt="" class="inline-bone"> in&nbsp;our&nbsp;mark
+                                stands for&nbsp;structure and&nbsp;foundation. We&nbsp;start every project
+                                from&nbsp;the&nbsp;core: we&nbsp;clarify the&nbsp;brief, build the&nbsp;brand framework,
+                                and&nbsp;define the&nbsp;key meanings, logic, and&nbsp;rules that&nbsp;later shape
+                                the&nbsp;visuals, copy, website, and&nbsp;all touchpoints. It’s a&nbsp;reminder
+                                that&nbsp;the&nbsp;result is&nbsp;built on&nbsp;a&nbsp;system, not decoration.</p>
                         </div>
                         <img src="img/Kiss%20%2B%20Saw.svg?v=2" alt="Kiss + Saw"
                             style="width: 80%; height: auto; display: block; margin: -120px auto 0 !important; transform: translateX(100px) !important;">
@@ -758,16 +814,22 @@
                                     <div class="palette-square" style="background: #007BFF;"></div>
                                 </div>
                                 <div class="palette-text philosophy-intro-text" style="padding: 0 20px !important;">
-                                    <p>OUR CORE PALETTE IS BUILT AROUND BLACK, GREY, AND WHITE AS THE BASE TONES OF
-                                        PAPER AND INK, THE TOOLS WE USE TO DOCUMENT OUR IDEAS, STEPS, AND STRATEGY.</p>
-                                    <p>OUR COLOR ACCENTS WORK LIKE BOOKMARKS IN A BOOK OR A PLANNER. THEY HELP MARK WHAT
-                                        MATTERS, HIGHLIGHT KEY STAGES, AND KEEP FOCUS ON WHAT NEEDS ATTENTION RIGHT NOW.
-                                        THE ACCENT IS NOT DECORATION, IT’S NAVIGATION, PRIORITIZATION, AND PROCESS
-                                        CONTROL.</p>
+                                    <p>Our&nbsp;core palette is&nbsp;built around black, grey, and&nbsp;white as
+                                        the&nbsp;base tones of&nbsp;paper and&nbsp;ink, the&nbsp;tools we&nbsp;use
+                                        to&nbsp;document our&nbsp;ideas, steps, and&nbsp;strategy.</p>
+                                    <p>Our&nbsp;color accents work like bookmarks in&nbsp;a&nbsp;book or a&nbsp;planner.
+                                        They help mark what matters, highlight key stages, and&nbsp;keep focus
+                                        on&nbsp;what needs attention right now. The&nbsp;accent is&nbsp;not decoration,
+                                        it’s navigation, prioritization, and&nbsp;process control.</p>
+                                </div>
+                                <div
+                                    style="display: flex !important; justify-content: center !important; width: 100% !important; margin-top: 80px !important; pointer-events: auto !important;">
+                                    <a href="#request-form" class="philosophy-action-btn send-signal-btn">SEND THE
+                                        SIGNAL</a>
                                 </div>
                             </div>
                             <img src="img/Palette.svg?v=2" alt="Palette"
-                                style="width: 100%; height: auto; display: block;">
+                                style="width: 100% !important; height: auto; display: block;">
                         </div>
                     </div>
                 </main>
@@ -779,32 +841,15 @@
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img
                                         src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
                             </div>
-                            <div class="footer-socials">
-                                <a href="#" class="footer-social-link" aria-label="X (Twitter)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                    </svg>
+                                                                                                                <div class="footer-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="footer-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance" width="40" height="40">
                                 </a>
-                                <a href="#" class="footer-social-link" aria-label="Instagram">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                    </svg>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="footer-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram" width="40" height="40">
                                 </a>
-                                <a href="#" class="footer-social-link" aria-label="YouTube">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="footer-social-link" aria-label="LinkedIn">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn" width="40" height="40">
                                 </a>
                             </div>
                             <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
@@ -817,10 +862,10 @@
                         </div>
                     </div>
                     <div class="footer-copyright-row">
-                        <span>Made by</span>
+                        <span>Vibecoded by</span>
                         <a href="/" class="footer-bone-link"><img src="img/imgs_for_main/kisaw_logo_white.svg" alt=""
                                 class="footer-bone-icon"></a>
-                        <span>KISAW 2026</span>
+                        <span><strong>KISAW</strong> <em>2026</em></span>
                     </div>
                 </footer>
             </div>
@@ -854,6 +899,7 @@
             });
         });
     </script>
+    <script src="bones-confetti.js"></script>
     <script src="quest-modal.js"></script>
 </body>
 

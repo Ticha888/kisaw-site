@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,6 +69,11 @@
         .other-projects-section {
             padding: 100px 0 !important;
             margin-top: 0 !important;
+            background-color: #1E1E1E !important;
+            width: calc(100% + 160px) !important;
+            max-width: none !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
         }
 
         .other-projects-title {
@@ -77,6 +82,7 @@
             margin: 0 auto 40px auto !important;
             padding: 0 !important;
             text-align: left !important;
+            color: #FBFBFB !important;
         }
 
         .projects-carousel {
@@ -120,7 +126,11 @@
             margin-top: 0 !important;
             padding-top: 100px !important;
             padding-bottom: 80px !important;
-            background-color: #353535 !important;
+            background-color: #1E1E1E !important;
+            border-radius: 0 !important;
+            width: calc(100% + 160px) !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
         }
 
         .request-form-layout {
@@ -150,6 +160,7 @@
             margin-bottom: 40px !important;
             font-weight: 900 !important;
             text-transform: uppercase !important;
+            color: #FBFBFB !important;
         }
 
         .tags {
@@ -175,6 +186,7 @@
         .request-form-description {
             font-size: 24px !important;
             line-height: 1.4 !important;
+            color: #FBFBFB !important;
         }
 
         .buttons-wrap {
@@ -264,6 +276,16 @@
             font-weight: 900 !important;
             margin-bottom: 24px;
             text-transform: uppercase;
+        }
+
+        .new-site-footer {
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+            padding: 80px !important;
+            width: calc(100% + 160px) !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            background-color: #1E1E1E !important;
         }
     </style>
 </head>
@@ -499,20 +521,29 @@
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
                             </div>
                             <div class="footer-socials">
-                                <!-- Social Icons ... -->
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="footer-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance" width="40" height="40">
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="footer-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram" width="40" height="40">
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn" width="40" height="40">
+                                </a>
                             </div>
-                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@hello@kisaw.studio</a>
+                            <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
                         </div>
                         <div class="footer-nav-col">
                             <a href="about.html" class="footer-nav-link">About</a>
                             <a href="services.html" class="footer-nav-link">Services</a>
                             <a href="index.html#cases-nav" class="footer-nav-link">Cases</a>
+                            <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
                         </div>
                     </div>
                     <div class="footer-copyright-row">
-                        <span>Made by</span>
+                        <span>Vibecoded by</span>
                         <a href="/" class="footer-bone-link"><img src="img/imgs_for_main/kisaw_logo_white.svg" alt="" class="footer-bone-icon"></a>
-                        <span>KISAW 2026</span>
+                        <span><strong>KISAW</strong> <em>2026</em></span>
                     </div>
                 </footer>
             </div>
@@ -541,7 +572,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
@@ -664,8 +694,11 @@
             }
         });
     </script>
+    <script src="bones-confetti.js"></script>
     <script src="quest-modal.js"></script>
 </body>
 
 </html>
+
+
 

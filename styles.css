@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -1437,6 +1439,7 @@ a {
     background: #353535;
     padding: 72px 80px;
     overflow: hidden;
+    scroll-margin-top: 25vh;
 }
 
 .main-page .request-form-section {
@@ -1919,59 +1922,68 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.55);
     z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
 }
 
 .success-modal-card {
-    background: #1E1E1E;
-    border-radius: 12px;
-    padding: 36px 27px;
+    /* Circle shape — same size as the signal sent.png */
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
-    /* Gap between mascot, text-block, and button */
-    width: 397px;
-    /* Updated width */
+    justify-content: flex-end;
+    gap: 0;
     text-align: center;
-    box-shadow: 0 0 60px rgba(71, 225, 148, 0.4);
-    /* GREEN GLOW */
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    /* signal sent.png IS the background */
+    background-image: url('img/signal sent.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* No extra box-shadow — the image has its own edge */
+    filter: drop-shadow(0 8px 40px rgba(0,0,0,0.7));
 }
 
 .success-image-wrap {
-    width: 150px;
-    height: 150px;
-    border-radius: 25px;
-    overflow: hidden;
-    margin-bottom: 0;
+    /* Hide the separate mascot img — it's already baked into signal sent.png */
+    display: none;
 }
 
 .success-mascot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none;
 }
 
 .success-text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 13px;
-    /* Exact gap from Figma */
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .success-title {
     color: #fbfbfb;
-    font-size: 35px;
+    font-size: 34px;
     font-weight: 900;
     text-transform: uppercase;
     margin: 0;
     letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .success-desc {
@@ -1981,8 +1993,8 @@ a {
     opacity: 0.9;
     margin: 0 auto;
     text-transform: uppercase;
-    width: 247px;
-    /* Exact width for text wrapping */
+    max-width: 230px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .btn-got-it {
@@ -1997,7 +2009,38 @@ a {
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.15s, filter 0.15s;
+}
+
+.btn-got-it:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 520px) {
+    .success-modal-card {
+        width: 320px;
+        height: 320px;
+        padding-bottom: 48px;
+    }
+    .success-text-content {
+        margin-bottom: 14px;
+        gap: 7px;
+    }
+    .success-title {
+        font-size: 24px;
+    }
+    .success-desc {
+        font-size: 11px;
+        max-width: 170px;
+    }
+    .btn-got-it {
+        font-size: 13px;
+        padding: 6px 22px;
+        height: 34px;
+    }
 }
 
 .request-submit-btn {
@@ -2354,6 +2397,12 @@ a {
     justify-content: center;
 }
 
+/* Restrict the width of a single card to match the 2-card grid layout */
+.cases-row-single .case-card {
+    flex: 0 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
+}
+
 /* Case Cards */
 .case-card {
     background: #fbfbfb;
@@ -2383,7 +2432,7 @@ a {
 
 .case-card-image {
     width: 100%;
-    aspect-ratio: 696 / 288;
+    aspect-ratio: 978 / 674;
     /* Keeps perfect original proportions when scaling */
     position: relative;
     overflow: hidden;
@@ -2417,6 +2466,10 @@ a {
     background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%);
 }
 
+.skrepki-bg {
+    background: linear-gradient(135deg, #FFF4E0 0%, #FFE4B5 100%);
+}
+
 .case-card-content {
     /* Padding matches Figma */
     padding: 0 19px;
@@ -2436,7 +2489,8 @@ a {
 .content-abilka,
 .content-frozen,
 .content-boiling,
-.content-wdy {
+.content-wdy,
+.content-skrepki {
     width: 100%;
 }
 
@@ -2471,6 +2525,10 @@ a {
 .content-boiling .case-card-title,
 .content-wdy .case-card-title {
     color: #3a442c;
+}
+
+.content-skrepki .case-card-title {
+    color: #C47A00;
 }
 
 .case-card-location {
@@ -2663,14 +2721,15 @@ a {
         align-items: center;
     }
 
-    .case-card {
+    .case-card,
+    .cases-row-single .case-card {
         width: 100%;
         max-width: 100%;
         height: auto;
     }
 
     .case-card-image {
-        height: 220px;
+        height: auto;
     }
 
     .case-card-content {
@@ -3131,7 +3190,7 @@ a {
 /* New Dark Footer Styles */
 .new-site-footer {
     background: #1E1E1E;
-    padding: 80px 80px 40px;
+    padding: 80px 80px 80px;
     color: rgb(251, 251, 251);
     border-radius: 0;
 
@@ -3139,7 +3198,7 @@ a {
     width: calc(100% + 160px);
     margin-left: -80px;
     margin-right: -80px;
-    margin-top: 0;
+    margin-top: 40px;
 }
 
 .footer-main-row {
@@ -3152,7 +3211,7 @@ a {
 .footer-brand-col {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 }
 
 .footer-brand-logo {
@@ -3179,18 +3238,22 @@ a {
 
 .footer-social-link {
     color: rgb(251, 251, 251);
-    transition: opacity 0.2s;
+    display: inline-block;
+    transition: transform 0.2s, filter 0.2s;
 }
 
 .footer-social-link:hover {
-    opacity: 0.7;
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 12px rgba(71, 225, 148, 0.3));
 }
 
 .footer-email {
     font-size: 16px;
     font-weight: 400;
-    color: rgb(251, 251, 251);
-    text-decoration: none;
+    color: #FFBEE1;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
 .footer-nav-col {
@@ -3229,7 +3292,7 @@ a {
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     display: inline-block;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .footer-animated-bone:hover {
@@ -5844,20 +5907,16 @@ a {
 
 /* QUEST MODAL CARD */
 .quest-modal-card {
-    background: #353535;
-    /* Figma Kisaw Grey/900 */
-    border-radius: 12px;
-    padding: 64px;
+    background: #1E1E1E;
+    border-radius: 16px;
+    padding: 48px 56px;
     position: relative;
     width: 100%;
-    max-width: 800px;
-    /* Figma Width */
+    max-width: 1100px;
     max-height: 90vh;
     overflow-y: auto;
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(71, 225, 148, 0.15);
-    /* Soft green glow */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(71, 225, 148, 0.1);
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: rgba(251, 251, 251, 0.2) transparent;
@@ -5881,8 +5940,8 @@ a {
 /* CLOSE BUTTON */
 .quest-modal-close {
     position: absolute;
-    top: 32px;
-    right: 32px;
+    top: 28px;
+    right: 28px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -5891,62 +5950,33 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 10;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
 }
 
 .quest-modal-close img {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
+    transform: rotate(-45deg);
+    filter: invert(1);
 }
 
-.quest-modal-close:hover {
-    transform: scale(1.1) rotate(90deg);
-    opacity: 0.8;
+.quest-modal-close:hover img {
+    animation: spinFast 0.6s linear infinite;
 }
 
-/* HEADER STYLE */
-.quest-modal-header {
-    margin-bottom: 48px;
-    text-align: left;
-}
+/* Modal uses homepage form layout — no custom header/title/description needed */
 
-.quest-modal-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    color: #fbfbfb;
-    margin: 0 0 16px 0;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-}
-
-.quest-modal-description {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.54;
-    color: #fbfbfb;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.quest-modal-description .text-accent-green {
-    color: #47e194;
-    /* Kisaw Primary/Green */
-}
-
-/* Form fields styling inside modal to look like figma */
+/* Form fields — clean overrides via specificity, no !important */
 .quest-modal-card .request-form-fields {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
 .quest-modal-card .request-input-group {
     border-bottom: 1.25px solid rgba(251, 251, 251, 0.3);
-    padding-bottom: 4px;
+    padding-bottom: 2px;
     position: relative;
 }
 
@@ -5954,35 +5984,45 @@ a {
     border-bottom: none;
 }
 
+/* Override variant-refined input size via higher specificity */
+.quest-modal-card .variant-refined .request-input-group input,
 .quest-modal-card .request-input-group input {
     background: transparent;
     border: none;
     outline: none;
     width: 100%;
-    color: #fbfbfb;
-    font-size: 18px;
-    padding: 8px 0;
+    height: auto;
+    color: rgba(251, 251, 251, 0.6);
+    font-size: 16px;
+    padding: 4px 0 8px;
+    margin-top: 0;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 400;
 }
 
+.quest-modal-card .variant-refined .request-input-group input::placeholder,
 .quest-modal-card .request-input-group input::placeholder {
     color: rgba(251, 251, 251, 0.5);
     text-transform: uppercase;
+    font-size: 16px;
 }
 
+/* Override variant-refined textarea */
+.quest-modal-card .variant-refined .request-textarea-wrapper textarea,
 .quest-modal-card .request-textarea-wrapper textarea {
     border: 1.25px solid rgba(251, 251, 251, 0.3);
     border-radius: 12px;
     background: transparent;
     padding: 16px 12px;
     width: 100%;
-    height: 180px;
-    /* Premium height for modal */
+    height: 320px;
     color: #fbfbfb;
-    font-size: 18px;
+    font-size: 16px;
     resize: none;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 .quest-modal-card .request-textarea-wrapper textarea::placeholder {
@@ -5990,21 +6030,23 @@ a {
     text-transform: uppercase;
 }
 
-/* Submit button styling */
+/* Submit button */
 .quest-modal-card .request-submit-btn {
     background: #47e194;
     color: #1e1e1e;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     font-style: italic;
     text-transform: uppercase;
-    border-radius: 12px;
-    padding: 16px 32px;
+    border-radius: 10px;
+    padding: 12px 28px;
     cursor: pointer;
     border: none;
     transition: transform 0.2s ease, filter 0.2s ease;
     width: fit-content;
+    display: block;
+    margin: 10px auto 0;
 }
 
 .quest-modal-card .request-submit-btn:hover {
@@ -6012,17 +6054,38 @@ a {
     filter: brightness(1.05);
 }
 
+/* Helper text */
 .quest-modal-card .font-sub {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.54;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
     color: #fbfbfb;
     opacity: 0.5;
+    margin-top: 0;
 }
 
 .quest-modal-card .state-voice .font-sub {
     color: #47e194;
     opacity: 1;
+}
+
+/* Helper row — text on top, icons below */
+.quest-modal-card .request-helper-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.quest-modal-card .helper-icons {
+    gap: 6px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.quest-modal-card .icon-btn img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Responsive adjustments */
@@ -6042,6 +6105,29 @@ a {
     .quest-modal-close {
         top: 20px;
         right: 20px;
+    }
+}
+
+/* Height-based responsiveness to guarantee submit button visibility on shorter screens */
+@media (max-height: 850px) {
+    .quest-modal-card {
+        padding: 32px 40px !important;
+    }
+    .quest-modal-header {
+        margin-bottom: 16px !important;
+    }
+    .quest-modal-title {
+        font-size: 38px !important;
+    }
+    .quest-modal-description {
+        font-size: 15px !important;
+    }
+    .quest-modal-card .request-form-fields {
+        gap: 16px !important;
+        margin-bottom: 20px !important;
+    }
+    .quest-modal-card .request-textarea-wrapper textarea {
+        height: 100px !important;
     }
 }
 
