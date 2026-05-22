@@ -1559,7 +1559,7 @@ a {
 /* ERROR STATE */
 .request-error-msg {
     display: none;
-    color: #ff4444;
+    color: #FFBEE1;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1568,8 +1568,14 @@ a {
 }
 
 .request-input-group.has-error input {
-    border-bottom-color: #ff4444;
-    color: #ff4444;
+    border-bottom-color: #FFBEE1;
+    color: #FFBEE1;
+}
+
+.request-input-group.has-error input::placeholder {
+    color: #FFBEE1;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .request-input-group.has-error .request-error-msg {
