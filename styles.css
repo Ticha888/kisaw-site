@@ -1561,18 +1561,22 @@ a {
     display: none;
     color: #FFBEE1;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 300;
+    font-style: italic;
     letter-spacing: 1px;
     margin-top: -6px;
     font-family: 'Inter', sans-serif;
 }
 
-.request-input-group.has-error input {
+.request-input-group.has-error input,
+.request-input-group.has-error textarea {
     border-bottom-color: #FFBEE1;
+    border-color: #FFBEE1;
     color: #FFBEE1;
 }
 
-.request-input-group.has-error input::placeholder {
+.request-input-group.has-error input::placeholder,
+.request-input-group.has-error textarea::placeholder {
     color: #FFBEE1;
     font-weight: 300;
     font-style: italic;

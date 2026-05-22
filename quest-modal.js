@@ -38,23 +38,90 @@
         form.dataset.initialized = 'true';
 
         const fileInput = form.querySelector('input[type="file"]');
-        const clipBtn   = form.querySelector('.btn-clip-toggle');
-        const micBtn    = form.querySelector('.btn-mic-toggle');
         const filesList = form.querySelector('.files-list');
         const helperStatus = form.querySelector('.helper-text') || form.querySelector('.font-sub');
-        const submitBtn = form.querySelector('.request-submit-btn, #btn-submit');
-        const stopBtn   = form.querySelector('.btn-stop-record');
         const voiceTimer = form.querySelector('.recording-timer');
         const nameInput  = form.querySelector('input[name="name"]');
         const emailInput = form.querySelector('input[name="email"]');
+        const messageInput = form.querySelector('textarea[name="message"]');
+
+        // Clone interactive elements to strip any duplicate/redundant event listeners from inline HTML scripts
+        const originalSubmitBtn = form.querySelector('.request-submit-btn, #btn-submit');
+        let submitBtn = originalSubmitBtn;
+        if (originalSubmitBtn) {
+            const clonedBtn = originalSubmitBtn.cloneNode(true);
+            originalSubmitBtn.parentNode.replaceChild(clonedBtn, originalSubmitBtn);
+            submitBtn = clonedBtn;
+        }
+
+        const originalClipBtn = form.querySelector('.btn-clip-toggle');
+        let clipBtn = originalClipBtn;
+        if (originalClipBtn) {
+            const clonedClip = originalClipBtn.cloneNode(true);
+            originalClipBtn.parentNode.replaceChild(clonedClip, originalClipBtn);
+            clipBtn = clonedClip;
+        }
+
+        const originalMicBtn = form.querySelector('.btn-mic-toggle');
+        let micBtn = originalMicBtn;
+        if (originalMicBtn) {
+            const clonedMic = originalMicBtn.cloneNode(true);
+            originalMicBtn.parentNode.replaceChild(clonedMic, originalMicBtn);
+            micBtn = clonedMic;
+        }
+
+        const originalStopBtn = form.querySelector('.btn-stop-record');
+        let stopBtn = originalStopBtn;
+        if (originalStopBtn) {
+            const clonedStop = originalStopBtn.cloneNode(true);
+            originalStopBtn.parentNode.replaceChild(clonedStop, originalStopBtn);
+            stopBtn = clonedStop;
+        }
 
         let selectedFiles = [];
         const MAX_SIZE = 20 * 1024 * 1024;
         let mediaRecorder, audioChunks = [], recordInterval, recordStartTime;
         let audioCtx, analyser, dataArray, animationId;
 
+        // Dynamic generation of error spans if they are missing in the HTML template
+        function ensureErrorSpans() {
+            if (nameInput) {
+                const g = nameInput.closest('.request-input-group');
+                if (g && !g.querySelector('.request-error-msg')) {
+                    const span = document.createElement('span');
+                    span.className = 'request-error-msg';
+                    span.textContent = 'Please enter your name';
+                    g.appendChild(span);
+                }
+            }
+            if (emailInput) {
+                const g = emailInput.closest('.request-input-group');
+                if (g && !g.querySelector('.request-error-msg')) {
+                    const span = document.createElement('span');
+                    span.className = 'request-error-msg';
+                    span.textContent = 'Please enter your email';
+                    g.appendChild(span);
+                }
+            }
+            if (messageInput) {
+                const g = messageInput.closest('.request-input-group');
+                if (g && !g.querySelector('.request-error-msg')) {
+                    const span = document.createElement('span');
+                    span.className = 'request-error-msg';
+                    span.textContent = 'Please enter your message';
+                    const wrapper = g.querySelector('.request-textarea-wrapper');
+                    if (wrapper) {
+                        wrapper.parentNode.insertBefore(span, wrapper.nextSibling);
+                    } else {
+                        g.appendChild(span);
+                    }
+                }
+            }
+        }
+        ensureErrorSpans();
+
         // Inline validation
-        form.querySelectorAll('input').forEach(inp => {
+        form.querySelectorAll('input, textarea').forEach(inp => {
             inp.addEventListener('input', () => {
                 const g = inp.closest('.request-input-group');
                 if (g) g.classList.remove('has-error');
@@ -185,11 +252,40 @@
                 let err = false;
                 if (nameInput) {
                     const g = nameInput.closest('.request-input-group');
-                    if (!nameInput.value.trim()) { if (g) g.classList.add('has-error'); err = true; }
+                    const span = g ? g.querySelector('.request-error-msg') : null;
+                    if (!nameInput.value.trim()) {
+                        if (g) g.classList.add('has-error');
+                        if (span) span.textContent = 'Please enter your name';
+                        err = true;
+                    } else {
+                        if (g) g.classList.remove('has-error');
+                    }
                 }
                 if (emailInput) {
                     const g = emailInput.closest('.request-input-group');
-                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) { if (g) g.classList.add('has-error'); err = true; }
+                    const span = g ? g.querySelector('.request-error-msg') : null;
+                    if (!emailInput.value.trim()) {
+                        if (g) g.classList.add('has-error');
+                        if (span) span.textContent = 'Please enter your email';
+                        err = true;
+                    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                        if (g) g.classList.add('has-error');
+                        if (span) span.textContent = 'Please enter a valid email';
+                        err = true;
+                    } else {
+                        if (g) g.classList.remove('has-error');
+                    }
+                }
+                if (messageInput) {
+                    const g = messageInput.closest('.request-input-group');
+                    const span = g ? g.querySelector('.request-error-msg') : null;
+                    if (!messageInput.value.trim()) {
+                        if (g) g.classList.add('has-error');
+                        if (span) span.textContent = 'Please enter your message';
+                        err = true;
+                    } else {
+                        if (g) g.classList.remove('has-error');
+                    }
                 }
                 if (err) { form.classList.add('state-error'); return; }
                 form.classList.remove('state-error');
