@@ -68,6 +68,13 @@ body.services-page {
     margin-bottom: 100px;
 }
 
+@media (max-width: 800px) {
+    .services-headline {
+        margin-left: 16px;
+        margin-bottom: 64px;
+    }
+}
+
 /* Services Grid */
 .services-grid {
     display: flex;
@@ -80,7 +87,7 @@ body.services-page {
 .services-section {
     display: flex;
     flex-direction: column;
-    gap: 103px;
+    gap: 72px;
 }
 
 /* Default row: 2 equal columns, 154px column gap */

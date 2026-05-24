@@ -4009,6 +4009,11 @@ a {
     will-change: transform, color, text-shadow;
 }
 
+@media screen and (max-width: 800px) {
+    .hero-word {
+        line-height: 1.2;
+    }   
+}
 /* Hover Accent States as defined in Brandbook node 2476:16868 */
 
 /* 1. Pink State */
@@ -4057,7 +4062,7 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     font-size: clamp(1.6rem, 6.2vw, 90.2px);
-    line-height: 0.74;
+    line-height: 1.2;
     color: #A6D3FF;
     -webkit-text-fill-color: #A6D3FF;
     -webkit-text-stroke: 0.83px #A6D3FF;
@@ -4644,7 +4649,6 @@ a {
     .container_main_page,
     .container {
         padding: 40px 20px !important;
-        border-radius: 8px !important;
         width: 92% !important;
         max-width: 92% !important;
         margin: 0 auto 40px !important;
@@ -4699,6 +4703,221 @@ a {
             box-sizing: border-box !important;
         }
     }
+
+/* ==========================================================================
+   PAGE WRAPPER FULLSCREEN MOBILE OVERRIDE
+   ========================================================================== */
+@media (max-width: 800px) {
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .page {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   SCROLL BEHAVIOR: FLOATING BURGER MENU (MOBILE ONLY)
+   ========================================================================== */
+@media (max-width: 800px) {
+    /* When scrolled, disable sticky header so it scrolls away naturally */
+    body.is-scrolled .header {
+        position: relative !important; 
+        z-index: 1000 !important;
+    }
+
+    /* Separate floating button outside the container */
+    .mobile-nav-toggle-floating {
+        display: none !important;
+        position: fixed !important;
+        top: 16px !important;
+        right: 16px !important;
+        z-index: 99999 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 72px !important;
+        height: 72px !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        margin: 0 !important;
+    }
+
+    body.is-scrolled .mobile-nav-toggle-floating {
+        display: flex !important;
+        animation: fadeInBurger 0.3s ease-out forwards !important;
+    }
+
+    /* Прячем плавающий бургер, когда меню уже открыто */
+    body.menu-open .mobile-nav-toggle-floating {
+        display: none !important;
+    }
+
+    .mobile-nav-toggle-floating .burger-icon {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE OVERRIDES FOR NEW POPUP MENU CONTENT
+   GLOBAL MOBILE OVERRIDES FOR NEW POPUP MENU CONTENT (FULL SCREEN)
+   ========================================================================== */
+@media (max-width: 800px) {
+    .nav-overlay, .main-page .nav-overlay {
+        align-items: center !important;
+    }
+    .nav-popup, .main-page .nav-popup {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        min-height: 100vh !important;
+        border-radius: 0 !important;
+        padding: 40px 20px !important;
+        gap: 48px !important;
+        padding: 100px 20px 40px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+    .menu-close-btn, .main-page .menu-close-btn {
+        position: static !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+    .nav-links, .main-page .nav-links {
+        align-items: center !important;
+        gap: 32px !important;
+        width: 100% !important;
+    }
+    .nav-links a, .main-page .nav-links a {
+        text-align: center !important;
+        font-size: 24px !important;
+    }
+    .nav-socials {
+        display: flex !important;
+        gap: 24px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .nav-social-link {
+        display: inline-flex !important;
+    }
+    .nav-social-link img {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    .send-signal-btn-mobile, .main-page .send-signal-btn-mobile {
+        margin: 0 !important;
+        align-self: center !important;
+        width: auto !important;
+    }
+}
+
+/* ==========================================================================
+   UNIVERSAL MOBILE HEADER FIX (GRID + TAGLINE ALIGNMENT)
+   ========================================================================== */
+@media (max-width: 800px) {
+    body .header,
+    body.main-page .header {
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        left: 0 !important;
+        position: relative !important;
+        top: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    body .header-mobile-hero,
+    body.main-page .header-mobile-hero {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 6px !important; /* Минимальный отступ между лого и подписью */
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 16px 0 !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+    }
+
+    body .header-mobile-hero .logo-stack,
+    body.main-page .header-mobile-hero .logo-stack,
+    body .header-mobile-hero .logo-stack a,
+    body.main-page .header-mobile-hero .logo-stack a {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    body .header-mobile-hero .logo-main,
+    body.main-page .header-mobile-hero .logo-main {
+        width: 86px !important;
+        max-width: 86px !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    body .header-mobile-hero .tagline,
+    body.main-page .header-mobile-hero .tagline {
+        margin: 0 !important;
+        margin-top: 2px !important; /* Оптическое выравнивание по центру логотипа */
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.06em !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    body .header--dark .header-mobile-hero .tagline,
+    body.main-page .header--dark .header-mobile-hero .tagline {
+        color: #DDDDDD !important;
+    }
+
+    body .header--light .header-mobile-hero .tagline,
+    body.main-page .header--light .header-mobile-hero .tagline {
+        color: #1E1E1E !important;
+    }
+
+    body .header-mobile-hero .mobile-nav-toggle-hero,
+    body.main-page .header-mobile-hero .mobile-nav-toggle-hero {
+        margin: 0 0 0 auto !important; /* Прибиваем бургер к правому краю */
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        display: flex !important;
+        flex-shrink: 0 !important;
+    }
+
+    body .header-mobile-hero .burger-icon,
+    body.main-page .header-mobile-hero .burger-icon {
+        width: 48px !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+}
+
+@keyframes fadeInBurger {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
 
     .logo-main {
         display: block !important;
@@ -4862,10 +5081,10 @@ a {
     .container_main_page,
     .container {
         padding: 0 !important;
-        border-radius: 32px !important;
-        width: 92% !important;
-        max-width: 92% !important;
-        margin: 0 auto 40px !important;
+        border-radius: 0px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0px 40px 0px !important;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
         overflow: hidden !important;
         position: relative;
@@ -5050,13 +5269,13 @@ a {
     .services-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 40px !important;
-        padding: 0 20px !important;
+        gap: 72px !important;
+        padding: 0 20px 72px !important
     }
 
     .services-row {
         flex-direction: column !important;
-        gap: 24px !important;
+        gap: 72px !important;
     }
 
     .service-card {
@@ -5066,6 +5285,7 @@ a {
     #request-form {
         padding-top: 72px !important;
         margin-top: 0px !important;
+        border-radius: 12px !important;
     }
 
     .request-form-section {
@@ -5307,6 +5527,15 @@ a {
 
     .about-member-left {
         width: 100%;
+    }
+
+    .about-tabs {
+        display: none !important;
+    }
+    .about-content-inner {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
     }
 }
 
@@ -6578,8 +6807,8 @@ body.menu-open {
     body .new-site-footer {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 40px 0 0 !important;
-        padding: 48px 16px 28px !important;
+        margin: 72px 0 0 !important;
+        padding: 72px 16px 28px !important;
         border-radius: 0 !important;
         box-sizing: border-box !important;
     }
@@ -6681,4 +6910,220 @@ body.menu-open {
     .request-form-section #request-message::placeholder {
         font-size: 16px !important;
     }
+}
+
+/* ==========================================================================
+   ABSOLUTE FULLSCREEN MOBILE MENU OVERRIDE (FORCING FULL SCREEN)
+   ========================================================================== */
+@media (max-width: 800px) {
+    body .nav-overlay, 
+    body.main-page .nav-overlay {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    body .nav-popup, 
+    body.main-page .nav-popup {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: none !important;
+        max-height: none !important;
+        min-height: 100vh !important;
+        border-radius: 0 !important;
+        padding: 40px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 40px !important;
+        box-sizing: border-box !important;
+        transform: translateY(100vh) !important;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+        margin: 0 !important;
+    }
+
+    body .nav-overlay.active .nav-popup,
+    body.main-page .nav-overlay.active .nav-popup {
+        transform: translateY(0) !important;
+    }
+
+    body .menu-close-btn, 
+    body.main-page .menu-close-btn {
+        position: absolute !important;
+        top: 32px !important;
+        right: 32px !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+
+    body .nav-popup .nav-links, 
+    body.main-page .nav-popup .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 32px !important;
+        width: 100% !important;
+    }
+    
+    body .nav-popup .nav-links a, 
+    body.main-page .nav-popup .nav-links a {
+        text-align: center !important;
+        font-size: 24px !important;
+        width: 100% !important;
+    }
+
+    body .nav-popup .nav-socials, 
+    body.main-page .nav-popup .nav-socials {
+        display: flex !important;
+        gap: 24px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    body .nav-popup .nav-social-link img,
+    body.main-page .nav-popup .nav-social-link img {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    body .nav-popup .send-signal-btn-mobile, 
+    body.main-page .nav-popup .send-signal-btn-mobile {
+        margin: 0 !important;
+        align-self: center !important;
+        width: auto !important;
+        min-width: 200px !important;
+    }
+}
+
+/* ==========================================================================
+   CASE PAGES MOBILE REFINEMENTS (ABILKA)
+   ========================================================================== */
+@media (max-width: 800px) {
+    /* 1. White menu for Light Header */
+    body.abilka-case-page .header-mobile-hero,
+    body.abilka-case-page .nav-popup {
+        background: #FBFBFB !important;
+    }
+    body.abilka-case-page .header-mobile-hero .logo-main,
+    body.abilka-case-page .header-mobile-hero .burger-icon,
+    body.abilka-case-page .menu-close-btn img,
+    body.abilka-case-page .mobile-nav-toggle-floating .burger-icon {
+        filter: invert(1) !important;
+    }
+    body.abilka-case-page .header-mobile-hero .tagline,
+    body.abilka-case-page .nav-popup .nav-links a {
+        color: #1E1E1E !important;
+    }
+
+    /* 2. Tags size */
+    body.abilka-case-page .tags span,
+    body.abilka-case-page .tag-hash {
+            font-size: 11px !important;
+    }
+    body.abilka-case-page .tags {
+            gap: 8px !important;
+            margin-top: 8px !important;
+            margin-bottom: 16px !important;
+            flex-wrap: wrap !important;
+    }
+
+    /* 3. Images side margins and gallery fit */
+        body.abilka-case-page {
+            padding: 0 !important;
+        }
+        body.abilka-case-page .main-row {
+            padding: 0 !important;
+        }
+    body.abilka-case-page .container {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            overflow: hidden !important;
+        }
+        body.abilka-case-page .header {
+            padding: 0 16px !important;
+            margin-bottom: 16px !important;
+    }
+    body.abilka-case-page .main-left {
+            padding-top: 0 !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+        body.abilka-case-page .abilka-case-images {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            box-sizing: border-box !important;
+        }
+        body.abilka-case-page .title-section {
+            margin-bottom: 16px !important;
+    }
+    body.abilka-case-page .abilka-img-wrapper {
+            margin-bottom: 8px !important;
+        border-radius: 8px !important;
+            width: 100% !important;
+    }
+
+        /* 4. Other Projects Carousel Adaptation */
+        body.abilka-case-page .other-projects-section {
+            padding: 48px 0 0 !important;
+            margin-top: 32px !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            left: 0 !important;
+            position: relative !important;
+            background: #1E1E1E !important;
+        }
+        body.abilka-case-page .other-projects-title {
+            width: 100% !important;
+            max-width: 100% !important;
+            font-size: 24px !important;
+            padding: 0 16px !important;
+            margin: 0 0 16px 0 !important;
+            text-align: left !important;
+            color: #FBFBFB !important;
+        }
+        body.abilka-case-page .projects-carousel {
+            padding: 0 0 24px 0 !important;
+        }
+        body.abilka-case-page .carousel-track {
+            width: 100% !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            gap: 12px !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch;
+            display: flex !important;
+            scrollbar-width: none;
+        }
+        body.abilka-case-page .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+        body.abilka-case-page .carousel-item {
+            min-width: 75vw !important;
+            flex: 0 0 75vw !important;
+        }
+
+        /* 5. Zero gap between form and footer */
+        body.abilka-case-page .request-form-section {
+            width: 100% !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding: 24px 16px 40px !important;
+            border-radius: 0 !important;
+            background: #1E1E1E !important;
+            box-sizing: border-box !important;
+        }
+        body.abilka-case-page .new-site-footer {
+            width: 100% !important;
+            margin-top: 0 !important;
+            padding: 40px 16px !important;
+            border-radius: 0 !important;
+            background: #1E1E1E !important;
+            box-sizing: border-box !important;
+        }
 }

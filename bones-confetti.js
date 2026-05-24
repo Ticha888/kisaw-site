@@ -241,3 +241,41 @@
     window.fireBones = fireBones;
 
 })();
+
+/* ==========================================================================
+   GLOBAL MOBILE FLOATING BURGER (Injects directly into body to avoid CSS transform bugs)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Вытаскиваем окно меню в корень body, чтобы оно не ломалось из-за CSS transform на контейнерах
+    const navOverlay = document.querySelector('.nav-overlay');
+    if (navOverlay && navOverlay.parentNode !== document.body) {
+        document.body.appendChild(navOverlay);
+    }
+
+    // Only create it if it doesn't already exist
+    if (!document.querySelector('.mobile-nav-toggle-floating')) {
+        const floatingBurger = document.createElement('button');
+        floatingBurger.className = 'mobile-nav-toggle-floating';
+        floatingBurger.setAttribute('aria-label', 'Toggle Navigation');
+        floatingBurger.innerHTML = '<img src="img/burgermenu.png" alt="Menu" class="burger-icon">';
+        document.body.appendChild(floatingBurger);
+
+        floatingBurger.addEventListener('click', () => {
+            const overlay = document.querySelector('.nav-overlay');
+            if (overlay) {
+                overlay.classList.add('active');
+                document.body.classList.add('menu-open');
+            }
+        });
+    }
+
+    // Global scroll listener for mobile
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 800) {
+            if (window.scrollY > 200) document.body.classList.add('is-scrolled');
+            else document.body.classList.remove('is-scrolled');
+        } else {
+            document.body.classList.remove('is-scrolled');
+        }
+    });
+});
