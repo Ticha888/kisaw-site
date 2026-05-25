@@ -1023,6 +1023,7 @@ a {
 
     .illustrations-title-img {
         width: 220px;
+        width: 280px;
         height: auto;
     }
 
@@ -4725,10 +4726,19 @@ a {
    SCROLL BEHAVIOR: FLOATING BURGER MENU (MOBILE ONLY)
    ========================================================================== */
 @media (max-width: 800px) {
-    /* When scrolled, disable sticky header so it scrolls away naturally */
     body.is-scrolled .header {
         position: relative !important; 
-        z-index: 1000 !important;
+        top: auto !important;
+        z-index: 9999 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-bottom: none !important;
+    }
+    body.is-scrolled .header.header--light,
+    body.is-scrolled .header--light {
+        background: transparent !important;
+        border-bottom: none !important;
     }
 
     /* Separate floating button outside the container */
@@ -4829,18 +4839,28 @@ a {
    ========================================================================== */
 @media (max-width: 800px) {
     body .header,
-    body.main-page .header {
-        margin: 0 !important;
+    body.main-page .header,
+    body.services-page .header,
+    body.abilka-case-page .header,
+    body.frozenbro-page .header,
+    body.drwdy-page .header,
+    body.brand-package-page .header,
+    body.privacy-page .header,
+    body.about-page-body .header {
+        display: block !important;
+        margin: 0 0 54px 0 !important;
         width: 100% !important;
         padding: 0 16px !important;
         left: 0 !important;
         position: relative !important;
         top: auto !important;
+        z-index: 9999 !important;
         box-sizing: border-box !important;
     }
 
     body .header-mobile-hero,
-    body.main-page .header-mobile-hero {
+    body.main-page .header-mobile-hero,
+    body.services-page .header-mobile-hero {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
@@ -4855,8 +4875,10 @@ a {
 
     body .header-mobile-hero .logo-stack,
     body.main-page .header-mobile-hero .logo-stack,
+    body.services-page .header-mobile-hero .logo-stack,
     body .header-mobile-hero .logo-stack a,
-    body.main-page .header-mobile-hero .logo-stack a {
+    body.main-page .header-mobile-hero .logo-stack a,
+    body.services-page .header-mobile-hero .logo-stack a {
         display: flex !important;
         align-items: center !important;
         margin: 0 !important;
@@ -4866,7 +4888,8 @@ a {
     }
 
     body .header-mobile-hero .logo-main,
-    body.main-page .header-mobile-hero .logo-main {
+    body.main-page .header-mobile-hero .logo-main,
+    body.services-page .header-mobile-hero .logo-main {
         width: 86px !important;
         max-width: 86px !important;
         margin: 0 !important;
@@ -4874,7 +4897,8 @@ a {
     }
 
     body .header-mobile-hero .tagline,
-    body.main-page .header-mobile-hero .tagline {
+    body.main-page .header-mobile-hero .tagline,
+    body.services-page .header-mobile-hero .tagline {
         margin: 0 !important;
         margin-top: 2px !important; /* Оптическое выравнивание по центру логотипа */
         font-size: 12px !important;
@@ -4887,17 +4911,20 @@ a {
     }
 
     body .header--dark .header-mobile-hero .tagline,
-    body.main-page .header--dark .header-mobile-hero .tagline {
+    body.main-page .header--dark .header-mobile-hero .tagline,
+    body.services-page .header--dark .header-mobile-hero .tagline {
         color: #DDDDDD !important;
     }
 
     body .header--light .header-mobile-hero .tagline,
-    body.main-page .header--light .header-mobile-hero .tagline {
+    body.main-page .header--light .header-mobile-hero .tagline,
+    body.services-page .header--light .header-mobile-hero .tagline {
         color: #1E1E1E !important;
     }
 
     body .header-mobile-hero .mobile-nav-toggle-hero,
-    body.main-page .header-mobile-hero .mobile-nav-toggle-hero {
+    body.main-page .header-mobile-hero .mobile-nav-toggle-hero,
+    body.services-page .header-mobile-hero .mobile-nav-toggle-hero {
         margin: 0 0 0 auto !important; /* Прибиваем бургер к правому краю */
         padding: 0 !important;
         background: transparent !important;
@@ -4907,7 +4934,8 @@ a {
     }
 
     body .header-mobile-hero .burger-icon,
-    body.main-page .header-mobile-hero .burger-icon {
+    body.main-page .header-mobile-hero .burger-icon,
+    body.services-page .header-mobile-hero .burger-icon {
         width: 48px !important;
         height: auto !important;
         margin: 0 !important;
@@ -5074,7 +5102,7 @@ a {
     .main-row {
         display: block !important;
         padding: 0 !important;
-        margin-top: -64px !important;
+        margin-top: -20px !important;
         width: 100% !important;
     }
 
@@ -5265,6 +5293,11 @@ a {
     .case-card {
         width: 100% !important;
     }
+
+        .services-headline {
+            font-size: 54px !important;
+            line-height: 1.1 !important;
+        }
 
     .services-grid {
         display: flex !important;
@@ -5536,6 +5569,98 @@ a {
         padding-left: 16px !important;
         padding-right: 16px !important;
         box-sizing: border-box !important;
+    }
+}
+
+/* ==========================================================================
+   FINAL MOBILE HEADER VISIBILITY FIX (SERVICES & ALL PAGES)
+   ========================================================================== */
+@media (max-width: 800px) {
+    /* 0. Убираем отрицательные отступы у главного ряда, из-за которых шапка улетала за экран */
+    body {
+        padding-top: 0 !important;
+    }
+
+    /* 1. Убираем обрезку и лишние отступы у контейнера */
+    body .container,
+    body .container_main_page {
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 2. Возвращаем шапку на место и делаем ее видимой */
+    body .header {
+        display: block !important;
+        position: relative !important;
+        top: auto !important;
+        margin: 0 0 32px 0 !important;
+        padding: 0 16px !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background: transparent !important;
+    }
+
+    /* 3. Задаем горизонтальный вид и отменяем отрицательные отступы */
+    body .header-mobile-hero {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 16px 0 !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+    }
+
+    body .header-mobile-hero .logo-stack {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+    }
+
+    body .header-mobile-hero .logo-main {
+        display: block !important;
+        width: 86px !important;
+        max-width: 86px !important;
+        margin: 0 !important;
+    }
+
+    /* 4. Отменяем margin-top: -64px, из-за которого шапка улетала вверх */
+    body .header-mobile-hero .tagline {
+        display: block !important;
+        margin: 0 0 0 8px !important;
+        font-size: 12px !important;
+        text-transform: uppercase !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+    }
+    
+    body .header--light .header-mobile-hero .tagline {
+        color: #1E1E1E !important;
+    }
+    body .header--dark .header-mobile-hero .tagline {
+        color: #DDDDDD !important;
+    }
+
+    /* 5. Выравниваем кнопку меню */
+    body .header-mobile-hero .mobile-nav-toggle-hero {
+        display: flex !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    body .header-mobile-hero .burger-icon {
+        width: 44px !important;
+        height: auto !important;
+        margin: 0 !important;
+        display: block !important;
     }
 }
 
@@ -6451,6 +6576,8 @@ a {
 
 @media (max-width: 800px) {
     .header {
+        position: relative !important;
+        top: auto !important;
         margin-left: -22px !important;
         margin-right: -22px !important;
         width: calc(100% + 44px) !important;
@@ -6487,12 +6614,13 @@ a {
     }
 
     .main-page .header {
-        margin: 0 !important;
+        margin: 0 0 54px 0 !important;
         width: 100% !important;
         padding: 0 16px !important;
         left: 0 !important;
         position: relative !important;
         top: auto !important;
+        z-index: 9999 !important;
     }
 
     .main-page .header-mobile-hero {
@@ -6561,8 +6689,10 @@ a {
         margin-left: 0 !important;
         margin-right: 0 !important;
         padding: 72px 16px !important;
+        padding: 32px 16px 72px !important;
         box-sizing: border-box !important;
         margin-top: 72px;
+        margin-top: 32px;
     }
 
     .main-page .illustrations-container {
@@ -6575,6 +6705,8 @@ a {
 
     .main-page .illustrations-title-img {
         margin: 0 auto !important;
+        width: 280px !important;
+        max-width: 100% !important;
     }
 
     .main-page .illustrations-grid {
@@ -6795,11 +6927,11 @@ body.menu-open {
     }
 
     .request-form-section .request-submit-btn {
-        width: 100% !important;
+            width: 64% !important;
         max-width: 100% !important;
         height: 48px !important;
-        margin: 8px 0 0 !important;
-        align-self: flex-start !important;
+            margin: 8px auto 0 !important;
+            align-self: center !important;
     }
 }
 
@@ -6807,8 +6939,8 @@ body.menu-open {
     body .new-site-footer {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 72px 0 0 !important;
-        padding: 72px 16px 28px !important;
+        margin: 36px 0 0 !important;
+        padding: 36px 16px 28px !important;
         border-radius: 0 !important;
         box-sizing: border-box !important;
     }
@@ -6816,20 +6948,23 @@ body.menu-open {
     body .new-site-footer .footer-main-row {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 28px !important;
+            align-items: center !important;
+            gap: 64px !important;
         margin-bottom: 36px !important;
         padding: 0 !important;
-        text-align: left !important;
+            text-align: center !important;
     }
 
     body .new-site-footer .footer-brand-col {
         width: 100% !important;
-        gap: 16px !important;
+                gap: 16px !important;
+            align-items: center !important;
     }
 
     body .new-site-footer .footer-brand-logo {
         gap: 10px !important;
+            justify-content: center !important;
+            margin-bottom: 48px !important;
     }
 
     body .new-site-footer .footer-animated-bone {
@@ -6840,16 +6975,19 @@ body.menu-open {
     body .new-site-footer .footer-socials {
         gap: 12px !important;
         flex-wrap: wrap !important;
+            justify-content: center !important;
     }
 
     body .new-site-footer .footer-email {
         font-size: 14px !important;
+            text-align: center !important;
     }
 
     body .new-site-footer .footer-nav-col {
         width: 100% !important;
         gap: 12px !important;
-        text-align: left !important;
+            text-align: center !important;
+            align-items: center !important;
     }
 
     body .new-site-footer .footer-nav-link {
@@ -6858,7 +6996,7 @@ body.menu-open {
 
     body .new-site-footer .footer-copyright-row {
         width: 100% !important;
-        justify-content: flex-start !important;
+            justify-content: center !important;
         flex-wrap: wrap !important;
         gap: 6px !important;
         font-size: 14px !important;
@@ -7047,7 +7185,7 @@ body.menu-open {
         }
         body.abilka-case-page .header {
             padding: 0 16px !important;
-            margin-bottom: 16px !important;
+        margin-bottom: 54px !important;
     }
     body.abilka-case-page .main-left {
             padding-top: 0 !important;

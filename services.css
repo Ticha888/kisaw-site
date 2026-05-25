@@ -100,7 +100,7 @@ body.services-page {
 
 /* Section 2 row: wider column gap (196px per Figma) */
 .services-row--wide {
-    column-gap: 196px;
+    column-gap: 154px;
 }
 
 /* Single-card row: only first column used */

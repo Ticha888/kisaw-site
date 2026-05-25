@@ -93,12 +93,13 @@ body.services-page .sticky-sidebar-blue-layer {
 
 /* Section Headings */
 .section-title-large {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 900;
     color: var(--text-dark);
     margin-top: 36px;
     margin-bottom: 48px;
     text-transform: uppercase;
+    line-height: 1.15;
 }
 
 /* Process Section */
@@ -197,10 +198,50 @@ body.services-page .sticky-sidebar-blue-layer {
     .sticky-sidebar-blue { font-size: 60px; }
 }
 
+@media (max-width: 1100px) {
+    .section-title-large { font-size: 36px; }
+}
+
 @media (max-width: 1024px) {
     .request-form-layout {
         grid-template-columns: 1fr;
         gap: 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .brand-intro h1 {
+        font-size: 54px !important;
+        line-height: 1.1 !important;
+    }
+    .section-title-large {
+        font-size: 28px;
+    }
+    .process-step h3,
+    .work-item h4 {
+        font-size: 18px;
+    }
+    .process-step li,
+    .process-text-block,
+    .deliverables-list,
+    .work-item p,
+    .brand-intro p {
+        font-size: 15px;
+    }
+
+    .brand-intro,
+    .content-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .services-switcher {
+        width: calc(100% + 40px) !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
 
@@ -224,15 +265,15 @@ body.services-page .sticky-sidebar-blue-layer {
 
 .services-switch-btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 12px 28px;
     background-color: #EAEAEA;
     color: var(--text-dark);
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 4px;
+        border-radius: 40px;
     letter-spacing: 0.5px;
     white-space: nowrap;
     transition: all 0.2s ease-in-out;

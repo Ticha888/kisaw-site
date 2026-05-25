@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
                         </div>
                         <nav class="nav">
                             <div class="nav-links">
-                                <a href="/">cases</a>
+                                <a href="index.html#cases-nav">cases</a>
                                 <a href="services.html">Services</a>
                                 <a href="about.html">About</a>
                             </div>
@@ -52,7 +52,7 @@
                     <!-- Mobile Hero Layout -->
                     <div class="header-mobile-hero">
                         <div class="logo-stack">
-                            <a href="/"><img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main"></a>
+                            <a href="/"><img src="img/logo_kisaw_black.svg" alt="KISAW" class="logo-main"></a>
                         </div>
                         <p class="tagline">by nika and vanya</p>
                         <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
@@ -716,6 +716,38 @@
                 YA!</button>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggles = document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero');
+            const closeBtn = document.querySelector('.menu-close-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+
+            if (!navOverlay) return;
+
+            const closeMenu = () => {
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                toggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+            };
+
+            const openMenu = () => {
+                navOverlay.classList.add('active');
+                document.body.classList.add('menu-open');
+                toggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'true'));
+            };
+
+            toggles.forEach((toggle) => {
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.addEventListener('click', openMenu);
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            navOverlay.addEventListener('click', (e) => { if (e.target === navOverlay) closeMenu(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navOverlay.classList.contains('active')) closeMenu(); });
+            navOverlay.querySelectorAll('a').forEach((link) => { link.addEventListener('click', closeMenu); });
+        });
+    </script>
     <script src="bones-confetti.js"></script>
     <script src="quest-modal.js?v=5"></script>
 </body>

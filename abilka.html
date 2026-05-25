@@ -41,7 +41,7 @@
         .abilka-img-wrapper {
             width: 1000px !important;
             max-width: 100% !important;
-            border-radius: 12px !important;
+            border-radius: 0 !important;
             margin-bottom: 40px !important;
             overflow: hidden !important;
             transition: transform 0.4s ease, box-shadow 0.4s ease !important;
@@ -63,6 +63,7 @@
             display: block !important;
             height: auto !important;
             object-fit: cover !important;
+            border-radius: 0 !important;
         }
 
         @media (min-width: 801px) {
@@ -120,7 +121,21 @@
             width: 100% !important;
             height: auto !important;
             display: block !important;
-            border-radius: 12px !important;
+            border-radius: 0 !important;
+        }
+
+        /* Maximum specificity to kill all roundings on form elements */
+        html body.abilka-case-page .request-form-section,
+        html body.abilka-case-page .request-form-layout,
+        html body.abilka-case-page .request-textarea-wrapper textarea,
+        html body.abilka-case-page .request-submit-btn,
+        html body.abilka-case-page .request-voice-recording-panel,
+        html body.abilka-case-page .file-item,
+        html body.abilka-case-page .request-input-group input {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
         }
 
         @media (min-width: 801px) {
@@ -129,7 +144,6 @@
             padding-top: 100px !important;
             padding-bottom: 80px !important;
             background-color: #1E1E1E !important;
-            border-radius: 0 !important;
             width: calc(100% + 160px) !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
@@ -254,7 +268,7 @@
                     <!-- Mobile Hero Layout -->
                     <div class="header-mobile-hero">
                         <div class="logo-stack">
-                            <a href="/"><img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main"></a>
+                            <a href="/"><img src="img/logo_kisaw_black.svg" alt="KISAW" class="logo-main"></a>
                         </div>
                         <p class="tagline">by nika and vanya</p>
                         <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">

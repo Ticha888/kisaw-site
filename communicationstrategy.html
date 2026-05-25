@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,7 +59,7 @@
                         </div>
                         <nav class="nav">
                             <div class="nav-links">
-                                <a href="/">cases</a>
+                                <a href="index.html#cases-nav">cases</a>
                                 <a href="services.html">Services</a>
                                 <a href="about.html">About</a>
                             </div>
@@ -73,7 +73,7 @@
                     <!-- Mobile Hero Layout -->
                     <div class="header-mobile-hero">
                         <div class="logo-stack">
-                            <a href="/"><img src="img/logo_kisaw.svg" alt="KISAW" class="logo-main"></a>
+                            <a href="/"><img src="img/logo_kisaw_black.svg" alt="KISAW" class="logo-main"></a>
                         </div>
                         <p class="tagline">by nika and vanya</p>
                         <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
@@ -88,9 +88,21 @@
                                 <img src="img/closewindow.svg" alt="Close">
                             </button>
                             <div class="nav-links">
-                                <a href="/">cases</a>
-                                <a href="services.html">Services</a>
                                 <a href="about.html">About</a>
+                                <a href="services.html">Services</a>
+                                <a href="index.html#cases-nav">Cases</a>
+                                <a href="privacypolicy.html">Privacy policy</a>
+                            </div>
+                            <div class="nav-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="nav-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance">
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nav-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram">
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nav-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn">
+                                </a>
                             </div>
                             <a href="#request-form" class="send-signal-btn-mobile">Send the Signal</a>
                         </nav>
@@ -115,15 +127,6 @@
                         <a href="multipage.html" class="services-switch-btn" data-page="multipage.html">WEBSITE</a>
                         <a href="ecommerce.html" class="services-switch-btn" data-page="ecommerce.html">E-COM</a>
                     </div>
-                    <script>
-                        document.querySelectorAll('.services-switcher .services-switch-btn').forEach(btn => {
-                            const pages = btn.getAttribute('data-page').split(' ');
-                            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-                            if (pages.includes(currentPath)) {
-                                btn.classList.add('active');
-                            }
-                        });
-                    </script>
 
                         <h1>COMMUNICATION STRATEGY</h1>
                         <p>A&nbsp;communication strategy is&nbsp;a&nbsp;clear roadmap for&nbsp;how your&nbsp;brand speaks, sounds, and&nbsp;shows up across channels.</p>
@@ -347,6 +350,38 @@
             <button class="btn-got-it" onclick="document.getElementById('success-modal').style.display='none'">GOT YA!</button>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggles = document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero');
+            const closeBtn = document.querySelector('.menu-close-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+
+            if (!navOverlay) return;
+
+            const closeMenu = () => {
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                toggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+            };
+
+            const openMenu = () => {
+                navOverlay.classList.add('active');
+                document.body.classList.add('menu-open');
+                toggles.forEach((toggle) => toggle.setAttribute('aria-expanded', 'true'));
+            };
+
+            toggles.forEach((toggle) => {
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.addEventListener('click', openMenu);
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            navOverlay.addEventListener('click', (e) => { if (e.target === navOverlay) closeMenu(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && navOverlay.classList.contains('active')) closeMenu(); });
+            navOverlay.querySelectorAll('a').forEach((link) => { link.addEventListener('click', closeMenu); });
+        });
+    </script>
     <script src="bones-confetti.js"></script>
     <script src="quest-modal.js?v=5"></script>
 </body>

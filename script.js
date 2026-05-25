@@ -253,4 +253,46 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- Services Switcher Scroll State ---
+    const servicesSwitcher = document.querySelector('.services-switcher');
+    if (servicesSwitcher) {
+        // 1. Надежно определяем активную кнопку по всему URL
+        const currentUrl = window.location.href.toLowerCase();
+        
+        const switchBtns = servicesSwitcher.querySelectorAll('.services-switch-btn');
+        switchBtns.forEach(btn => {
+            const href = (btn.getAttribute('href') || '').toLowerCase();
+            const pages = (btn.getAttribute('data-page') || '').toLowerCase().split(' ').filter(Boolean);
+            
+            const isMatch = (href && currentUrl.includes(href)) || pages.some(p => currentUrl.includes(p));
+            
+            if (isMatch) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // 2. Умная функция центрирования активной кнопки
+        const centerActiveButton = () => {
+            const activeBtn = servicesSwitcher.querySelector('.active');
+            if (activeBtn) {
+                const containerRect = servicesSwitcher.getBoundingClientRect();
+                const btnRect = activeBtn.getBoundingClientRect();
+                
+                if (containerRect.width > 0 && btnRect.width > 0) {
+                    // Вычисляем визуальную разницу между тем, где кнопка сейчас, и центром
+                    const currentOffset = btnRect.left - containerRect.left;
+                    const desiredOffset = (containerRect.width / 2) - (btnRect.width / 2);
+                    servicesSwitcher.scrollLeft += (currentOffset - desiredOffset);
+                }
+            }
+        };
+
+        centerActiveButton();
+        setTimeout(centerActiveButton, 100);
+        setTimeout(centerActiveButton, 500);
+        window.addEventListener('load', centerActiveButton);
+    }
 });
