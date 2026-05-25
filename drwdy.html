@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=204.0">
+    <link rel="stylesheet" href="styles.css?v=214.0">
     <style>
         /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
         .abilka-centered-group {
@@ -66,6 +66,7 @@
             border-radius: 6.74px !important;
         }
 
+        @media (min-width: 801px) {
         .other-projects-section {
             padding: 100px 0 !important;
             margin-top: 0 !important;
@@ -74,6 +75,7 @@
             max-width: none !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
+            }
         }
 
         .other-projects-title {
@@ -122,6 +124,21 @@
             border-radius: 6.74px !important;
         }
 
+        /* Maximum specificity to kill all roundings on form elements */
+        html body.drwdy-page .request-form-section,
+        html body.drwdy-page .request-form-layout,
+        html body.drwdy-page .request-textarea-wrapper textarea,
+        html body.drwdy-page .request-submit-btn,
+        html body.drwdy-page .request-voice-recording-panel,
+        html body.drwdy-page .file-item,
+        html body.drwdy-page .request-input-group input {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+        }
+
+        @media (min-width: 801px) {
         .request-form-section {
             margin-top: 0 !important;
             padding-top: 100px !important;
@@ -131,6 +148,7 @@
             width: calc(100% + 160px) !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
+            }
         }
 
         .request-form-layout {
@@ -278,6 +296,7 @@
             text-transform: uppercase;
         }
 
+        @media (min-width: 801px) {
         .new-site-footer {
             margin-top: 0 !important;
             border-radius: 0 !important;
@@ -286,6 +305,7 @@
             margin-left: -80px !important;
             margin-right: -80px !important;
             background-color: #1E1E1E !important;
+        }
         }
     </style>
 </head>
@@ -318,6 +338,44 @@
                         <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
                             <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
                         </button>
+                    </div>
+
+                    <!-- Mobile Hero Layout -->
+                    <div class="header-mobile-hero">
+                        <div class="logo-stack">
+                            <a href="/"><img src="img/logo_kisaw_black.svg" alt="KISAW" class="logo-main"></a>
+                        </div>
+                        <p class="tagline">by nika and vanya</p>
+                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Popup Menu -->
+                    <div class="nav-overlay">
+                        <nav class="nav-popup">
+                            <button class="menu-close-btn" aria-label="Close Menu">
+                                <img src="img/closewindow.svg" alt="Close">
+                            </button>
+                            <div class="nav-links">
+                                <a href="about.html">About</a>
+                                <a href="services.html">Services</a>
+                                <a href="index.html#cases-nav">Cases</a>
+                                <a href="privacypolicy.html">Privacy policy</a>
+                            </div>
+                            <div class="nav-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="nav-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance">
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nav-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram">
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nav-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <a href="/#request-form" class="send-signal-btn-mobile">Send the Signal</a>
+                        </nav>
                     </div>
                 </header>
 
@@ -374,7 +432,7 @@
 
                             <!-- HISTORY TAB CONTENT -->
                             <div id="lore" class="tab-content" style="width: 100%;">
-                                <div class="abilka-centered-group" style="margin-top: 0 !important;">
+                                <div class="abilka-centered-group strategy-content-wrapper" style="margin-top: 0 !important;">
                                     <section class="strategy-section">
                                         <h3 class="section-title">PROJECT CONTEXT</h3>
                                         <div class="drwdy-copy">
@@ -515,7 +573,7 @@
                     </div>
                 </section>
 
-                <footer class="new-site-footer">
+                                <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
@@ -571,7 +629,7 @@
         <div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=213.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
@@ -690,7 +748,6 @@
                         confetti({ particleCount: 80, spread: 80, origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight } });
                         document.getElementById('success-modal').style.display = 'flex';
                     });
-                }
             }
         });
     </script>

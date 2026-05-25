@@ -2776,7 +2776,7 @@ a {
         padding: 24px 20px 48px !important;
         /* Increased bottom padding for more "air" */
         background: #353535 !important;
-        border-radius: 12px !important;
+        border-radius: 0 !important;
     }
 
     .request-form-copy {
@@ -5318,7 +5318,7 @@ a {
     #request-form {
         padding-top: 72px !important;
         margin-top: 0px !important;
-        border-radius: 12px !important;
+        border-radius: 0 !important;
     }
 
     .request-form-section {
@@ -7137,31 +7137,50 @@ body.menu-open {
 }
 
 /* ==========================================================================
-   CASE PAGES MOBILE REFINEMENTS (ABILKA)
+   CASE PAGES MOBILE REFINEMENTS (ABILKA, FROZEN BRO, DRWDY & BOILING BRAINS)
    ========================================================================== */
 @media (max-width: 800px) {
     /* 1. White menu for Light Header */
     body.abilka-case-page .header-mobile-hero,
-    body.abilka-case-page .nav-popup {
+    body.abilka-case-page .nav-popup,
+    body.frozenbro-page .header-mobile-hero,
+    body.frozenbro-page .nav-popup,
+    body.drwdy-page .header-mobile-hero,
+    body.drwdy-page .nav-popup {
         background: #FBFBFB !important;
     }
-    body.abilka-case-page .header-mobile-hero .logo-main,
     body.abilka-case-page .header-mobile-hero .burger-icon,
     body.abilka-case-page .menu-close-btn img,
-    body.abilka-case-page .mobile-nav-toggle-floating .burger-icon {
+    body.abilka-case-page .mobile-nav-toggle-floating .burger-icon,
+    body.frozenbro-page .header-mobile-hero .burger-icon,
+    body.frozenbro-page .menu-close-btn img,
+    body.frozenbro-page .mobile-nav-toggle-floating .burger-icon,
+    body.drwdy-page .header-mobile-hero .burger-icon,
+    body.drwdy-page .menu-close-btn img,
+    body.drwdy-page .mobile-nav-toggle-floating .burger-icon {
         filter: invert(1) !important;
     }
     body.abilka-case-page .header-mobile-hero .tagline,
-    body.abilka-case-page .nav-popup .nav-links a {
+    body.abilka-case-page .nav-popup .nav-links a,
+    body.frozenbro-page .header-mobile-hero .tagline,
+    body.frozenbro-page .nav-popup .nav-links a,
+    body.drwdy-page .header-mobile-hero .tagline,
+    body.drwdy-page .nav-popup .nav-links a {
         color: #1E1E1E !important;
     }
 
     /* 2. Tags size */
     body.abilka-case-page .tags span,
-    body.abilka-case-page .tag-hash {
+    body.abilka-case-page .tag-hash,
+    body.frozenbro-page .tags span,
+    body.frozenbro-page .tag-hash,
+    body.drwdy-page .tags span,
+    body.drwdy-page .tag-hash {
             font-size: 11px !important;
     }
-    body.abilka-case-page .tags {
+    body.abilka-case-page .tags,
+    body.frozenbro-page .tags,
+    body.drwdy-page .tags {
             gap: 8px !important;
             margin-top: 8px !important;
             margin-bottom: 16px !important;
@@ -7169,13 +7188,19 @@ body.menu-open {
     }
 
     /* 3. Images side margins and gallery fit */
-        body.abilka-case-page {
+        body.abilka-case-page,
+        body.frozenbro-page,
+        body.drwdy-page {
             padding: 0 !important;
         }
-        body.abilka-case-page .main-row {
+        body.abilka-case-page .main-row,
+        body.frozenbro-page .main-row,
+        body.drwdy-page .main-row {
             padding: 0 !important;
         }
-    body.abilka-case-page .container {
+    body.abilka-case-page .container,
+    body.frozenbro-page .container,
+    body.drwdy-page .container {
             width: 100% !important;
             max-width: 100% !important;
             margin: 0 !important;
@@ -7183,31 +7208,64 @@ body.menu-open {
             border-radius: 0 !important;
             overflow: hidden !important;
         }
-        body.abilka-case-page .header {
+        body.abilka-case-page .header,
+        body.frozenbro-page .header,
+        body.drwdy-page .header {
             padding: 0 16px !important;
         margin-bottom: 54px !important;
     }
-    body.abilka-case-page .main-left {
+    body.abilka-case-page .main-left,
+    body.frozenbro-page .main-left,
+    body.drwdy-page .main-left {
             padding-top: 0 !important;
             padding-left: 16px !important;
             padding-right: 16px !important;
         }
-        body.abilka-case-page .abilka-case-images {
+        body.abilka-case-page .abilka-case-images,
+        body.frozenbro-page .abilka-case-images,
+        body.drwdy-page .abilka-case-images {
             padding-left: 16px !important;
             padding-right: 16px !important;
             box-sizing: border-box !important;
-        }
-        body.abilka-case-page .title-section {
+            margin-top: 16px !important;
             margin-bottom: 16px !important;
-    }
-    body.abilka-case-page .abilka-img-wrapper {
-            margin-bottom: 8px !important;
-        border-radius: 8px !important;
+        }
+        body.abilka-case-page .title-section,
+        body.frozenbro-page .title-section,
+        body.drwdy-page .title-section {
+            margin-bottom: 16px !important;
+        }
+        /* Reset border radius for all case study images and wrappers on mobile, make margins between images tighter */
+        body.abilka-case-page .abilka-img-wrapper,
+        body.frozenbro-page .abilka-img-wrapper,
+        body.drwdy-page .abilka-img-wrapper {
+            margin-bottom: 4px !important;
+            border-radius: 0 !important;
             width: 100% !important;
-    }
+        }
+        body.abilka-case-page .abilka-image,
+        body.frozenbro-page .abilka-image,
+        body.drwdy-page .abilka-image,
+        body.frozenbro-page .strategy-img,
+        body.drwdy-page .strategy-img,
+        body.drwdy-page .drwdy-visual-before-image {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+        }
+        /* Override any inline top margin on first showcase image wrapper on mobile */
+        body.abilka-case-page .abilka-img-wrapper:first-child,
+        body.frozenbro-page .abilka-img-wrapper:first-child,
+        body.drwdy-page .abilka-img-wrapper:first-child,
+        body.abilka-case-page .main-left + .abilka-img-wrapper,
+        body.frozenbro-page .main-left + .abilka-img-wrapper,
+        body.drwdy-page .main-left + .abilka-img-wrapper {
+            margin-top: 16px !important;
+        }
 
         /* 4. Other Projects Carousel Adaptation */
-        body.abilka-case-page .other-projects-section {
+        body.abilka-case-page .other-projects-section,
+        body.frozenbro-page .other-projects-section,
+        body.drwdy-page .other-projects-section {
             padding: 48px 0 0 !important;
             margin-top: 32px !important;
             width: 100% !important;
@@ -7216,7 +7274,9 @@ body.menu-open {
             position: relative !important;
             background: #1E1E1E !important;
         }
-        body.abilka-case-page .other-projects-title {
+        body.abilka-case-page .other-projects-title,
+        body.frozenbro-page .other-projects-title,
+        body.drwdy-page .other-projects-title {
             width: 100% !important;
             max-width: 100% !important;
             font-size: 24px !important;
@@ -7225,10 +7285,14 @@ body.menu-open {
             text-align: left !important;
             color: #FBFBFB !important;
         }
-        body.abilka-case-page .projects-carousel {
+        body.abilka-case-page .projects-carousel,
+        body.frozenbro-page .projects-carousel,
+        body.drwdy-page .projects-carousel {
             padding: 0 0 24px 0 !important;
         }
-        body.abilka-case-page .carousel-track {
+        body.abilka-case-page .carousel-track,
+        body.frozenbro-page .carousel-track,
+        body.drwdy-page .carousel-track {
             width: 100% !important;
             padding-left: 16px !important;
             padding-right: 16px !important;
@@ -7238,16 +7302,22 @@ body.menu-open {
             display: flex !important;
             scrollbar-width: none;
         }
-        body.abilka-case-page .carousel-track::-webkit-scrollbar {
+        body.abilka-case-page .carousel-track::-webkit-scrollbar,
+        body.frozenbro-page .carousel-track::-webkit-scrollbar,
+        body.drwdy-page .carousel-track::-webkit-scrollbar {
             display: none;
         }
-        body.abilka-case-page .carousel-item {
+        body.abilka-case-page .carousel-item,
+        body.frozenbro-page .carousel-item,
+        body.drwdy-page .carousel-item {
             min-width: 75vw !important;
             flex: 0 0 75vw !important;
         }
 
         /* 5. Zero gap between form and footer */
-        body.abilka-case-page .request-form-section {
+        body.abilka-case-page .request-form-section,
+        body.frozenbro-page .request-form-section,
+        body.drwdy-page .request-form-section {
             width: 100% !important;
             margin-top: 0 !important;
             margin-bottom: 0 !important;
@@ -7256,7 +7326,9 @@ body.menu-open {
             background: #1E1E1E !important;
             box-sizing: border-box !important;
         }
-        body.abilka-case-page .new-site-footer {
+        body.abilka-case-page .new-site-footer,
+        body.frozenbro-page .new-site-footer,
+        body.drwdy-page .new-site-footer {
             width: 100% !important;
             margin-top: 0 !important;
             padding: 40px 16px !important;
@@ -7264,4 +7336,110 @@ body.menu-open {
             background: #1E1E1E !important;
             box-sizing: border-box !important;
         }
-}
+
+        /* 6. Specific Case Page Typography and Containers (Dr. Wdy, Boiling Brains & Frozen Bro) */
+        body.drwdy-page .drwdy-copy,
+        body.drwdy-page .drwdy-visual-concept-intro,
+        body.drwdy-page .drwdy-visual-concept-outro,
+        body.drwdy-page .strategy-project-context,
+        body.drwdy-page .strategy-section,
+        body.abilka-case-page .strategy-project-context,
+        body.frozenbro-page .strategy-project-context {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        body.drwdy-page .drwdy-brandbook-section .drwdy-grid-three,
+        body.drwdy-page .drwdy-grid-three {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+        }
+
+        /* 7. Mobile Tab Switcher Scaling & Spacing (Compact Layout) */
+        body.abilka-case-page .buttons-wrap,
+        body.frozenbro-page .buttons-wrap,
+        body.drwdy-page .buttons-wrap {
+            margin: 16px auto !important;
+            padding: 3px !important;
+            border-radius: 20px !important;
+            gap: 4px !important;
+        }
+        body.abilka-case-page .buttons-wrap .btn,
+        body.frozenbro-page .buttons-wrap .btn,
+        body.drwdy-page .buttons-wrap .btn {
+            height: 36px !important;
+            padding: 0 20px !important;
+            font-size: 13px !important;
+            border-radius: 18px !important;
+        }
+        body.abilka-case-page .active-pill,
+        body.frozenbro-page .active-pill,
+        body.drwdy-page .active-pill {
+            top: 3px !important;
+            left: 3px;
+            height: 36px !important;
+            border-radius: 18px !important;
+        }
+        body.abilka-case-page .tab-content,
+        body.frozenbro-page .tab-content,
+        body.drwdy-page .tab-content {
+            margin-bottom: 24px !important;
+        }
+        body.frozenbro-page .strategy-section,
+        body.drwdy-page .strategy-section {
+            margin-bottom: 32px !important;
+        }
+        body.frozenbro-page .subtitle-media-group,
+        body.drwdy-page .subtitle-media-group {
+            margin-bottom: 24px !important;
+        }
+
+        /* 8. LORE tab content mobile alignment, spacing and typography parity with VISUALS */
+        body.abilka-case-page .strategy-content-wrapper,
+        body.frozenbro-page .strategy-content-wrapper,
+        body.drwdy-page .strategy-content-wrapper {
+            padding: 0 16px !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        body.frozenbro-page .strategy-title,
+        body.drwdy-page .section-title,
+        body.drwdy-page .drwdy-brandbook-title {
+            font-size: 20px !important;
+            margin-top: 24px !important;
+            margin-bottom: 12px !important;
+            text-transform: uppercase !important;
+            font-weight: 900 !important;
+            color: #1E1E1E !important;
+        }
+
+        body.frozenbro-page .strategy-text,
+        body.drwdy-page .drwdy-copy {
+            font-size: 15px !important;
+            line-height: 1.45 !important;
+            margin-top: 12px !important;
+            margin-bottom: 16px !important;
+            color: #1E1E1E !important;
+        }
+
+        body.frozenbro-page .strategy-subtitle,
+        body.drwdy-page .strategy-subtitle {
+            font-size: 13px !important;
+            font-style: italic !important;
+            margin-top: 12px !important;
+            margin-bottom: 6px !important;
+            color: #1E1E1E !important;
+        }
+
+        body.abilka-case-page .tab-content .abilka-img-wrapper,
+        body.frozenbro-page .tab-content .abilka-img-wrapper,
+        body.drwdy-page .tab-content .abilka-img-wrapper,
+        body.frozenbro-page .strategy-img {
+            margin-top: 6px !important;
+            margin-bottom: 16px !important;
+            border-radius: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+        }

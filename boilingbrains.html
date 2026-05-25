@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=46.0">
+    <link rel="stylesheet" href="styles.css?v=213.0">
     <style>
         /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
         .abilka-centered-group {
@@ -66,6 +66,7 @@
             object-fit: cover !important;
         }
 
+        @media (min-width: 801px) {
         .other-projects-section {
             padding: 100px 0 !important;
             margin-top: 0 !important;
@@ -74,6 +75,7 @@
             max-width: none !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
+            }
         }
 
         .other-projects-title {
@@ -124,6 +126,21 @@
             border-radius: 12px !important;
         }
 
+        /* Maximum specificity to kill all roundings on form elements */
+        html body.drwdy-page .request-form-section,
+        html body.drwdy-page .request-form-layout,
+        html body.drwdy-page .request-textarea-wrapper textarea,
+        html body.drwdy-page .request-submit-btn,
+        html body.drwdy-page .request-voice-recording-panel,
+        html body.drwdy-page .file-item,
+        html body.drwdy-page .request-input-group input {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+        }
+
+        @media (min-width: 801px) {
         .request-form-section {
             margin-top: 0 !important;
             padding-top: 100px !important;
@@ -133,6 +150,7 @@
             width: calc(100% + 160px) !important;
             margin-left: -80px !important;
             margin-right: -80px !important;
+            }
         }
 
         .request-form-layout {
@@ -252,6 +270,7 @@
             display: block !important;
         }
 
+        @media (min-width: 801px) {
         .new-site-footer {
             margin-top: 0 !important;
             border-radius: 0 !important;
@@ -260,6 +279,7 @@
             margin-left: -80px !important;
             margin-right: -80px !important;
             background-color: #1E1E1E !important;
+        }
         }
     </style>
 </head>
@@ -389,7 +409,7 @@
                         <div id="lore" class="tab-content">
                             <div class="abilka-case-images">
                                 <section class="abilka-intro-section">
-                                    <div style="width: 1000px; max-width: 100%; color: #1E1E1E;">
+                                    <div class="strategy-content-wrapper" style="width: 1000px; max-width: 100%; color: #1E1E1E;">
                                         <h3 class="section-title"
                                             style="font-size: 24px; font-weight: 900; margin-bottom: 24px; text-transform: uppercase; color: #1E1E1E;">
                                             PROJECT CONTEXT</h3>
@@ -591,7 +611,7 @@
                         </form>
                     </div>
                 </section>
-                <footer class="new-site-footer">
+                                <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
@@ -648,7 +668,7 @@
         <div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=213.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Tab Logic ---

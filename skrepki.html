@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=46.0">
+    <link rel="stylesheet" href="styles.css?v=213.0">
     <style>
         /* Embedded to bypass cache */
         .abilka-centered-group {
@@ -72,6 +72,7 @@
             object-fit: cover !important;
         }
 
+        @media (min-width: 801px) {
         .other-projects-section {
             padding: 100px 0 !important;
             margin-top: 0 !important;
@@ -81,6 +82,7 @@
             margin-left: -80px !important;
             margin-right: -80px !important;
             }
+        }
 
         .other-projects-title {
             width: 1000px !important;
@@ -130,6 +132,7 @@
             border-radius: 12px !important;
         }
 
+        @media (min-width: 801px) {
         .request-form-section {
             margin-top: 0 !important;
             padding-top: 100px !important;
@@ -137,9 +140,10 @@
             background-color: #1E1E1E !important;
             width: calc(100% + 160px) !important;
             max-width: none !important;
-            /* margin-left: -80px !important;
-            margin-right: -80px !important; */
             border-radius: 0 !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            }
         }
 
         .request-form-layout {
@@ -259,6 +263,7 @@
             display: block !important;
         }
 
+        @media (min-width: 801px) {
         .new-site-footer {
             margin-top: 0 !important;
             border-radius: 0 !important;
@@ -267,6 +272,7 @@
             margin-left: -80px !important;
             margin-right: -80px !important;
             background-color: #1E1E1E !important;
+        }
         }
     </style>
 </head>
@@ -563,7 +569,7 @@
                     </div>
                 </section>
 
-                                <footer class="new-site-footer">
+                                                <footer class="new-site-footer">
                     <div class="footer-main-row">
                         <div class="footer-brand-col">
                             <div class="footer-brand-logo"><a href="/" class="footer-animated-bone-link"><img src="img/bone white.svg" alt="KISAW Logo" class="footer-animated-bone"></a>
@@ -620,7 +626,7 @@
         <div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=213.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Tab Logic ---

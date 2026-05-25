@@ -220,39 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lightbox.classList.remove('active');
     });
 
-    // --- Carousel Navigation ---
-    const track = document.querySelector('.carousel-track');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    
-    if (track && carouselItems.length > 0) {
-        let currentIndex = 0;
-        const gap = 24;
-        const itemWidth = 380;
-        const totalItems = carouselItems.length;
-        
-        function updateCarousel() {
-            const offset = -(itemWidth + gap) * currentIndex;
-            track.style.transform = `translateX(${offset}px)`;
-        }
-        
-        // "Smart Click" logic
-        carouselItems.forEach((item, index) => {
-            item.addEventListener('click', (e) => {
-                // If it's to the right of the current view, slide instead of following link
-                if (index > currentIndex) {
-                    e.preventDefault();
-                    currentIndex = index;
-                    updateCarousel();
-                } else if (index < currentIndex) {
-                    // Allow going back if clicking items to the left
-                    e.preventDefault();
-                    currentIndex = index;
-                    updateCarousel();
-                }
-                // If index === currentIndex, allow following the link
-            });
-        });
-    }
+
 
     // --- Services Switcher Scroll State ---
     const servicesSwitcher = document.querySelector('.services-switcher');
@@ -294,5 +262,34 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(centerActiveButton, 100);
         setTimeout(centerActiveButton, 500);
         window.addEventListener('load', centerActiveButton);
+    }
+
+    // --- Mobile Menu Toggle Centralized Logic ---
+    const mobileToggles = document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero');
+    const mobileCloseBtn = document.querySelector('.menu-close-btn');
+    const mobileNavOverlay = document.querySelector('.nav-overlay');
+
+    if (mobileNavOverlay) {
+        const closeMobileMenu = () => {
+            mobileNavOverlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            mobileToggles.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+        };
+
+        const openMobileMenu = () => {
+            mobileNavOverlay.classList.add('active');
+            document.body.classList.add('menu-open');
+            mobileToggles.forEach((t) => t.setAttribute('aria-expanded', 'true'));
+        };
+
+        mobileToggles.forEach((toggle) => {
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.addEventListener('click', openMobileMenu);
+        });
+
+        if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+        mobileNavOverlay.addEventListener('click', (e) => { if (e.target === mobileNavOverlay) closeMobileMenu(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) closeMobileMenu(); });
+        mobileNavOverlay.querySelectorAll('a').forEach((link) => { link.addEventListener('click', closeMobileMenu); });
     }
 });
