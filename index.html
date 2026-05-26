@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=235.0">
 </head>
 
 <body class="main-page">
@@ -662,6 +662,84 @@
         });
     </script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const physicsHero = document.getElementById('physics-hero');
+            if (physicsHero) {
+                const words = physicsHero.querySelectorAll('.hero-word, .hero-tagline');
+                
+                // Generate pre-calculated pseudorandom factors for each word
+                const wordProps = Array.from(words).map((word, idx) => {
+                    // Index-based seeds for deterministic multipliers
+                    const speedMult = 1.0 + ((idx * 7) % 11) / 7.0; // 1.0 to ~2.4
+                    const driftMult = -35 + ((idx * 13) % 71); // -35px to +35px
+                    const rotMult = -12 + ((idx * 17) % 25); // -12deg to +12deg
+                    
+                    return {
+                        element: word,
+                        speed: speedMult,
+                        drift: driftMult,
+                        rotation: rotMult
+                    };
+                });
+
+                let lastScrollY = -1;
+                let ticking = false;
+                const maxScroll = 450;
+
+                const updateFallingWords = () => {
+                    const currentScroll = window.scrollY;
+                    const isMobile = window.innerWidth <= 800;
+                    
+                    if (currentScroll !== lastScrollY) {
+                        lastScrollY = currentScroll;
+                        
+                        if (isMobile) {
+                            const progress = Math.min(currentScroll / maxScroll, 1);
+                            
+                            wordProps.forEach((prop) => {
+                                if (progress <= 0) {
+                                    prop.element.style.transform = '';
+                                    prop.element.style.opacity = '';
+                                } else {
+                                    const translateY = progress * prop.speed * 260; // falls up to 260px
+                                    const translateX = progress * prop.drift; // drifts sideways
+                                    const rotate = progress * prop.rotation; // rotates
+                                    const opacity = Math.max(1 - progress * 1.6, 0); // fades out nicely
+
+                                    prop.element.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) rotate(${rotate}deg)`;
+                                    prop.element.style.opacity = opacity;
+                                }
+                            });
+                        } else {
+                            // If not mobile, reset styles just in case
+                            wordProps.forEach((prop) => {
+                                prop.element.style.transform = '';
+                                prop.element.style.opacity = '';
+                            });
+                        }
+                    }
+                    ticking = false;
+                };
+
+                const onScroll = () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateFallingWords);
+                        ticking = true;
+                    }
+                };
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('resize', () => {
+                    // Instantly recalculate or reset on resize
+                    lastScrollY = -1;
+                    onScroll();
+                });
+
+                // Trigger initial paint
+                onScroll();
+            }
+        });
+
         window.addEventListener('scroll', () => {
             if (window.innerWidth <= 800) {
                 if (window.scrollY > 200) document.body.classList.add('is-scrolled');

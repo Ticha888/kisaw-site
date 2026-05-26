@@ -3416,15 +3416,28 @@ a {
 .cases-header-icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 64px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: -10px !important;
+    margin-bottom: 50px !important;
+    border: none !important;
+    padding: 0 !important;
     scroll-margin-top: 64px;
+}
+
+.cases-header-icon img {
+    width: 80px;
+    height: auto;
+    transition: width 0.3s ease;
 }
 
 @media (max-width: 800px) {
     .cases-header-icon {
-        margin-bottom: 40px;
+        margin-top: 8px !important;
+        margin-bottom: 24px !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+    .cases-header-icon img {
+        width: 41px !important;
     }
 }
 
@@ -3958,7 +3971,10 @@ a {
 .hero-section.brand-typography-hero {
     background: transparent !important;
     border-radius: 0 !important;
-    min-height: 80vh !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 40px !important;
+    padding-bottom: 10px !important;
     overflow: visible !important;
     display: flex;
     align-items: center;
@@ -4012,9 +4028,47 @@ a {
 
 @media screen and (max-width: 800px) {
     .hero-word {
-        line-height: 1.2;
+        font-size: clamp(2.9rem, 11.5vw, 95px) !important;
+    }
+    .hero-tagline {
+        font-size: clamp(1.8rem, 7.5vw, 90px) !important;
+    }
+
+    .hero-word,
+    .hero-tagline {
+        line-height: 0.8 !important;
+        transition: color 0.3s ease, -webkit-text-fill-color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease !important;
+        will-change: transform, opacity !important;
     }   
+
+    /* Base states for words to match mockup on mobile only */
+    .hero-word.word-pink {
+        color: #FFDAEF !important;
+        -webkit-text-fill-color: #FFDAEF !important;
+        -webkit-text-stroke: none !important;
+    }
+    .hero-word.word-blue {
+        color: #007EFA !important;
+        -webkit-text-fill-color: #007EFA !important;
+        -webkit-text-stroke: none !important;
+    }
+    .hero-word.word-green {
+        color: #47E194 !important;
+        -webkit-text-fill-color: #47E194 !important;
+        -webkit-text-stroke: none !important;
+    }
+    .hero-word.word-white {
+        color: #FBFBFB !important;
+        -webkit-text-fill-color: #FBFBFB !important;
+        -webkit-text-stroke: none !important;
+    }
+    .hero-word.word-outline {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+        -webkit-text-stroke: 0.35px #FBFBFB !important;
+    }
 }
+
 /* Hover Accent States as defined in Brandbook node 2476:16868 */
 
 /* 1. Pink State */
@@ -4054,7 +4108,7 @@ a {
     transform: scale(1.06);
     color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.26px #FBFBFB;
+    -webkit-text-stroke: 0.35px #FBFBFB;
 }
 
 /* Tagline Style */
@@ -4066,7 +4120,7 @@ a {
     line-height: 1.2;
     color: #A6D3FF;
     -webkit-text-fill-color: #A6D3FF;
-    -webkit-text-stroke: 0.83px #A6D3FF;
+    -webkit-text-stroke: none;
     text-align: center;
     display: inline-block;
     cursor: default;
@@ -4089,21 +4143,37 @@ a {
 
 @media (max-width: 800px) {
     .hero-section.brand-typography-hero {
-        width: calc(100% + 44px);
-        margin-left: -22px;
-        margin-right: -22px;
-        min-height: 60vh !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding-top: 12px !important;
+        padding-bottom: 2px !important;
+        overflow: hidden !important;
     }
 
     .hero-typo-container {
-        gap: 6px;
-        padding: 0 16px;
+        gap: 4px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        width: 100% !important;
     }
 
     .hero-typo-row {
-        gap: 12px;
-        flex-wrap: wrap;
-        /* allow natural line breaks on small mobile viewports */
+        gap: clamp(4px, 1vw, 8px) !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .hero-word {
+        font-size: 11.5vw !important;
+    }
+
+    .hero-tagline {
+        font-size: 7.2vw !important;
     }
 }
 
@@ -4838,9 +4908,21 @@ a {
    UNIVERSAL MOBILE HEADER FIX (GRID + TAGLINE ALIGNMENT)
    ========================================================================== */
 @media (max-width: 800px) {
-    body .header,
+    /* Dark layouts (already have container padding) */
     body.main-page .header,
-    body.services-page .header,
+    body.services-page .header {
+        display: block !important;
+        margin: 0 0 54px 0 !important;
+        width: 100% !important;
+        padding: 24px 16px 0 !important;
+        left: 0 !important;
+        position: relative !important;
+        top: auto !important;
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Light layouts & Case pages (need elegant top spacing) */
     body.abilka-case-page .header,
     body.frozenbro-page .header,
     body.drwdy-page .header,
@@ -4850,7 +4932,7 @@ a {
         display: block !important;
         margin: 0 0 54px 0 !important;
         width: 100% !important;
-        padding: 0 16px !important;
+        padding: 24px 16px 0 !important;
         left: 0 !important;
         position: relative !important;
         top: auto !important;
@@ -4865,10 +4947,10 @@ a {
         flex-direction: row !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        gap: 6px !important; /* Минимальный отступ между лого и подписью */
+        gap: 0 !important; /* Rely entirely on margin on tagline for precise control */
         width: 100% !important;
         margin: 0 !important;
-        padding: 16px 0 !important;
+        padding: 0 !important; /* Zero padding to match other pages */
         background: transparent !important;
         border-radius: 0 !important;
     }
@@ -4896,11 +4978,8 @@ a {
         display: block !important;
     }
 
-    body .header-mobile-hero .tagline,
-    body.main-page .header-mobile-hero .tagline,
-    body.services-page .header-mobile-hero .tagline {
-        margin: 0 !important;
-        margin-top: 2px !important; /* Оптическое выравнивание по центру логотипа */
+    body .header-mobile-hero .tagline {
+        margin: 0 0 0 16px !important; /* Единый отступ логотип → подпись на всех страницах */
         font-size: 12px !important;
         line-height: 1.2 !important;
         text-align: left !important;
@@ -4950,18 +5029,18 @@ a {
     .logo-main {
         display: block !important;
         height: auto !important;
-        width: 180px !important;
-        max-width: 220px !important;
-        margin: 0 auto !important;
+        width: 86px !important;
+        max-width: 86px !important;
+        margin: 0 !important;
     }
 
     .header-mobile-hero .tagline {
         color: #DDDDDD !important;
-        font-size: 14px !important;
-        text-align: center !important;
+        font-size: 12px !important;
+        text-align: left !important;
         text-transform: uppercase !important;
         line-height: 1.2 !important;
-        margin-top: -64px !important;
+        margin: 0 0 0 16px !important;
         letter-spacing: 0.05em !important;
     }
 
@@ -5148,18 +5227,18 @@ a {
     .logo-main {
         display: block !important;
         height: auto !important;
-        width: 180px !important;
-        max-width: 220px !important;
-        margin: 0 auto !important;
+        width: 86px !important;
+        max-width: 86px !important;
+        margin: 0 !important;
     }
 
     .header-mobile-hero .tagline {
         color: #DDDDDD !important;
-        font-size: 14px !important;
-        text-align: center !important;
+        font-size: 12px !important;
+        text-align: left !important;
         text-transform: uppercase !important;
         line-height: 1.2 !important;
-        margin-top: -64px !important;
+        margin: 0 0 0 16px !important;
         letter-spacing: 0.05em !important;
     }
 
@@ -5598,7 +5677,7 @@ a {
         position: relative !important;
         top: auto !important;
         margin: 0 0 32px 0 !important;
-        padding: 0 16px !important;
+        padding: 24px 16px 0 !important;
         width: 100% !important;
         z-index: 9999 !important;
         background: transparent !important;
@@ -5609,7 +5688,8 @@ a {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 16px 0 !important;
@@ -5633,7 +5713,7 @@ a {
     /* 4. Отменяем margin-top: -64px, из-за которого шапка улетала вверх */
     body .header-mobile-hero .tagline {
         display: block !important;
-        margin: 0 0 0 8px !important;
+        margin: 0 0 0 16px !important;
         font-size: 12px !important;
         text-transform: uppercase !important;
         line-height: 1.2 !important;
@@ -5650,7 +5730,7 @@ a {
     /* 5. Выравниваем кнопку меню */
     body .header-mobile-hero .mobile-nav-toggle-hero {
         display: flex !important;
-        margin: 0 !important;
+        margin: 0 0 0 auto !important;
         padding: 0 !important;
         background: transparent !important;
         border: none !important;
@@ -6583,11 +6663,8 @@ a {
         width: calc(100% + 44px) !important;
         padding: 0 22px !important;
         border-radius: 0 !important;
-        /* Overrides parent boundary radius when sticky */
     }
-}
 
-@media (max-width: 800px) {
     body.main-page {
         padding: 0 !important;
     }
@@ -6616,7 +6693,7 @@ a {
     .main-page .header {
         margin: 0 0 54px 0 !important;
         width: 100% !important;
-        padding: 0 16px !important;
+        padding: 24px 16px 0 !important;
         left: 0 !important;
         position: relative !important;
         top: auto !important;
@@ -6624,20 +6701,21 @@ a {
     }
 
     .main-page .header-mobile-hero {
-        display: grid !important;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 12px;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
         width: 100% !important;
         margin: 0 !important;
-        padding: 16px 0 !important;
+        padding: 0 !important;
         background: transparent !important;
         border-radius: 0 !important;
     }
 
     .main-page .header-mobile-hero .logo-stack {
-        display: flex;
-        align-items: center;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .main-page .header-mobile-hero .logo-main {
@@ -6647,10 +6725,10 @@ a {
     }
 
     .main-page .header-mobile-hero .tagline {
-        margin: 0 !important;
+        margin: 0 0 0 16px !important;
         font-size: 12px !important;
         line-height: 1.2 !important;
-        text-align: center !important;
+        text-align: left !important;
         text-transform: uppercase !important;
         letter-spacing: 0.06em !important;
         color: #DDDDDD !important;
@@ -6658,18 +6736,18 @@ a {
 
     .main-page .mobile-nav-toggle-hero {
         display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: auto !important;
+        margin: 0 0 0 auto !important;
         padding: 0 !important;
         border: 0 !important;
         background: transparent !important;
     }
 
     .main-page .mobile-nav-toggle-hero .burger-icon {
-        width: 48px !important;
+        width: 44px !important;
         height: auto !important;
     }
 
@@ -6700,7 +6778,7 @@ a {
         max-width: 100% !important;
         align-items: center !important;
         text-align: center !important;
-        gap: 24px !important;
+        gap: 54px !important;
     }
 
     .main-page .illustrations-title-img {
@@ -6712,12 +6790,14 @@ a {
     .main-page .illustrations-grid {
         width: 100% !important;
         justify-content: center !important;
-        gap: 16px !important;
+        gap: 28px !important;
     }
 
     .main-page .illustration-item {
-        width: calc(50% - 8px) !important;
-        max-width: 170px !important;
+        width: calc(50% - 14px) !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        max-width: 150px !important;
     }
 
     .main-page .why-us-v3 {
@@ -7149,6 +7229,15 @@ body.menu-open {
     body.drwdy-page .nav-popup {
         background: #FBFBFB !important;
     }
+    body.abilka-case-page .header-mobile-hero .logo-main,
+    body.frozenbro-page .header-mobile-hero .logo-main,
+    body.drwdy-page .header-mobile-hero .logo-main,
+    body.boilingbrains-page .header-mobile-hero .logo-main,
+    body.skrepki-page .header-mobile-hero .logo-main {
+        width: 86px !important;
+        max-width: 86px !important;
+        margin: 0 !important;
+    }
     body.abilka-case-page .header-mobile-hero .burger-icon,
     body.abilka-case-page .menu-close-btn img,
     body.abilka-case-page .mobile-nav-toggle-floating .burger-icon,
@@ -7211,9 +7300,9 @@ body.menu-open {
         body.abilka-case-page .header,
         body.frozenbro-page .header,
         body.drwdy-page .header {
-            padding: 0 16px !important;
-        margin-bottom: 54px !important;
-    }
+            padding: 24px 16px 0 !important;
+            margin-bottom: 54px !important;
+        }
     body.abilka-case-page .main-left,
     body.frozenbro-page .main-left,
     body.drwdy-page .main-left {
