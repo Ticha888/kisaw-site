@@ -251,4 +251,5 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileNavOverlay.addEventListener('click', (e) => { if (e.target === mobileNavOverlay) closeMobileMenu(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileNavOverlay.classList.contains('active')) closeMobileMenu(); });
         mobileNavOverlay.querySelectorAll('a').forEach((link) => { link.addEventListener('click', closeMobileMenu); });
+    }
 });

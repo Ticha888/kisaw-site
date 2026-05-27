@@ -171,14 +171,33 @@ a {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: #fff;
-    font-size: 60px;
-    font-weight: 300;
     cursor: pointer;
     z-index: 10001;
-    line-height: 1;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    /* Black outline */
+    /* Replace text × with bone SVG icon */
+    font-size: 0;        /* hide the &times; text */
+    color: transparent;
+    text-shadow: none;
+    width: 52px;
+    height: 52px;
+    background-image: url('img/closewindow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);   /* white on dark background */
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* On mobile — hide the close button, tap outside to close */
+@media (max-width: 800px) {
+    .lightbox-close {
+        display: none !important;
+    }
 }
 
 #lightbox-img {
@@ -7260,15 +7279,17 @@ body.menu-open {
    CASE PAGES MOBILE REFINEMENTS (ABILKA, FROZEN BRO, DRWDY & BOILING BRAINS)
    ========================================================================== */
 @media (max-width: 800px) {
-    /* 1. White menu for Light Header */
     body.abilka-case-page .header-mobile-hero,
     body.abilka-case-page .nav-popup,
-    body.frozenbro-page .header-mobile-hero,
-    body.frozenbro-page .nav-popup,
     body.drwdy-page .header-mobile-hero,
     body.drwdy-page .nav-popup {
         background: #FBFBFB !important;
     }
+    body.frozenbro-page .header-mobile-hero,
+    body.frozenbro-page .nav-popup {
+        background: #F6F5F5 !important;
+    }
+
     body.abilka-case-page .header-mobile-hero .logo-main,
     body.frozenbro-page .header-mobile-hero .logo-main,
     body.drwdy-page .header-mobile-hero .logo-main,
