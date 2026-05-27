@@ -32,7 +32,36 @@ body.services-page {
     background: rgb(53, 53, 53);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* .container has padding: 0 80px, stretch to fill edge-to-edge */
+    width: calc(100% + 160px) !important;
+    margin-left: -80px !important;
+    margin-right: -80px !important;
+    margin-bottom: 0 !important;
 }
+
+@media (max-width: 1100px) {
+    .services-page .request-form-section {
+        width: calc(100% + 80px) !important;
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .services-page .request-form-section {
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: none !important;
+    }
+}
+
+
 
 .services-page .request-form-title {
     font-size: 75px;
