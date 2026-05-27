@@ -274,6 +274,13 @@ a {
     z-index: 1001;
 }
 
+/* Floating burger — desktop only hidden */
+@media (min-width: 801px) {
+    .mobile-nav-toggle-floating {
+        display: none !important;
+    }
+}
+
 .mobile-nav-toggle .burger-icon {
     width: 30px;
     height: auto;
@@ -338,8 +345,9 @@ a {
     color: #DDDDDD;
 }
 
-.header--light .tagline {
-    color: #1E1E1E;
+.header--light .tagline,
+body .header--light .header-mobile-hero .tagline {
+    display: none !important;
 }
 
 .nav {
@@ -3951,7 +3959,6 @@ a {
         position: relative;
         box-sizing: border-box !important;
     }
-}
 
     .logo-main {
         display: block !important;
@@ -4070,7 +4077,11 @@ a {
         text-decoration: none !important;
         width: auto !important;
         min-width: 220px !important;
-        text-align: center !impor/* Header & Container Integration */
+        text-align: center !important;
+    }
+}
+
+/* Header & Container Integration */
 .header {
     width: 100%;
     position: relative;
@@ -4270,6 +4281,7 @@ a {
     .request-form-section { 
         padding: 0 20px 40px !important; 
         width: 100% !important; 
+        background: #1E1E1E !important;
     }
     .footer-main-row { flex-direction: column !important; gap: 40px !important; align-items: center !important; text-align: center !important; padding: 0 20px !important; }
 }
@@ -4748,3 +4760,9 @@ a {
 }
 
 
+
+/* Fix for mobile header color mismatch on light grey case pages */
+body.abilka-case-page .header--scrolled.header--light,
+body.frozenbro-page .header--scrolled.header--light {
+    background: rgba(246, 245, 245, 0.9) !important;
+}

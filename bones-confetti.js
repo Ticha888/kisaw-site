@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
         floatingBurger.className = 'mobile-nav-toggle-floating';
         floatingBurger.setAttribute('aria-label', 'Toggle Navigation');
         floatingBurger.innerHTML = '<img src="img/burgermenu.png" alt="Menu" class="burger-icon">';
+        // DESKTOP GUARD: force hidden by default; CSS media query makes it visible on mobile only
+        floatingBurger.style.display = 'none';
         document.body.appendChild(floatingBurger);
 
         floatingBurger.addEventListener('click', () => {
@@ -268,6 +270,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Helper: show/hide floating burger based on viewport width
+    function updateFloatingBurgerVisibility() {
+        const burger = document.querySelector('.mobile-nav-toggle-floating');
+        if (!burger) return;
+        if (window.innerWidth > 800) {
+            // Desktop — always hidden, clear is-scrolled class
+            burger.style.display = 'none';
+            document.body.classList.remove('is-scrolled');
+        } else {
+            // Mobile — let scroll listener / CSS control it; remove forced inline style
+            burger.style.display = '';
+        }
+    }
+
+    // Run on load and on every resize
+    updateFloatingBurgerVisibility();
+    window.addEventListener('resize', updateFloatingBurgerVisibility);
 
     // Global scroll listener for mobile
     window.addEventListener('scroll', () => {

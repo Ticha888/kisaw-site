@@ -370,8 +370,9 @@ a {
     color: #DDDDDD;
 }
 
-.header--light .tagline {
-    color: #1E1E1E;
+.header--light .tagline,
+body .header--light .header-mobile-hero .tagline {
+    display: none !important;
 }
 
 .nav {
@@ -3201,7 +3202,7 @@ a {
 /* New Dark Footer Styles */
 .new-site-footer {
     background: #1E1E1E;
-    padding: 80px 80px 80px;
+    padding: 120px 80px 80px;
     color: rgb(251, 251, 251);
     border-radius: 0;
 
@@ -3209,7 +3210,7 @@ a {
     width: calc(100% + 160px);
     margin-left: -80px;
     margin-right: -80px;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 .footer-main-row {
@@ -4026,6 +4027,45 @@ a {
     will-change: transform, color, text-shadow;
 }
 
+/* Slow fade back to white after 2s linger */
+.hero-word.word-fading {
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+        color 1.5s ease-in-out,
+        -webkit-text-fill-color 1.5s ease-in-out,
+        -webkit-text-stroke 1.5s ease-in-out,
+        text-shadow 1.5s ease-in-out;
+}
+
+/* Locked color states (applied by JS while hovered or lingering) */
+.hero-word.word-pink.word-lit {
+    color: #FFDAEF !important;
+    -webkit-text-fill-color: #FFDAEF !important;
+    text-shadow: 0px 4px 10px rgba(255, 218, 239, 0.45) !important;
+    transform: scale(1.06);
+}
+.hero-word.word-blue.word-lit {
+    color: #007EFA !important;
+    -webkit-text-fill-color: #007EFA !important;
+    text-shadow: 0px 4px 10px rgba(0, 126, 250, 0.45) !important;
+    transform: scale(1.06);
+}
+.hero-word.word-green.word-lit {
+    color: #47E194 !important;
+    -webkit-text-fill-color: #47E194 !important;
+    text-shadow: 0px 4px 10px rgba(71, 225, 148, 0.45) !important;
+    transform: scale(1.06);
+}
+.hero-word.word-white.word-lit {
+    color: #FBFBFB !important;
+    -webkit-text-fill-color: #FBFBFB !important;
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6) !important;
+    transform: scale(1.06);
+}
+.hero-word.word-outline.word-lit {
+    -webkit-text-stroke: 0.35px #FBFBFB !important;
+    transform: scale(1.06);
+}
+
 @media screen and (max-width: 800px) {
     .hero-word {
         font-size: clamp(2.9rem, 11.5vw, 95px) !important;
@@ -4036,7 +4076,7 @@ a {
 
     .hero-word,
     .hero-tagline {
-        line-height: 0.8 !important;
+        line-height: 1.0 !important;
         transition: color 0.3s ease, -webkit-text-fill-color 0.3s ease, -webkit-text-stroke 0.3s ease, text-shadow 0.3s ease !important;
         will-change: transform, opacity !important;
     }   
@@ -7019,8 +7059,8 @@ body.menu-open {
     body .new-site-footer {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 36px 0 0 !important;
-        padding: 36px 16px 28px !important;
+        margin: 0 !important;
+        padding: 72px 16px 28px !important;
         border-radius: 0 !important;
         box-sizing: border-box !important;
     }

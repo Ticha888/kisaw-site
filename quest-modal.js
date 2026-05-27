@@ -380,4 +380,52 @@
         setupStickyHeader();
     }
 
+    // ─── 6. Services Switcher Scroll State ─────────────────────────────────────
+    function setupServicesSwitcher() {
+        const servicesSwitcher = document.querySelector('.services-switcher');
+        if (!servicesSwitcher) return;
+
+        // 1. Determine active button by URL
+        const currentUrl = window.location.href.toLowerCase();
+        const switchBtns = servicesSwitcher.querySelectorAll('.services-switch-btn');
+        switchBtns.forEach(btn => {
+            const href = (btn.getAttribute('href') || '').toLowerCase();
+            const pages = (btn.getAttribute('data-page') || '').toLowerCase().split(' ').filter(Boolean);
+            
+            const isMatch = (href && currentUrl.includes(href)) || pages.some(p => currentUrl.includes(p));
+            
+            if (isMatch) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // 2. Smart centering of the active button
+        const centerActiveButton = () => {
+            const activeBtn = servicesSwitcher.querySelector('.active');
+            if (activeBtn) {
+                const containerRect = servicesSwitcher.getBoundingClientRect();
+                const btnRect = activeBtn.getBoundingClientRect();
+                
+                if (containerRect.width > 0 && btnRect.width > 0) {
+                    const currentOffset = btnRect.left - containerRect.left;
+                    const desiredOffset = (containerRect.width / 2) - (btnRect.width / 2);
+                    servicesSwitcher.scrollLeft += (currentOffset - desiredOffset);
+                }
+            }
+        };
+
+        centerActiveButton();
+        setTimeout(centerActiveButton, 100);
+        setTimeout(centerActiveButton, 500);
+        window.addEventListener('load', centerActiveButton);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupServicesSwitcher);
+    } else {
+        setupServicesSwitcher();
+    }
+
 })();

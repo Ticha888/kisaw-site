@@ -407,9 +407,9 @@
                             </div>
                             <a href="mailto:hello@kisaw.studio" class="footer-email">hello@kisaw.studio</a>
                         </div>
-                        <div class="footer-nav-col">
+                                                <div class="footer-nav-col">
                             <a href="about.html" class="footer-nav-link">About</a>
-                            <a href="#services" class="footer-nav-link">Services</a>
+                            <a href="services.html" class="footer-nav-link">Services</a>
                             <a href="index.html#cases-nav" class="footer-nav-link">Cases</a>
                             <a href="privacypolicy.html" class="footer-nav-link">Privacy policy</a>
                         </div>
@@ -749,8 +749,41 @@
             }
         });
     </script>
+    <script>
+        // Hero word linger: stay colored 2s after hover, then slow fade to white
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroWords = document.querySelectorAll('#physics-hero .hero-word');
+            heroWords.forEach(word => {
+                let lingerTimer = null;
+
+                word.addEventListener('mouseenter', () => {
+                    // Cancel any pending fade
+                    if (lingerTimer) {
+                        clearTimeout(lingerTimer);
+                        lingerTimer = null;
+                    }
+                    word.classList.remove('word-fading');
+                    word.classList.add('word-lit');
+                });
+
+                word.addEventListener('mouseleave', () => {
+                    // Keep lit for 2 seconds, then start slow fade
+                    lingerTimer = setTimeout(() => {
+                        word.classList.add('word-fading');
+                        word.classList.remove('word-lit');
+                        // Clean up fading class after transition completes
+                        lingerTimer = setTimeout(() => {
+                            word.classList.remove('word-fading');
+                            lingerTimer = null;
+                        }, 1600);
+                    }, 1000);
+                });
+            });
+        });
+    </script>
     <script src="bones-confetti.js"></script>
-    <script src="quest-modal.js?v=5"></script>
+
+    <script src="quest-modal.js?v=6"></script>
 </body>
 
 </html>

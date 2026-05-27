@@ -186,6 +186,60 @@ body.services-page .sticky-sidebar-blue-layer {
 /* Dark Request Form Section */
 .brand-package-page .request-form-section {
     background: var(--bg-dark-section);
+    border-radius: 0 !important;
+    /* Default Desktop: container padding is 80px */
+    width: calc(100% + 160px) !important;
+    margin-left: -80px !important;
+    margin-right: -80px !important;
+    margin-bottom: 0 !important;
+}
+
+.brand-package-page .new-site-footer {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 1100px) {
+    .brand-package-page .request-form-section {
+        /* Tablet: container padding is 40px */
+        width: calc(100% + 80px) !important;
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    body.brand-package-page .new-site-footer {
+        width: calc(100% + 80px) !important;
+        margin-left: -40px !important;
+        margin-right: -40px !important;
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .brand-package-page .request-form-section {
+        /* Force element to span the exact screen width regardless of container */
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: none !important;
+        padding-bottom: 80px !important; /* Ensure sufficient padding inside the dark area */
+        margin-bottom: 0 !important;
+    }
+    
+    body.brand-package-page .new-site-footer {
+        /* Force element to span the exact screen width regardless of container */
+        width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        max-width: none !important;
+        margin-top: 0 !important;
+    }
 }
 
 .brand-package-page .request-form-title {
@@ -288,3 +342,9 @@ body.services-page .sticky-sidebar-blue-layer {
     background-color: var(--brand-green) !important;
     color: #000 !important;
 }
+
+/* Fix footer margin to avoid white gap */
+.brand-package-page .new-site-footer {
+    margin-top: 0;
+}
+
