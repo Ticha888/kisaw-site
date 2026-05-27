@@ -786,6 +786,288 @@
         });
     </script>
     <script src="bones-confetti.js"></script>
+    <script>
+        (() => {
+            function initEasterEgg() {
+                const tagline = document.querySelector('.hero-tagline');
+                if (!tagline) return;
+
+                // Make tagline feel clickable
+                tagline.style.cursor = 'pointer';
+
+                let isShavukhaActivated = false;
+                let activeShavukhasCount = 0;
+
+                tagline.addEventListener('click', () => {
+                    if (!isShavukhaActivated) {
+                        // Step 1: Change text to HOCHU SHAVUKHU
+                        tagline.textContent = 'HOCHU SHAVUKHU';
+                        tagline.style.color = '#ff4a9e';
+                        tagline.style.webkitTextFillColor = '#ff4a9e';
+                        tagline.style.textShadow = '0 0 10px rgba(255, 74, 158, 0.5)';
+                        isShavukhaActivated = true;
+                        
+                        // Tiny pop animation on click
+                        tagline.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            tagline.style.transform = '';
+                        }, 100);
+                    } else {
+                        // Step 2: Fall down a huge shavukha!
+                        spawnHugeShavukha();
+                        
+                        // Tiny bounce animation on subsequent clicks
+                        tagline.style.transform = 'scale(1.08)';
+                        setTimeout(() => {
+                            tagline.style.transform = '';
+                        }, 150);
+                    }
+                });
+
+                function spawnHugeShavukha() {
+                    activeShavukhasCount++;
+
+                    const shav = document.createElement('div');
+                    shav.className = 'physics-shavukha';
+                    
+                    const img = document.createElement('img');
+                    
+                    // Track dimensions once image is loaded to handle accurate bounce bounds
+                    // BIGGER SIZE: 60% of viewport width, up to 950px!
+                    const width = Math.min(Math.max(window.innerWidth * 0.6, 400), 950);
+                    let height = width * 0.55; // fallback aspect ratio
+                    
+                    img.onload = () => {
+                        height = shav.offsetHeight;
+                    };
+                    img.src = 'img/shavukha.png';
+                    img.alt = 'Shavukha';
+                    shav.appendChild(img);
+                    
+                    document.body.appendChild(shav);
+
+                    // Styling for realistic presentation
+                    shav.style.position = 'fixed';
+                    shav.style.zIndex = '99999';
+                    shav.style.left = '0px';
+                    shav.style.top = '0px';
+                    shav.style.willChange = 'transform';
+                    shav.style.userSelect = 'none';
+                    shav.style.pointerEvents = 'auto';
+                    shav.style.cursor = 'grab';
+                    shav.style.width = width + 'px';
+                    
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                    img.style.display = 'block';
+                    img.style.pointerEvents = 'none';
+
+                    // HEAVIER PHYSICS VARIABLES
+                    let x = Math.random() * (window.innerWidth - width);
+                    let y = -600; // spawn higher due to size
+                    let vx = (Math.random() - 0.5) * 10; // heavier horizontal launch
+                    let vy = 1;
+                    let angle = (Math.random() - 0.5) * 30; // initial rotation less extreme
+                    let vangle = (Math.random() - 0.5) * 2; // slow spin
+                    
+                    const gravity = 1.3; // heavier gravity (was 0.8)
+                    const bounce = 0.32; // thuds heavily, bouncing less (was 0.6)
+                    const friction = 0.975; // slightly higher drag
+                    
+                    let isHovered = false;
+                    let isExploding = false;
+
+                    // Track mouse position relative to viewport
+                    let mouseX = 0;
+                    let mouseY = 0;
+                    const onMouseMove = (e) => {
+                        mouseX = e.clientX;
+                        mouseY = e.clientY;
+                    };
+                    window.addEventListener('mousemove', onMouseMove);
+
+                    shav.addEventListener('mouseenter', () => {
+                        isHovered = true;
+                    });
+
+                    shav.addEventListener('mouseleave', () => {
+                        isHovered = false;
+                    });
+
+                    // Self-contained high performance bone explosion
+                    function explodeBones() {
+                        const BONE_SRCS = [
+                            'img/bones/bone white.svg',
+                            'img/bones/bone black.svg',
+                            'img/bones/bone blue.svg',
+                            'img/bones/bone green.svg',
+                            'img/bones/bone pink.svg',
+                            'img/bones/bone red.svg',
+                        ];
+                        
+                        const rect = shav.getBoundingClientRect();
+                        const cx = rect.left + rect.width / 2;
+                        const cy = rect.top + rect.height / 2;
+
+                        for (let i = 0; i < 28; i++) {
+                            const boneEl = document.createElement('img');
+                            boneEl.src = BONE_SRCS[i % BONE_SRCS.length];
+                            boneEl.style.position = 'fixed';
+                            boneEl.style.zIndex = '100000';
+                            boneEl.style.width = '45px'; // bigger bone bits
+                            boneEl.style.height = '45px';
+                            boneEl.style.pointerEvents = 'none';
+                            boneEl.style.userSelect = 'none';
+                            boneEl.style.willChange = 'transform';
+                            document.body.appendChild(boneEl);
+
+                            // Physics values
+                            let bx = cx - 22.5;
+                            let by = cy - 22.5;
+                            const angleRad = Math.random() * Math.PI * 2;
+                            const speed = 5 + Math.random() * 15;
+                            let bvx = Math.cos(angleRad) * speed;
+                            let bvy = Math.sin(angleRad) * speed - 5; // upward bias
+                            let brot = Math.random() * 360;
+                            let bvrot = (Math.random() - 0.5) * 15;
+                            let bopacity = 1;
+
+                            function updateBone() {
+                                bvy += 0.45; // heavy bone gravity
+                                bvx *= 0.98;
+                                bvy *= 0.98;
+                                bx += bvx;
+                                by += bvy;
+                                brot += bvrot;
+                                bopacity -= 0.015; // fade out
+
+                                if (bopacity <= 0) {
+                                    boneEl.remove();
+                                } else {
+                                    boneEl.style.transform = `translate(${bx}px, ${by}px) rotate(${brot}deg)`;
+                                    boneEl.style.opacity = bopacity;
+                                    requestAnimationFrame(updateBone);
+                                }
+                            }
+                            requestAnimationFrame(updateBone);
+                        }
+                    }
+
+                    // Click to explode
+                    shav.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (isExploding) return;
+                        isExploding = true;
+                        shav.style.cursor = 'default';
+                        window.removeEventListener('mousemove', onMouseMove);
+                        
+                        // Fire custom bone explosion
+                        explodeBones();
+                        setTimeout(explodeBones, 80);
+
+                        // Explosion animation: spin, scale down
+                        let scale = 1;
+                        const explodeInterval = setInterval(() => {
+                            scale -= 0.08;
+                            angle += vangle + 12; // spins less during explode (was 30)
+                            
+                            if (scale <= 0) {
+                                clearInterval(explodeInterval);
+                                shav.remove();
+                                
+                                // Reset tagline once all shavukhas are cleared
+                                activeShavukhasCount--;
+                                if (activeShavukhasCount === 0) {
+                                    tagline.textContent = 'a Design team of visual enthusiasts';
+                                    tagline.style.color = '';
+                                    tagline.style.webkitTextFillColor = '';
+                                    tagline.style.textShadow = '';
+                                    isShavukhaActivated = false;
+                                }
+                            } else {
+                                shav.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg) scale(${scale})`;
+                            }
+                        }, 16);
+                    });
+
+                    // Physics loop
+                    function update() {
+                        if (isExploding) return;
+
+                        // 1. Repulsion Force from Mouse pointer
+                        const rect = shav.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+                        
+                        const dx = centerX - mouseX;
+                        const dy = centerY - mouseY;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        const forceRadius = 320; // larger repulsion radius for larger item
+                        if (dist < forceRadius) {
+                            const force = (forceRadius - dist) / forceRadius; // 0 (far) to 1 (close)
+                            const angleRad = Math.atan2(dy, dx);
+                            
+                            // Push shavukha away, but heavier feeling
+                            vx += Math.cos(angleRad) * force * 1.4;
+                            vy += Math.sin(angleRad) * force * 1.4;
+                            
+                            // Add gentle torque
+                            vangle += (dx * Math.sin(angleRad) - dy * Math.cos(angleRad)) * force * 0.01;
+                        }
+
+                        // 2. Physics Equations
+                        vy += gravity;
+                        vx *= friction;
+                        vy *= friction;
+                        vangle *= 0.94; // high damping on spin (was 0.97)
+
+                        // 3. Update Positions
+                        x += vx;
+                        y += vy;
+                        angle += vangle;
+
+                        // 4. Bounds Collisions
+                        const rightBound = window.innerWidth - width;
+                        const bottomBound = window.innerHeight - height;
+
+                        // Side walls
+                        if (x < 0) {
+                            x = 0;
+                            vx = -vx * bounce;
+                            vangle += vy * 0.02; // very low torque on wall collision
+                        } else if (x > rightBound) {
+                            x = rightBound;
+                            vx = -vx * bounce;
+                            vangle -= vy * 0.02;
+                        }
+
+                        // Bottom boundary
+                        if (y > bottomBound) {
+                            y = bottomBound;
+                            vy = -vy * bounce;
+                            vx *= 0.75; // higher slide friction (feels heavy)
+                            vangle += vx * 0.05; // low roll torque
+                        }
+
+                        // Render
+                        shav.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+
+                        requestAnimationFrame(update);
+                    }
+
+                    requestAnimationFrame(update);
+                }
+            }
+
+            // Bulletproof readyState listener
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initEasterEgg);
+            } else {
+                initEasterEgg();
+            }
+        })();
+    </script>
 
     <script src="quest-modal.js?v=6"></script>
 </body>
