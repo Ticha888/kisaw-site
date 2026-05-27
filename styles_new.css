@@ -165,18 +165,13 @@ a {
     position: absolute;
     top: 20px;
     right: 30px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
     cursor: pointer;
     z-index: 10001;
-    font-size: 0;
-    color: transparent;
-    text-shadow: none;
-    width: 52px;
-    height: 52px;
-    background-image: url('img/closewindow.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: invert(1);
+    line-height: 1;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
     opacity: 0.85;
     transition: opacity 0.2s, transform 0.2s;
 }
