@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/imgs_for_main/kisaw_logo_black.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/imgs_for_main/kisaw_logo_white.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://kisaw.studio/img/ogmain.png" />
+    <meta property="og:image:width" content="1648" />
+    <meta property="og:image:height" content="790" />
+    <title>PIZHMA - Nika's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Montserrat:wght@700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=245.0">
+    <link rel="stylesheet" href="nika.css?v=1.0">
+</head>
+
+<body class="main-page">
+    <div class="page">
+        <div class="main-row">
+            <!-- Sticky Sidebar (empty) -->
+            <div class="sticky-sidebar-layer"></div>
+
+            <div class="container_main_page">
+                <!-- Header -->
+                <header class="header header--dark">
+                    <!-- Desktop Layout -->
+                    <div class="header-desktop-layout">
+                        <div class="header-left">
+                            <a href="#" class="logo-link nika-logo-link">
+                                <span class="logo nika-logo nika-name-shimmer">Anika Pizhma</span>
+                            </a>
+                        </div>
+                        <!-- Language switcher -->
+                        <div class="nika-lang-switcher" id="nika-lang-switcher">
+                            <button class="nika-lang-btn active" data-lang="en" aria-label="English" onclick="return false;">
+                                <!-- US Flag SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="32" height="22" class="nika-flag">
+                                    <rect width="60" height="40" fill="#B22234"/>
+                                    <rect y="3.08" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="9.23" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="15.38" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="21.54" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="27.69" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="33.85" width="60" height="3.08" fill="#fff"/>
+                                    <rect width="24" height="21.54" fill="#3C3B6E"/>
+                                    <!-- Stars (simplified dots) -->
+                                    <g fill="#fff" font-size="3">
+                                        <circle cx="2.4" cy="2.15" r="1.1"/><circle cx="7.2" cy="2.15" r="1.1"/><circle cx="12" cy="2.15" r="1.1"/><circle cx="16.8" cy="2.15" r="1.1"/><circle cx="21.6" cy="2.15" r="1.1"/>
+                                        <circle cx="4.8" cy="4.92" r="1.1"/><circle cx="9.6" cy="4.92" r="1.1"/><circle cx="14.4" cy="4.92" r="1.1"/><circle cx="19.2" cy="4.92" r="1.1"/>
+                                        <circle cx="2.4" cy="7.69" r="1.1"/><circle cx="7.2" cy="7.69" r="1.1"/><circle cx="12" cy="7.69" r="1.1"/><circle cx="16.8" cy="7.69" r="1.1"/><circle cx="21.6" cy="7.69" r="1.1"/>
+                                        <circle cx="4.8" cy="10.46" r="1.1"/><circle cx="9.6" cy="10.46" r="1.1"/><circle cx="14.4" cy="10.46" r="1.1"/><circle cx="19.2" cy="10.46" r="1.1"/>
+                                        <circle cx="2.4" cy="13.23" r="1.1"/><circle cx="7.2" cy="13.23" r="1.1"/><circle cx="12" cy="13.23" r="1.1"/><circle cx="16.8" cy="13.23" r="1.1"/><circle cx="21.6" cy="13.23" r="1.1"/>
+                                        <circle cx="4.8" cy="16" r="1.1"/><circle cx="9.6" cy="16" r="1.1"/><circle cx="14.4" cy="16" r="1.1"/><circle cx="19.2" cy="16" r="1.1"/>
+                                        <circle cx="2.4" cy="18.77" r="1.1"/><circle cx="7.2" cy="18.77" r="1.1"/><circle cx="12" cy="18.77" r="1.1"/><circle cx="16.8" cy="18.77" r="1.1"/><circle cx="21.6" cy="18.77" r="1.1"/>
+                                    </g>
+                                </svg>
+                                <span class="nika-lang-label">EN</span>
+                            </button>
+                            <button class="nika-lang-btn" data-lang="ru" aria-label="Russian" onclick="window.location.href='nika-ru.html'; return false;">
+                                <!-- Russian flag: white / blue / white (future Russia) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="32" height="22" class="nika-flag">
+                                    <rect width="60" height="13.33" fill="#fff"/>
+                                    <rect y="13.33" width="60" height="13.33" fill="#0039A6"/>
+                                    <rect y="26.67" width="60" height="13.33" fill="#fff"/>
+                                </svg>
+                                <span class="nika-lang-label">RU</span>
+                            </button>
+                        </div>
+                        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hero Layout -->
+                    <div class="header-mobile-hero">
+                        <div class="logo-stack">
+                            <a href="#" class="logo-link nika-logo-link">
+                                <span class="logo nika-logo nika-name-shimmer">Anika Pizhma</span>
+                            </a>
+                        </div>
+                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+
+                    <!-- Popup Menu -->
+                    <div class="nav-overlay">
+                        <nav class="nav-popup">
+                            <button class="menu-close-btn" aria-label="Close Menu">
+                                <img src="img/closewindow.svg" alt="Close">
+                            </button>
+                            <div class="nav-links">
+                                <a href="#cases">Cases</a>
+                                <a href="about.html">About</a>
+                                <a href="privacypolicy.html">Privacy policy</a>
+                            </div>
+                            <div class="nav-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="nav-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance">
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nav-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram">
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nav-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <a href="#contacts" class="send-signal-btn-mobile">CONTACTS</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <!-- Hero Section (Block 1) -->
+                <section id="nika-hero" class="nika-hero-section">
+                    <div class="nika-hero-left">
+                        <h1 class="nika-hero-title">Communication &amp; Brand Designer</h1>
+                        <p class="nika-hero-desc">Developing visual strategies and creative narratives to support and grow brands.</p>
+                    </div>
+                    <div class="nika-hero-right">
+                        <div class="nika-hero-image-container">
+                            <img src="img/meyourbrand.png" alt="Nika - Me & Your Brand" class="nika-hero-img">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Accordion (Block 1.5) -->
+                <div class="nika-about-accordion" id="nika-about">
+                    <button class="nika-about-toggle" id="nika-about-toggle" aria-expanded="false" aria-controls="nika-about-body">
+                        <span class="nika-about-toggle-label">ABOUT</span>
+                        <span class="nika-about-arrow" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L7 10L12 5" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="nika-about-body" id="nika-about-body" role="region" aria-labelledby="nika-about-toggle">
+                        <div class="nika-about-inner">
+                            <div class="nika-avatar-wrap">
+                                <div class="nika-avatar-inner">
+                                    <img src="img/nika avatar gif.gif" alt="Nika" width="160" height="160">
+                                </div>
+                            </div>
+                            <div class="nika-about-text">
+                                <p>Hi! I'm Anika, a communication and brand designer working with international projects. I help companies launch and grow their brands, ensuring that design always serves specific business goals.</p>
+                                <p class="nika-about-what">What I do:</p>
+                                <ul class="nika-about-list">
+                                    <li><span class="nika-dot" style="background:#007EFA;"></span><span><strong>Brand & Visual Design</strong> — Developing custom identities, logos, and scalable design systems from scratch.</span></li>
+                                    <li><span class="nika-dot" style="background:#47E194;"></span><span><strong>Creative & Communication</strong> — Crafting concepts, narratives, and visual assets for marketing campaigns and promo projects.</span></li>
+                                    <li><span class="nika-dot" style="background:#DD3737;"></span><span><strong>Design Operations</strong> — Managing day-to-day workflows within the design department, leading teams, and keeping production on schedule.</span></li>
+                                    <li><span class="nika-dot" style="background:#FFDAEF;"></span><span><strong>Web & Media</strong> — Designing landing pages, creating custom illustrations, and leveraging AI tools (Midjourney, Runway) for rapid prototyping.</span></li>
+                                </ul>
+
+                                <p class="nika-about-context-p">Originally from Moscow, I am currently based in Montenegro (GMT+2) and working fully remote in both Russian and English. When I'm not building visual systems, I immerse myself in digital culture — writing a personal blog on Threads, streaming games, and keeping a close eye on live content trends.</p>
+                            </div>
+                        </div>
+
+                        <!-- Experience sub-accordion (inside About) -->
+                        <div class="nika-exp-accordion nika-exp-sub" id="nika-experience">
+                            <button class="nika-exp-sub-toggle" id="nika-experience-toggle" aria-expanded="false" aria-controls="nika-experience-body">
+                                <span class="nika-about-toggle-label" style="font-size:24px;">EXPERIENCE</span>
+                                <span class="nika-about-arrow" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L7 10L12 5" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="nika-exp-body" id="nika-experience-body" role="region" aria-labelledby="nika-experience-toggle">
+                                <div class="nika-exp-inner">
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Art Director / Brand Designer</span>
+                                            <span class="nika-exp-company">Frozen Bro (Estonia)</span>
+                                            <span class="nika-exp-meta">Freelance · July 2023 – present · 2+ years</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Design process management: briefing, strategy, quality control</li>
+                                            <li>Development of identities and visual systems for B2C and B2B clients</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Brand Designer &amp; SMM Strategy</span>
+                                            <span class="nika-exp-company">Boiling Brains</span>
+                                            <span class="nika-exp-meta">Freelance (Remote, Estonia) · May 2025 – present</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Initiated a strategic rebranding: developed brand DNA, structure, and visual system</li>
+                                            <li>Developed a communications strategy and content plan for social media</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Brand Design &amp; Digital Agency</span>
+                                            <span class="nika-exp-company">EterPride</span>
+                                            <span class="nika-exp-meta">May 2023 – Oct 2024 · 1 yr 6 mos</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Advertising Campaigns and Digital Projects</li>
+                                            <li>Developing a visual concept and maintaining a consistent style across all projects</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Web Designer, Communication Designer</span>
+                                            <span class="nika-exp-company">WIM.Agency</span>
+                                            <span class="nika-exp-meta">Full-time (Remote, USA) · April 2024 – July 2024</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Web product and digital communications design for the American market</li>
+                                            <li>Management of a team of 3 designers: setting tasks, quality control, feedback</li>
+                                            <li>Development of design processes and standards within the team</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Art Director</span>
+                                            <span class="nika-exp-company">US Health Management</span>
+                                            <span class="nika-exp-meta">Freelance (USA) · April 2022 – June 2022</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Rebranding and art direction of visual communications</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Art Director</span>
+                                            <span class="nika-exp-company">WRT Israel</span>
+                                            <span class="nika-exp-meta">Full-time (Haifa, Israel) · June 2021 – Oct 2023</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Art Direction for Advertising Campaigns and Digital Projects</li>
+                                            <li>Managing a team of 6 designers: assigning tasks, mentoring, and monitoring results</li>
+                                            <li>Developing a visual concept and maintaining a consistent style across all projects</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Illustrator / Designer</span>
+                                            <span class="nika-exp-company">Toonbox</span>
+                                            <span class="nika-exp-meta">Freelance (Cyprus, Remote) · Aug 2022 – Jan 2023</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Illustration and graphic design for gaming projects</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Special Projects Designer / Media Designer</span>
+                                            <span class="nika-exp-company">Lifehacker.ru</span>
+                                            <span class="nika-exp-meta">Full-time (Russia) · Aug 2020 – Mar 2022 · 1 yr 8 mos</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Developing visual materials for special projects and media content, creating graphics for digital channels and online advertising</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="nika-exp-item">
+                                        <div class="nika-exp-header">
+                                            <span class="nika-exp-role">Special Projects Designer / Media Designer</span>
+                                            <span class="nika-exp-company">Burninghut.ru</span>
+                                            <span class="nika-exp-meta">Full-time (Russia) · Aug 2020 – Mar 2022 · 1 yr 8 mos</span>
+                                        </div>
+                                        <ul class="nika-exp-duties">
+                                            <li>Media content and graphics design for social media, development of visual solutions for digital campaigns</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Main Content -->
+                <main class="main">
+                    <!-- Cases Icon Header -->
+                    <div class="cases-header-icon nika-cases-icon-spacer" id="cases-nav">
+                        <img src="img/imgs_for_main/cases_icon.svg" alt="">
+                    </div>
+
+                    <!-- Cases Grid (Block 2) -->
+                    <section id="cases" class="cases-section">
+                        <div class="cases-rows-container">
+                            <!-- Row 1 -->
+                            <div class="cases-row">
+                                <!-- Abilka Space Card -->
+                                <a href="pizhma-abilka.html" class="case-card case-card-link" style="padding: 0; background: transparent; box-shadow: none;">
+                                    <img src="img/case_cards/abilka.png" alt="Abilka Space" style="width: 100%; height: auto; display: block; border-radius: 13px; box-shadow: 0 3px 3px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;">
+                                </a>
+
+                                <!-- Frozen Bro Card -->
+                                <a href="pizhma-frozenbro.html" class="case-card case-card-link" style="padding: 0; background: transparent; box-shadow: none;">
+                                    <img src="img/case_cards/frbr.png" alt="Frozen Bro" style="width: 100%; height: auto; display: block; border-radius: 13px; box-shadow: 0 3px 3px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;">
+                                </a>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="cases-row">
+                                <!-- Boiling Brains Card -->
+                                <a href="pizhma-boilingbrains.html" class="case-card case-card-link" style="padding: 0; background: transparent; box-shadow: none;">
+                                    <img src="img/case_cards/bb.png" alt="Boiling Brains" style="width: 100%; height: auto; display: block; border-radius: 13px; box-shadow: 0 3px 3px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;">
+                                </a>
+
+                                <!-- Dr.WDY Card -->
+                                <a href="pizhma-drwdy.html" class="case-card case-card-link" style="padding: 0; background: transparent; box-shadow: none;">
+                                    <img src="img/case_cards/wdy.png" alt="Dr.WDY" style="width: 100%; height: auto; display: block; border-radius: 13px; box-shadow: 0 3px 3px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;">
+                                </a>
+                            </div>
+
+                            <!-- Row 3 — Skrepki (single card, full width) -->
+                            <div class="cases-row cases-row-single">
+                                <!-- Skrepki Card -->
+                                <a href="pizhma-skrepki.html" class="case-card case-card-link" style="padding: 0; background: transparent; box-shadow: none;">
+                                    <img src="img/case_cards/skrepki.png" alt="Skrepki" style="width: 100%; height: auto; display: block; border-radius: 13px; box-shadow: 0 3px 3px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Illustrations Section (Block 3) -->
+                    <section class="illustrations-section">
+                        <div class="illustrations-container">
+                            <img src="img/Illustrations/media illustrations.svg" alt="Media Illustrations" class="illustrations-title-img">
+                            <div class="illustrations-grid">
+                                <a href="https://www.behance.net/gallery/136648293/Media-Illustrations" target="_blank" class="illustration-item">
+                                    <img src="img/Illustrations/behance 1.png" alt="Media Illustrations">
+                                </a>
+                                <a href="https://www.behance.net/gallery/137494363/Unknown-and-unseen-spaces-Media-Illustrations" target="_blank" class="illustration-item">
+                                    <img src="img/Illustrations/behance 2.png" alt="Unknown and unseen spaces">
+                                </a>
+                                <a href="https://www.behance.net/gallery/137493871/Illustrations-for-Burning-Hut-Media" target="_blank" class="illustration-item">
+                                    <img src="img/Illustrations/behance 3.png" alt="Illustrations for Burning Hut">
+                                </a>
+                                <a href="https://www.behance.net/gallery/137494857/Cute-and-touching-things-Media-Illustrations" target="_blank" class="illustration-item">
+                                    <img src="img/Illustrations/behance 4.png" alt="Cute and touching things">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Why Me Section (Duplicated and adapted from Why Us V3) -->
+                    <section id="why-me" class="why-us-v3">
+                        <div class="why-us-v3-container">
+                            <div class="why-us-v3-title-wrap">
+                                <h2 class="why-us-v3-title">WHY ME?</h2>
+                            </div>
+                            
+                            <div class="why-us-v3-grid">
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">I ASK FIRST</h4>
+                                    <p class="why-us-v3-card-desc">I ask the right questions myself to clearly understand the task, set priorities, and avoid wasting resources.</p>
+                                </div>
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">YOU ALWAYS KNOW</h4>
+                                    <p class="why-us-v3-card-desc">You always know exactly where the project stands. Every stage is broken into tasks and subtasks, making progress easy to track.</p>
+                                </div>
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">SORTED</h4>
+                                    <p class="why-us-v3-card-desc">My documentation and files are structured and ready to use straight away. I work to minimize fuckups and maximize results.</p>
+                                </div>
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">FOR REAL</h4>
+                                    <p class="why-us-v3-card-desc">I commit to dates and keep them.</p>
+                                </div>
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">AUTONOMY</h4>
+                                    <p class="why-us-v3-card-desc">I work directly with your marketers, project managers, developers, and copywriters.</p>
+                                </div>
+                                <div class="why-us-v3-card">
+                                    <h4 class="why-us-v3-card-title">JUST ME</h4>
+                                    <p class="why-us-v3-card-desc">All communication goes directly through me, as I stay deep in the project from start to finish.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contacts Section (Block 4) -->
+                    <section id="contacts" class="nika-contacts-section">
+                        <div class="nika-contacts-grid-wrapper">
+                            <!-- Left Column: Heading & Text -->
+                            <div class="nika-contacts-left">
+                                <h2 class="nika-contacts-title">LET'S WORK<br><span class="nika-contacts-title-gradient">TOGETHER</span></h2>
+                                <p class="nika-contacts-description">
+                                    If you need an autonomous designer to launch a project from scratch, strengthen an in-house team, or establish a long-term contract partnership, <span class="nika-pulse-text">let's connect</span>.
+                                </p>
+                                <!-- Shared SVG Gradients for Social Icons -->
+                                <div class="nika-contacts-socials">
+                                    <a href="https://www.behance.net/kisawawaw" target="_blank" class="nika-social-btn" aria-label="Behance">
+                                        <svg viewBox="0 0 24 24" class="social-icon-svg">
+                                            <defs>
+                                                <linearGradient id="gradient-behance" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" class="stop-1" stop-color="#FBFBFB" />
+                                                    <stop offset="50%" class="stop-2" stop-color="#FBFBFB" />
+                                                    <stop offset="100%" class="stop-3" stop-color="#FBFBFB" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z" fill="url(#gradient-behance)" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nika-social-btn" aria-label="LinkedIn">
+                                        <svg viewBox="0 0 24 24" class="social-icon-svg">
+                                            <defs>
+                                                <linearGradient id="gradient-linkedin" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" class="stop-1" stop-color="#FBFBFB" />
+                                                    <stop offset="50%" class="stop-2" stop-color="#FBFBFB" />
+                                                    <stop offset="100%" class="stop-3" stop-color="#FBFBFB" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M20.6667 20.6667V13.6C20.6667 12.4472 20.2087 11.3416 19.3936 10.5264C18.5784 9.7113 17.4728 9.2533 16.32 9.2533C15.1867 9.2533 13.8667 9.9467 13.2267 10.9867V9.5067H9.5067V20.6667H13.2267V14.0933C13.2267 13.0667 14.0533 12.2267 15.08 12.2267C15.5751 12.2267 16.0499 12.4233 16.3999 12.7734C16.75 13.1235 16.9467 13.5983 16.9467 14.0933V20.6667H20.6667ZM5.17333 7.4133C5.76742 7.4133 6.3372 7.1773 6.7573 6.7573C7.1773 6.3372 7.4133 5.76742 7.4133 5.17333C7.4133 3.93333 6.4133 2.92 5.17333 2.92C4.57571 2.92 4.00257 3.1574 3.57999 3.57999C3.1574 4.00257 2.92 4.57571 2.92 5.17333C2.92 6.4133 3.93333 7.4133 5.17333 7.4133ZM7.0267 20.6667V9.5067H3.33333V20.6667H7.0267Z" fill="url(#gradient-linkedin)" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nika-social-btn" aria-label="Instagram">
+                                        <svg viewBox="0 0 32 32" class="social-icon-svg">
+                                            <defs>
+                                                <linearGradient id="gradient-instagram" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" class="stop-1" stop-color="#FBFBFB" />
+                                                    <stop offset="50%" class="stop-2" stop-color="#FBFBFB" />
+                                                    <stop offset="100%" class="stop-3" stop-color="#FBFBFB" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M17.3708 2.66675C18.8708 2.67075 19.6321 2.67875 20.2894 2.69741L20.5481 2.70675C20.8468 2.71741 21.1414 2.73075 21.4974 2.74675C22.9161 2.81341 23.8841 3.03741 24.7334 3.36675C25.6134 3.70541 26.3548 4.16408 27.0961 4.90408C27.7744 5.57039 28.299 6.37671 28.6334 7.26675C28.9628 8.11608 29.1868 9.08408 29.2534 10.5041C29.2694 10.8587 29.2828 11.1534 29.2934 11.4534L29.3014 11.7121C29.3214 12.3681 29.3294 13.1294 29.3321 14.6294L29.3334 15.6241V17.3707C29.3367 18.3433 29.3265 19.3158 29.3028 20.2881L29.2948 20.5467C29.2841 20.8467 29.2708 21.1414 29.2548 21.4961C29.1881 22.9161 28.9614 23.8827 28.6334 24.7334C28.299 25.6235 27.7744 26.4298 27.0961 27.0961C26.4298 27.7743 25.6235 28.299 24.7334 28.6334C23.8841 28.9627 22.9161 29.1868 21.4974 29.2534L20.5481 29.2934L20.2894 29.3014C19.6321 29.3201 18.8708 29.3294 17.3708 29.3321L16.3761 29.3334H14.6308C13.6578 29.3368 12.6848 29.3266 11.7121 29.3027L11.4534 29.2948C11.1369 29.2828 10.8205 29.269 10.5041 29.2534C9.08544 29.1868 8.11744 28.9627 7.26677 28.6334C6.37721 28.2988 5.57136 27.7742 4.90544 27.0961C4.2267 26.4299 3.70159 25.6236 3.36677 24.7334C3.03744 23.8841 2.81344 22.9161 2.74677 21.4961L2.70677 20.5467L2.70011 20.2881C2.67553 19.3158 2.66442 18.3433 2.66677 17.3707V14.6294C2.66308 13.6569 2.67286 12.6843 2.69611 11.7121L2.70544 11.4534C2.71611 11.1534 2.72944 10.8587 2.74544 10.5041C2.81211 9.08408 3.03611 8.11741 3.36544 7.26675C3.70103 6.37635 4.22707 5.57 4.90677 4.90408C5.57231 4.22615 6.37769 3.70151 7.26677 3.36675C8.11744 3.03741 9.08411 2.81341 10.5041 2.74675C10.8588 2.73075 11.1548 2.71741 11.4534 2.70675L11.7121 2.69875C12.6844 2.67506 13.6569 2.66484 14.6294 2.66808L17.3708 2.66675ZM16.0001 9.33342C14.232 9.33342 12.5363 10.0358 11.2861 11.286C10.0358 12.5363 9.33344 14.232 9.33344 16.0001C9.33344 17.7682 10.0358 19.4639 11.2861 20.7141C12.5363 21.9644 14.232 22.6667 16.0001 22.6667C17.7682 22.6667 19.4639 21.9644 20.7142 20.7141C21.9644 19.4639 22.6668 17.7682 22.6668 16.0001C22.6668 14.232 21.9644 12.5363 20.7142 11.286C19.4639 10.0358 17.7682 9.33342 16.0001 9.33342ZM16.0001 12.0001C16.5254 12 17.0456 12.1034 17.5309 12.3043C18.0162 12.5052 18.4572 12.7998 18.8287 13.1712C19.2002 13.5426 19.4949 13.9835 19.696 14.4687C19.8971 14.954 20.0007 15.4741 20.0008 15.9994C20.0009 16.5247 19.8975 17.0449 19.6965 17.5302C19.4956 18.0155 19.201 18.4565 18.8297 18.828C18.4583 19.1995 18.0174 19.4942 17.5321 19.6953C17.0469 19.8964 16.5267 20 16.0014 20.0001C14.9406 20.0001 13.9232 19.5787 13.173 18.8285C12.4229 18.0784 12.0014 17.0609 12.0014 16.0001C12.0014 14.9392 12.4229 13.9218 13.173 13.1717C13.9232 12.4215 14.9406 12.0001 16.0014 12.0001M23.0014 7.33342C22.5594 7.33342 22.1355 7.50901 21.8229 7.82157C21.5104 8.13413 21.3348 8.55805 21.3348 9.00008C21.3348 9.44211 21.5104 9.86603 21.8229 10.1786C22.1355 10.4912 22.5594 10.6667 23.0014 10.6667C23.4435 10.6667 23.8674 10.4912 24.18 10.1786C24.4925 9.86603 24.6681 9.44211 24.6681 9.00008C24.6681 8.55805 24.4925 8.13413 24.18 7.82157C23.8674 7.50901 23.4435 7.33342 23.0014 7.33342Z" fill="url(#gradient-instagram)" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Right Column: Interactive Cards -->
+                            <div class="nika-contacts-right">
+                                <a href="mailto:hello@kisaw.studio" class="nika-contact-card card-email">
+                                    <div class="card-icon">✉</div>
+                                    <div class="card-content">
+                                        <span class="card-label">EMAIL</span>
+                                        <span class="card-value">hello@kisaw.studio</span>
+                                    </div>
+                                    <div class="card-arrow">→</div>
+                                </a>
+                                <a href="https://t.me/pizhmaishere" target="_blank" class="nika-contact-card card-telegram">
+                                    <div class="card-icon">✈</div>
+                                    <div class="card-content">
+                                        <span class="card-label">TELEGRAM</span>
+                                        <span class="card-value">@pizhmaishere</span>
+                                    </div>
+                                    <div class="card-arrow">→</div>
+                                </a>
+                                <a href="https://kisaw.studio" target="_blank" class="nika-contact-card card-community">
+                                    <div class="card-icon"><img src="img/bone white.svg" alt="Bone" class="card-bone-icon"></div>
+                                    <div class="card-content">
+                                        <span class="card-label">MY COMMUNITY</span>
+                                        <span class="card-value">KISAW.STUDIO</span>
+                                    </div>
+                                    <div class="card-arrow">→</div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation & Scroll JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header scroll effect (toggles glassmorphism background on scroll)
+            const header = document.querySelector('.header');
+            const checkHeader = () => {
+                if (header) {
+                    header.classList.toggle('header--scrolled', window.scrollY > 15);
+                }
+            };
+            window.addEventListener('scroll', checkHeader, { passive: true });
+            checkHeader();
+
+            // Mobile menu event delegation (bulletproof against dynamically created/moved elements)
+            document.addEventListener('click', (e) => {
+                const toggle = e.target.closest('.mobile-nav-toggle, .mobile-nav-toggle-hero, .mobile-nav-toggle-floating');
+                const closeBtn = e.target.closest('.menu-close-btn');
+                const overlay = document.querySelector('.nav-overlay');
+
+                if (toggle) {
+                    e.preventDefault();
+                    if (overlay) {
+                        overlay.classList.add('active');
+                        document.body.classList.add('menu-open');
+                        document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero, .mobile-nav-toggle-floating').forEach(t => {
+                            t.setAttribute('aria-expanded', 'true');
+                        });
+                    }
+                } else if (closeBtn) {
+                    e.preventDefault();
+                    if (overlay) {
+                        overlay.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                        document.querySelectorAll('.mobile-nav-toggle, .mobile-nav-toggle-hero, .mobile-nav-toggle-floating').forEach(t => {
+                            t.setAttribute('aria-expanded', 'false');
+                        });
+                    }
+                } else if (overlay && overlay.classList.contains('active')) {
+                    if (e.target === overlay) {
+                        // Clicked backdrop
+                        overlay.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    } else if (e.target.closest('.nav-overlay a')) {
+                        // Clicked menu link
+                        overlay.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    }
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const overlay = document.querySelector('.nav-overlay');
+                    if (overlay && overlay.classList.contains('active')) {
+                        overlay.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 800) {
+                if (window.scrollY > 200) document.body.classList.add('is-scrolled');
+                else document.body.classList.remove('is-scrolled');
+            } else {
+                document.body.classList.remove('is-scrolled');
+            }
+        });
+    </script>
+
+    <!-- Heart Hover & Click Animation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgContainer = document.querySelector('.nika-hero-image-container');
+            if (!imgContainer) return;
+
+            const BRAND_COLORS = ['#007EFA','#47E194','#FFDAEF','#DD3737','#A6D3FF','#FBFBFB'];
+
+            // ── Small hearts on mousemove ──
+            let lastSpawnTime = 0;
+            imgContainer.addEventListener('mousemove', (e) => {
+                const now = Date.now();
+                if (now - lastSpawnTime < 80) return;
+                lastSpawnTime = now;
+                const rect = imgContainer.getBoundingClientRect();
+                spawnSmallHeart(e.clientX - rect.left, e.clientY - rect.top);
+            });
+
+            imgContainer.addEventListener('mouseenter', (e) => {
+                imgContainer.classList.add('is-hovered');
+                const rect = imgContainer.getBoundingClientRect();
+                spawnSmallHeart(e.clientX - rect.left, e.clientY - rect.top);
+            });
+            imgContainer.addEventListener('mouseleave', () => {
+                imgContainer.classList.remove('is-hovered');
+            });
+
+            function spawnSmallHeart(x, y) {
+                const heart = document.createElement('img');
+                heart.src = 'img/pixeheart.svg';
+                heart.className = 'pixel-heart';
+                heart.style.left = `${x}px`;
+                heart.style.top  = `${y}px`;
+                heart.style.setProperty('--drift-x',      `${(Math.random()-0.5)*120}px`);
+                heart.style.setProperty('--drift-y',      `${-120 - Math.random()*100}px`);
+                heart.style.setProperty('--drift-rotate', `${(Math.random()-0.5)*90}deg`);
+                heart.style.setProperty('--start-scale',  0.6 + Math.random()*0.8);
+                imgContainer.appendChild(heart);
+                setTimeout(() => heart.remove(), 1200);
+            }
+
+            // ── BIG heart burst on click with Gravity & Bounce Physics ──
+            const activeHearts = [];
+
+            imgContainer.addEventListener('click', (e) => {
+                const cx = e.pageX;
+                const cy = e.pageY;
+                // Spawn between 2 and 10 hearts
+                const count = Math.floor(Math.random() * 9) + 2; 
+
+                const SVG_HEARTS = [
+                    'Heart blue.svg',
+                    'Heart green.svg',
+                    'Heart pink.svg',
+                    'Heart red.svg',
+                    'Heart very blue.svg'
+                ];
+
+                const SHADOW_COLORS = ['#007EFA', '#47E194', '#FFDAEF', '#DD3737', '#A6D3FF'];
+
+                for (let i = 0; i < count; i++) {
+                    const heartImgName = SVG_HEARTS[Math.floor(Math.random() * SVG_HEARTS.length)];
+                    const glowColor = SHADOW_COLORS[Math.floor(Math.random() * SHADOW_COLORS.length)];
+                    const size  = 50 + Math.random() * 60; // 50px to 110px
+
+                    const h = document.createElement('img');
+                    h.src = `img/Hearts/${heartImgName}`;
+                    h.className = 'nika-big-heart';
+                    h.style.cssText = `
+                        position: absolute;
+                        left: 0; top: 0;
+                        width: ${size}px; height: auto;
+                        filter: saturate(1.4) brightness(1.2) drop-shadow(0 0 15px ${glowColor}) drop-shadow(0 0 30px ${glowColor}88);
+                    `;
+
+                    // Initial position (center at click point)
+                    const startX = cx - size / 2;
+                    const startY = cy - size / 2;
+
+                    // Initial velocities: blast outwards/upwards
+                    const angle = (Math.random() * 180 + 180) * Math.PI / 180; // focus upward semi-circle
+                    const speed = 8 + Math.random() * 12;
+                    const vx = Math.cos(angle) * speed;
+                    const vy = Math.sin(angle) * speed;
+
+                    const rotation = Math.random() * 360;
+                    const vrot = (Math.random() - 0.5) * 12;
+
+                    document.body.appendChild(h);
+
+                    activeHearts.push({
+                        el: h,
+                        x: startX,
+                        y: startY,
+                        vx: vx,
+                        vy: vy,
+                        rot: rotation,
+                        vrot: vrot,
+                        size: size,
+                        bounce: -0.6 - Math.random() * 0.15, // bounce elasticity
+                        spawnTime: Date.now(),
+                        lifetime: 3000 + Math.random() * 1000 // 3-4 seconds total life
+                    });
+                }
+
+                // Start physics loop if not already running
+                if (activeHearts.length === count) {
+                    requestAnimationFrame(updatePhysics);
+                }
+            });
+
+            function updatePhysics() {
+                const now = Date.now();
+                const gravity = 0.5;
+
+                for (let i = activeHearts.length - 1; i >= 0; i--) {
+                    const p = activeHearts[i];
+                    const elapsed = now - p.spawnTime;
+
+                    if (elapsed >= p.lifetime) {
+                        p.el.remove();
+                        activeHearts.splice(i, 1);
+                        continue;
+                    }
+
+                    // Physics math
+                    p.vy += gravity;
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.rot += p.vrot;
+
+                    // Collision bounds
+                    const floor = window.scrollY + window.innerHeight - p.size - 10;
+                    const leftWall = window.scrollX + 5;
+                    const rightWall = window.scrollX + window.innerWidth - p.size - 5;
+
+                    // Floor collision with bounce
+                    if (p.y >= floor) {
+                        p.y = floor;
+                        p.vy = p.vy * p.bounce;
+                        p.vx *= 0.8; // friction on floor
+                        p.vrot *= 0.85;
+                    }
+                    // Left wall
+                    if (p.x <= leftWall) {
+                        p.x = leftWall;
+                        p.vx = -p.vx * 0.7;
+                    }
+                    // Right wall
+                    if (p.x >= rightWall) {
+                        p.x = rightWall;
+                        p.vx = -p.vx * 0.7;
+                    }
+
+                    // Opacity fade logic:
+                    // Fades in quickly in first 200ms, then fades out in the last 1 second
+                    let opacity = 1.0;
+                    if (elapsed < 200) {
+                        opacity = elapsed / 200; // fade in
+                    } else if (elapsed > p.lifetime - 1000) {
+                        opacity = (p.lifetime - elapsed) / 1000; // fade out to 0
+                    }
+
+                    // Apply transform & opacity
+                    p.el.style.transform = `translate3d(${p.x}px, ${p.y}px, 0) rotate(${p.rot}deg)`;
+                    p.el.style.opacity = opacity;
+                }
+
+                if (activeHearts.length > 0) {
+                    requestAnimationFrame(updatePhysics);
+                }
+            }
+        });
+    </script>
+
+    <!-- About & Experience Accordions JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // About accordion
+            const aboutAcc = document.getElementById('nika-about');
+            const aboutToggle = document.getElementById('nika-about-toggle');
+            if (aboutAcc && aboutToggle) {
+                aboutToggle.addEventListener('click', () => {
+                    const isOpen = aboutAcc.classList.toggle('is-open');
+                    aboutToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+
+            // Experience accordion
+            const expAcc = document.getElementById('nika-experience');
+            const expToggle = document.getElementById('nika-experience-toggle');
+            if (expAcc && expToggle) {
+                expToggle.addEventListener('click', () => {
+                    const isOpen = expAcc.classList.toggle('is-open');
+                    expToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+        });
+    </script>
+
+
+    <script src="bones-confetti.js"></script>
+</body>
+
+</html>
