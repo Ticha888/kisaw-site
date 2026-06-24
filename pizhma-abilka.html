@@ -511,6 +511,12 @@
     </div>
 
     <script>
+        // Set lang attribute immediately to prevent flash of wrong language text
+        (function() {
+            const isRu = new URLSearchParams(window.location.search).get('lang') === 'ru';
+            document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en');
+        })();
+
         const initPizhmaCase = () => {
             const header = document.querySelector('.header');
             const checkHeader = () => { if (header) header.classList.toggle('header--scrolled', window.scrollY > 15); };

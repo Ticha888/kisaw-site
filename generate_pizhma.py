@@ -1,7 +1,33 @@
 import re, os
+from pizhma_translations import TRANSLATIONS
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
+def make_regex(text):
+    words = text.split()
+    pattern = r'\s*'.join(re.escape(w) for w in words)
+    return pattern
+def apply_translations(html, dst_filename):
+    if dst_filename not in TRANSLATIONS:
+        return html
+    
+    # Sort by the length of the English text descending to match longest blocks first
+    sorted_translations = sorted(TRANSLATIONS[dst_filename], key=lambda x: len(x[0]), reverse=True)
+    
+    for eng, ru in sorted_translations:
+        if eng.startswith('<'):
+            html = html.replace(eng, ru)
+        else:
+            regex_str = make_regex(eng)
+            match = re.search(regex_str, html, flags=re.DOTALL)
+            if match:
+                matched_text = match.group(0)
+                # Wrap inside span
+                replacement = f'<span class="lang-en">{matched_text}</span><span class="lang-ru">{ru}</span>'
+                html = html.replace(matched_text, replacement)
+            else:
+                print(f"WARNING: Could not find translation text in {dst_filename}: {eng[:50]}...")
+    return html
 # Nika header — gradient logo (black→pink), lang switcher with dark labels
 NIKA_HEADER = '''                <!-- Header -->
                 <header class="header header--light pizhma-case-header">
@@ -246,6 +272,12 @@ def process_file(src, dst, title):
     </div>
 
     <script>
+        // Set lang attribute immediately to prevent flash of wrong language text
+        (function() {
+            const isRu = new URLSearchParams(window.location.search).get('lang') === 'ru';
+            document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en');
+        })();
+
         const initPizhmaCase = () => {
             const header = document.querySelector('.header');
             const checkHeader = () => { if (header) header.classList.toggle('header--scrolled', window.scrollY > 15); };
@@ -350,6 +382,9 @@ def process_file(src, dst, title):
 </html>'''
     else:
         print(f"WARNING: No request-form found in {src}")
+
+    # Apply translations
+    html = apply_translations(html, dst)
 
     with open(os.path.join(BASE, dst), 'w', encoding='utf-8') as f:
         f.write(html)
