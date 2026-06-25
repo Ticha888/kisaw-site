@@ -117,7 +117,7 @@
                 <!-- Hero Section (Block 1) -->
                 <section id="nika-hero" class="nika-hero-section">
                     <div class="nika-hero-left">
-                        <h1 class="nika-hero-title">ДИЗАЙНЕР<br>БРЕНДОВ И<br>КОММУНИКАЦИЙ</h1>
+                        <h1 class="nika-hero-title">ДИЗАЙНЕР<br>БРЕНДОВ<br>&&nbsp;КОММУНИКАЦИЙ</h1>
                         <p class="nika-hero-desc">Разработка визуальных стратегий и&nbsp;креативных концепций для&nbsp;развития брендов.</p>
                     </div>
                     <div class="nika-hero-right">
@@ -554,7 +554,7 @@
             let lastSpawnTime = 0;
             imgContainer.addEventListener('mousemove', (e) => {
                 const now = Date.now();
-                if (now - lastSpawnTime < 80) return;
+                if (now - lastSpawnTime < 300) return;
                 lastSpawnTime = now;
                 const rect = imgContainer.getBoundingClientRect();
                 spawnSmallHeart(e.clientX - rect.left, e.clientY - rect.top);
@@ -589,8 +589,8 @@
             imgContainer.addEventListener('click', (e) => {
                 const cx = e.pageX;
                 const cy = e.pageY;
-                // Spawn between 2 and 10 hearts
-                const count = Math.floor(Math.random() * 9) + 2; 
+                // Spawn between 2 and 5 hearts for better performance
+                const count = Math.floor(Math.random() * 4) + 2; 
 
                 const SVG_HEARTS = [
                     'Heart blue.svg',
@@ -614,7 +614,6 @@
                         position: absolute;
                         left: 0; top: 0;
                         width: ${size}px; height: auto;
-                        filter: saturate(1.4) brightness(1.2) drop-shadow(0 0 15px ${glowColor}) drop-shadow(0 0 30px ${glowColor}88);
                     `;
 
                     // Initial position (center at click point)

@@ -6647,10 +6647,12 @@ body .header--light .header-mobile-hero .tagline {
     border-bottom: 1px solid transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    margin-bottom: 0px !important;
     transition: background 0.35s cubic-bezier(0.25, 1, 0.5, 1),
         backdrop-filter 0.35s cubic-bezier(0.25, 1, 0.5, 1),
         -webkit-backdrop-filter 0.35s cubic-bezier(0.25, 1, 0.5, 1),
-        border-color 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+        border-color 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+        margin-bottom 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .header-desktop-layout {
@@ -6687,6 +6689,13 @@ body .header--light .header-mobile-hero .tagline {
 
 .header--scrolled .header-mobile-hero {
     padding: 20px 18px 20px !important;
+}
+
+/* Compensate for the 80px lost padding on scroll to prevent sticky layout jump */
+@media (min-width: 801px) {
+    .header--scrolled {
+        margin-bottom: 80px !important;
+    }
 }
 
 /* --- Responsive Alignments --- */

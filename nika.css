@@ -1,5 +1,12 @@
 
 
+@font-face {
+    font-family: 'G8_Bold';
+    src: url('G8_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* ===== CUSTOM CURSORS (nika page) ===== */
 body.main-page {
     cursor: url('img/Arrow/Arrow.png') 0 0, auto !important;
@@ -34,8 +41,8 @@ body.main-page .nika-hero-image-container:active {
 }
 
 .nika-logo {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
+    font-family: 'G8_Bold', sans-serif;
+    font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -141,8 +148,8 @@ body.main-page .nika-hero-image-container:active {
 }
 
 .nika-hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 96px;
+    font-family: 'G8_Bold', sans-serif;
+    font-size: 72px;
     line-height: 0.92;
     color: #FBFBFB;
     margin: 0 0 24px 0;
@@ -196,7 +203,6 @@ body.main-page .nika-hero-image-container:active {
     height: 58px;
     z-index: 10;
     transform-origin: center;
-    filter: drop-shadow(0 0 12px rgba(255, 0, 127, 0.95)) drop-shadow(0 0 4px rgba(255, 0, 127, 0.6)); /* Double drop shadow glow effect */
     animation: floatHeart 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
@@ -354,7 +360,7 @@ body.main-page .nika-hero-image-container:active {
 }
 
 .nika-about-toggle-label {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'G8_Bold', sans-serif;
     font-size: 36px;
     letter-spacing: 1.5px;
     color: #FBFBFB;
@@ -394,7 +400,7 @@ body.main-page .nika-hero-image-container:active {
     display: flex;
     align-items: flex-start;
     gap: 48px;
-    padding: 0 40px 40px 40px;
+    padding: 24px 40px 40px 40px;
 }
 
 /* Animated gradient avatar */
@@ -514,7 +520,7 @@ body.main-page .nika-hero-image-container:active {
         flex-direction: column;
         align-items: center;
         gap: 28px;
-        padding: 0 24px 32px 24px;
+        padding: 20px 24px 32px 24px;
     }
 
     .nika-avatar-wrap {
@@ -554,7 +560,7 @@ body.main-page .nika-hero-image-container:active {
 }
 
 .nika-contacts-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'G8_Bold', sans-serif;
     font-size: 80px;
     line-height: 0.95;
     color: #FBFBFB;
@@ -1067,24 +1073,26 @@ body.main-page .nika-hero-image-container:active {
     }
 }
 
-/* Headings typography: Montserrat 700 (Russian version only) */
+/* Headings typography: G8_Bold (Russian version only) */
 html[lang="ru"] .nika-hero-title,
 html[lang="ru"] .nika-about-toggle-label,
 html[lang="ru"] .nika-contacts-title,
 html[lang="ru"] .why-us-v3-title,
 html[lang="ru"] .why-us-v3-card-title {
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 700 !important;
+    font-family: 'G8_Bold', sans-serif !important;
+    font-weight: bold !important;
 }
 
-html[lang="ru"] .nika-hero-title {
+html[lang="ru"] .nika-hero-title,
+html[lang="ru"] .nika-contacts-title {
     font-size: 64px !important;
     line-height: 1.1 !important;
     letter-spacing: -0.02em !important;
 }
 
 @media (max-width: 900px) {
-    html[lang="ru"] .nika-hero-title {
+    html[lang="ru"] .nika-hero-title,
+    html[lang="ru"] .nika-contacts-title {
         font-size: 38px !important;
         line-height: 1.15 !important;
     }
