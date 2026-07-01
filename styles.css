@@ -4991,11 +4991,11 @@ body .header--light .header-mobile-hero .tagline {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: space-between !important;
         gap: 0 !important; /* Rely entirely on margin on tagline for precise control */
         width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important; /* Zero padding to match other pages */
+        padding: 0 16px !important; /* Zero padding to match other pages */
         background: transparent !important;
         border-radius: 0 !important;
     }
@@ -6747,7 +6747,7 @@ body .header--light .header-mobile-hero .tagline {
     .main-page .header {
         margin: 0 0 54px 0 !important;
         width: 100% !important;
-        padding: 24px 16px 0 !important;
+        padding: 0 !important;
         left: 0 !important;
         position: relative !important;
         top: auto !important;
@@ -6758,11 +6758,11 @@ body .header--light .header-mobile-hero .tagline {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: space-between !important;
         gap: 0 !important;
         width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 16px 24px !important;
         background: transparent !important;
         border-radius: 0 !important;
     }

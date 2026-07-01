@@ -253,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Only create it if it doesn't already exist
+    /*
     if (!document.querySelector('.mobile-nav-toggle-floating')) {
         const floatingBurger = document.createElement('button');
         floatingBurger.className = 'mobile-nav-toggle-floating';
@@ -270,8 +271,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    */
 
     // Helper: show/hide floating burger based on viewport width
+    /*
     function updateFloatingBurgerVisibility() {
         const burger = document.querySelector('.mobile-nav-toggle-floating');
         if (!burger) return;
@@ -288,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run on load and on every resize
     updateFloatingBurgerVisibility();
     window.addEventListener('resize', updateFloatingBurgerVisibility);
+    */
 
     // Global scroll listener for mobile
     window.addEventListener('scroll', () => {

@@ -258,7 +258,7 @@ body.main-page .nika-hero-image-container:active {
     position: relative;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 8px;
+    border-radius: 99px;
     padding: 5px 10px;
     cursor: pointer;
     transition: border-color 0.2s, background 0.2s;
@@ -295,7 +295,7 @@ body.main-page .nika-hero-image-container:active {
         );
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    border-radius: 8px;
+    border-radius: 99px;
     box-shadow:
         0 0 8px rgba(221, 55, 55, 0.4),
         0 0 20px rgba(255, 218, 239, 0.25);
@@ -317,7 +317,7 @@ body.main-page .nika-hero-image-container:active {
         );
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    border-radius: 8px;
+    border-radius: 99px;
     box-shadow:
         0 0 8px rgba(0, 126, 250, 0.45),
         0 0 20px rgba(166, 211, 255, 0.2);
@@ -520,16 +520,22 @@ body.main-page .nika-hero-image-container:active {
         flex-direction: column;
         align-items: center;
         gap: 28px;
-        padding: 20px 24px 32px 24px;
+        padding: 0 16px;
+    }
+
+    .nika-about-accordion {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     .nika-avatar-wrap {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     .nika-about-text p {
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -872,9 +878,10 @@ body.main-page .nika-hero-image-container:active {
 @media (max-width: 900px) {
     .nika-hero-section {
         flex-direction: column-reverse;
-        padding: 40px 0;
+        padding: 40px 16px;
+        box-sizing: border-box;
         gap: 32px;
-        text-align: center;
+        text-align: left;
         min-height: auto;
     }
 
@@ -882,7 +889,7 @@ body.main-page .nika-hero-image-container:active {
         max-width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .nika-hero-title {
@@ -897,19 +904,30 @@ body.main-page .nika-hero-image-container:active {
 
 
     .nika-hero-desc {
-        font-size: 16px;
+        font-size: 18px; /* Increased from 16px */
     }
 
     .nika-hero-image-container {
-        max-width: 380px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .nika-hero-img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .nika-contacts-section {
-        padding: 60px 24px;
-        margin-left: -24px;
-        margin-right: -24px;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 60px 16px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cases-header-icon img {
+        width: 72px !important;
     }
 
     .nika-contacts-grid-wrapper {
@@ -1091,10 +1109,53 @@ html[lang="ru"] .nika-contacts-title {
 }
 
 @media (max-width: 900px) {
-    html[lang="ru"] .nika-hero-title,
-    html[lang="ru"] .nika-contacts-title {
+    .nika-hero-title {
         font-size: 38px !important;
         line-height: 1.15 !important;
+    }
+
+    html[lang="ru"] .nika-hero-title {
+        font-size: 32px !important;
+    }
+
+    .nika-contacts-title {
+        font-size: 38px !important;
+        line-height: 1.15 !important;
+    }
+
+    .nika-lang-btn {
+        padding: 4px 6px !important;
+        gap: 4px !important;
+    }
+    
+    .nika-lang-btn.active {
+        padding: 5px 7px !important;
+    }
+
+    .nika-lang-label {
+        font-size: 11px !important;
+    }
+
+    .nika-flag {
+        width: 22px !important;
+        height: 15px !important;
+    }
+
+    body.main-page .header-mobile-hero,
+    .header-mobile-hero {
+        justify-content: space-between !important;
+        padding: 16px 24px !important;
+        gap: 0 !important;
+    }
+    
+    body.main-page .header-mobile-hero .nika-logo,
+    .header-mobile-hero .nika-logo {
+        font-size: 22px !important;
+    }
+
+    /* Push lang switcher to right edge */
+    #pizhma-lang-switcher-mobile {
+        margin-left: auto !important;
     }
 }
 
@@ -1106,6 +1167,13 @@ html[lang="ru"] .lang-en {
     display: none !important;
 }
 html:not([lang="ru"]) .lang-ru {
+    display: none !important;
+}
+
+/* Completely remove the floating burger menu from Nika pages */
+body.main-page .mobile-nav-toggle-floating,
+body.main-page.is-scrolled .mobile-nav-toggle-floating,
+.mobile-nav-toggle-floating {
     display: none !important;
 }
 
