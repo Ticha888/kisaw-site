@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/imgs_for_main/kisaw_logo_black.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/imgs_for_main/kisaw_logo_white.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika Pizhma — Frozen Bro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=245.0">
+    <link rel="stylesheet" href="nika.css?v=1.0">
+    <style>
+        /* Embedded to bypass cache - REVERTED DUE TO LOAD ISSUES */
+        .abilka-centered-group {
+            margin: 0 auto !important;
+            width: 1000px !important;
+            max-width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .abilka-case-images {
+            margin-top: 40px !important;
+            margin-bottom: 120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-intro-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .abilka-img-wrapper {
+            width: 1000px !important;
+            max-width: 100% !important;
+            border-radius: 6.74px !important;
+            margin-bottom: 40px !important;
+            overflow: hidden !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            cursor: pointer !important;
+        }
+
+        .abilka-img-small {
+            width: 500px !important;
+            align-self: center !important;
+        }
+
+        .abilka-img-wrapper:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: none !important;
+        }
+
+        .abilka-image {
+            width: 100% !important;
+            display: block !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 6.74px !important;
+        }
+
+        @media (min-width: 801px) {
+        .other-projects-section {
+            padding: 100px 0 !important;
+            margin-top: 0 !important;
+            background-color: #1E1E1E !important;
+            width: calc(100% + 160px) !important;
+            max-width: none !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            }
+        }
+
+        .other-projects-title {
+            width: 1000px !important;
+            max-width: calc(100% - 80px) !important;
+            margin: 0 auto 40px auto !important;
+            padding: 0 !important;
+            text-align: left !important;
+            color: #FBFBFB !important;
+        }
+
+        .projects-carousel {
+            width: 100% !important;
+            overflow: hidden !important;
+            padding: 40px 0 !important;
+        }
+
+        .carousel-container {
+            position: relative !important;
+            width: 100% !important;
+        }
+
+        .carousel-track {
+            display: flex !important;
+            gap: 24px !important;
+            padding-left: calc((100% - 1000px) / 2) !important;
+            padding-right: 40px !important;
+            width: max-content !important;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+
+        @media (max-width: 1100px) {
+            .carousel-track {
+                padding-left: 40px !important;
+            }
+        }
+
+        .carousel-item {
+            flex: 0 0 380px !important;
+        }
+
+        .carousel-full-card {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            border-radius: 6.74px !important;
+        }
+
+        /* Maximum specificity to kill all roundings on form elements */
+        html body.frozenbro-page .request-form-section,
+        html body.frozenbro-page .request-form-layout,
+        html body.frozenbro-page .request-textarea-wrapper textarea,
+        html body.frozenbro-page .request-submit-btn,
+        html body.frozenbro-page .request-voice-recording-panel,
+        html body.frozenbro-page .file-item,
+        html body.frozenbro-page .request-input-group input {
+            border-radius: 0 !important;
+            -webkit-border-radius: 0 !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+        }
+
+        @media (min-width: 801px) {
+        .request-form-section {
+            margin-top: 0 !important;
+            padding-top: 100px !important;
+            padding-bottom: 80px !important;
+            background-color: #1E1E1E !important;
+            border-radius: 0 !important;
+            width: calc(100% + 160px) !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            }
+        }
+
+        .request-form-layout {
+            width: 1230px !important;
+            max-width: calc(100% - 40px) !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            gap: 80px !important;
+        }
+
+        .request-form-copy {
+            flex: 1 !important;
+            max-width: 550px !important;
+        }
+
+        .request-form {
+            flex: 0 0 600px !important;
+            width: 600px !important;
+        }
+
+        .request-form-title {
+            font-size: 60px !important;
+            line-height: 1 !important;
+            margin-bottom: 40px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+            color: #FBFBFB !important;
+        }
+
+        .tags {
+            display: flex;
+            gap: 13px;
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            color: #1E1E1E !important;
+            text-transform: uppercase;
+            line-height: 1.13 !important;
+            opacity: 0.6 !important;
+            /* Transparent by total 40% */
+        }
+
+        .tag-hash {
+            color: #1E1E1E !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            opacity: 0.6 !important;
+            /* Transparent by total 40% */
+        }
+
+        .request-form-description {
+            font-size: 24px !important;
+            line-height: 1.4 !important;
+            color: #FBFBFB !important;
+        }
+
+        .buttons-wrap {
+            margin: 40px auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 6px !important;
+            width: fit-content !important;
+            padding: 4px !important;
+            position: relative !important;
+            background: #e4c1f5 !important;
+            border-radius: 26px !important;
+            overflow: hidden !important;
+        }
+
+        /* The sliding background pill */
+        .active-pill {
+            position: absolute !important;
+            top: 4px;
+            left: 4px;
+            height: 44px;
+            background: #000 !important;
+            border-radius: 22px !important;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            z-index: 1 !important;
+        }
+
+        .buttons-wrap .btn {
+            font-weight: 600 !important;
+            /* Semi-bold */
+            padding: 0 32px !important;
+            /* Increased for better slide feel */
+            height: 44px !important;
+            font-size: 17px !important;
+            border-radius: 22px !important;
+            transition: color 0.3s ease !important;
+            color: #000 !important;
+            position: relative !important;
+            z-index: 2 !important;
+            /* Above the pill */
+            background: transparent !important;
+            /* Background is now handled by the pill */
+            border: none !important;
+        }
+
+        .buttons-wrap .btn.active-text {
+            color: #fff !important;
+        }
+
+        .buttons-wrap .btn:not(.active-text):hover {
+            background-color: #D0A9E7 !important;
+            transform: translateY(1px);
+        }
+
+        body.frozenbro-page {
+            background-color: #b8b8b8 !important;
+            /* Original grey */
+        }
+
+        .container-abilka {
+            background-color: #F6F5F5 !important;
+            /* Targeted light background */
+        }
+
+        /* LIGHT LIGHTBOX THEME */
+        .lightbox {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            /* Slightly more transparent */
+            backdrop-filter: blur(10px) !important;
+            /* Blur effect */
+            -webkit-backdrop-filter: blur(10px) !important;
+            /* Safari support */
+        }
+
+        .lightbox-close {
+            color: #000 !important;
+        }
+
+        .lightbox-thumbnails {
+            background: rgba(0, 0, 0, 0.05) !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .lightbox-thumb {
+            border: 2px solid transparent !important;
+        }
+
+        .lightbox-thumb.active {
+            border-color: #000 !important;
+        }
+
+        @media (min-width: 801px) {
+        .new-site-footer {
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+            padding: 80px !important;
+            width: calc(100% + 160px) !important;
+            margin-left: -80px !important;
+            margin-right: -80px !important;
+            background-color: #1E1E1E !important;
+        }
+        }
+    </style>
+</head>
+
+<body class="frozenbro-page">
+    <div class="page">
+        <div class="main-row">
+            <!-- Sticky Sidebar -->
+            <div class="sticky-sidebar-layer">
+                <img src="img/Frozen bro badge.png" alt="Frozen Bro" class="sticky-sidebar-img">
+            </div>
+
+            <div class="container container-abilka">
+                <!-- Header -->
+                <!-- Header -->
+                <header class="header header--light pizhma-case-header">
+                    <style>
+                        .pizhma-case-header .nika-logo-link { text-decoration: none !important; }
+                        .pizhma-case-header .nika-logo {
+                            background: linear-gradient(90deg, #1E1E1E 0%, #C8006B 60%, #FFDAEF 100%) !important;
+                            -webkit-background-clip: text !important;
+                            -webkit-text-fill-color: transparent !important;
+                            background-clip: text !important;
+                            animation: pizhma-logo-shift 4s ease-in-out infinite alternate !important;
+                        }
+                        @keyframes pizhma-logo-shift {
+                            0%   { background-position: 0% 50%; }
+                            100% { background-position: 100% 50%; }
+                        }
+                        .pizhma-case-header .nika-logo {
+                            background-size: 200% 200% !important;
+                        }
+                        /* Lang switcher — dark labels */
+                        .pizhma-case-header .nika-lang-switcher {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                        }
+                        .pizhma-case-header .nika-lang-btn {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                            padding: 6px 12px;
+                            border: 1.5px solid rgba(30,30,30,0.18);
+                            border-radius: 999px;
+                            background: transparent;
+                            cursor: pointer;
+                            transition: background 0.2s, border-color 0.2s;
+                        }
+                        .pizhma-case-header .nika-lang-btn:hover { background: rgba(30,30,30,0.07); }
+                        .pizhma-case-header .nika-lang-btn.active {
+                            background: #1E1E1E;
+                            border-color: #1E1E1E;
+                        }
+                        .pizhma-case-header .nika-lang-label {
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: #1E1E1E;
+                            letter-spacing: 0.04em;
+                        }
+                        .pizhma-case-header .nika-lang-btn.active .nika-lang-label { color: #FBFBFB; }
+                        /* Hide default nav links on desktop */
+                        @media (min-width: 801px) {
+                            .pizhma-case-header .nav { display: none !important; }
+                        }
+                    </style>
+                    <!-- Desktop Layout -->
+                    <div class="header-desktop-layout">
+                        <div class="header-left">
+                            <a href="index.html" class="logo-link nika-logo-link">
+                                <span class="logo nika-logo">Anika Pizhma</span>
+                            </a>
+                        </div>
+                        <!-- Language switcher (black labels) -->
+                        <div class="nika-lang-switcher" id="pizhma-lang-switcher">
+                            <button class="nika-lang-btn active" data-lang="en" aria-label="English">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" class="nika-flag">
+                                    <rect width="60" height="40" fill="#B22234"/>
+                                    <rect y="3.08" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="9.23" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="15.38" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="21.54" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="27.69" width="60" height="3.08" fill="#fff"/>
+                                    <rect y="33.85" width="60" height="3.08" fill="#fff"/>
+                                    <rect width="24" height="21.54" fill="#3C3B6E"/>
+                                    <g fill="#fff"><circle cx="2.4" cy="2.15" r="1.1"/><circle cx="7.2" cy="2.15" r="1.1"/><circle cx="12" cy="2.15" r="1.1"/><circle cx="16.8" cy="2.15" r="1.1"/><circle cx="21.6" cy="2.15" r="1.1"/><circle cx="4.8" cy="4.92" r="1.1"/><circle cx="9.6" cy="4.92" r="1.1"/><circle cx="14.4" cy="4.92" r="1.1"/><circle cx="19.2" cy="4.92" r="1.1"/><circle cx="2.4" cy="7.69" r="1.1"/><circle cx="7.2" cy="7.69" r="1.1"/><circle cx="12" cy="7.69" r="1.1"/><circle cx="16.8" cy="7.69" r="1.1"/><circle cx="21.6" cy="7.69" r="1.1"/><circle cx="4.8" cy="10.46" r="1.1"/><circle cx="9.6" cy="10.46" r="1.1"/><circle cx="14.4" cy="10.46" r="1.1"/><circle cx="19.2" cy="10.46" r="1.1"/><circle cx="2.4" cy="13.23" r="1.1"/><circle cx="7.2" cy="13.23" r="1.1"/><circle cx="12" cy="13.23" r="1.1"/><circle cx="16.8" cy="13.23" r="1.1"/><circle cx="21.6" cy="13.23" r="1.1"/><circle cx="4.8" cy="16" r="1.1"/><circle cx="9.6" cy="16" r="1.1"/><circle cx="14.4" cy="16" r="1.1"/><circle cx="19.2" cy="16" r="1.1"/><circle cx="2.4" cy="18.77" r="1.1"/><circle cx="7.2" cy="18.77" r="1.1"/><circle cx="12" cy="18.77" r="1.1"/><circle cx="16.8" cy="18.77" r="1.1"/><circle cx="21.6" cy="18.77" r="1.1"/></g>
+                                </svg>
+                                <span class="nika-lang-label">EN</span>
+                            </button>
+                            <button class="nika-lang-btn" data-lang="ru" aria-label="Russian">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" class="nika-flag">
+                                    <rect width="60" height="13.33" fill="#fff"/>
+                                    <rect y="13.33" width="60" height="13.33" fill="#0039A6"/>
+                                    <rect y="26.67" width="60" height="13.33" fill="#fff"/>
+                                </svg>
+                                <span class="nika-lang-label">RU</span>
+                            </button>
+                        </div>
+                        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+                    <!-- Mobile Hero Layout -->
+                    <div class="header-mobile-hero">
+                        <div class="logo-stack">
+                            <a href="index.html" class="logo-link nika-logo-link">
+                                <span class="logo nika-logo">Anika Pizhma</span>
+                            </a>
+                        </div>
+                        <button class="mobile-nav-toggle-hero" aria-label="Toggle Navigation">
+                            <img src="img/burgermenu.png" alt="Menu" class="burger-icon">
+                        </button>
+                    </div>
+                    <!-- Popup Menu -->
+                    <div class="nav-overlay">
+                        <nav class="nav-popup">
+                            <button class="menu-close-btn" aria-label="Close Menu">
+                                <img src="img/closewindow.svg" alt="Close">
+                            </button>
+                            <div class="nav-links">
+                                <a href="index.html#cases">Cases</a>
+                                <a href="index.html#contacts">Contacts</a>
+                                <a href="https://kisaw.studio/privacypolicy.html">Privacy policy</a>
+                            </div>
+                            <div class="nav-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="nav-social-link" aria-label="Behance">
+                                    <img src="img/icons/mage_behance.svg" alt="Behance">
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nav-social-link" aria-label="Instagram">
+                                    <img src="img/icons/ri_instagram-fill.svg" alt="Instagram">
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nav-social-link" aria-label="LinkedIn">
+                                    <img src="img/icons/mdi_linkedin.svg" alt="LinkedIn">
+                                </a>
+                            </div>
+                            <a href="index.html#contacts" class="send-signal-btn-mobile">CONTACTS</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <main class="main">
+                    <div class="abilka-centered-group">
+                        <div class="main-left">
+                            <section class="title-section">
+                                <h1 class="main-title"><span class="lang-en"><span class="light">ESTONIA\</span>FROZEN.BRO</span><span class="lang-ru"><span class="light">ЭСТОНИЯ\</span>FROZEN.BRO</span></h1>
+                                <h2 class="sub-title"><span class="lang-en">BRAND IDENTITY&amp;PACKAGING</span><span class="lang-ru"><span class="lang-en">BRAND IDENTITY&amp;PACKAGING</span><span class="lang-ru">АЙДЕНТИКА И&nbsp;УПАКОВКА</span></span></h2>
+                            </section>
+
+                            <span class="tag-hash">#</span>
+                            <div class="tags">
+                                <span><span class="lang-en">FOOD</span><span class="lang-ru">ЕДА</span></span>
+                                <span><span class="lang-en">BRAND IDENTITY</span><span class="lang-ru">АЙДЕНТИКА</span></span>
+                                <span><span class="lang-en">GRAPHIC/<span class="orange">WEB</span> DESIGN</span><span class="lang-ru">ГРАФИЧЕСКИЙ/<span class="orange">ВЕБ</span> ДИЗАЙН</span></span>
+                                <span><span class="lang-en">CONCEPT</span><span class="lang-ru">КОНЦЕПТ</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Lead Image -->
+                        <div class="abilka-img-wrapper" style="margin-top: 40px;">
+                            <img src="img/frozen_case/frozen.bro 1.png" alt="Frozen Bro Case 1" class="abilka-image">
+                        </div>
+
+                        <!-- Tab Switcher -->
+                        <div class="buttons-wrap">
+                            <div class="active-pill"></div>
+                            <button class="btn active-text" data-tab="visuals"><span class="lang-en">VISUALS</span><span class="lang-ru">ВИЗУАЛ</span></button>
+                            <button class="btn" data-tab="lore"><span class="lang-en">LORE</span><span class="lang-ru">ЛОГРИД</span></button>
+                        </div>
+
+                        <!-- Tab Content: VISUALS -->
+                        <div id="visuals" class="tab-content active">
+                            <div class="abilka-case-images">
+                                <section class="abilka-intro-section">
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 2.png" alt="Frozen Bro visual identity 2" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 3.png" alt="Frozen Bro visual identity 3" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 4.png" alt="Frozen Bro visual identity 4" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 5.png" alt="Frozen Bro visual identity 5" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 6.png" alt="Frozen Bro visual identity 6" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 7.1.png" alt="Frozen Bro visual identity 7.1" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 8-1.png" alt="Frozen Bro visual identity 8" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 9.png" alt="Frozen Bro visual identity 9" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 10.1.png" alt="Frozen Bro visual identity 10" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 11.png" alt="Frozen Bro visual identity 11" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 12.png" alt="Frozen Bro visual identity 12" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <img src="img/frozen_case/frozen.bro 13.png" alt="Frozen Bro visual identity 13" class="abilka-image">
+                                    </div>
+                                    <div class="abilka-img-wrapper">
+                                        <video src="img/fr.br video.mp4" class="abilka-image" loop playsinline controls
+                                            style="width: 100%; border-radius: 6.74px;"></video>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: LORE -->
+                        <div id="lore" class="tab-content">
+                            <div class="strategy-content-wrapper" style="width: 1000px; max-width: 100%;">
+                                <style>
+                                    .strategy-content-wrapper {
+                                        color: #1E1E1E !important;
+                                    }
+
+                                    .strategy-section {
+                                        margin-bottom: 80px;
+                                    }
+
+                                    .strategy-title {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 24px !important;
+                                        font-weight: 900 !important;
+                                        margin-bottom: 24px;
+                                        text-transform: uppercase;
+                                        opacity: 1 !important;
+                                        line-height: normal !important;
+                                    }
+
+                                    .strategy-text {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 20px !important;
+                                        line-height: 1.55 !important;
+                                        margin-bottom: 32px;
+                                        font-weight: 400 !important;
+                                        letter-spacing: 0 !important;
+                                        opacity: 1 !important;
+                                    }
+
+                                    .strategy-img {
+                                        width: 1000px;
+                                        max-width: 100%;
+                                        border-radius: 6.74px !important;
+                                        margin-bottom: 40px;
+                                    }
+
+                                    .strategy-subtitle {
+                                        color: #1E1E1E !important;
+                                        font-family: 'Inter', sans-serif !important;
+                                        font-size: 16px !important;
+                                        font-style: italic !important;
+                                        font-weight: 400 !important;
+                                        line-height: 1.55 !important;
+                                        margin: 0 !important;
+                                        /* Reset margin for group control */
+                                        opacity: 1 !important;
+                                    }
+
+                                    .subtitle-media-group {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        gap: 4px;
+                                        /* Exact gap */
+                                        margin-bottom: 40px;
+                                    }
+
+                                    @media (max-width: 800px) {
+                                        .strategy-content-wrapper {
+                                            padding: 0 16px !important;
+                                            box-sizing: border-box !important;
+                                        }
+                                        .strategy-title {
+                                            font-size: 20px !important;
+                                            margin-bottom: 16px !important;
+                                        }
+                                        .strategy-text {
+                                            font-size: 15px !important;
+                                            line-height: 1.45 !important;
+                                            margin-bottom: 24px !important;
+                                        }
+                                        .strategy-img {
+                                            border-radius: 6.74px !important;
+                                            margin-bottom: 24px !important;
+                                        }
+                                        .strategy-subtitle {
+                                            font-size: 13px !important;
+                                        }
+                                        .subtitle-media-group {
+                                            margin-bottom: 24px !important;
+                                        }
+                                    }
+                                </style>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title"><span class="lang-en">Project Context</span><span class="lang-ru">Контекст проекта</span></h3>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">Frozen Bro reached out to me in 2023 for a systematic branding project. They
+                                        already
+                                        had a frozen product line and basic communications, and the team’s vibe was
+                                        instantly clear: lively, creative, and genuinely funny. The brand already felt
+                                        human
+                                        and warm. At the same time, the packaging and supporting materials were produced
+                                        in
+                                        different ways: some layouts were printed at home, and many decisions were made
+                                        case
+                                        by case depending on the task.</span><span class="lang-ru">Ребята из&nbsp;Frozen Bro пришли ко&nbsp;мне в&nbsp;2023 году за&nbsp;комплексным брендингом. На&nbsp;тот момент у&nbsp;них уже вовсю продавалась заморозка, были какие-то базовые соцсети и, главное, понятный вайб: живой, творческий и&nbsp;с&nbsp;хорошим чувством юмора. Бренд изначально получался очень человечным и&nbsp;теплым. Правда, с&nbsp;визуалом был хаос: упаковку и&nbsp;полиграфию делали на&nbsp;коленке, что-то печатали чуть ли&nbsp;не&nbsp;дома, а&nbsp;решения принимались спонтанно под&nbsp;каждую задачу.</span>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Early visuals by the founders:</span><span class="lang-ru">Первые наброски основателей:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 1.png" alt="Early visuals"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title"><span class="lang-en">process</span><span class="lang-ru">Как&nbsp;все строилось</span></h3>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">We started with briefing and deep context work. On the strategic side, we
+                                        defined
+                                        what Frozen Bro is selling, how the lineup is structured, who the customer is,
+                                        and
+                                        where people meet the brand. A key intention was to support their own style and
+                                        taste in design and messaging, and to keep their tone of voice intact: warm,
+                                        friendly, and human, like good friends or neighbors, the kind of people you can
+                                        meet
+                                        through everyday life and end up sharing a good table and a fun evening with.</span><span class="lang-ru">Мы&nbsp;начали с&nbsp;брифа и&nbsp;погружения в&nbsp;контекст. Разложили по&nbsp;полочкам стратегию: что&nbsp;именно продают Frozen Bro, как&nbsp;устроена линейка, кто их клиент и&nbsp;где&nbsp;они вообще пересекаются. Главная цель: не&nbsp;ломать их собственный стиль, а&nbsp;упаковать его. Сохранить тот самый голос бренда — дружелюбный и&nbsp;свойский, как&nbsp;у&nbsp;классных соседей, с&nbsp;которыми легко можно затусить на&nbsp;кухне до&nbsp;утра.</span>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Process visuals:</span><span class="lang-ru">Рабочие материалы:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 2.png" alt="Process"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title"><span class="lang-en">Three guides</span><span class="lang-ru">Три гайдбука в&nbsp;итоге</span></h3>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">The project was structured into three blocks so the brand could immediately
+                                        function
+                                        as a practical tool.</span><span class="lang-ru">Чтобы бренд сразу стал рабочим инструментом, мы&nbsp;разбили проект на&nbsp;три практических блока.</span>
+                                    </div>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">We built the foundation of the brand system, with a stronger emphasis on
+                                        communication and tone of voice. Frozen Bro has a focused, niche audience, and
+                                        the
+                                        founders meet people in person at festivals and events, so the way the brand
+                                        speaks
+                                        matters as much as how it looks. At this stage, the priority was to define a
+                                        clear,
+                                        human voice for everyday conversations and content: approachable, recognizable,
+                                        and
+                                        consistent across touchpoints.</span><span class="lang-ru"><strong>Основа системы: коммуникация и&nbsp;тон</strong><br><br>У&nbsp;Frozen Bro классная нишевая аудитория, а&nbsp;фаундеры сами стоят за&nbsp;стойкой на&nbsp;маркетах и&nbsp;фестивалях. Поэтому то, как&nbsp;бренд разговаривает, здесь важно не&nbsp;меньше, чем визуал. На&nbsp;этом этапе мы&nbsp;прописали правила для&nbsp;повседневного общения и&nbsp;контента: как&nbsp;оставаться узнаваемыми, живыми и&nbsp;цельными на&nbsp;любой площадке.</span>
+                                    </div>
+
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Part of Base Brandbook:</span><span class="lang-ru">Раздел базового брендбука:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 3.png" alt="Brandbook"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title"><span class="lang-en">Packaging guideline</span><span class="lang-ru">Гайдлайн по&nbsp;упаковке</span></h3>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">This was the most practical part of the project. For the frozen product line, we
+                                        designed belly bands for the packaging as well as additional stickers. The goal
+                                        was
+                                        to strengthen shelf presence and standardize the look of the lineup.</span><span class="lang-ru">Самая прикладная часть работы. Для&nbsp;заморозки мы&nbsp;придумали картонные обечайки и&nbsp;систему стикеров. Задача: сделать так, чтобы продукт выделялся на&nbsp;полке, а&nbsp;вся линейка выглядела аккуратно и&nbsp;в&nbsp;одном стиле.</span>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Part of Package Brandbook:</span><span class="lang-ru">Раздел гайдлайна по&nbsp;упаковке:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 4.png" alt="Packaging"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+
+                                    <div class="strategy-text" style="margin-top: 40px;">
+                                        <span class="lang-en">One of the brand’s most recognizable signatures is the “logo” itself: a real
+                                        face,
+                                        used as a bold and memorable marker across touchpoints. We leaned into that idea
+                                        and
+                                        made it a repeating motif in the packaging system, so the lineup stays instantly
+                                        identifiable even when formats, flavors, or product types change. Instead of
+                                        following the typical frozen-food visual codes, we chose a minimal, distinctive
+                                        direction that feels true to Frozen Bro and stands apart from competitors.
+                                        Alongside
+                                        the design work, we organized food photoshoots, handled retouching, and prepared
+                                        a
+                                        consistent set of visual assets for packaging and content production.</span><span class="lang-ru">Главная фишка бренда — «логотип» в&nbsp;виде реального лица. Мы&nbsp;зацепились за&nbsp;этот образ и&nbsp;превратили его в&nbsp;сквозной элемент упаковки. Теперь бренд считывается моментально, независимо от&nbsp;формата или&nbsp;вкуса внутри. Вместо стандартных штампов для&nbsp;замороженных полуфабрикатов мы&nbsp;ушли в&nbsp;минимализм, который выглядит самобытно и&nbsp;отстраивает ребят от&nbsp;конкурентов. В&nbsp;процессе мы&nbsp;также провели фуд-съемку, отретушировали кадры и&nbsp;собрали базу визуалов для&nbsp;упаковки и&nbsp;постов.</span>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Food Photo and Retouche:</span><span class="lang-ru">Фуд-съемку и&nbsp;ретушь:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 5.png" alt="Retouche"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                <section class="strategy-section">
+                                    <h3 class="strategy-title"><span class="lang-en">Social media guideline</span><span class="lang-ru">Гайдлайн по&nbsp;соцсетям</span></h3>
+                                    <div class="strategy-text">
+                                        <span class="lang-en">Frozen Bro is constantly filming and sharing what they do: day-to-day kitchen
+                                        life,
+                                        work <span class="lang-en">process</span><span class="lang-ru">Как&nbsp;все строилось</span>, product moments, and real meetings with people around food. The
+                                        brand
+                                        system was built to support that rhythm, so it integrates naturally with short
+                                        videos, posts, stories, and quick announcements without losing consistency. We
+                                        documented the rules and templates in a clear, practical way, so the team can
+                                        produce and format their own creatives independently. This removed the need to
+                                        hire
+                                        a designer for every post and helped them keep the channel active, recognizable,
+                                        and
+                                        true to their voice.</span><span class="lang-ru">Frozen Bro постоянно в&nbsp;эфире: показывают внутреннюю кухню, процессы, продукт и&nbsp;гостей. Бренд-система создавалась под&nbsp;этот темп, так что&nbsp;дизайн легко адаптируется под&nbsp;рилсы, сторис и&nbsp;быстрые анонсы. Все правила и&nbsp;шаблоны мы&nbsp;зафиксировали в&nbsp;простом виде, чтобы команда могла собирать креативы сама. Больше не&nbsp;нужно дергать дизайнера ради каждой картинки, можно вести соцсети быстро, регулярно и&nbsp;в&nbsp;своем стиле.</span>
+                                    </div>
+                                    <div class="subtitle-media-group">
+                                        <p class="strategy-subtitle"><span class="lang-en">Part of Content (SM) Brandbook:</span><span class="lang-ru">Раздел гайдлайна по&nbsp;SMM:</span></p>
+                                        <img src="img/frozen_case/frozen lore/lore frozen 6.png" alt="Social Media"
+                                            class="strategy-img" style="margin-bottom: 0;">
+                                    </div>
+                                </section>
+
+                                 <section class="strategy-section" style="text-align: center; margin-top: 80px;">
+                                     <h3 class="strategy-title" style="margin-bottom: 0;">VISIT US <a
+                                             href="https://frozenbro.ee" target="_blank"
+                                             style="color: inherit; text-decoration: none; border-bottom: 2px solid #47E194;">FROZENBRO.EE</a>
+                                     </h3>
+                                 </section>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Look Other Projects Carousel -->
+                <section class="other-projects-section">
+                    <h2 class="other-projects-title">LOOK OTHER PROJECTS</h2>
+                    <div class="carousel-container">
+                        <div class="projects-carousel">
+                            <div class="carousel-track">
+                                <a href="pizhma-abilka.html" class="carousel-item">
+                                    <img src="img/case_cards/abilka.png" alt="Abilka" class="carousel-full-card">
+                                </a>
+                                <a href="pizhma-boilingbrains.html" class="carousel-item">
+                                    <img src="img/case_cards/bb.png" alt="Boiling Brains" class="carousel-full-card">
+                                </a>
+                                <a href="pizhma-drwdy.html" class="carousel-item">
+                                    <img src="img/case_cards/wdy.png" alt="Dr.WDY" class="carousel-full-card">
+                                </a>
+                                <a href="pizhma-skrepki.html" class="carousel-item">
+                                    <img src="img/case_cards/skrepki.png" alt="Skrepki" class="carousel-full-card">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Contacts Section -->
+                <section id="contacts" class="nika-contacts-section">
+                    <div class="nika-contacts-grid-wrapper">
+                        <div class="nika-contacts-left">
+                            <h2 class="nika-contacts-title">LET'S WORK<br><span class="nika-contacts-title-gradient">TOGETHER</span></h2>
+                            <p class="nika-contacts-description">
+                                If you need an autonomous designer to launch a project from scratch, strengthen an in-house team, or establish a long-term contract partnership, <span class="nika-pulse-text">let's connect</span>.
+                            </p>
+                            <div class="nika-contacts-socials">
+                                <a href="https://www.behance.net/kisawawaw" target="_blank" class="nika-social-btn" aria-label="Behance">
+                                    <svg viewBox="0 0 24 24" class="social-icon-svg"><defs><linearGradient id="gradient-behance-c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" class="stop-1" stop-color="#FBFBFB"/><stop offset="50%" class="stop-2" stop-color="#FBFBFB"/><stop offset="100%" class="stop-3" stop-color="#FBFBFB"/></linearGradient></defs><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z" fill="url(#gradient-behance-c)"/></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/company/kisaw-studio/" target="_blank" class="nika-social-btn" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" class="social-icon-svg"><defs><linearGradient id="gradient-linkedin-c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" class="stop-1" stop-color="#FBFBFB"/><stop offset="50%" class="stop-2" stop-color="#FBFBFB"/><stop offset="100%" class="stop-3" stop-color="#FBFBFB"/></linearGradient></defs><path d="M20.6667 20.6667V13.6C20.6667 12.4472 20.2087 11.3416 19.3936 10.5264C18.5784 9.7113 17.4728 9.2533 16.32 9.2533C15.1867 9.2533 13.8667 9.9467 13.2267 10.9867V9.5067H9.5067V20.6667H13.2267V14.0933C13.2267 13.0667 14.0533 12.2267 15.08 12.2267C15.5751 12.2267 16.0499 12.4233 16.3999 12.7734C16.75 13.1235 16.9467 13.5983 16.9467 14.0933V20.6667H20.6667ZM5.17333 7.4133C5.76742 7.4133 6.3372 7.1773 6.7573 6.7573C7.1773 6.3372 7.4133 5.76742 7.4133 5.17333C7.4133 3.93333 6.4133 2.92 5.17333 2.92C4.57571 2.92 4.00257 3.1574 3.57999 3.57999C3.1574 4.00257 2.92 4.57571 2.92 5.17333C2.92 6.4133 3.93333 7.4133 5.17333 7.4133ZM7.0267 20.6667V9.5067H3.33333V20.6667H7.0267Z" fill="url(#gradient-linkedin-c)"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/kisaw.design/" target="_blank" class="nika-social-btn" aria-label="Instagram">
+                                    <svg viewBox="0 0 32 32" class="social-icon-svg"><defs><linearGradient id="gradient-instagram-c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" class="stop-1" stop-color="#FBFBFB"/><stop offset="50%" class="stop-2" stop-color="#FBFBFB"/><stop offset="100%" class="stop-3" stop-color="#FBFBFB"/></linearGradient></defs><path d="M17.3708 2.66675C18.8708 2.67075 19.6321 2.67875 20.2894 2.69741L20.5481 2.70675C20.8468 2.71741 21.1414 2.73075 21.4974 2.74675C22.9161 2.81341 23.8841 3.03741 24.7334 3.36675C25.6134 3.70541 26.3548 4.16408 27.0961 4.90408C27.7744 5.57039 28.299 6.37671 28.6334 7.26675C28.9628 8.11608 29.1868 9.08408 29.2534 10.5041C29.2694 10.8587 29.2828 11.1534 29.2934 11.4534L29.3014 11.7121C29.3214 12.3681 29.3294 13.1294 29.3321 14.6294L29.3334 15.6241V17.3707C29.3367 18.3433 29.3265 19.3158 29.3028 20.2881L29.2948 20.5467C29.2841 20.8467 29.2708 21.1414 29.2548 21.4961C29.1881 22.9161 28.9614 23.8827 28.6334 24.7334C28.299 25.6235 27.7744 26.4298 27.0961 27.0961C26.4298 27.7743 25.6235 28.299 24.7334 28.6334C23.8841 28.9627 22.9161 29.1868 21.4974 29.2534L20.5481 29.2934L20.2894 29.3014C19.6321 29.3201 18.8708 29.3294 17.3708 29.3321L16.3761 29.3334H14.6308C13.6578 29.3368 12.6848 29.3266 11.7121 29.3027L11.4534 29.2948C11.1369 29.2828 10.8205 29.269 10.5041 29.2534C9.08544 29.1868 8.11744 28.9627 7.26677 28.6334C6.37721 28.2988 5.57136 27.7742 4.90544 27.0961C4.2267 26.4299 3.70159 25.6236 3.36677 24.7334C3.03744 23.8841 2.81344 22.9161 2.74677 21.4961L2.70677 20.5467L2.70011 20.2881C2.67553 19.3158 2.66442 18.3433 2.66677 17.3707V14.6294C2.66308 13.6569 2.67286 12.6843 2.69611 11.7121L2.70544 11.4534C2.71611 11.1534 2.72944 10.8587 2.74544 10.5041C2.81211 9.08408 3.03611 8.11741 3.36544 7.26675C3.70103 6.37635 4.22707 5.57 4.90677 4.90408C5.57231 4.22615 6.37769 3.70151 7.26677 3.36675C8.11744 3.03741 9.08411 2.81341 10.5041 2.74675C10.8588 2.73075 11.1548 2.71741 11.4534 2.70675L11.7121 2.69875C12.6844 2.67506 13.6569 2.66484 14.6294 2.66808L17.3708 2.66675ZM16.0001 9.33342C14.232 9.33342 12.5363 10.0358 11.2861 11.286C10.0358 12.5363 9.33344 14.232 9.33344 16.0001C9.33344 17.7682 10.0358 19.4639 11.2861 20.7141C12.5363 21.9644 14.232 22.6667 16.0001 22.6667C17.7682 22.6667 19.4639 21.9644 20.7142 20.7141C21.9644 19.4639 22.6668 17.7682 22.6668 16.0001C22.6668 14.232 21.9644 12.5363 20.7142 11.286C19.4639 10.0358 17.7682 9.33342 16.0001 9.33342ZM16.0001 12.0001C16.5254 12 17.0456 12.1034 17.5309 12.3043C18.0162 12.5052 18.4572 12.7998 18.8287 13.1712C19.2002 13.5426 19.4949 13.9835 19.696 14.4687C19.8971 14.954 20.0007 15.4741 20.0008 15.9994C20.0009 16.5247 19.8975 17.0449 19.6965 17.5302C19.4956 18.0155 19.201 18.4565 18.8297 18.828C18.4583 19.1995 18.0174 19.4942 17.5321 19.6953C17.0469 19.8964 16.5267 20 16.0014 20.0001C14.9406 20.0001 13.9232 19.5787 13.173 18.8285C12.4229 18.0784 12.0014 17.0609 12.0014 16.0001C12.0014 14.9392 12.4229 13.9218 13.173 13.1717C13.9232 12.4215 14.9406 12.0001 16.0014 12.0001M23.0014 7.33342C22.5594 7.33342 22.1355 7.50901 21.8229 7.82157C21.5104 8.13413 21.3348 8.55805 21.3348 9.00008C21.3348 9.44211 21.5104 9.86603 21.8229 10.1786C22.1355 10.4912 22.5594 10.6667 23.0014 10.6667C23.4435 10.6667 23.8674 10.4912 24.18 10.1786C24.4925 9.86603 24.6681 9.44211 24.6681 9.00008C24.6681 8.55805 24.4925 8.13413 24.18 7.82157C23.8674 7.50901 23.4435 7.33342 23.0014 7.33342Z" fill="url(#gradient-instagram-c)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nika-contacts-right">
+                            <a href="mailto:hello@kisaw.studio" class="nika-contact-card card-email">
+                                <div class="card-icon">✉</div>
+                                <div class="card-content">
+                                    <span class="card-label">EMAIL</span>
+                                    <span class="card-value">hello@kisaw.studio</span>
+                                </div>
+                                <div class="card-arrow">→</div>
+                            </a>
+                            <a href="https://t.me/pizhmaishere" target="_blank" class="nika-contact-card card-telegram">
+                                <div class="card-icon">✈</div>
+                                <div class="card-content">
+                                    <span class="card-label">TELEGRAM</span>
+                                    <span class="card-value">@pizhmaishere</span>
+                                </div>
+                                <div class="card-arrow">→</div>
+                            </a>
+                            <a href="https://kisaw.studio" target="_blank" class="nika-contact-card card-community">
+                                <div class="card-icon"><img src="img/bone white.svg" alt="Bone" class="card-bone-icon"></div>
+                                <div class="card-content">
+                                    <span class="card-label">MY COMMUNITY</span>
+                                    <span class="card-value">KISAW.STUDIO</span>
+                                </div>
+                                <div class="card-arrow">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for images -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full Screen Image">
+        <div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
+    </div>
+
+    <script>
+        // Set lang attribute immediately to prevent flash of wrong language text
+        (function() {
+            const isRu = new URLSearchParams(window.location.search).get('lang') === 'ru';
+            document.documentElement.setAttribute('lang', isRu ? 'ru' : 'en');
+        })();
+
+        const initPizhmaCase = () => {
+            const header = document.querySelector('.header');
+            const checkHeader = () => { if (header) header.classList.toggle('header--scrolled', window.scrollY > 15); };
+            window.addEventListener('scroll', checkHeader, { passive: true });
+            checkHeader();
+            document.addEventListener('click', (e) => {
+                const toggle = e.target.closest('.mobile-nav-toggle, .mobile-nav-toggle-hero');
+                const closeBtn = e.target.closest('.menu-close-btn');
+                const overlay = document.querySelector('.nav-overlay');
+                if (toggle) { e.preventDefault(); if (overlay) { overlay.classList.add('active'); document.body.classList.add('menu-open'); } }
+                else if (closeBtn) { e.preventDefault(); if (overlay) { overlay.classList.remove('active'); document.body.classList.remove('menu-open'); } }
+                else if (overlay && overlay.classList.contains('active') && e.target === overlay) { overlay.classList.remove('active'); document.body.classList.remove('menu-open'); }
+            });
+
+            // --- Tab Switching Logic (with Sliding Pill) ---
+            const tabBtns = document.querySelectorAll('.buttons-wrap .btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const pill = document.querySelector('.active-pill');
+
+            function updatePill(btn) {
+                if (!pill || !btn) return;
+                pill.style.width = `${btn.offsetWidth}px`;
+                pill.style.left = `${btn.offsetLeft}px`;
+            }
+
+            // Initial position
+            const activeBtn = document.querySelector('.buttons-wrap .btn.active-text');
+            if (activeBtn) {
+                setTimeout(() => updatePill(activeBtn), 50);
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+
+                    tabBtns.forEach(b => b.classList.remove('active-text'));
+                    btn.classList.add('active-text');
+                    updatePill(btn);
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tabId) content.classList.add('active');
+                    });
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                const currentActive = document.querySelector('.buttons-wrap .btn.active-text');
+                if (currentActive) updatePill(currentActive);
+            });
+
+            // Language switcher & Logo link dynamic routing based on ?lang=ru
+            const urlParams = new URLSearchParams(window.location.search);
+            const isRu = urlParams.get('lang') === 'ru';
+            const langBtns = document.querySelectorAll('.nika-lang-btn');
+            const logoLinks = document.querySelectorAll('.nika-logo-link');
+
+            if (isRu) {
+                langBtns.forEach(btn => {
+                    if (btn.getAttribute('data-lang') === 'ru') {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                logoLinks.forEach(link => {
+                    link.href = 'nika-ru.html';
+                });
+            } else {
+                langBtns.forEach(btn => {
+                    if (btn.getAttribute('data-lang') === 'en') {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                logoLinks.forEach(link => {
+                    link.href = 'nika.html';
+                });
+            }
+
+            langBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+                    if (targetLang === 'ru') {
+                        window.location.href = window.location.pathname + '?lang=ru';
+                    } else {
+                        window.location.href = window.location.pathname;
+                    }
+                });
+            });
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPizhmaCase);
+        } else {
+            initPizhmaCase();
+        }
+    </script>
+    <script src="script.js?v=213.0"></script>
+    <script src="bones-confetti.js"></script>
+</body>
+</html>
